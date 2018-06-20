@@ -1,0 +1,114 @@
+
+
+  <head>
+    <!-- Bootstrap core CSS -->
+    <link href="https://blackrockdigital.github.io/startbootstrap-round-about/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <%= stylesheet_link_tag "round-about" %>
+  </head>
+
+  <body>
+    <%= stylesheet_link_tag "round-about" %>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">CSC 648 Software Engineering - Summer 2018</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Introduction Row -->
+      <h1 class="my-4" style="text-align:center;">TEAM 6
+        <small></small>
+      </h1>
+      <br><br>
+      <p></p>
+
+      <!-- Team Members Row -->
+      <div class="row">
+        <div class="col-lg-12">
+          
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center mb-4">
+          <%= link_to "#{image_tag("paul.png", class: "rounded-circle img-fluid d-block mx-auto", style: "width:200px;height:200px;")}".html_safe, "/pages/AboutPaul" %>
+          <h3>Paul Ancajima
+            <small><br>Team Member</small>
+          </h3>
+          <p></p>
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center mb-4">
+          <%= link_to "#{image_tag("zac.jpg", class: "rounded-circle img-fluid d-block mx-auto", style: "width:200px;height:200px;")}".html_safe, "/pages/AboutZac" %>
+          <h3>Zac Henney
+            <small><br>Team Lead</small>
+          </h3>
+          <p></p>
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center mb-4">
+          <%= link_to "#{image_tag("", class: "rounded-circle img-fluid d-block mx-auto", style: "width:200px;height:200px;")}".html_safe, "/pages/AboutAndre" %>
+          <h3>Andre Leslie
+            <small><br>Team Member</small>
+          </h3>
+          <p></p>
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center mb-4">
+        <%= link_to "#{image_tag("teodora.png", class: "rounded-circle img-fluid d-block mx-auto", style: "width:200px;height:200px;")}".html_safe, "/pages/AboutTeodora" %>
+          <h3>Teodora Caneva
+            <small><br>Team Member</small>
+          </h3>
+          <p></p>
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center mb-4">
+          <%= link_to "#{image_tag("", class: "rounded-circle img-fluid d-block mx-auto", style: "width:200px;height:200px;")}".html_safe, "/pages/AboutAmir" %>
+          <h3>Abdullah Amir
+            <small><br>Team Member</small>
+          </h3>
+          <p></p>
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center mb-4">
+          <%= link_to "#{image_tag("joe.jpg", class: "rounded-circle img-fluid d-block mx-auto", style: "width:200px;height:200px;")}".html_safe, "/pages/AboutJoe" %>
+          <h3>Joe Phabmixay
+            <small><br>Team Member</small>
+          </h3>
+          <p></p>
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center mb-4" align="center"></div>
+        <div class="col-lg-4 col-sm-6 text-center mb-4" align="center">
+          <%= link_to "#{image_tag("", class: "rounded-circle img-fluid d-block mx-auto", style: "width:200px;height:200px;")}".html_safe, "" %>
+          <h3>John Smith
+            <small><br>Team Member</small>
+          </h3>
+          <p></p>
+        </div>
+      </div>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; SFSU CS Dept. 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
