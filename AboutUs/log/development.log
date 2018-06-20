@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2018-06-15 21:01:38 -0700
 Processing by Rails::WelcomeController#index as HTML
   Rendering /usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
@@ -29548,6 +29549,19 @@ ActionController::RoutingError (No route matches [GET] "/vendor/jquery/jquery.mi
   
   
 ActionController::RoutingError (No route matches [GET] "/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+=======
+Started GET "/" for 127.0.0.1 at 2018-06-19 18:33:08 -0700
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (13328.7ms)
+Completed 200 OK in 13584ms (Views: 13571.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/vendor/jquery/jquery.min.js" for 127.0.0.1 at 2018-06-19 18:33:23 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/jquery/jquery.min.js"):
+  
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -29575,6 +29589,12 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
+=======
+Started GET "/vendor/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2018-06-19 18:33:23 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
   
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
@@ -29603,6 +29623,7 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/pages/AboutZac" for 127.0.0.1 at 2018-06-19 17:03:03 -0700
 Processing by PagesController#show as HTML
   Parameters: {"page"=>"AboutZac"}
@@ -29618,6 +29639,19 @@ ActionController::RoutingError (No route matches [GET] "/vendor/jquery/jquery.mi
   
   
 ActionController::RoutingError (No route matches [GET] "/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+=======
+Started GET "/" for 127.0.0.1 at 2018-06-19 18:36:12 -0700
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (373.2ms)
+Completed 200 OK in 641ms (Views: 630.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/vendor/jquery/jquery.min.js" for 127.0.0.1 at 2018-06-19 18:36:13 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/jquery/jquery.min.js"):
+  
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -29645,6 +29679,12 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
+=======
+Started GET "/vendor/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2018-06-19 18:36:13 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
   
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
@@ -29673,6 +29713,7 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2018-06-19 17:20:43 -0700
 Processing by PagesController#index as HTML
   Rendering pages/index.html.erb within layouts/application
@@ -29685,6 +29726,18 @@ Started GET "/vendor/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2018
   
 ActionController::RoutingError (No route matches [GET] "/vendor/jquery/jquery.min.js"):
   
+=======
+Started GET "/pages/AboutTeodora" for 127.0.0.1 at 2018-06-19 18:36:16 -0700
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"AboutTeodora"}
+  Rendering pages/AboutTeodora.html.erb within layouts/application
+  Rendered pages/AboutTeodora.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 125ms (Views: 124.6ms | ActiveRecord: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/picture.jpg"):
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
   
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
@@ -29698,7 +29751,16 @@ activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagge
 activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
 activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
 railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+<<<<<<< HEAD
 sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+=======
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.0) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.0) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
 actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
 actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
 rack (2.0.5) lib/rack/method_override.rb:22:in `call'
@@ -29713,7 +29775,13 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 ActionController::RoutingError (No route matches [GET] "/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+=======
+Started GET "/fonts/fontawesome-webfont.woff2?v=4.7.0" for 127.0.0.1 at 2018-06-19 18:36:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff2"):
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
   
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
@@ -29742,6 +29810,7 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2018-06-19 17:20:45 -0700
 Processing by PagesController#index as HTML
   Rendering pages/index.html.erb within layouts/application
@@ -29752,6 +29821,11 @@ Completed 200 OK in 1095ms (Views: 1092.3ms | ActiveRecord: 0.0ms)
 Started GET "/vendor/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2018-06-19 17:20:46 -0700
   
 ActionController::RoutingError (No route matches [GET] "/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+=======
+Started GET "/fonts/fontawesome-webfont.woff?v=4.7.0" for 127.0.0.1 at 2018-06-19 18:36:17 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff"):
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
   
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
@@ -29780,9 +29854,15 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/vendor/jquery/jquery.min.js" for 127.0.0.1 at 2018-06-19 17:20:46 -0700
   
 ActionController::RoutingError (No route matches [GET] "/vendor/jquery/jquery.min.js"):
+=======
+Started GET "/fonts/fontawesome-webfont.ttf?v=4.7.0" for 127.0.0.1 at 2018-06-19 18:36:17 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.ttf"):
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
   
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
@@ -29811,6 +29891,7 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/pages/AboutAndre" for 127.0.0.1 at 2018-06-19 17:20:49 -0700
 Processing by PagesController#show as HTML
   Parameters: {"page"=>"AboutAndre"}
@@ -29822,6 +29903,13 @@ Completed 200 OK in 116ms (Views: 115.1ms | ActiveRecord: 0.0ms)
 Started GET "/fonts/fontawesome-webfont.woff2?v=4.7.0" for 127.0.0.1 at 2018-06-19 17:20:49 -0700
   
 ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff2"):
+=======
+Started GET "/vendor/jquery/jquery.min.js" for 127.0.0.1 at 2018-06-19 18:39:16 -0700
+Started GET "/vendor/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2018-06-19 18:39:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/jquery/jquery.min.js"):
+  
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
   
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
@@ -29850,8 +29938,15 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
   
 ActionController::RoutingError (No route matches [GET] "/assets/fonts/devicon.woff"):
+=======
+ActionController::RoutingError (No route matches [GET] "/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+ActionController::RoutingError (No route matches [GET] "/assets/picture.jpg"):
+  
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
   
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
@@ -29885,10 +29980,13 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/fonts/fontawesome-webfont.woff?v=4.7.0" for 127.0.0.1 at 2018-06-19 17:20:51 -0700
   
 ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff"):
   
+=======
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -29916,8 +30014,21 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
   
 ActionController::RoutingError (No route matches [GET] "/assets/fonts/devicon.ttf"):
+=======
+Started GET "/" for 127.0.0.1 at 2018-06-19 18:39:18 -0700
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (276.8ms)
+Completed 200 OK in 464ms (Views: 453.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/vendor/jquery/jquery.min.js" for 127.0.0.1 at 2018-06-19 18:39:18 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/jquery/jquery.min.js"):
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
   
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
@@ -29931,12 +30042,16 @@ activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagge
 activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
 activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
 railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+<<<<<<< HEAD
 sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
 activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
 activesupport (5.2.0) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
 activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
 activesupport (5.2.0) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
 sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+=======
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
 actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
 actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
 rack (2.0.5) lib/rack/method_override.rb:22:in `call'
@@ -29951,9 +30066,15 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/fonts/fontawesome-webfont.ttf?v=4.7.0" for 127.0.0.1 at 2018-06-19 17:20:53 -0700
   
 ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.ttf"):
+=======
+Started GET "/vendor/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2018-06-19 18:39:18 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
   
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
@@ -29982,8 +30103,21 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
   
 ActionController::RoutingError (No route matches [GET] "/assets/fonts/devicon.svg"):
+=======
+Started GET "/pages/AboutTeodora" for 127.0.0.1 at 2018-06-19 18:39:21 -0700
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"AboutTeodora"}
+  Rendering pages/AboutTeodora.html.erb within layouts/application
+  Rendered pages/AboutTeodora.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 113ms (Views: 111.9ms | ActiveRecord: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/picture.jpg"):
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
   
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
@@ -30017,9 +30151,15 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/fonts/fontawesome-webfont.svg?v=4.7.0" for 127.0.0.1 at 2018-06-19 17:20:54 -0700
   
 ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.svg"):
+=======
+Started GET "/fonts/fontawesome-webfont.woff2?v=4.7.0" for 127.0.0.1 at 2018-06-19 18:39:21 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff2"):
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
   
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
@@ -30048,11 +30188,18 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/vendor/jquery/jquery.min.js" for 127.0.0.1 at 2018-06-19 17:21:02 -0700
   
 ActionController::RoutingError (No route matches [GET] "/vendor/jquery/jquery.min.js"):
   
 Started GET "/vendor/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2018-06-19 17:21:02 -0700
+=======
+Started GET "/fonts/fontawesome-webfont.woff?v=4.7.0" for 127.0.0.1 at 2018-06-19 18:39:22 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff"):
+  
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -30080,8 +30227,19 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
   
 ActionController::RoutingError (No route matches [GET] "/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+=======
+Started GET "/pages/AboutTeodora" for 127.0.0.1 at 2018-06-19 18:39:22 -0700
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"AboutTeodora"}
+  Rendering pages/AboutTeodora.html.erb within layouts/application
+  Rendered pages/AboutTeodora.html.erb within layouts/application (0.4ms)
+Started GET "/fonts/fontawesome-webfont.ttf?v=4.7.0" for 127.0.0.1 at 2018-06-19 18:39:22 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.ttf"):
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
   
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
@@ -30110,6 +30268,7 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/pages/AboutAndre" for 127.0.0.1 at 2018-06-19 17:21:55 -0700
 Processing by PagesController#show as HTML
   Parameters: {"page"=>"AboutAndre"}
@@ -30153,6 +30312,13 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+=======
+Completed 200 OK in 791ms (Views: 790.4ms | ActiveRecord: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/picture.jpg"):
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
   
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
@@ -30166,7 +30332,16 @@ activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagge
 activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
 activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
 railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+<<<<<<< HEAD
 sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+=======
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.0) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.0) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
 actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
 actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
 rack (2.0.5) lib/rack/method_override.rb:22:in `call'
@@ -30181,6 +30356,7 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Processing by PagesController#index as HTML
   Rendering pages/index.html.erb within layouts/application
   Rendered pages/index.html.erb within layouts/application (8809.5ms)
@@ -30195,6 +30371,10 @@ ActionController::RoutingError (No route matches [GET] "/vendor/bootstrap/js/boo
   
 ActionController::RoutingError (No route matches [GET] "/vendor/jquery/jquery.min.js"):
   
+=======
+  
+ActionController::RoutingError (No route matches [GET] "/assets/picture.jpg"):
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
   
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
@@ -30208,6 +30388,7 @@ activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagge
 activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
 activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
 railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+<<<<<<< HEAD
 sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
 actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
 actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
@@ -30236,6 +30417,14 @@ activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
 activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
 railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
 sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+=======
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.0) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.0) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
 actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
 actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
 rack (2.0.5) lib/rack/method_override.rb:22:in `call'
@@ -30250,6 +30439,7 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Processing by PagesController#index as HTML
   Rendering pages/index.html.erb within layouts/application
   Rendered pages/index.html.erb within layouts/application (263.9ms)
@@ -30265,6 +30455,17 @@ Completed 200 OK in 118ms (Views: 116.4ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/fonts/fontawesome-webfont.woff2?v=4.7.0" for 127.0.0.1 at 2018-06-19 18:16:44 -0700
+=======
+Started GET "/pages/AboutTeodora" for 127.0.0.1 at 2018-06-19 18:41:29 -0700
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"AboutTeodora"}
+  Rendering pages/AboutTeodora.html.erb within layouts/application
+  Rendered pages/AboutTeodora.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 160ms (Views: 159.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fonts/fontawesome-webfont.woff2?v=4.7.0" for 127.0.0.1 at 2018-06-19 18:41:29 -0700
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
   
 ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff2"):
   
@@ -30295,7 +30496,11 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/fonts/fontawesome-webfont.woff?v=4.7.0" for 127.0.0.1 at 2018-06-19 18:16:44 -0700
+=======
+Started GET "/fonts/fontawesome-webfont.woff?v=4.7.0" for 127.0.0.1 at 2018-06-19 18:41:30 -0700
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
   
 ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff"):
   
@@ -30326,7 +30531,11 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/fonts/fontawesome-webfont.ttf?v=4.7.0" for 127.0.0.1 at 2018-06-19 18:16:45 -0700
+=======
+Started GET "/fonts/fontawesome-webfont.ttf?v=4.7.0" for 127.0.0.1 at 2018-06-19 18:41:30 -0700
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
   
 ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.ttf"):
   
@@ -30357,9 +30566,54 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/fonts/fontawesome-webfont.svg?v=4.7.0" for 127.0.0.1 at 2018-06-19 18:16:46 -0700
   
 ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.svg"):
+=======
+Started GET "/pages/AboutTeodora" for 127.0.0.1 at 2018-06-19 18:41:32 -0700
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"AboutTeodora"}
+  Rendering pages/AboutTeodora.html.erb within layouts/application
+  Rendered pages/AboutTeodora.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 107ms (Views: 106.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/AboutTeodora" for 127.0.0.1 at 2018-06-19 18:41:32 -0700
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"AboutTeodora"}
+  Rendering pages/AboutTeodora.html.erb within layouts/application
+  Rendered pages/AboutTeodora.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 118ms (Views: 117.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/AboutTeodora" for 127.0.0.1 at 2018-06-19 18:41:33 -0700
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"AboutTeodora"}
+  Rendering pages/AboutTeodora.html.erb within layouts/application
+  Rendered pages/AboutTeodora.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 102ms (Views: 101.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/AboutTeodora" for 127.0.0.1 at 2018-06-19 18:41:33 -0700
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"AboutTeodora"}
+  Rendering pages/AboutTeodora.html.erb within layouts/application
+  Rendered pages/AboutTeodora.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 89ms (Views: 88.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-19 18:41:39 -0700
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 135ms (Views: 132.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/vendor/jquery/jquery.min.js" for 127.0.0.1 at 2018-06-19 18:41:39 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/jquery/jquery.min.js"):
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
   
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
@@ -30388,8 +30642,12 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/vendor/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2018-06-19 18:17:14 -0700
 Started GET "/vendor/jquery/jquery.min.js" for 127.0.0.1 at 2018-06-19 18:17:14 -0700
+=======
+Started GET "/vendor/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2018-06-19 18:41:39 -0700
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
   
 ActionController::RoutingError (No route matches [GET] "/vendor/bootstrap/js/bootstrap.bundle.min.js"):
   
@@ -30420,6 +30678,7 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
   
 ActionController::RoutingError (No route matches [GET] "/vendor/jquery/jquery.min.js"):
   
@@ -30462,6 +30721,18 @@ Started GET "/vendor/jquery/jquery.min.js" for 127.0.0.1 at 2018-06-19 18:17:22 
   
 ActionController::RoutingError (No route matches [GET] "/vendor/jquery/jquery.min.js"):
 Started GET "/vendor/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2018-06-19 18:17:22 -0700
+=======
+Started GET "/" for 127.0.0.1 at 2018-06-19 18:43:29 -0700
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 202ms (Views: 192.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/vendor/jquery/jquery.min.js" for 127.0.0.1 at 2018-06-19 18:43:29 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/jquery/jquery.min.js"):
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
   
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
@@ -30490,6 +30761,10 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
+=======
+Started GET "/vendor/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2018-06-19 18:43:29 -0700
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
   
 ActionController::RoutingError (No route matches [GET] "/vendor/bootstrap/js/bootstrap.bundle.min.js"):
   
@@ -30520,6 +30795,7 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/pages/AboutPaul" for 127.0.0.1 at 2018-06-19 18:17:23 -0700
 Processing by PagesController#show as HTML
   Parameters: {"page"=>"AboutPaul"}
@@ -30530,6 +30806,19 @@ Completed 200 OK in 812ms (Views: 811.7ms | ActiveRecord: 0.0ms)
 
   
 ActionController::RoutingError (No route matches [GET] "/assets/fonts/devicon.woff"):
+=======
+Started GET "/pages/AboutTeodora" for 127.0.0.1 at 2018-06-19 18:43:36 -0700
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"AboutTeodora"}
+  Rendering pages/AboutTeodora.html.erb within layouts/application
+  Rendered pages/AboutTeodora.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 108ms (Views: 107.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fonts/fontawesome-webfont.woff2?v=4.7.0" for 127.0.0.1 at 2018-06-19 18:43:36 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff2"):
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
   
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
@@ -30543,12 +30832,16 @@ activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagge
 activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
 activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
 railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+<<<<<<< HEAD
 sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
 activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
 activesupport (5.2.0) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
 activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
 activesupport (5.2.0) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
 sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+=======
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
 actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
 actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
 rack (2.0.5) lib/rack/method_override.rb:22:in `call'
@@ -30563,8 +30856,14 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
   
 ActionController::RoutingError (No route matches [GET] "/assets/fonts/devicon.ttf"):
+=======
+Started GET "/fonts/fontawesome-webfont.woff?v=4.7.0" for 127.0.0.1 at 2018-06-19 18:43:37 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff"):
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
   
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
@@ -30578,12 +30877,16 @@ activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagge
 activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
 activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
 railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+<<<<<<< HEAD
 sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
 activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
 activesupport (5.2.0) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
 activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
 activesupport (5.2.0) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
 sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+=======
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
 actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
 actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
 rack (2.0.5) lib/rack/method_override.rb:22:in `call'
@@ -30598,11 +30901,18 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/vendor/jquery/jquery.min.js" for 127.0.0.1 at 2018-06-19 18:17:25 -0700
   
 ActionController::RoutingError (No route matches [GET] "/vendor/jquery/jquery.min.js"):
   
 Started GET "/vendor/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2018-06-19 18:17:26 -0700
+=======
+Started GET "/fonts/fontawesome-webfont.ttf?v=4.7.0" for 127.0.0.1 at 2018-06-19 18:43:37 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.ttf"):
+  
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -30630,8 +30940,14 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
   
 ActionController::RoutingError (No route matches [GET] "/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+=======
+Started GET "/vendor/jquery/jquery.min.js" for 127.0.0.1 at 2018-06-19 18:43:44 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/jquery/jquery.min.js"):
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
   
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
@@ -30660,6 +30976,7 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/pages/AboutZac" for 127.0.0.1 at 2018-06-19 18:17:27 -0700
 Processing by PagesController#show as HTML
   Parameters: {"page"=>"AboutZac"}
@@ -30703,6 +31020,12 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+=======
+Started GET "/vendor/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2018-06-19 18:43:44 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+>>>>>>> ee55ef6b0fa2cc53d3b671b75c385903d303c2b1
 actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
