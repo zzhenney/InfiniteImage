@@ -11659,3 +11659,2286 @@ Processing by ImagesController#new as HTML
 Completed 200 OK in 121ms (Views: 111.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/images/new" for 127.0.0.1 at 2018-07-07 14:09:49 -0700
+  [1m[35m (0.4ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by ImagesController#new as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/paulancajima/Desktop/SFSU/Summer2018/csc648Project/csc648-su18-Team06/AboutUs/app/models/image.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  has_many_attached :uploads
+                    ^):
+  
+app/models/image.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/controllers/images_controller.rb:17:in `new'
+Started GET "/images/new" for 127.0.0.1 at 2018-07-07 14:10:43 -0700
+Processing by ImagesController#new as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/paulancajima/Desktop/SFSU/Summer2018/csc648Project/csc648-su18-Team06/AboutUs/app/models/image.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  has_many_attached :uploads
+                    ^):
+  
+app/models/image.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/controllers/images_controller.rb:17:in `new'
+Started GET "/images/new" for 127.0.0.1 at 2018-07-07 14:13:01 -0700
+Processing by ImagesController#new as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/paulancajima/Desktop/SFSU/Summer2018/csc648Project/csc648-su18-Team06/AboutUs/app/models/image.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  has_many_attached :uploads[]
+                    ^):
+  
+app/models/image.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/controllers/images_controller.rb:17:in `new'
+Started GET "/images/new" for 127.0.0.1 at 2018-07-07 14:13:44 -0700
+Processing by ImagesController#new as HTML
+  Rendering images/new.html.erb within layouts/application
+  Rendered images/_form.html.erb (6.4ms)
+  Rendered images/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 186ms (Views: 140.7ms | ActiveRecord: 21.3ms)
+
+
+Started GET "/images/new" for 127.0.0.1 at 2018-07-07 14:14:07 -0700
+Processing by ImagesController#new as HTML
+  Rendering images/new.html.erb within layouts/application
+  Rendered images/_form.html.erb (6.2ms)
+  Rendered images/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 149ms (Views: 117.8ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/images/users" for 127.0.0.1 at 2018-07-07 14:21:47 -0700
+  [1m[35m (0.6ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"users"}
+  [1m[36mImage Load (0.9ms)[0m  [1m[34mSELECT  `images`.* FROM `images` WHERE `images`.`id` = 0 LIMIT 1[0m
+  ↳ app/controllers/images_controller.rb:67
+Completed 404 Not Found in 6ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Image with 'id'=users):
+  
+app/controllers/images_controller.rb:67:in `set_image'
+Started GET "/images/users" for 127.0.0.1 at 2018-07-07 14:22:44 -0700
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"users"}
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT  `images`.* FROM `images` WHERE `images`.`id` = 0 LIMIT 1[0m
+  ↳ app/controllers/images_controller.rb:67
+Completed 404 Not Found in 21ms (ActiveRecord: 13.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Image with 'id'=users):
+  
+app/controllers/images_controller.rb:67:in `set_image'
+Started GET "/images/users" for 127.0.0.1 at 2018-07-07 14:22:59 -0700
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"users"}
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT  `images`.* FROM `images` WHERE `images`.`id` = 0 LIMIT 1[0m
+  ↳ app/controllers/images_controller.rb:67
+Completed 404 Not Found in 17ms (ActiveRecord: 11.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Image with 'id'=users):
+  
+app/controllers/images_controller.rb:67:in `set_image'
+Started GET "/images/" for 127.0.0.1 at 2018-07-07 14:28:40 -0700
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 142ms (Views: 137.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/images/2" for 127.0.0.1 at 2018-07-07 14:28:43 -0700
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT  `images`.* FROM `images` WHERE `images`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/images_controller.rb:67
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/images/show.html.erb:7
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/images/show.html.erb:7
+  Rendered images/show.html.erb within layouts/application (83.5ms)
+Completed 200 OK in 170ms (Views: 141.4ms | ActiveRecord: 20.7ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d3bf5dfa8359d0873bc47acc5d29d4e0beade856/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png" for 127.0.0.1 at 2018-07-07 14:28:43 -0700
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d3bf5dfa8359d0873bc47acc5d29d4e0beade856", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c2eefd9dd2786e9bf2bcb89abbb7f0d100a3d770/photography-student.gif" for 127.0.0.1 at 2018-07-07 14:28:43 -0700
+  [1m[35m (2.2ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by ActiveStorage::BlobsController#show as GIF
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c2eefd9dd2786e9bf2bcb89abbb7f0d100a3d770", "filename"=>"photography-student"}
+  [1m[36mActiveStorage::Blob Load (2.2ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3 LIMIT 1[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: ti8AUNSPm9rDvnK7NG5Wvrnc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEwYVRoQlZVNVRVRzA1Y2tSMmJrczNUa2MxVjNaeWJtTUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDdUMjE6MzM6NDMuOTgyWiIsInB1ciI6ImJsb2Jfa2V5In19--c83654dd0eccc532c867f10eda9db3fee0baafde/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEwYVRoQlZVNVRVRzA1Y2tSMmJrczNUa2MxVjNaeWJtTUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDdUMjE6MzM6NDMuOTgyWiIsInB1ciI6ImJsb2Jfa2V5In19--c83654dd0eccc532c867f10eda9db3fee0baafde/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png
+  [1m[36mActiveStorage::Blob Load (2.5ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 302 Found in 12ms (ActiveRecord: 2.2ms)
+
+
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: vUV4oLbMnaALLzeMvWP4bmGb (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEyVlZZMGIweGlUVzVoUVV4TWVtVk5kbGRRTkdKdFIySUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDdUMjE6MzM6NDMuOTg1WiIsInB1ciI6ImJsb2Jfa2V5In19--9b3896e65080cdec5e4be0c48f369df52fc6499e/photography-student.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22photography-student.gif%22%3B+filename%2A%3DUTF-8%27%27photography-student.gif)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEyVlZZMGIweGlUVzVoUVV4TWVtVk5kbGRRTkdKdFIySUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDdUMjE6MzM6NDMuOTg1WiIsInB1ciI6ImJsb2Jfa2V5In19--9b3896e65080cdec5e4be0c48f369df52fc6499e/photography-student.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22photography-student.gif%22%3B+filename%2A%3DUTF-8%27%27photography-student.gif
+Completed 302 Found in 6ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEwYVRoQlZVNVRVRzA1Y2tSMmJrczNUa2MxVjNaeWJtTUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDdUMjE6MzM6NDMuOTgyWiIsInB1ciI6ImJsb2Jfa2V5In19--c83654dd0eccc532c867f10eda9db3fee0baafde/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png" for 127.0.0.1 at 2018-07-07 14:28:43 -0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEyVlZZMGIweGlUVzVoUVV4TWVtVk5kbGRRTkdKdFIySUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDdUMjE6MzM6NDMuOTg1WiIsInB1ciI6ImJsb2Jfa2V5In19--9b3896e65080cdec5e4be0c48f369df52fc6499e/photography-student.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22photography-student.gif%22%3B+filename%2A%3DUTF-8%27%27photography-student.gif" for 127.0.0.1 at 2018-07-07 14:28:43 -0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"Screen Shot 2018-06-26 at 7.13.46 PM.png\"; filename*=UTF-8''Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEwYVRoQlZVNVRVRzA1Y2tSMmJrczNUa2MxVjNaeWJtTUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDdUMjE6MzM6NDMuOTgyWiIsInB1ciI6ImJsb2Jfa2V5In19--c83654dd0eccc532c867f10eda9db3fee0baafde", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+Processing by ActiveStorage::DiskController#show as GIF
+  Parameters: {"content_type"=>"image/gif", "disposition"=>"inline; filename=\"photography-student.gif\"; filename*=UTF-8''photography-student.gif", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEyVlZZMGIweGlUVzVoUVV4TWVtVk5kbGRRTkdKdFIySUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDdUMjE6MzM6NDMuOTg1WiIsInB1ciI6ImJsb2Jfa2V5In19--9b3896e65080cdec5e4be0c48f369df52fc6499e", "filename"=>"photography-student"}
+[36m  Disk Storage (0.7ms) [0m[34mDownloaded file from key: ti8AUNSPm9rDvnK7NG5Wvrnc[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.8ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+[36m  Disk Storage (2.0ms) [0m[34mDownloaded file from key: vUV4oLbMnaALLzeMvWP4bmGb[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.6ms)
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/new" for 127.0.0.1 at 2018-07-07 14:28:46 -0700
+Processing by ImagesController#new as HTML
+  Rendering images/new.html.erb within layouts/application
+  Rendered images/_form.html.erb (7.6ms)
+  Rendered images/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 96ms (Views: 88.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 14:28:52 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 90ms (Views: 74.2ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-07 14:28:56 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.5ms)
+  Rendered users/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 92ms (Views: 83.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-07 14:28:59 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DPQV14ooqWPEGoKgwLYWong+YGEGjIxSgkOfYTminFbj5xdeAjKjWYCn1cn+nedNB0viFbcbfhDJosDjcep7jg==", "user"=>{"images"=>{"uploads"=>[#<ActionDispatch::Http::UploadedFile:0x00007f9d34eb7b10 @tempfile=#<Tempfile:/var/folders/65/6418qwk55nbccpdlfd2m9f300000gn/T/RackMultipart20180707-8260-t7quzo.png>, @original_filename="Screen Shot 2018-07-03 at 9.41.28 PM.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[images][uploads][]\"; filename=\"Screen Shot 2018-07-03 at 9.41.28 PM.png\"\r\nContent-Type: image/png\r\n">]}, "user_id"=>"", "is_admin"=>"0", "cart_id"=>"", "album_list"=>"", "friend_list"=>"", "email"=>"", "password"=>"[FILTERED]", "first_name"=>"", "last_name"=>""}, "commit"=>"Create User"}
+Unpermitted parameter: :images
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`user_id`, `is_admin`, `email`, `password`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES ('', FALSE, '', '', '', '', '2018-07-07 21:29:00', '2018-07-07 21:29:00')[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (171.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:30
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 179ms (ActiveRecord: 171.8ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2018-07-07 14:29:00 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 75ms (Views: 69.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 14:29:02 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 87ms (Views: 81.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2018-07-07 14:29:03 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 89ms (Views: 79.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2018-07-07 14:29:38 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `uploads' for nil:NilClass):
+    3: <p>
+    4: 
+    5: <ul>
+    6:   <% @image.uploads.each do |upload| %>
+    7:     <li>
+    8:       <%= image_tag upload, size: '200x200'  %>
+    9:     </li>
+  
+app/views/users/show.html.erb:6:in `_app_views_users_show_html_erb___2208141139201338831_70156620178380'
+Started GET "/users/4" for 127.0.0.1 at 2018-07-07 14:30:01 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    3: <p>
+    4: 
+    5: <ul>
+    6:   <% @users.image.uploads.each do |upload| %>
+    7:     <li>
+    8:       <%= image_tag upload, size: '200x200'  %>
+    9:     </li>
+  
+app/views/users/show.html.erb:6:in `_app_views_users_show_html_erb___2208141139201338831_70156625802440'
+Started GET "/users/4" for 127.0.0.1 at 2018-07-07 14:30:36 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    3: <p>
+    4: 
+    5: <ul>
+    6:   <% @users.image.uploads.each do |upload| %>
+    7:     <li>
+    8:       <%= image_tag upload, size: '200x200'  %>
+    9:     </li>
+  
+app/views/users/show.html.erb:6:in `_app_views_users_show_html_erb___2208141139201338831_70156575175000'
+Started GET "/users/4" for 127.0.0.1 at 2018-07-07 14:32:21 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 12.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    3: <p>
+    4: 
+    5: <ul>
+    6:   <% @users.image.uploads.each do |upload| %>
+    7:     <li>
+    8:       <%= image_tag upload, size: '200x200'  %>
+    9:     </li>
+  
+app/views/users/show.html.erb:6:in `_app_views_users_show_html_erb___2208141139201338831_70156631709240'
+Started GET "/images" for 127.0.0.1 at 2018-07-07 14:33:11 -0700
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/index.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 107ms (Views: 90.1ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/images/2" for 127.0.0.1 at 2018-07-07 14:33:14 -0700
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT  `images`.* FROM `images` WHERE `images`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/images_controller.rb:67
+  Rendering images/show.html.erb within layouts/application
+  Rendered images/show.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `images' for nil:NilClass):
+    2: 
+    3: 
+    4: <ul>
+    5:   <% @user.images.each do |upload| %>
+    6:     <li>
+    7:       <%= image_tag upload, size: '200x200'  %>
+    8:     </li>
+  
+app/views/images/show.html.erb:5:in `_app_views_images_show_html_erb___3579824464215498016_70156601801340'
+Started GET "/images/2" for 127.0.0.1 at 2018-07-07 14:33:41 -0700
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT  `images`.* FROM `images` WHERE `images`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/images_controller.rb:67
+  Rendering images/show.html.erb within layouts/application
+  Rendered images/show.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `uploads' for nil:NilClass):
+    2: 
+    3: 
+    4: <ul>
+    5:   <% @user.uploads.each do |upload| %>
+    6:     <li>
+    7:       <%= image_tag upload, size: '200x200'  %>
+    8:     </li>
+  
+app/views/images/show.html.erb:5:in `_app_views_images_show_html_erb___3579824464215498016_70156635640920'
+Started GET "/images/2" for 127.0.0.1 at 2018-07-07 14:33:49 -0700
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT  `images`.* FROM `images` WHERE `images`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/images_controller.rb:67
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/images/show.html.erb:7
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/images/show.html.erb:7
+  Rendered images/show.html.erb within layouts/application (64.7ms)
+Completed 200 OK in 148ms (Views: 123.9ms | ActiveRecord: 20.6ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d3bf5dfa8359d0873bc47acc5d29d4e0beade856/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png" for 127.0.0.1 at 2018-07-07 14:33:50 -0700
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d3bf5dfa8359d0873bc47acc5d29d4e0beade856", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c2eefd9dd2786e9bf2bcb89abbb7f0d100a3d770/photography-student.gif" for 127.0.0.1 at 2018-07-07 14:33:50 -0700
+  [1m[36mActiveStorage::Blob Load (2.5ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3 LIMIT 1[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.9ms) [0m[34mGenerated URL for file at key: ti8AUNSPm9rDvnK7NG5Wvrnc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEwYVRoQlZVNVRVRzA1Y2tSMmJrczNUa2MxVjNaeWJtTUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDdUMjE6Mzg6NTAuMzg3WiIsInB1ciI6ImJsb2Jfa2V5In19--21cb8666b7a44a061ded445941cdf2cb121da5d8/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEwYVRoQlZVNVRVRzA1Y2tSMmJrczNUa2MxVjNaeWJtTUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDdUMjE6Mzg6NTAuMzg3WiIsInB1ciI6ImJsb2Jfa2V5In19--21cb8666b7a44a061ded445941cdf2cb121da5d8/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png
+Completed 302 Found in 7ms (ActiveRecord: 2.5ms)
+
+
+Processing by ActiveStorage::BlobsController#show as GIF
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c2eefd9dd2786e9bf2bcb89abbb7f0d100a3d770", "filename"=>"photography-student"}
+  [1m[36mActiveStorage::Blob Load (5.3ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: vUV4oLbMnaALLzeMvWP4bmGb (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEyVlZZMGIweGlUVzVoUVV4TWVtVk5kbGRRTkdKdFIySUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDdUMjE6Mzg6NTAuMzk4WiIsInB1ciI6ImJsb2Jfa2V5In19--d07a6f1a7ab1bb9098ba7a726929ae37ec7fff9b/photography-student.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22photography-student.gif%22%3B+filename%2A%3DUTF-8%27%27photography-student.gif)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEyVlZZMGIweGlUVzVoUVV4TWVtVk5kbGRRTkdKdFIySUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDdUMjE6Mzg6NTAuMzk4WiIsInB1ciI6ImJsb2Jfa2V5In19--d07a6f1a7ab1bb9098ba7a726929ae37ec7fff9b/photography-student.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22photography-student.gif%22%3B+filename%2A%3DUTF-8%27%27photography-student.gif
+Completed 302 Found in 9ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEwYVRoQlZVNVRVRzA1Y2tSMmJrczNUa2MxVjNaeWJtTUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDdUMjE6Mzg6NTAuMzg3WiIsInB1ciI6ImJsb2Jfa2V5In19--21cb8666b7a44a061ded445941cdf2cb121da5d8/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png" for 127.0.0.1 at 2018-07-07 14:33:50 -0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEyVlZZMGIweGlUVzVoUVV4TWVtVk5kbGRRTkdKdFIySUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDdUMjE6Mzg6NTAuMzk4WiIsInB1ciI6ImJsb2Jfa2V5In19--d07a6f1a7ab1bb9098ba7a726929ae37ec7fff9b/photography-student.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22photography-student.gif%22%3B+filename%2A%3DUTF-8%27%27photography-student.gif" for 127.0.0.1 at 2018-07-07 14:33:50 -0700
+Processing by ActiveStorage::DiskController#show as GIF
+  Parameters: {"content_type"=>"image/gif", "disposition"=>"inline; filename=\"photography-student.gif\"; filename*=UTF-8''photography-student.gif", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEyVlZZMGIweGlUVzVoUVV4TWVtVk5kbGRRTkdKdFIySUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDdUMjE6Mzg6NTAuMzk4WiIsInB1ciI6ImJsb2Jfa2V5In19--d07a6f1a7ab1bb9098ba7a726929ae37ec7fff9b", "filename"=>"photography-student"}
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"Screen Shot 2018-06-26 at 7.13.46 PM.png\"; filename*=UTF-8''Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEwYVRoQlZVNVRVRzA1Y2tSMmJrczNUa2MxVjNaeWJtTUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDdUMjE6Mzg6NTAuMzg3WiIsInB1ciI6ImJsb2Jfa2V5In19--21cb8666b7a44a061ded445941cdf2cb121da5d8", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+[36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: vUV4oLbMnaALLzeMvWP4bmGb[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (1.2ms)
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+[36m  Disk Storage (1.0ms) [0m[34mDownloaded file from key: ti8AUNSPm9rDvnK7NG5Wvrnc[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.9ms)
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 14:34:13 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 98ms (Views: 94.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2018-07-07 14:34:16 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    3: <p>
+    4: 
+    5: <ul>
+    6:   <% @users.image.uploads.each do |upload| %>
+    7:     <li>
+    8:       <%= image_tag upload, size: '200x200'  %>
+    9:     </li>
+  
+app/views/users/show.html.erb:6:in `_app_views_users_show_html_erb___2208141139201338831_70156636427140'
+Started GET "/users/4" for 127.0.0.1 at 2018-07-07 14:34:31 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `uploads' for nil:NilClass):
+    3: <p>
+    4: 
+    5: <<ul>
+    6:   <% @image.uploads.each do |upload| %>
+    7:     <li>
+    8:       <%= image_tag upload, size: '200x200'  %>
+    9:     </li>
+  
+app/views/users/show.html.erb:6:in `_app_views_users_show_html_erb___2208141139201338831_70156626259260'
+Started GET "/users/4" for 127.0.0.1 at 2018-07-07 14:34:47 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `images' for nil:NilClass):
+    3: <p>
+    4: 
+    5: <<ul>
+    6:   <% @users.images.each do |upload| %>
+    7:     <li>
+    8:       <%= image_tag upload, size: '200x200'  %>
+    9:     </li>
+  
+app/views/users/show.html.erb:6:in `_app_views_users_show_html_erb___2208141139201338831_70156587509480'
+Started GET "/users/4" for 127.0.0.1 at 2018-07-07 14:34:51 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '4'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 91ms (Views: 86.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2018-07-07 14:35:10 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (6.3ms)
+  Rendered users/edit.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 111ms (Views: 101.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 14:35:13 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 109ms (Views: 102.5ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/4" for 127.0.0.1 at 2018-07-07 14:35:15 -0700
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3Eex380pao9XZvl3WlzS94CWfFxNLS0LbNGEkGMm3xIpvlzrXVAPl0jbYvgAWjJODqwrAfQ2t+DehtOuhR6BKw==", "id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:57
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 4[0m
+  ↳ app/controllers/users_controller.rb:57
+  [1m[35m (121.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:57
+Redirected to http://localhost:3000/users
+Completed 302 Found in 128ms (ActiveRecord: 122.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 14:35:15 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 90ms (Views: 86.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-07 14:35:17 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.6ms)
+  Rendered users/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 101ms (Views: 91.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-07 14:35:26 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5gkxk4T/E6PYuLkCIfOoCb1vdpNSAHhtFhq9kU3nZK4JGjMaDOUZmZwF7msf2Fnmwhr05+OXii9d++ITBa+Ddg==", "user"=>{"images"=>{"uploads"=>[#<ActionDispatch::Http::UploadedFile:0x00007f9d3a544398 @tempfile=#<Tempfile:/var/folders/65/6418qwk55nbccpdlfd2m9f300000gn/T/RackMultipart20180707-8260-1btz6i.gif>, @original_filename="photography-student.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"user[images][uploads][]\"; filename=\"photography-student.gif\"\r\nContent-Type: image/gif\r\n">]}, "user_id"=>"paul", "is_admin"=>"0", "cart_id"=>"", "album_list"=>"", "friend_list"=>"", "email"=>"paulancajima@yahoo.com", "password"=>"[FILTERED]", "first_name"=>"Paul", "last_name"=>"Ancajima"}, "commit"=>"Create User"}
+Unpermitted parameter: :images
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`user_id`, `is_admin`, `email`, `password`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES ('paul', FALSE, 'paulancajima@yahoo.com', '', 'Paul', 'Ancajima', '2018-07-07 21:35:26', '2018-07-07 21:35:26')[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (132.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:30
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 139ms (ActiveRecord: 132.7ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2018-07-07 14:35:27 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '5'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 82ms (Views: 75.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 14:35:30 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 82ms (Views: 75.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2018-07-07 14:35:32 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '5'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 95ms (Views: 82.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2018-07-07 14:41:15 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mImage Load (0.6ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '5'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 91ms (Views: 86.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 14:41:17 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 115ms (Views: 107.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2018-07-07 14:41:19 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mImage Load (1.2ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '3'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 97ms (Views: 86.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/3/edit" for 127.0.0.1 at 2018-07-07 14:41:20 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (9.6ms)
+  Rendered users/edit.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 101ms (Views: 91.5ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/users/3" for 127.0.0.1 at 2018-07-07 14:41:25 -0700
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LlLO1bmv64Cy0wSNMSlL63ZePZVjKsJ/sLCmxOfy215dnfRl0jggngEWk5mrK5V9Z107RXxi58hYQLngHzJ7fA==", "user"=>{"image"=>{"uploads"=>[#<ActionDispatch::Http::UploadedFile:0x00007f9d34936588 @tempfile=#<Tempfile:/var/folders/65/6418qwk55nbccpdlfd2m9f300000gn/T/RackMultipart20180707-8260-zpfvv.gif>, @original_filename="bg.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"user[image][uploads][]\"; filename=\"bg.gif\"\r\nContent-Type: image/gif\r\n">]}, "user_id"=>"", "is_admin"=>"0", "cart_id"=>"", "album_list"=>"", "friend_list"=>"", "email"=>"paulancajima@yahoo.com", "password"=>"[FILTERED]", "first_name"=>"Paul", "last_name"=>"Ancajima"}, "commit"=>"Update User", "id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67
+Unpermitted parameter: :image
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:44
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2018-07-07 14:41:25 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '3'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 73ms (Views: 68.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 14:41:28 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 104ms (Views: 93.9ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2018-07-07 14:41:30 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mImage Load (0.8ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '3'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 91ms (Views: 80.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 14:41:31 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 112ms (Views: 100.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2018-07-07 14:41:33 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mImage Load (1.1ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '5'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 101ms (Views: 90.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 14:41:35 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 112ms (Views: 106.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-07 14:42:46 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (7.4ms)
+  Rendered users/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 113ms (Views: 101.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2018-07-07 14:42:54 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mImage Load (2.5ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '3'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 104ms (Views: 91.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/3/edit" for 127.0.0.1 at 2018-07-07 14:42:56 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (6.3ms)
+  Rendered users/edit.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 107ms (Views: 101.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/3/edit" for 127.0.0.1 at 2018-07-07 14:44:03 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.8ms)
+  Rendered users/edit.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 90ms (Views: 86.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 14:44:07 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 88ms (Views: 84.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-07 14:44:09 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (6.6ms)
+  Rendered users/new.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 112ms (Views: 105.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-07 14:44:14 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ErpjVU617WZDxwkiE0ipPTMgH16HeE67b0z/Kce83mz9qWHcxq/nXAd6XkstY1jSTFWdKjbvvPkkraCrj/Q5tA==", "user"=>{"image"=>{"uploads"=>[#<ActionDispatch::Http::UploadedFile:0x00007f9d368bd1b8 @tempfile=#<Tempfile:/var/folders/65/6418qwk55nbccpdlfd2m9f300000gn/T/RackMultipart20180707-8260-uz7emz.gif>, @original_filename="bg.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"user[image][uploads][]\"; filename=\"bg.gif\"\r\nContent-Type: image/gif\r\n">]}, "user_id"=>"", "is_admin"=>"0", "cart_id"=>"", "album_list"=>"", "friend_list"=>"", "email"=>"", "password"=>"[FILTERED]", "first_name"=>"", "last_name"=>""}, "commit"=>"Create User"}
+Unpermitted parameter: :image
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`user_id`, `is_admin`, `email`, `password`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES ('', FALSE, '', '', '', '', '2018-07-07 21:44:14', '2018-07-07 21:44:14')[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (170.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:30
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 175ms (ActiveRecord: 171.1ms)
+
+
+Started GET "/users/6" for 127.0.0.1 at 2018-07-07 14:44:14 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '6'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 88ms (Views: 82.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/6/edit" for 127.0.0.1 at 2018-07-07 14:44:18 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.3ms)
+  Rendered users/edit.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 91ms (Views: 82.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 14:44:19 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 76ms (Views: 69.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/6" for 127.0.0.1 at 2018-07-07 14:44:21 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '6'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 98ms (Views: 87.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/6/edit" for 127.0.0.1 at 2018-07-07 14:58:17 -0700
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.1ms)
+  Rendered users/edit.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 171ms (Views: 132.4ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 14:58:19 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 97ms (Views: 91.5ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/users/3" for 127.0.0.1 at 2018-07-07 14:58:21 -0700
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4JKt5lxhjnYXEKizL3rjUKObHSS7eDuR7Slpj+IEaRsVa0DSzBjrbgitMzx1fAPpLaFKeQJjoXpffj6xBDw3Ig==", "id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:70
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:60
+  [1m[36mUser Destroy (1.4ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 3[0m
+  ↳ app/controllers/users_controller.rb:60
+  [1m[35m (168.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:60
+Redirected to http://localhost:3000/users
+Completed 302 Found in 176ms (ActiveRecord: 170.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 14:58:22 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 78ms (Views: 75.0ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/5" for 127.0.0.1 at 2018-07-07 14:58:23 -0700
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Qs1oyI86gkrI20Lw+n0OpToSaIYurlIJgnPEEZIi6423NIX8H0PnUtdm2X+ge+4ctCg/25e1yOIwJJMvdBq1tA==", "id"=>"5"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:70
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:60
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 5[0m
+  ↳ app/controllers/users_controller.rb:60
+  [1m[35m (136.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:60
+Redirected to http://localhost:3000/users
+Completed 302 Found in 144ms (ActiveRecord: 138.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 14:58:24 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 72ms (Views: 68.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/6" for 127.0.0.1 at 2018-07-07 14:58:26 -0700
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zXnYZRIfHYxFmTGp8+hJYs4eEYwKoLIvIk8dPFays6g4gDVRgmZ4lFokqiap7qnbQCRG0bO7KMSQGEoCsIrtkQ==", "id"=>"6"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:70
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:60
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 6[0m
+  ↳ app/controllers/users_controller.rb:60
+  [1m[35m (141.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:60
+Redirected to http://localhost:3000/users
+Completed 302 Found in 147ms (ActiveRecord: 143.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 14:58:26 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 74ms (Views: 69.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images" for 127.0.0.1 at 2018-07-07 14:58:29 -0700
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.7ms)[0m  [1m[34mSELECT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/index.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 118ms (Views: 94.6ms | ActiveRecord: 12.8ms)
+
+
+Started DELETE "/images/1" for 127.0.0.1 at 2018-07-07 14:58:33 -0700
+Processing by ImagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8CjluSgKXlR+KZdjZMMdCON1sRSlT1ZOwI1J3BBRtQAF0QiNuHM7TGGUDOw+xf2xbU/mSRxUzKVy2h7i9mnrOQ==", "id"=>"1"}
+  [1m[36mImage Load (1.0ms)[0m  [1m[34mSELECT  `images`.* FROM `images` WHERE `images`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/images_controller.rb:67
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:57
+  [1m[36mImage Destroy (1.7ms)[0m  [1m[31mDELETE FROM `images` WHERE `images`.`id` = 1[0m
+  ↳ app/controllers/images_controller.rb:57
+  [1m[35m (55.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:57
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/controllers/images_controller.rb:57
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/images_controller.rb:57
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: b269f2bf-d748-4734-9d1a-d0b2b0cdbc83) to Async(default) with arguments: #<GlobalID:0x00007f9d3a70cd60 @uri=#<URI::GID gid://about-paul/ActiveStorage::Blob/2>>
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:57
+  [1m[35m (0.9ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Attachment Destroy (1.6ms)[0m  [1m[31mDELETE FROM `active_storage_attachments` WHERE `active_storage_attachments`.`id` = 1[0m
+  ↳ app/controllers/images_controller.rb:57
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 2 LIMIT 1[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [b269f2bf-d748-4734-9d1a-d0b2b0cdbc83] Performing ActiveStorage::PurgeJob (Job ID: b269f2bf-d748-4734-9d1a-d0b2b0cdbc83) from Async(default) with arguments: #<GlobalID:0x00007f9d3a6e5a08 @uri=#<URI::GID gid://about-paul/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::PurgeJob] [b269f2bf-d748-4734-9d1a-d0b2b0cdbc83] [36m  Disk Storage (0.6ms) [0m[31mDeleted file from key: irAexw1oHkg7wCYSqmQRPwHv[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [b269f2bf-d748-4734-9d1a-d0b2b0cdbc83] [36m  Disk Storage (0.9ms) [0m[31mDeleted files by key prefix: variants/irAexw1oHkg7wCYSqmQRPwHv/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [b269f2bf-d748-4734-9d1a-d0b2b0cdbc83]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [b269f2bf-d748-4734-9d1a-d0b2b0cdbc83]   ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [b269f2bf-d748-4734-9d1a-d0b2b0cdbc83]   [1m[36mActiveStorage::Blob Destroy (0.6ms)[0m  [1m[31mDELETE FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 2[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [b269f2bf-d748-4734-9d1a-d0b2b0cdbc83]   ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (21.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:57
+Redirected to http://localhost:3000/images
+Completed 302 Found in 164ms (ActiveRecord: 104.3ms)
+
+
+Started GET "/images" for 127.0.0.1 at 2018-07-07 14:58:33 -0700
+Processing by ImagesController#index as HTML
+[ActiveJob] [ActiveStorage::PurgeJob] [b269f2bf-d748-4734-9d1a-d0b2b0cdbc83]   [1m[35m (26.4ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [b269f2bf-d748-4734-9d1a-d0b2b0cdbc83]   ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (3.5ms)[0m  [1m[34mSELECT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/index.html.erb within layouts/application (5.3ms)
+[ActiveJob] [ActiveStorage::PurgeJob] [b269f2bf-d748-4734-9d1a-d0b2b0cdbc83]   [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT  `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'ActiveStorage::Blob' AND `active_storage_attachments`.`name` = 'preview_image' LIMIT 1[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [b269f2bf-d748-4734-9d1a-d0b2b0cdbc83]   ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [b269f2bf-d748-4734-9d1a-d0b2b0cdbc83] Performed ActiveStorage::PurgeJob (Job ID: b269f2bf-d748-4734-9d1a-d0b2b0cdbc83) from Async(default) in 51.21ms
+Completed 200 OK in 78ms (Views: 71.5ms | ActiveRecord: 3.5ms)
+
+
+Started DELETE "/images/2" for 127.0.0.1 at 2018-07-07 14:58:35 -0700
+Processing by ImagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Jsi+w1pzJqEpfbq2hvsJE34TPgre8+j/h54ITJt3lTzTMVP3ygpDuTbAITnc/emq8ClpV2fochQ1yV9yfU/LBQ==", "id"=>"2"}
+  [1m[36mImage Load (1.1ms)[0m  [1m[34mSELECT  `images`.* FROM `images` WHERE `images`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/images_controller.rb:67
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:57
+  [1m[36mImage Destroy (0.3ms)[0m  [1m[31mDELETE FROM `images` WHERE `images`.`id` = 2[0m
+  ↳ app/controllers/images_controller.rb:57
+  [1m[35m (35.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:57
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/controllers/images_controller.rb:57
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/images_controller.rb:57
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 178f5eb5-b52a-44ba-81ec-630a0234c4e7) to Async(default) with arguments: #<GlobalID:0x00007f9d3ac09138 @uri=#<URI::GID gid://about-paul/ActiveStorage::Blob/3>>
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:57
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3 LIMIT 1[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [178f5eb5-b52a-44ba-81ec-630a0234c4e7] Performing ActiveStorage::PurgeJob (Job ID: 178f5eb5-b52a-44ba-81ec-630a0234c4e7) from Async(default) with arguments: #<GlobalID:0x00007f9d39a887d8 @uri=#<URI::GID gid://about-paul/ActiveStorage::Blob/3>>
+  [1m[36mActiveStorage::Attachment Destroy (1.4ms)[0m  [1m[31mDELETE FROM `active_storage_attachments` WHERE `active_storage_attachments`.`id` = 2[0m
+  ↳ app/controllers/images_controller.rb:57
+[ActiveJob] [ActiveStorage::PurgeJob] [178f5eb5-b52a-44ba-81ec-630a0234c4e7] [36m  Disk Storage (0.8ms) [0m[31mDeleted file from key: ti8AUNSPm9rDvnK7NG5Wvrnc[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [178f5eb5-b52a-44ba-81ec-630a0234c4e7] [36m  Disk Storage (0.2ms) [0m[31mDeleted files by key prefix: variants/ti8AUNSPm9rDvnK7NG5Wvrnc/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [178f5eb5-b52a-44ba-81ec-630a0234c4e7]   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [178f5eb5-b52a-44ba-81ec-630a0234c4e7]   ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [178f5eb5-b52a-44ba-81ec-630a0234c4e7]   [1m[36mActiveStorage::Blob Destroy (0.4ms)[0m  [1m[31mDELETE FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [178f5eb5-b52a-44ba-81ec-630a0234c4e7]   ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (17.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:57
+[ActiveJob] [ActiveStorage::PurgeJob] [178f5eb5-b52a-44ba-81ec-630a0234c4e7]   [1m[35m (15.4ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [178f5eb5-b52a-44ba-81ec-630a0234c4e7]   ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/images_controller.rb:57
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 7f9c7c94-1b03-4974-93de-290a8520ba41) to Async(default) with arguments: #<GlobalID:0x00007f9d3abd8ad8 @uri=#<URI::GID gid://about-paul/ActiveStorage::Blob/4>>
+[ActiveJob] [ActiveStorage::PurgeJob] [178f5eb5-b52a-44ba-81ec-630a0234c4e7]   [1m[36mActiveStorage::Attachment Load (1.5ms)[0m  [1m[34mSELECT  `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'ActiveStorage::Blob' AND `active_storage_attachments`.`name` = 'preview_image' LIMIT 1[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [178f5eb5-b52a-44ba-81ec-630a0234c4e7]   ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [178f5eb5-b52a-44ba-81ec-630a0234c4e7] Performed ActiveStorage::PurgeJob (Job ID: 178f5eb5-b52a-44ba-81ec-630a0234c4e7) from Async(default) in 22.21ms
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:57
+  [1m[35m (0.6ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Attachment Destroy (0.5ms)[0m  [1m[31mDELETE FROM `active_storage_attachments` WHERE `active_storage_attachments`.`id` = 3[0m
+  ↳ app/controllers/images_controller.rb:57
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [7f9c7c94-1b03-4974-93de-290a8520ba41] Performing ActiveStorage::PurgeJob (Job ID: 7f9c7c94-1b03-4974-93de-290a8520ba41) from Async(default) with arguments: #<GlobalID:0x00007f9d3abc3840 @uri=#<URI::GID gid://about-paul/ActiveStorage::Blob/4>>
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:57
+[ActiveJob] [ActiveStorage::PurgeJob] [7f9c7c94-1b03-4974-93de-290a8520ba41] [36m  Disk Storage (0.2ms) [0m[31mDeleted file from key: vUV4oLbMnaALLzeMvWP4bmGb[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [7f9c7c94-1b03-4974-93de-290a8520ba41] [36m  Disk Storage (0.2ms) [0m[31mDeleted files by key prefix: variants/vUV4oLbMnaALLzeMvWP4bmGb/[0m
+Redirected to http://localhost:3000/images
+Completed 302 Found in 80ms (ActiveRecord: 60.8ms)
+
+
+[ActiveJob] [ActiveStorage::PurgeJob] [7f9c7c94-1b03-4974-93de-290a8520ba41]   [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [7f9c7c94-1b03-4974-93de-290a8520ba41]   ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [7f9c7c94-1b03-4974-93de-290a8520ba41]   [1m[36mActiveStorage::Blob Destroy (1.0ms)[0m  [1m[31mDELETE FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [7f9c7c94-1b03-4974-93de-290a8520ba41]   ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [7f9c7c94-1b03-4974-93de-290a8520ba41]   [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [7f9c7c94-1b03-4974-93de-290a8520ba41]   ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [7f9c7c94-1b03-4974-93de-290a8520ba41]   [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 4 AND `active_storage_attachments`.`record_type` = 'ActiveStorage::Blob' AND `active_storage_attachments`.`name` = 'preview_image' LIMIT 1[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [7f9c7c94-1b03-4974-93de-290a8520ba41]   ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [7f9c7c94-1b03-4974-93de-290a8520ba41] Performed ActiveStorage::PurgeJob (Job ID: 7f9c7c94-1b03-4974-93de-290a8520ba41) from Async(default) in 9.7ms
+Started GET "/images" for 127.0.0.1 at 2018-07-07 14:58:35 -0700
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 74ms (Views: 70.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 14:58:38 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 68ms (Views: 64.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-07 14:58:40 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.9ms)
+  Rendered users/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 89ms (Views: 79.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-07 14:58:58 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KQ+Pw+Lh10uKxCt5vwW43LdAvsUE8i6xNFwWg0YZ+aPGHI1Kavvdcc55fBCBLkkzyDU8sbVl3PN/vUkBDlEeew==", "user"=>{"image"=>{"uploads"=>[#<ActionDispatch::Http::UploadedFile:0x00007f9d38a2cab0 @tempfile=#<Tempfile:/var/folders/65/6418qwk55nbccpdlfd2m9f300000gn/T/RackMultipart20180707-8260-1cg2jj5.gif>, @original_filename="photography-student.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"user[image][uploads][]\"; filename=\"photography-student.gif\"\r\nContent-Type: image/gif\r\n">]}, "user_id"=>"paul", "is_admin"=>"1", "cart_id"=>"1", "album_list"=>"1", "friend_list"=>"1", "email"=>"paulancajima@yahoo.com", "password"=>"[FILTERED]", "first_name"=>"Paul", "last_name"=>"Ancajima"}, "commit"=>"Create User"}
+Unpermitted parameter: :image
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `id' for #<Class:0x00007f9d34236648>
+Did you mean?  ids):
+  
+app/controllers/users_controller.rb:30:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-07-07 15:00:59 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KQ+Pw+Lh10uKxCt5vwW43LdAvsUE8i6xNFwWg0YZ+aPGHI1Kavvdcc55fBCBLkkzyDU8sbVl3PN/vUkBDlEeew==", "user"=>{"image"=>{"uploads"=>[#<ActionDispatch::Http::UploadedFile:0x00007f9d38ebd368 @tempfile=#<Tempfile:/var/folders/65/6418qwk55nbccpdlfd2m9f300000gn/T/RackMultipart20180707-8260-1ajr9y.gif>, @original_filename="photography-student.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"user[image][uploads][]\"; filename=\"photography-student.gif\"\r\nContent-Type: image/gif\r\n">]}, "user_id"=>"paul", "is_admin"=>"1", "cart_id"=>"1", "album_list"=>"1", "friend_list"=>"1", "email"=>"paulancajima@yahoo.com", "password"=>"[FILTERED]", "first_name"=>"Paul", "last_name"=>"Ancajima"}, "commit"=>"Create User"}
+Unpermitted parameter: :image
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 22.9ms)
+
+
+  
+NoMethodError (undefined method `user_id=' for nil:NilClass):
+  
+app/controllers/users_controller.rb:30:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-07-07 15:01:09 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ICkjkWZ9iClg+EV7BdhGW18+s8lAuGRy2+11/upPnWXV0M6l9gTtMX9F3vRf3qbi0QTklPmj/plpuiLADHfDXA==", "user"=>{"image"=>{"uploads"=>[#<ActionDispatch::Http::UploadedFile:0x00007f9d3abe13b8 @tempfile=#<Tempfile:/var/folders/65/6418qwk55nbccpdlfd2m9f300000gn/T/RackMultipart20180707-8260-1qgvz2x.gif>, @original_filename="photography-student.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"user[image][uploads][]\"; filename=\"photography-student.gif\"\r\nContent-Type: image/gif\r\n">]}, "user_id"=>"paul", "is_admin"=>"1", "cart_id"=>"1", "album_list"=>"1", "friend_list"=>"1", "email"=>"paulancajima@yahoo.com", "password"=>"[FILTERED]", "first_name"=>"Paul", "last_name"=>"Ancajima"}, "commit"=>"Create User"}
+Unpermitted parameter: :image
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `user_id=' for nil:NilClass):
+  
+app/controllers/users_controller.rb:30:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-07-07 15:01:28 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ICkjkWZ9iClg+EV7BdhGW18+s8lAuGRy2+11/upPnWXV0M6l9gTtMX9F3vRf3qbi0QTklPmj/plpuiLADHfDXA==", "user"=>{"image"=>{"uploads"=>[#<ActionDispatch::Http::UploadedFile:0x00007f9d38ccde68 @tempfile=#<Tempfile:/var/folders/65/6418qwk55nbccpdlfd2m9f300000gn/T/RackMultipart20180707-8260-xv59t7.gif>, @original_filename="photography-student.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"user[image][uploads][]\"; filename=\"photography-student.gif\"\r\nContent-Type: image/gif\r\n">]}, "user_id"=>"paul", "is_admin"=>"1", "cart_id"=>"1", "album_list"=>"1", "friend_list"=>"1", "email"=>"paulancajima@yahoo.com", "password"=>"[FILTERED]", "first_name"=>"Paul", "last_name"=>"Ancajima"}, "commit"=>"Create User"}
+Unpermitted parameter: :image
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 19.7ms)
+
+
+  
+NoMethodError (undefined method `user_id=' for nil:NilClass):
+  
+app/controllers/users_controller.rb:30:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-07-07 15:01:33 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ICkjkWZ9iClg+EV7BdhGW18+s8lAuGRy2+11/upPnWXV0M6l9gTtMX9F3vRf3qbi0QTklPmj/plpuiLADHfDXA==", "user"=>{"image"=>{"uploads"=>[#<ActionDispatch::Http::UploadedFile:0x00007f9d36feaeb8 @tempfile=#<Tempfile:/var/folders/65/6418qwk55nbccpdlfd2m9f300000gn/T/RackMultipart20180707-8260-1aa0w8s.gif>, @original_filename="photography-student.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"user[image][uploads][]\"; filename=\"photography-student.gif\"\r\nContent-Type: image/gif\r\n">]}, "user_id"=>"paul", "is_admin"=>"1", "cart_id"=>"1", "album_list"=>"1", "friend_list"=>"1", "email"=>"paulancajima@yahoo.com", "password"=>"[FILTERED]", "first_name"=>"Paul", "last_name"=>"Ancajima"}, "commit"=>"Create User"}
+Unpermitted parameter: :image
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `user_id=' for nil:NilClass):
+  
+app/controllers/users_controller.rb:30:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-07-07 15:03:25 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ICkjkWZ9iClg+EV7BdhGW18+s8lAuGRy2+11/upPnWXV0M6l9gTtMX9F3vRf3qbi0QTklPmj/plpuiLADHfDXA==", "user"=>{"image"=>{"uploads"=>[#<ActionDispatch::Http::UploadedFile:0x00007f9d34c27878 @tempfile=#<Tempfile:/var/folders/65/6418qwk55nbccpdlfd2m9f300000gn/T/RackMultipart20180707-8260-7nzgb5.gif>, @original_filename="photography-student.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"user[image][uploads][]\"; filename=\"photography-student.gif\"\r\nContent-Type: image/gif\r\n">]}, "user_id"=>"paul", "is_admin"=>"1", "cart_id"=>"1", "album_list"=>"1", "friend_list"=>"1", "email"=>"paulancajima@yahoo.com", "password"=>"[FILTERED]", "first_name"=>"Paul", "last_name"=>"Ancajima"}, "commit"=>"Create User"}
+Unpermitted parameter: :image
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 20.7ms)
+
+
+  
+NoMethodError (undefined method `user_id' for #<Class:0x00007f9d34c1cc98>):
+  
+app/controllers/users_controller.rb:30:in `create'
+  [1m[35m (0.7ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('5509066464804893655', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('5509066464804893655')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Started POST "/users" for 127.0.0.1 at 2018-07-07 15:06:59 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ICkjkWZ9iClg+EV7BdhGW18+s8lAuGRy2+11/upPnWXV0M6l9gTtMX9F3vRf3qbi0QTklPmj/plpuiLADHfDXA==", "user"=>{"image"=>{"uploads"=>[#<ActionDispatch::Http::UploadedFile:0x00007f9d3aa23c10 @tempfile=#<Tempfile:/var/folders/65/6418qwk55nbccpdlfd2m9f300000gn/T/RackMultipart20180707-8260-1rtzpmh.gif>, @original_filename="photography-student.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"user[image][uploads][]\"; filename=\"photography-student.gif\"\r\nContent-Type: image/gif\r\n">]}, "user_id"=>"paul", "is_admin"=>"1", "cart_id"=>"1", "album_list"=>"1", "friend_list"=>"1", "email"=>"paulancajima@yahoo.com", "password"=>"[FILTERED]", "first_name"=>"Paul", "last_name"=>"Ancajima"}, "commit"=>"Create User"}
+Unpermitted parameter: :image
+Completed 500 Internal Server Error in 245ms (ActiveRecord: 20.2ms)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<UsersController:0x00007f9d3a4059f0>):
+  
+app/controllers/users_controller.rb:30:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-07-07 15:07:14 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ICkjkWZ9iClg+EV7BdhGW18+s8lAuGRy2+11/upPnWXV0M6l9gTtMX9F3vRf3qbi0QTklPmj/plpuiLADHfDXA==", "user"=>{"image"=>{"uploads"=>[#<ActionDispatch::Http::UploadedFile:0x00007f9d389a3198 @tempfile=#<Tempfile:/var/folders/65/6418qwk55nbccpdlfd2m9f300000gn/T/RackMultipart20180707-8260-oay3mx.gif>, @original_filename="photography-student.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"user[image][uploads][]\"; filename=\"photography-student.gif\"\r\nContent-Type: image/gif\r\n">]}, "user_id"=>"paul", "is_admin"=>"1", "cart_id"=>"1", "album_list"=>"1", "friend_list"=>"1", "email"=>"paulancajima@yahoo.com", "password"=>"[FILTERED]", "first_name"=>"Paul", "last_name"=>"Ancajima"}, "commit"=>"Create User"}
+Unpermitted parameter: :image
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 20.2ms)
+
+
+  
+NoMethodError (undefined method `user_id=' for nil:NilClass):
+  
+app/controllers/users_controller.rb:30:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-07-07 15:11:40 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ICkjkWZ9iClg+EV7BdhGW18+s8lAuGRy2+11/upPnWXV0M6l9gTtMX9F3vRf3qbi0QTklPmj/plpuiLADHfDXA==", "user"=>{"image"=>{"uploads"=>[#<ActionDispatch::Http::UploadedFile:0x00007f9d3a4ae1e0 @tempfile=#<Tempfile:/var/folders/65/6418qwk55nbccpdlfd2m9f300000gn/T/RackMultipart20180707-8260-vj9006.gif>, @original_filename="photography-student.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"user[image][uploads][]\"; filename=\"photography-student.gif\"\r\nContent-Type: image/gif\r\n">]}, "user_id"=>"paul", "is_admin"=>"1", "cart_id"=>"1", "album_list"=>"1", "friend_list"=>"1", "email"=>"paulancajima@yahoo.com", "password"=>"[FILTERED]", "first_name"=>"Paul", "last_name"=>"Ancajima"}, "commit"=>"Create User"}
+Unpermitted parameter: :image
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`user_id`, `is_admin`, `cart_id`, `album_list`, `friend_list`, `email`, `password`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES ('paul', TRUE, 1, 1, 1, 'paulancajima@yahoo.com', 'password', 'Paul', 'Ancajima', '2018-07-07 22:11:40', '2018-07-07 22:11:40')[0m
+  ↳ app/controllers/users_controller.rb:32
+  [1m[35m (131.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 174ms (ActiveRecord: 150.7ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2018-07-07 15:11:40 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '7'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 163ms (Views: 155.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 15:11:43 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 91ms (Views: 86.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2018-07-07 15:11:45 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '7'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 122ms (Views: 110.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/7/edit" for 127.0.0.1 at 2018-07-07 15:11:48 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (8.5ms)
+  Rendered users/edit.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 110ms (Views: 102.4ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/users/7" for 127.0.0.1 at 2018-07-07 15:11:55 -0700
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TywV6nPO/PhBu8EoER2tjVto8CwrzAiJ9ZtU2wiaaWGGIbVZeVVPSqgO2H2zrCNhEZQ5kTc5Mb2A8BE3GE1etg==", "user"=>{"image"=>{"uploads"=>[#<ActionDispatch::Http::UploadedFile:0x00007f9d3983fd28 @tempfile=#<Tempfile:/var/folders/65/6418qwk55nbccpdlfd2m9f300000gn/T/RackMultipart20180707-8260-129ozgr.gif>, @original_filename="photography-student.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"user[image][uploads][]\"; filename=\"photography-student.gif\"\r\nContent-Type: image/gif\r\n">]}, "user_id"=>"paul", "is_admin"=>"1", "cart_id"=>"1", "album_list"=>"1", "friend_list"=>"1", "email"=>"paulancajima@yahoo.com", "password"=>"[FILTERED]", "first_name"=>"Paul", "last_name"=>"Ancajima"}, "commit"=>"Update User", "id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+Unpermitted parameter: :image
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:46
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '7'[0m
+  ↳ app/controllers/users_controller.rb:46
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:46
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 6ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2018-07-07 15:11:55 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '7'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 80ms (Views: 72.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 15:11:57 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 123ms (Views: 115.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2018-07-07 15:11:59 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mImage Load (8.2ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '7'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 87ms (Views: 68.9ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2018-07-07 15:12:23 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT  `images`.* FROM `images` WHERE `images`.`user_id` = '7' LIMIT 11[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendered users/show.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `uploads' for #<ActiveRecord::Associations::CollectionProxy []>
+Did you mean?  load):
+    3: <p>
+    4: 
+    5: <<ul>
+    6:   <% @user.images.uploads.each do |upload| %>
+    7:     <li>
+    8:       <%= image_tag upload, size: '200x200'  %>
+    9:     </li>
+  
+app/views/users/show.html.erb:6:in `_app_views_users_show_html_erb___2208141139201338831_70156632143080'
+Started GET "/users/7" for 127.0.0.1 at 2018-07-07 15:12:41 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `uploads' for nil:NilClass):
+    3: <p>
+    4: 
+    5: <<ul>
+    6:   <% @images.uploads.each do |upload| %>
+    7:     <li>
+    8:       <%= image_tag upload, size: '200x200'  %>
+    9:     </li>
+  
+app/views/users/show.html.erb:6:in `_app_views_users_show_html_erb___2208141139201338831_70156583401720'
+Started GET "/users/7" for 127.0.0.1 at 2018-07-07 15:14:26 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<User:0x00007f9d34ebe988>
+Did you mean?  images
+               images=):
+    3: <p>
+    4: 
+    5: <<ul>
+    6:   <% @user.image.each do |upload| %>
+    7:     <li>
+    8:       <%= image_tag upload, size: '200x200'  %>
+    9:     </li>
+  
+app/views/users/show.html.erb:6:in `_app_views_users_show_html_erb___2208141139201338831_70156587231980'
+Started GET "/users/7" for 127.0.0.1 at 2018-07-07 15:14:58 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '7'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 74ms (Views: 68.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 15:15:02 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 97ms (Views: 86.2ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2018-07-07 15:15:04 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mImage Load (7.3ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '7'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 98ms (Views: 84.0ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/users/7/edit" for 127.0.0.1 at 2018-07-07 15:15:06 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.3ms)
+  Rendered users/edit.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 85ms (Views: 77.9ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/users/7" for 127.0.0.1 at 2018-07-07 15:15:11 -0700
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cuatmJ1KP7DCX3T3cPcE91Cr5myLBhbM/Ue2BqeRzbi76w0rl9GMAivqbaLSRoobGlcv0ZfzL/iILPPqt0b6bw==", "user"=>{"image"=>{"uploads"=>[#<ActionDispatch::Http::UploadedFile:0x00007f9d34ef60e0 @tempfile=#<Tempfile:/var/folders/65/6418qwk55nbccpdlfd2m9f300000gn/T/RackMultipart20180707-8260-19gqqbr.gif>, @original_filename="photography-student.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"user[image][uploads][]\"; filename=\"photography-student.gif\"\r\nContent-Type: image/gif\r\n">]}, "user_id"=>"paul", "is_admin"=>"1", "cart_id"=>"1", "album_list"=>"1", "friend_list"=>"1", "email"=>"paulancajima@yahoo.com", "password"=>"[FILTERED]", "first_name"=>"Paul", "last_name"=>"Ancajima"}, "commit"=>"Update User", "id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+Unpermitted parameter: :image
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:46
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '7'[0m
+  ↳ app/controllers/users_controller.rb:46
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:46
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2018-07-07 15:15:11 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '7'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 68ms (Views: 63.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 15:15:13 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 91ms (Views: 83.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2018-07-07 15:15:15 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mImage Load (2.7ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '7'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 88ms (Views: 79.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/images" for 127.0.0.1 at 2018-07-07 15:17:14 -0700
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 73ms (Views: 69.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/new" for 127.0.0.1 at 2018-07-07 15:17:19 -0700
+Processing by ImagesController#new as HTML
+  Rendering images/new.html.erb within layouts/application
+  Rendered images/_form.html.erb (5.3ms)
+  Rendered images/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 118ms (Views: 87.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/images" for 127.0.0.1 at 2018-07-07 15:17:24 -0700
+Processing by ImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e0vJwZRI/0aEimNDchjp0jUqZKbkogoLTReMulOq47zDT5a4GP61Gk+702AdhoiDmcZKo7RdyBWciZyHkFbKWQ==", "image"=>{"uploads"=>[#<ActionDispatch::Http::UploadedFile:0x00007f9d38a79090 @tempfile=#<Tempfile:/var/folders/65/6418qwk55nbccpdlfd2m9f300000gn/T/RackMultipart20180707-8260-58c1jw.gif>, @original_filename="bg.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"image[uploads][]\"; filename=\"bg.gif\"\r\nContent-Type: image/gif\r\n">], "image_id"=>"", "is_approved"=>"0", "image_title"=>"", "image_owner_id"=>"", "tag_id"=>"", "licensing"=>"", "date(1i)"=>"2018", "date(2i)"=>"7", "date(3i)"=>"7", "description"=>"", "file_type"=>"", "location"=>""}, "commit"=>"Create Image"}
+[36m  Disk Storage (12.8ms) [0m[32mUploaded file to key: UErWJvTTgZvnykv1KNXuUJ9L (checksum: 7jPu4IfrTJvpLp8g0CJdLA==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:27
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO `active_storage_blobs` (`key`, `filename`, `content_type`, `metadata`, `byte_size`, `checksum`, `created_at`) VALUES ('UErWJvTTgZvnykv1KNXuUJ9L', 'bg.gif', 'image/gif', '{\"identified\":true}', 1700428, '7jPu4IfrTJvpLp8g0CJdLA==', '2018-07-07 22:17:24')[0m
+  ↳ app/controllers/images_controller.rb:27
+  [1m[35m (25.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:30
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/images_controller.rb:30
+  Rendering images/new.html.erb within layouts/application
+  Rendered images/_form.html.erb (4.8ms)
+  Rendered images/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 188ms (Views: 84.8ms | ActiveRecord: 49.7ms)
+
+
+Started GET "/images" for 127.0.0.1 at 2018-07-07 15:17:36 -0700
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.9ms)[0m  [1m[34mSELECT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 110ms (Views: 100.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/7/edit" for 127.0.0.1 at 2018-07-07 15:17:45 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.1ms)
+  Rendered users/edit.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 89ms (Views: 81.1ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/users/7" for 127.0.0.1 at 2018-07-07 15:17:50 -0700
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SpeK9woY2cxtEopDjvQo5DsTdwQTcRFy1Qzpl+grSQaDmipEAINqfoSnkxYsRaYIce++uQ+EKEagZ6x7+Px+0Q==", "user"=>{"user_id"=>"paul", "is_admin"=>"1", "cart_id"=>"1", "album_list"=>"1", "friend_list"=>"1", "email"=>"paulancajima@yahoo.com", "password"=>"[FILTERED]", "first_name"=>"Paul", "last_name"=>"Ancajima"}, "commit"=>"Update User", "id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:46
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '7'[0m
+  ↳ app/controllers/users_controller.rb:46
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:46
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2018-07-07 15:17:50 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '7'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 66ms (Views: 62.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/7/edit" for 127.0.0.1 at 2018-07-07 15:18:00 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (7.1ms)
+  Rendered users/edit.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 88ms (Views: 84.1ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/users/7" for 127.0.0.1 at 2018-07-07 15:18:11 -0700
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q9BRskxcKSupnxYzy8IiDtCPgbUyXDhwKYP21CSaW6Fi3fEBRseamUAqD2Zpc6zimnNICC6pAURc6LM4NE1sdg==", "user"=>{"image"=>{"uploads"=>[#<ActionDispatch::Http::UploadedFile:0x00007f9d38a8bba0 @tempfile=#<Tempfile:/var/folders/65/6418qwk55nbccpdlfd2m9f300000gn/T/RackMultipart20180707-8260-d8jx9s.gif>, @original_filename="bg.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"user[image][uploads][]\"; filename=\"bg.gif\"\r\nContent-Type: image/gif\r\n">]}, "user_id"=>"paul", "is_admin"=>"1", "cart_id"=>"1", "album_list"=>"1", "friend_list"=>"1", "email"=>"paulancajima@yahoo.com", "password"=>"[FILTERED]", "first_name"=>"Paul", "last_name"=>"Ancajima"}, "commit"=>"Update User", "id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+Unpermitted parameter: :image
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:46
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '7'[0m
+  ↳ app/controllers/users_controller.rb:46
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:46
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 6ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2018-07-07 15:18:11 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '7'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 69ms (Views: 64.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 15:18:17 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 98ms (Views: 93.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/7/edit" for 127.0.0.1 at 2018-07-07 15:18:25 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.4ms)
+  Rendered users/edit.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 94ms (Views: 86.2ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/7" for 127.0.0.1 at 2018-07-07 15:18:30 -0700
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"u3iwa5XT5DliCsschFkvKAlzmmMGa1O5fOOGwNY4h7VOgV1fBaqBIX23UJPeX8+Rh0nNPr9wyVLOtNH+MADZjA==", "id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:59
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 7[0m
+  ↳ app/controllers/users_controller.rb:59
+  [1m[35m (49.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:59
+Redirected to http://localhost:3000/users
+Completed 302 Found in 55ms (ActiveRecord: 50.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 15:18:30 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 68ms (Views: 65.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-07 15:18:38 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.5ms)
+  Rendered users/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 91ms (Views: 82.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 15:18:39 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 90ms (Views: 81.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/images" for 127.0.0.1 at 2018-07-07 15:18:57 -0700
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 85ms (Views: 82.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/new" for 127.0.0.1 at 2018-07-07 15:19:03 -0700
+Processing by ImagesController#new as HTML
+  Rendering images/new.html.erb within layouts/application
+  Rendered images/_form.html.erb (4.7ms)
+  Rendered images/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 96ms (Views: 90.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-07 15:19:15 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (9.8ms)
+  Rendered users/new.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 95ms (Views: 88.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 15:19:17 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 94ms (Views: 84.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-07 15:21:41 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (6.8ms)
+  Rendered users/new.html.erb within layouts/application (29.3ms)
+Completed 200 OK in 148ms (Views: 137.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-07 15:21:48 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/nX06C04OtDDmzzOeud0UbcFXkVn+pK934Kp9ASfDyoRZvZhpSIw6ocma6dEzIW+yHDcMdZtYP+UY/Z2TNfo8g==", "user"=>{"image"=>{"uploads"=>[#<ActionDispatch::Http::UploadedFile:0x00007f9d36f65038 @tempfile=#<Tempfile:/var/folders/65/6418qwk55nbccpdlfd2m9f300000gn/T/RackMultipart20180707-8260-1g0gioy.gif>, @original_filename="bg.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"user[image][uploads][]\"; filename=\"bg.gif\"\r\nContent-Type: image/gif\r\n">]}, "user_id"=>"paul", "is_admin"=>"0", "cart_id"=>"", "album_list"=>"", "friend_list"=>"", "email"=>"paulancajima@yahoo.com", "password"=>"[FILTERED]", "first_name"=>"Paul", "last_name"=>"Ancajima"}, "commit"=>"Create User"}
+Unpermitted parameter: :image
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`user_id`, `is_admin`, `email`, `password`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES ('paul', FALSE, 'paulancajima@yahoo.com', '', 'Paul', 'Ancajima', '2018-07-07 22:21:48', '2018-07-07 22:21:48')[0m
+  ↳ app/controllers/users_controller.rb:32
+  [1m[35m (44.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32
+Redirected to http://localhost:3000/users/8
+Completed 302 Found in 53ms (ActiveRecord: 45.0ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-07-07 15:21:48 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '8'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 87ms (Views: 82.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 15:21:50 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 108ms (Views: 104.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-07-07 15:21:52 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mImage Load (4.2ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '8'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 99ms (Views: 83.3ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-07-07 15:23:27 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '8'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 109ms (Views: 80.7ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 15:23:30 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 118ms (Views: 105.8ms | ActiveRecord: 5.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-07 15:23:35 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z6JkgMqFI9Ozmqt69X+kZD94DZSWcnvi+V9QQ5XIlOE6W4m0WvxGy6wnMPWveUTdsUJayS9p4QlLCAd9c/DK2A==", "user"=>{"image"=>{"uploads"=>[#<ActionDispatch::Http::UploadedFile:0x00007f9d38a21d68 @tempfile=#<Tempfile:/var/folders/65/6418qwk55nbccpdlfd2m9f300000gn/T/RackMultipart20180707-8260-78knfr.gif>, @original_filename="bg.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"user[image][uploads][]\"; filename=\"bg.gif\"\r\nContent-Type: image/gif\r\n">]}, "user_id"=>"paul", "is_admin"=>"0", "cart_id"=>"", "album_list"=>"", "friend_list"=>"", "email"=>"paulancajima@yahoo.com", "password"=>"[FILTERED]", "first_name"=>"Paul", "last_name"=>"Ancajima"}, "commit"=>"Create User"}
+Unpermitted parameter: :image
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`user_id`, `is_admin`, `email`, `password`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES ('paul', FALSE, 'paulancajima@yahoo.com', '', 'Paul', 'Ancajima', '2018-07-07 22:23:35', '2018-07-07 22:23:35')[0m
+  ↳ app/controllers/users_controller.rb:32
+  [1m[35m (71.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32
+Redirected to http://localhost:3000/users/9
+Completed 302 Found in 85ms (ActiveRecord: 79.1ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2018-07-07 15:23:35 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '9'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 79ms (Views: 74.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 15:23:37 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 99ms (Views: 91.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2018-07-07 15:23:39 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mImage Load (2.6ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '9'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 87ms (Views: 72.5ms | ActiveRecord: 4.4ms)
+
+
+Started DELETE "/users/8" for 127.0.0.1 at 2018-07-07 15:31:46 -0700
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"koPeo4xgRqa4ikzQPoY8aorWiE2MmefN2SdcqOJyAbFnejOXHBkjvqc3119kgNzTBOzfEDWCfSZrcAuWBEpfiA==", "id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:59
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 8[0m
+  ↳ app/controllers/users_controller.rb:59
+  [1m[35m (42.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:59
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 8 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/controllers/users_controller.rb:59
+Redirected to http://localhost:3000/users
+Completed 302 Found in 85ms (ActiveRecord: 58.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 15:31:46 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 88ms (Views: 84.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/9" for 127.0.0.1 at 2018-07-07 15:31:48 -0700
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qqVxuY5sJjBRfxWaSNHwwEDLncv8ELtuCdpMVtpACUpfXJyNHhVDKE7CjhUS1xB5zvHKlkULIYW7jRtoPHhXcw==", "id"=>"9"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:59
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 9[0m
+  ↳ app/controllers/users_controller.rb:59
+  [1m[35m (134.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:59
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 9 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/controllers/users_controller.rb:59
+Redirected to http://localhost:3000/users
+Completed 302 Found in 142ms (ActiveRecord: 136.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 15:31:48 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 80ms (Views: 76.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-07 15:31:50 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.5ms)
+  Rendered users/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 161ms (Views: 105.0ms | ActiveRecord: 26.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-07 15:31:57 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xDTN1fB1wNpgi9O2qZwO2wP23WKU3DL01R9Aw7hC/84rJ89ceG/K4CQ2hN+Xt/80fINfFiVLwLae/h9B8AoYFg==", "user"=>{"uploads"=>{"uploads"=>[#<ActionDispatch::Http::UploadedFile:0x00007f9d3a5a5418 @tempfile=#<Tempfile:/var/folders/65/6418qwk55nbccpdlfd2m9f300000gn/T/RackMultipart20180707-8260-17wn0de.gif>, @original_filename="bg.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"user[uploads][uploads][]\"; filename=\"bg.gif\"\r\nContent-Type: image/gif\r\n">]}, "user_id"=>"paul", "is_admin"=>"0", "cart_id"=>"", "album_list"=>"", "friend_list"=>"", "email"=>"paulancajima@yahoo.com", "password"=>"[FILTERED]", "first_name"=>"Paul", "last_name"=>"Ancajima"}, "commit"=>"Create User"}
+Unpermitted parameter: :uploads
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`user_id`, `is_admin`, `email`, `password`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES ('paul', FALSE, 'paulancajima@yahoo.com', '', 'Paul', 'Ancajima', '2018-07-07 22:31:57', '2018-07-07 22:31:57')[0m
+  ↳ app/controllers/users_controller.rb:32
+  [1m[35m (55.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32
+Redirected to http://localhost:3000/users/10
+Completed 302 Found in 61ms (ActiveRecord: 55.8ms)
+
+
+Started GET "/users/10" for 127.0.0.1 at 2018-07-07 15:31:57 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '10'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 89ms (Views: 83.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 15:32:00 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 86ms (Views: 78.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/10" for 127.0.0.1 at 2018-07-07 15:32:01 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mImage Load (3.1ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '10'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 90ms (Views: 80.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/users/10" for 127.0.0.1 at 2018-07-07 15:33:34 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 10 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 86ms (Views: 81.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/10" for 127.0.0.1 at 2018-07-07 15:34:50 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 10 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 105ms (Views: 73.1ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/users/10/edit" for 127.0.0.1 at 2018-07-07 15:34:53 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (6.1ms)
+  Rendered users/edit.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 101ms (Views: 90.9ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/users/10" for 127.0.0.1 at 2018-07-07 15:34:57 -0700
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lWzSyboLzgFPlzR4xVOCgALhZlLHoygOh6goUdF/yCGeAyZCxzK+ge8syHqM3lo+nevTQiEdld05QzKf2fdYuw==", "user"=>{"uploads"=>{"uploads"=>[#<ActionDispatch::Http::UploadedFile:0x00007f9d33a203a0 @tempfile=#<Tempfile:/var/folders/65/6418qwk55nbccpdlfd2m9f300000gn/T/RackMultipart20180707-8260-1hp16vt.gif>, @original_filename="bg.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"user[uploads][uploads][]\"; filename=\"bg.gif\"\r\nContent-Type: image/gif\r\n">]}, "user_id"=>"paul", "is_admin"=>"0", "cart_id"=>"", "album_list"=>"", "friend_list"=>"", "email"=>"paulancajima@yahoo.com", "password"=>"[FILTERED]", "first_name"=>"Paul", "last_name"=>"Ancajima"}, "commit"=>"Update User", "id"=>"10"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+Unpermitted parameter: :uploads
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:46
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '10'[0m
+  ↳ app/controllers/users_controller.rb:46
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:46
+Redirected to http://localhost:3000/users/10
+Completed 302 Found in 12ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/users/10" for 127.0.0.1 at 2018-07-07 15:34:57 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 10 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 78ms (Views: 73.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 15:35:00 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 103ms (Views: 94.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/10" for 127.0.0.1 at 2018-07-07 15:35:01 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 10 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 107ms (Views: 100.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 15:36:06 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 89ms (Views: 72.1ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/users/10" for 127.0.0.1 at 2018-07-07 15:36:08 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 10 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 101ms (Views: 87.9ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/users/10/edit" for 127.0.0.1 at 2018-07-07 15:36:09 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.4ms)
+  Rendered users/edit.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 94ms (Views: 84.8ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/users/10" for 127.0.0.1 at 2018-07-07 15:36:13 -0700
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TNpapOhUfXgURRaTHvEc4JRxVBCNQHBwWXaXel/ncnpHta4vlW0N+LT+6pFXfMReC3vhAGv+zaPnnY20V2/i4A==", "user"=>{"uploads"=>{"uploads"=>[#<ActionDispatch::Http::UploadedFile:0x00007f9d39ca95a8 @tempfile=#<Tempfile:/var/folders/65/6418qwk55nbccpdlfd2m9f300000gn/T/RackMultipart20180707-8260-10ub5s6.gif>, @original_filename="photography-student.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"user[uploads][uploads][]\"; filename=\"photography-student.gif\"\r\nContent-Type: image/gif\r\n">]}, "user_id"=>"paul", "is_admin"=>"0", "cart_id"=>"", "album_list"=>"", "friend_list"=>"", "email"=>"paulancajima@yahoo.com", "password"=>"[FILTERED]", "first_name"=>"Paul", "last_name"=>"Ancajima"}, "commit"=>"Update User", "id"=>"10"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68
+Unpermitted parameter: :uploads
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:45
+  [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`user_id` = '10'[0m
+  ↳ app/controllers/users_controller.rb:45
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:45
+Redirected to http://localhost:3000/users/10
+Completed 302 Found in 20ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/users/10" for 127.0.0.1 at 2018-07-07 15:36:13 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 10 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 68ms (Views: 63.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 15:36:15 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 80ms (Views: 70.6ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/users/10" for 127.0.0.1 at 2018-07-07 15:36:17 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 10 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 99ms (Views: 87.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 15:36:29 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 102ms (Views: 94.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images" for 127.0.0.1 at 2018-07-07 15:36:34 -0700
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 88ms (Views: 83.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/new" for 127.0.0.1 at 2018-07-07 15:36:36 -0700
+Processing by ImagesController#new as HTML
+  Rendering images/new.html.erb within layouts/application
+  Rendered images/_form.html.erb (6.5ms)
+  Rendered images/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 126ms (Views: 82.9ms | ActiveRecord: 29.1ms)
+
+
+Started POST "/images" for 127.0.0.1 at 2018-07-07 15:36:41 -0700
+Processing by ImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ai1F2u7ezd3FnVje8SKnXlcIvbISCLqrHjU4b4D/Gwi6KRqjYmiHgQ6s6P2evMYP++STt0L3eLXPqyhSQwMy7Q==", "image"=>{"uploads"=>[#<ActionDispatch::Http::UploadedFile:0x00007f9d3476de68 @tempfile=#<Tempfile:/var/folders/65/6418qwk55nbccpdlfd2m9f300000gn/T/RackMultipart20180707-8260-1583nnt.png>, @original_filename="Screen Shot 2018-06-26 at 7.13.46 PM.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"image[uploads][]\"; filename=\"Screen Shot 2018-06-26 at 7.13.46 PM.png\"\r\nContent-Type: image/png\r\n">], "image_id"=>"", "is_approved"=>"0", "image_title"=>"", "image_owner_id"=>"", "tag_id"=>"", "licensing"=>"", "date(1i)"=>"2018", "date(2i)"=>"7", "date(3i)"=>"7", "description"=>"", "file_type"=>"", "location"=>""}, "commit"=>"Create Image"}
+[36m  Disk Storage (4.7ms) [0m[32mUploaded file to key: 6sZzPwSbRzdwKi8VAxNmSFEy (checksum: CY/Kpb9ez5rBtaRHykJ8mA==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:27
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO `active_storage_blobs` (`key`, `filename`, `content_type`, `metadata`, `byte_size`, `checksum`, `created_at`) VALUES ('6sZzPwSbRzdwKi8VAxNmSFEy', 'Screen Shot 2018-06-26 at 7.13.46 PM.png', 'image/png', '{\"identified\":true}', 90278, 'CY/Kpb9ez5rBtaRHykJ8mA==', '2018-07-07 22:36:41')[0m
+  ↳ app/controllers/images_controller.rb:27
+  [1m[35m (136.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/images_controller.rb:30
+  Rendering images/new.html.erb within layouts/application
+  Rendered images/_form.html.erb (4.8ms)
+  Rendered images/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 290ms (Views: 68.0ms | ActiveRecord: 160.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 15:36:51 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 70ms (Views: 66.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/10" for 127.0.0.1 at 2018-07-07 15:36:54 -0700
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kbOvFQI+AF7wqEgWh3cD/8dFvO59UJSQSdY1np/7WeFkSkIhkkdlRu8V05ndceNGSX/rs8RLDnv7gWKgecMH2A==", "id"=>"10"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:58
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 10[0m
+  ↳ app/controllers/users_controller.rb:58
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:58
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 10 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/controllers/users_controller.rb:58
+Redirected to http://localhost:3000/users
+Completed 302 Found in 16ms (ActiveRecord: 10.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 15:36:54 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 72ms (Views: 67.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-07 15:36:56 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.1ms)
+  Rendered users/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 92ms (Views: 85.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-07 15:38:03 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.1ms)
+  Rendered users/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 75ms (Views: 72.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-07 15:38:10 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6OYDkjeg0ZyMkN23HBvmmN4W8ELxICuCi+qgLgVMMQQdH+6mp9m0hJMtRjhGHQYhUCynH0g7sWk5vfcQ43RvPQ==", "user"=>{"uploads"=>[#<ActionDispatch::Http::UploadedFile:0x00007f9d3470b3d0 @tempfile=#<Tempfile:/var/folders/65/6418qwk55nbccpdlfd2m9f300000gn/T/RackMultipart20180707-8260-4qgmte.gif>, @original_filename="photography-student.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"user[uploads][]\"; filename=\"photography-student.gif\"\r\nContent-Type: image/gif\r\n">], "user_id"=>"", "is_admin"=>"0", "cart_id"=>"", "album_list"=>"", "friend_list"=>"", "email"=>"paulancajima@yahoo.com", "password"=>"[FILTERED]", "first_name"=>"Paul", "last_name"=>"Ancajima"}, "commit"=>"Create User"}
+[36m  Disk Storage (2.8ms) [0m[32mUploaded file to key: BBFxDC1H1LuVrT2ZDsrkj5iv (checksum: eeg6UIb841y+mD2TJ89cWA==)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:28
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO `active_storage_blobs` (`key`, `filename`, `content_type`, `metadata`, `byte_size`, `checksum`, `created_at`) VALUES ('BBFxDC1H1LuVrT2ZDsrkj5iv', 'photography-student.gif', 'image/gif', '{\"identified\":true}', 48720, 'eeg6UIb841y+mD2TJ89cWA==', '2018-07-07 22:38:10')[0m
+  ↳ app/controllers/users_controller.rb:28
+  [1m[35m (30.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`user_id`, `is_admin`, `email`, `password`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES ('', FALSE, 'paulancajima@yahoo.com', '', 'Paul', 'Ancajima', '2018-07-07 22:38:10', '2018-07-07 22:38:10')[0m
+  ↳ app/controllers/users_controller.rb:31
+  [1m[36mActiveStorage::Attachment Create (0.3ms)[0m  [1m[32mINSERT INTO `active_storage_attachments` (`name`, `record_type`, `record_id`, `blob_id`, `created_at`) VALUES ('uploads', 'User', 11, 7, '2018-07-07 22:38:10')[0m
+  ↳ app/controllers/users_controller.rb:31
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE `users` SET `updated_at` = '2018-07-07 22:38:10' WHERE `users`.`id` = 11[0m
+  ↳ app/controllers/users_controller.rb:31
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: c7eb309d-0fec-4d39-b271-0d7772da40ee) to Async(default) with arguments: #<GlobalID:0x00007f9d388f9a80 @uri=#<URI::GID gid://about-paul/ActiveStorage::Blob/7>>
+Redirected to http://localhost:3000/users/11
+Completed 302 Found in 69ms (ActiveRecord: 32.6ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Blob Load (1.7ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 7 LIMIT 1[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c7eb309d-0fec-4d39-b271-0d7772da40ee] Performing ActiveStorage::AnalyzeJob (Job ID: c7eb309d-0fec-4d39-b271-0d7772da40ee) from Async(default) with arguments: #<GlobalID:0x00007f9d388a9080 @uri=#<URI::GID gid://about-paul/ActiveStorage::Blob/7>>
+Started GET "/users/11" for 127.0.0.1 at 2018-07-07 15:38:10 -0700
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c7eb309d-0fec-4d39-b271-0d7772da40ee] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c7eb309d-0fec-4d39-b271-0d7772da40ee]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c7eb309d-0fec-4d39-b271-0d7772da40ee]   ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c7eb309d-0fec-4d39-b271-0d7772da40ee]   [1m[36mActiveStorage::Blob Update (0.8ms)[0m  [1m[33mUPDATE `active_storage_blobs` SET `metadata` = '{\"identified\":true,\"analyzed\":true}' WHERE `active_storage_blobs`.`id` = 7[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c7eb309d-0fec-4d39-b271-0d7772da40ee]   ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 11 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/show.html.erb:6
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c7eb309d-0fec-4d39-b271-0d7772da40ee]   [1m[35m (20.3ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c7eb309d-0fec-4d39-b271-0d7772da40ee]   ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c7eb309d-0fec-4d39-b271-0d7772da40ee] Performed ActiveStorage::AnalyzeJob (Job ID: c7eb309d-0fec-4d39-b271-0d7772da40ee) from Async(default) in 27.77ms
+  [1m[36mActiveStorage::Blob Load (5.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:8
+  Rendered users/show.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 103ms (Views: 91.7ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4d70dec4f3d53d59cec2414452bb590a065b9ffc/photography-student.gif" for 127.0.0.1 at 2018-07-07 15:38:10 -0700
+Processing by ActiveStorage::BlobsController#show as GIF
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4d70dec4f3d53d59cec2414452bb590a065b9ffc", "filename"=>"photography-student"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 7 LIMIT 1[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: BBFxDC1H1LuVrT2ZDsrkj5iv (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFDUWtaNFJFTXhTREZNZFZaeVZESmFSSE55YTJvMWFYWUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDdUMjI6NDM6MTAuODM5WiIsInB1ciI6ImJsb2Jfa2V5In19--3ae16a5554904c4d948495989dc79e2a7a03c6fc/photography-student.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22photography-student.gif%22%3B+filename%2A%3DUTF-8%27%27photography-student.gif)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFDUWtaNFJFTXhTREZNZFZaeVZESmFSSE55YTJvMWFYWUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDdUMjI6NDM6MTAuODM5WiIsInB1ciI6ImJsb2Jfa2V5In19--3ae16a5554904c4d948495989dc79e2a7a03c6fc/photography-student.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22photography-student.gif%22%3B+filename%2A%3DUTF-8%27%27photography-student.gif
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFDUWtaNFJFTXhTREZNZFZaeVZESmFSSE55YTJvMWFYWUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDdUMjI6NDM6MTAuODM5WiIsInB1ciI6ImJsb2Jfa2V5In19--3ae16a5554904c4d948495989dc79e2a7a03c6fc/photography-student.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22photography-student.gif%22%3B+filename%2A%3DUTF-8%27%27photography-student.gif" for 127.0.0.1 at 2018-07-07 15:38:10 -0700
+Processing by ActiveStorage::DiskController#show as GIF
+  Parameters: {"content_type"=>"image/gif", "disposition"=>"inline; filename=\"photography-student.gif\"; filename*=UTF-8''photography-student.gif", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFDUWtaNFJFTXhTREZNZFZaeVZESmFSSE55YTJvMWFYWUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDdUMjI6NDM6MTAuODM5WiIsInB1ciI6ImJsb2Jfa2V5In19--3ae16a5554904c4d948495989dc79e2a7a03c6fc", "filename"=>"photography-student"}
+[36m  Disk Storage (0.1ms) [0m[34mDownloaded file from key: BBFxDC1H1LuVrT2ZDsrkj5iv[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (1.2ms)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 15:38:12 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 98ms (Views: 91.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/11" for 127.0.0.1 at 2018-07-07 15:38:14 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.9ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 11 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/show.html.erb:6
+  [1m[36mActiveStorage::Blob Load (5.3ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:8
+  Rendered users/show.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 106ms (Views: 87.5ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-07 15:38:50 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 98ms (Views: 85.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-07 15:39:04 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.8ms)
+  Rendered users/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 97ms (Views: 87.7ms | ActiveRecord: 0.0ms)
+
+
