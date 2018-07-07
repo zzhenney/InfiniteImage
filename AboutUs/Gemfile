@@ -15,6 +15,9 @@ gem 'mysql2'
 #Added aws-sdk 7/6/18
 gem 'aws-sdk', '~> 3'
 
+#Added devise 7/6/18  THIS IS USED FOR AUTHENTICATION FOR USERS
+gem 'devise'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
