@@ -1,0 +1,63 @@
+<p id="notice"><%= notice %></p>
+
+
+<ul>
+  <% @image.uploads.each do |upload| %>
+    <li>
+      <%= image_tag upload, size: '200x200'  %>
+    </li>
+  <% end %>
+</ul>
+
+<p>
+  <strong>Image:</strong>
+  <%= @image.image_id %>
+</p>
+
+<p>
+  <strong>Is approved:</strong>
+  <%= @image.is_approved %>
+</p>
+
+<p>
+  <strong>Image title:</strong>
+  <%= @image.image_title %>
+</p>
+
+<p>
+  <strong>Image owner:</strong>
+  <%= @image.image_owner_id %>
+</p>
+
+<p>
+  <strong>Tag:</strong>
+  <%= @image.tag_id %>
+</p>
+
+<p>
+  <strong>Licensing:</strong>
+  <%= @image.licensing %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @image.date %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @image.description %>
+</p>
+
+<p>
+  <strong>File type:</strong>
+  <%= @image.file_type %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @image.location %>
+</p>
+
+<%= link_to 'Edit', edit_image_path(@image) %> |
+<%= link_to 'Back', images_path %>
