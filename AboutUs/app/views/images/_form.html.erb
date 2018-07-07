@@ -37,8 +37,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :tag_id %>
-    <%= form.number_field :tag_id, class: "form-control" %>
+    <%= form.label :tag %>
+    <%= form.collection_select(:tag_id, Tag.all, :id, :name, { :prompt => 'Select a Tag', :selected => @image.tag_id }, { class: 'form-control' }) %>
   </div>
 
   <div class="field">

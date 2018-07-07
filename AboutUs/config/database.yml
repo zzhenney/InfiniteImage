@@ -12,6 +12,7 @@ default: &default
   password: team06
   host: localhost
   socket: /tmp/mysql.sock
+  #socket: /var/run/mysqld/mysqld.sock #FOR TESTING ON UBUNTU
 
 
 development:
