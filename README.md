@@ -1,5 +1,29 @@
 # csc648-su18-Team06
 
+BRANCH OF DATABASE_DEVELOPMENT -- Follow Paul's Instructions first!!
+Following tutorial: https://barnesian.com/adding-a-drop-down-list-in-rails-with-a-foreign-key/
+
+
+Added drop-down menu of foreign keys for image postings.
+IMPORTANT: 
+    Image Tag Column has been changed to a foreign key, and might conflict with existing databases on local machines. I am unsure if db:migrate fixes it completely, or will have to run a db:reset to purge all data.
+
+    As Paul has said, nothing important is stored locally anyways
+
+
+CHANGES
+
+Tag table migration created with id and name
+Tags are created in /db/seeds.rb
+tag_id changed from integer to foreign key
+    > /models/image.rb --> belongs_to :tag
+    > /views/forms.html.erb --> drop down menu for tag selection
+    > /views/show.html.erb --> @image.tag_id to @image.tag.name 
+
+I had to change my socket on /config/database.yml to point to my local machine for testing. Commented it it out before pushing to branch.
+
+==================================================================
+
 http://localhost:3000/users can now add users and some data
 
 TO CREATE YOUR DATABASE LOCALLY ON MYSQL WITH MY SAME EXACT SETTINGS
