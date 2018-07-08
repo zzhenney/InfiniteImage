@@ -1,11 +1,9 @@
 <%= search_form_for @q do |f| %>
   <div class="col-12 col-md-9 mb-2 mb-md-0">
     <%= f.search_field :description_cont, placeholder: 'Search for an image', class: 'form-control form-control-lg' %>
-  </div>
-  <div class="col-12 col-md-3">
     <%= f.submit 'Search', name: 'images', class: "btn btn-block btn-lg btn-primary" %>
-    <%# f.html { redirect_to admin_path, notice: 'Restaurant was successfully destroyed.' } %>
   </div>
+  
 <% end %>
 
 

@@ -15195,3 +15195,181 @@ Processing by ImagesController#index as HTML
 Completed 200 OK in 75ms (Views: 70.8ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/images?utf8=%E2%9C%93&q%5Bdescription_cont%5D=bg&images=Search" for 127.0.0.1 at 2018-07-08 10:56:54 -0700
+Processing by ImagesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"description_cont"=>"bg"}, "images"=>"Search"}
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images` WHERE `images`.`description` LIKE '%bg%'[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/_search_images.html.erb (1.3ms)
+  Rendered images/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 114ms (Views: 107.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images/new" for 127.0.0.1 at 2018-07-08 10:56:56 -0700
+Processing by ImagesController#new as HTML
+  Rendering images/new.html.erb within layouts/application
+  Rendered images/_form.html.erb (11.1ms)
+  Rendered images/new.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 117ms (Views: 112.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/images" for 127.0.0.1 at 2018-07-08 10:57:08 -0700
+Processing by ImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QiZmLmTjNh6GteRsrc5D3au9ffoII7Oo1P+aTqS3/yT6IjlX6FV8Qk2EVE/CUCKMB1FT/1jccbYFYYpzZ0vWwQ==", "image"=>{"uploads"=>[#<ActionDispatch::Http::UploadedFile:0x00007f7f91baa870 @tempfile=#<Tempfile:/var/folders/65/6418qwk55nbccpdlfd2m9f300000gn/T/RackMultipart20180708-10510-1jb9f0c.png>, @original_filename="Screen Shot 2018-07-07 at 3.49.01 PM.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"image[uploads][]\"; filename=\"Screen Shot 2018-07-07 at 3.49.01 PM.png\"\r\nContent-Type: image/png\r\n">], "image_id"=>"", "is_approved"=>"0", "image_title"=>"", "image_owner_id"=>"", "tag_id"=>"", "licensing"=>"", "date(1i)"=>"2018", "date(2i)"=>"7", "date(3i)"=>"8", "description"=>"hello world", "file_type"=>"", "location"=>""}, "commit"=>"Create Image"}
+[36m  Disk Storage (3.4ms) [0m[32mUploaded file to key: jzPosd5np51GWpMCrHBYDpMX (checksum: 39fVxcrIW/5Bjhtej4esxw==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:30
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO `active_storage_blobs` (`key`, `filename`, `content_type`, `metadata`, `byte_size`, `checksum`, `created_at`) VALUES ('jzPosd5np51GWpMCrHBYDpMX', 'Screen Shot 2018-07-07 at 3.49.01 PM.png', 'image/png', '{\"identified\":true}', 119533, '39fVxcrIW/5Bjhtej4esxw==', '2018-07-08 17:57:08')[0m
+  ↳ app/controllers/images_controller.rb:30
+  [1m[35m (69.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/images_controller.rb:33
+  [1m[36mImage Create (0.4ms)[0m  [1m[32mINSERT INTO `images` (`is_approved`, `image_title`, `licensing`, `date`, `description`, `file_type`, `location`, `created_at`, `updated_at`) VALUES (FALSE, '', '', '2018-07-08', 'hello world', '', '', '2018-07-08 17:57:08', '2018-07-08 17:57:08')[0m
+  ↳ app/controllers/images_controller.rb:33
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO `active_storage_attachments` (`name`, `record_type`, `record_id`, `blob_id`, `created_at`) VALUES ('uploads', 'Image', 4, 11, '2018-07-08 17:57:08')[0m
+  ↳ app/controllers/images_controller.rb:33
+  [1m[36mImage Update (0.4ms)[0m  [1m[33mUPDATE `images` SET `updated_at` = '2018-07-08 17:57:08' WHERE `images`.`id` = 4[0m
+  ↳ app/controllers/images_controller.rb:33
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/images_controller.rb:33
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 67c01e3c-fcc3-4df2-af93-60064ea26795) to Async(default) with arguments: #<GlobalID:0x00007f7f91bded50 @uri=#<URI::GID gid://about-paul/ActiveStorage::Blob/11>>
+Redirected to http://localhost:3000/images/4
+Completed 302 Found in 93ms (ActiveRecord: 72.2ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Blob Load (1.2ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 11 LIMIT 1[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [67c01e3c-fcc3-4df2-af93-60064ea26795] Performing ActiveStorage::AnalyzeJob (Job ID: 67c01e3c-fcc3-4df2-af93-60064ea26795) from Async(default) with arguments: #<GlobalID:0x00007f7f91b9e728 @uri=#<URI::GID gid://about-paul/ActiveStorage::Blob/11>>
+Started GET "/images/4" for 127.0.0.1 at 2018-07-08 10:57:08 -0700
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mImage Load (0.8ms)[0m  [1m[34mSELECT  `images`.* FROM `images` WHERE `images`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/images_controller.rb:70
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 4 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (2.1ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 11 LIMIT 1[0m
+  ↳ app/views/images/show.html.erb:7
+  Rendered images/show.html.erb within layouts/application (9.1ms)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [67c01e3c-fcc3-4df2-af93-60064ea26795] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [67c01e3c-fcc3-4df2-af93-60064ea26795]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [67c01e3c-fcc3-4df2-af93-60064ea26795]   ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [67c01e3c-fcc3-4df2-af93-60064ea26795]   [1m[36mActiveStorage::Blob Update (0.6ms)[0m  [1m[33mUPDATE `active_storage_blobs` SET `metadata` = '{\"identified\":true,\"analyzed\":true}' WHERE `active_storage_blobs`.`id` = 11[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [67c01e3c-fcc3-4df2-af93-60064ea26795]   ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [67c01e3c-fcc3-4df2-af93-60064ea26795]   [1m[35m (18.0ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [67c01e3c-fcc3-4df2-af93-60064ea26795]   ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [67c01e3c-fcc3-4df2-af93-60064ea26795] Performed ActiveStorage::AnalyzeJob (Job ID: 67c01e3c-fcc3-4df2-af93-60064ea26795) from Async(default) in 82.14ms
+Completed 200 OK in 137ms (Views: 129.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--db33132f85633d0109edd24400ad2f1fd6b8b4a8/Screen%20Shot%202018-07-07%20at%203.49.01%20PM.png" for 127.0.0.1 at 2018-07-08 10:57:09 -0700
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--db33132f85633d0109edd24400ad2f1fd6b8b4a8", "filename"=>"Screen Shot 2018-07-07 at 3.49.01 PM"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 11 LIMIT 1[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: jzPosd5np51GWpMCrHBYDpMX (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFxZWxCdmMyUTFibkExTVVkWGNFMURja2hDV1VSd1RWZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDhUMTg6MDI6MDkuNjg2WiIsInB1ciI6ImJsb2Jfa2V5In19--37e8a5d1d474c56af4bb97c5399074beb30265ee/Screen%20Shot%202018-07-07%20at%203.49.01%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-07-07+at+3.49.01+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-07-07%2520at%25203.49.01%2520PM.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFxZWxCdmMyUTFibkExTVVkWGNFMURja2hDV1VSd1RWZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDhUMTg6MDI6MDkuNjg2WiIsInB1ciI6ImJsb2Jfa2V5In19--37e8a5d1d474c56af4bb97c5399074beb30265ee/Screen%20Shot%202018-07-07%20at%203.49.01%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-07-07+at+3.49.01+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-07-07%2520at%25203.49.01%2520PM.png
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFxZWxCdmMyUTFibkExTVVkWGNFMURja2hDV1VSd1RWZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDhUMTg6MDI6MDkuNjg2WiIsInB1ciI6ImJsb2Jfa2V5In19--37e8a5d1d474c56af4bb97c5399074beb30265ee/Screen%20Shot%202018-07-07%20at%203.49.01%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-07-07+at+3.49.01+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-07-07%2520at%25203.49.01%2520PM.png" for 127.0.0.1 at 2018-07-08 10:57:09 -0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"Screen Shot 2018-07-07 at 3.49.01 PM.png\"; filename*=UTF-8''Screen%20Shot%202018-07-07%20at%203.49.01%20PM.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFxZWxCdmMyUTFibkExTVVkWGNFMURja2hDV1VSd1RWZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDhUMTg6MDI6MDkuNjg2WiIsInB1ciI6ImJsb2Jfa2V5In19--37e8a5d1d474c56af4bb97c5399074beb30265ee", "filename"=>"Screen Shot 2018-07-07 at 3.49.01 PM"}
+[36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: jzPosd5np51GWpMCrHBYDpMX[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.9ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images" for 127.0.0.1 at 2018-07-08 10:57:11 -0700
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/_search_images.html.erb (1.0ms)
+  Rendered images/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 97ms (Views: 92.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/images?utf8=%E2%9C%93&q%5Bdescription_cont%5D=hello+world&images=Search" for 127.0.0.1 at 2018-07-08 10:57:13 -0700
+Processing by ImagesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"description_cont"=>"hello world"}, "images"=>"Search"}
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images` WHERE `images`.`description` LIKE '%hello world%'[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/_search_images.html.erb (4.6ms)
+  Rendered images/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 76ms (Views: 72.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images?utf8=%E2%9C%93&q%5Bdescription_cont%5D=bg&images=Search" for 127.0.0.1 at 2018-07-08 10:57:16 -0700
+Processing by ImagesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"description_cont"=>"bg"}, "images"=>"Search"}
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (1.3ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images` WHERE `images`.`description` LIKE '%bg%'[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/_search_images.html.erb (1.0ms)
+  Rendered images/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 78ms (Views: 72.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/images?utf8=%E2%9C%93&q%5Bdescription_cont%5D=&images=Search" for 127.0.0.1 at 2018-07-08 10:57:19 -0700
+Processing by ImagesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"description_cont"=>""}, "images"=>"Search"}
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/_search_images.html.erb (1.0ms)
+  Rendered images/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 86ms (Views: 82.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images?utf8=%E2%9C%93&q%5Bdescription_cont%5D=&images=Search" for 127.0.0.1 at 2018-07-08 11:00:51 -0700
+Processing by ImagesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"description_cont"=>""}, "images"=>"Search"}
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/_search_images.html.erb (0.8ms)
+  Rendered images/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 110ms (Views: 106.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images?utf8=%E2%9C%93&q%5Bdescription_cont%5D=&images=Search" for 127.0.0.1 at 2018-07-08 11:01:10 -0700
+Processing by ImagesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"description_cont"=>""}, "images"=>"Search"}
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/_search_images.html.erb (0.8ms)
+  Rendered images/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 89ms (Views: 85.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images?utf8=%E2%9C%93&q%5Bdescription_cont%5D=&images=Search" for 127.0.0.1 at 2018-07-08 11:01:26 -0700
+Processing by ImagesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"description_cont"=>""}, "images"=>"Search"}
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.7ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/_search_images.html.erb (0.9ms)
+  Rendered images/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 90ms (Views: 86.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images?utf8=%E2%9C%93&q%5Bdescription_cont%5D=&images=Search" for 127.0.0.1 at 2018-07-08 11:01:39 -0700
+Processing by ImagesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"description_cont"=>""}, "images"=>"Search"}
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/_search_images.html.erb (0.8ms)
+  Rendered images/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 88ms (Views: 84.5ms | ActiveRecord: 0.4ms)
+
+
