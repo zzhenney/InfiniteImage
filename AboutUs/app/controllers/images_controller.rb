@@ -5,6 +5,8 @@ class ImagesController < ApplicationController
   # GET /images.json
   def index
     @images = Image.all
+    @q = Image.ransack(params[:q])
+    @images = @q.result(distinct: true)
   end
 
   # GET /images/1
@@ -15,6 +17,7 @@ class ImagesController < ApplicationController
   # GET /images/new
   def new
     @image = Image.new
+
   end
 
   # GET /images/1/edit
@@ -70,6 +73,6 @@ class ImagesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def image_params
       #Added uploads param 7/72018
-      params.require(:image).permit(:image_id, :is_approved, :image_title, :image_owner_id, :tag_id, :licensing, :date, :description, :file_type, :location, uploads:[])
+      params.require(:image).permit(:user_id, :image_id, :is_approved, :image_title, :image_owner_id, :tag_id, :licensing, :date, :description, :file_type, :location, uploads:[])
     end
 end

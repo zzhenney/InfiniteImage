@@ -1,6 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+
+<ul>
+  <% @user.uploads.each do |upload| %>
+    <li>
+      <%= image_tag upload, size: '200x200'  %>
+    </li>
+  <% end %>
+</ul>
+
   <strong>User:</strong>
   <%= @user.user_id %>
 </p>

@@ -11,6 +11,13 @@
     </div>
   <% end %>
 
+
+  <div class="field">
+    <%= form.label :uploads %>
+    <%= form.file_field :uploads, multiple:true, class: "form-control" %>
+  </div>
+
+
   <div class="field">
     <%= form.label :user_id %>
     <%= form.text_field :user_id %>

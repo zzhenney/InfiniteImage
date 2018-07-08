@@ -15,6 +15,7 @@ class UsersController < ApplicationController
   # GET /users/new
   def new
     @user = User.new
+    @user.images.new
   end
 
   # GET /users/1/edit
@@ -25,6 +26,7 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
+
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
@@ -68,6 +70,7 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:user_id, :is_admin, :cart_id, :album_list, :friend_list, :email, :password, :first_name, :last_name)
+      #Added uploads for active:storage
+      params.require(:user).permit(:user_id, :is_admin, :cart_id, :album_list, :friend_list, :email, :password, :first_name, :last_name, images_attributes: [:upload],uploads:[])
     end
 end
