@@ -18,6 +18,9 @@ gem 'aws-sdk', '~> 3'
 #Added devise 7/6/18  THIS IS USED FOR AUTHENTICATION FOR USERS
 gem 'devise'
 
+#Added ransack 7/7/18 THIS IS USED FOR SEARCHING
+gem 'ransack'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
