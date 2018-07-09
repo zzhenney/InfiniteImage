@@ -17074,3 +17074,875 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 95ms (Views: 82.9ms | ActiveRecord: 7.0ms)
 
 
+Started GET "/users/12" for 127.0.0.1 at 2018-07-09 11:46:37 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 12 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/show.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 8 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:8
+  Rendered users/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 119ms (Views: 112.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-09 11:46:39 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (11.4ms)
+  Rendered users/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 110ms (Views: 74.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images" for 127.0.0.1 at 2018-07-09 11:46:44 -0700
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/_search_images.html.erb (1.4ms)
+  Rendered images/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 107ms (Views: 102.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/images/new" for 127.0.0.1 at 2018-07-09 11:46:47 -0700
+Processing by ImagesController#new as HTML
+  Rendering images/new.html.erb within layouts/application
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT `tags`.* FROM `tags`[0m
+  ↳ app/views/images/_form.html.erb:41
+  Rendered images/_form.html.erb (16.9ms)
+  Rendered images/new.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 98ms (Views: 93.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/images" for 127.0.0.1 at 2018-07-09 11:48:16 -0700
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:24
+  Rendered images/index.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `uploads' for nil:NilClass):
+    33:         <td><%= image.description %></td>
+    34:         <td><%= image.file_type %></td>
+    35:         <td><%= image.location %></td>
+    36:         <td><% @user.uploads.each do |upload| %>
+    37:               <%= image_tag upload, size: '50x50' %>
+    38:           <% end %></td>
+    39:         <td><%= link_to 'Show', image %></td>
+  
+app/views/images/index.html.erb:36:in `block in _app_views_images_index_html_erb___4215795236975277187_70095510388620'
+app/views/images/index.html.erb:24:in `_app_views_images_index_html_erb___4215795236975277187_70095510388620'
+Started GET "/images" for 127.0.0.1 at 2018-07-09 11:48:58 -0700
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.8ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:24
+  Rendered images/index.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `uploads' for nil:NilClass):
+    33:         <td><%= image.description %></td>
+    34:         <td><%= image.file_type %></td>
+    35:         <td><%= image.location %></td>
+    36:         <td><% @image.uploads.each do |upload| %>
+    37:               <%= image_tag upload, size: '50x50' %>
+    38:           <% end %>
+    39:         </td>
+  
+app/views/images/index.html.erb:36:in `block in _app_views_images_index_html_erb___4215795236975277187_70095509235440'
+app/views/images/index.html.erb:24:in `_app_views_images_index_html_erb___4215795236975277187_70095509235440'
+Started GET "/images" for 127.0.0.1 at 2018-07-09 11:49:59 -0700
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/_search_images.html.erb (0.9ms)
+  Rendered images/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 73ms (Views: 68.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-09 11:50:04 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `uploads' for nil:NilClass):
+    31:         <td><%= user.password %></td>
+    32:         <td><%= user.first_name %></td>
+    33:         <td><%= user.last_name %></td>
+    34:         <td><% @user.uploads.each do |upload| %>
+    35:             <%= image_tag upload, size: '50x50' %>
+    36:           <% end %>
+    37:         </td>
+  
+app/views/users/index.html.erb:34:in `block in _app_views_users_index_html_erb___1195516264516850959_70095549943920'
+app/views/users/index.html.erb:23:in `_app_views_users_index_html_erb___1195516264516850959_70095549943920'
+Started GET "/users" for 127.0.0.1 at 2018-07-09 11:50:39 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 12 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/index.html.erb:34
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 8 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:35
+  Rendered users/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 95ms (Views: 88.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4b6213ce49227cc0125c55f688c53555f3ec82a3/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png" for 127.0.0.1 at 2018-07-09 11:50:40 -0700
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4b6213ce49227cc0125c55f688c53555f3ec82a3", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 8 LIMIT 1[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: UQy1uUfBXSK2eQ3wVVZZForK (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6NTU6NDAuODU5WiIsInB1ciI6ImJsb2Jfa2V5In19--5040b4aea4cf23bd42e2b3a66093b80a1949f532/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6NTU6NDAuODU5WiIsInB1ciI6ImJsb2Jfa2V5In19--5040b4aea4cf23bd42e2b3a66093b80a1949f532/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6NTU6NDAuODU5WiIsInB1ciI6ImJsb2Jfa2V5In19--5040b4aea4cf23bd42e2b3a66093b80a1949f532/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png" for 127.0.0.1 at 2018-07-09 11:50:40 -0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"Screen Shot 2018-06-26 at 7.13.46 PM.png\"; filename*=UTF-8''Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6NTU6NDAuODU5WiIsInB1ciI6ImJsb2Jfa2V5In19--5040b4aea4cf23bd42e2b3a66093b80a1949f532", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+[36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: UQy1uUfBXSK2eQ3wVVZZForK[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (1.0ms)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-09 11:51:25 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (6.3ms)
+  Rendered users/new.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 86ms (Views: 82.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-09 11:51:30 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2LcTwrwxGAceqy+DzKhAW3SwzP9rqeVww4oOT1hWWlk3pBFLNCsSPVoWeOryg7G0C8VOi9o+FzKIa1HNEB69gQ==", "user"=>{"user_id"=>"Paul", "is_admin"=>"0", "cart_id"=>"", "album_list"=>"", "friend_list"=>"", "email"=>"paulancajima@yahoo.com", "password"=>"[FILTERED]", "first_name"=>"", "last_name"=>""}, "commit"=>"Create User"}
+  [1m[35m (14.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31
+  [1m[36mUser Create (23.0ms)[0m  [1m[32mINSERT INTO `users` (`user_id`, `is_admin`, `email`, `password`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES ('Paul', FALSE, 'paulancajima@yahoo.com', '', '', '', '2018-07-09 18:51:30', '2018-07-09 18:51:30')[0m
+  ↳ app/controllers/users_controller.rb:31
+  [1m[35m (67.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31
+Redirected to http://localhost:3000/users/13
+Completed 302 Found in 110ms (ActiveRecord: 105.0ms)
+
+
+Started GET "/users/13" for 127.0.0.1 at 2018-07-09 11:51:30 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 13 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 78ms (Views: 73.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-09 11:51:32 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mActiveStorage::Attachment Load (1.7ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 12 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/index.html.erb:34
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 8 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:35
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 13 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/index.html.erb:34
+  Rendered users/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 94ms (Views: 87.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6NTU6NDAuODU5WiIsInB1ciI6ImJsb2Jfa2V5In19--5040b4aea4cf23bd42e2b3a66093b80a1949f532/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png" for 127.0.0.1 at 2018-07-09 11:51:32 -0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"Screen Shot 2018-06-26 at 7.13.46 PM.png\"; filename*=UTF-8''Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6NTU6NDAuODU5WiIsInB1ciI6ImJsb2Jfa2V5In19--5040b4aea4cf23bd42e2b3a66093b80a1949f532", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+[36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: UQy1uUfBXSK2eQ3wVVZZForK[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.5ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/13" for 127.0.0.1 at 2018-07-09 11:51:35 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 13 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 94ms (Views: 87.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-09 11:53:26 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/paulancajima/Desktop/SFSU/Summer2018/csc648Project/csc648-su18-Team06/AboutUs/app/views/users/index.html.erb:35: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+... 'Show', user, image_tag upload, size: '50x50'  );@output_bu...
+...                         ^~~~~~):
+  
+app/views/users/index.html.erb:35: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+Started GET "/users" for 127.0.0.1 at 2018-07-09 11:54:40 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/paulancajima/Desktop/SFSU/Summer2018/csc648Project/csc648-su18-Team06/AboutUs/app/views/users/index.html.erb:35: syntax error, unexpected tLABEL, expecting '='
+...ink_to image_tag (upload, size: '50x50'), user  );@output_bu...
+...                          ^~~~~
+/Users/paulancajima/Desktop/SFSU/Summer2018/csc648Project/csc648-su18-Team06/AboutUs/app/views/users/index.html.erb:35: syntax error, unexpected ')', expecting keyword_end
+...upload, size: '50x50'), user  );@output_buffer.safe_append='
+...                              ^
+/Users/paulancajima/Desktop/SFSU/Summer2018/csc648Project/csc648-su18-Team06/AboutUs/app/views/users/index.html.erb:51: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/users/index.html.erb:35: syntax error, unexpected tLABEL, expecting '='
+app/views/users/index.html.erb:35: syntax error, unexpected ')', expecting keyword_end
+app/views/users/index.html.erb:51: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/users" for 127.0.0.1 at 2018-07-09 11:54:58 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/paulancajima/Desktop/SFSU/Summer2018/csc648Project/csc648-su18-Team06/AboutUs/app/views/users/index.html.erb:35: syntax error, unexpected tLABEL, expecting '='
+...ink_to image_tag (upload, size: '50x50'), 'Show',user  );@ou...
+...                          ^~~~~
+/Users/paulancajima/Desktop/SFSU/Summer2018/csc648Project/csc648-su18-Team06/AboutUs/app/views/users/index.html.erb:35: syntax error, unexpected ')', expecting keyword_end
+... size: '50x50'), 'Show',user  );@output_buffer.safe_append='
+...                              ^
+/Users/paulancajima/Desktop/SFSU/Summer2018/csc648Project/csc648-su18-Team06/AboutUs/app/views/users/index.html.erb:51: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/users/index.html.erb:35: syntax error, unexpected tLABEL, expecting '='
+app/views/users/index.html.erb:35: syntax error, unexpected ')', expecting keyword_end
+app/views/users/index.html.erb:51: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/users" for 127.0.0.1 at 2018-07-09 11:55:08 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/paulancajima/Desktop/SFSU/Summer2018/csc648Project/csc648-su18-Team06/AboutUs/app/views/users/index.html.erb:35: syntax error, unexpected tLABEL, expecting '='
+...ink_to image_tag (upload, size: '50x50')  );@output_buffer.s...
+...                          ^~~~~
+/Users/paulancajima/Desktop/SFSU/Summer2018/csc648Project/csc648-su18-Team06/AboutUs/app/views/users/index.html.erb:35: syntax error, unexpected ')', expecting keyword_end
+..._tag (upload, size: '50x50')  );@output_buffer.safe_append='
+...                              ^
+/Users/paulancajima/Desktop/SFSU/Summer2018/csc648Project/csc648-su18-Team06/AboutUs/app/views/users/index.html.erb:51: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/users/index.html.erb:35: syntax error, unexpected tLABEL, expecting '='
+app/views/users/index.html.erb:35: syntax error, unexpected ')', expecting keyword_end
+app/views/users/index.html.erb:51: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/users" for 127.0.0.1 at 2018-07-09 11:55:16 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/paulancajima/Desktop/SFSU/Summer2018/csc648Project/csc648-su18-Team06/AboutUs/app/views/users/index.html.erb:35: syntax error, unexpected tLABEL, expecting '='
+...ink_to image_tag (upload, size: '50x50')  );@output_buffer.s...
+...                          ^~~~~
+/Users/paulancajima/Desktop/SFSU/Summer2018/csc648Project/csc648-su18-Team06/AboutUs/app/views/users/index.html.erb:35: syntax error, unexpected ')', expecting keyword_end
+..._tag (upload, size: '50x50')  );@output_buffer.safe_append='
+...                              ^
+/Users/paulancajima/Desktop/SFSU/Summer2018/csc648Project/csc648-su18-Team06/AboutUs/app/views/users/index.html.erb:51: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/users/index.html.erb:35: syntax error, unexpected tLABEL, expecting '='
+app/views/users/index.html.erb:35: syntax error, unexpected ')', expecting keyword_end
+app/views/users/index.html.erb:51: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/users/new" for 127.0.0.1 at 2018-07-09 11:55:21 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.6ms)
+  Rendered users/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 125ms (Views: 120.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-09 11:56:43 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/paulancajima/Desktop/SFSU/Summer2018/csc648Project/csc648-su18-Team06/AboutUs/app/views/users/index.html.erb:54: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^):
+  
+app/views/users/index.html.erb:54: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users" for 127.0.0.1 at 2018-07-09 11:56:45 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/paulancajima/Desktop/SFSU/Summer2018/csc648Project/csc648-su18-Team06/AboutUs/app/views/users/index.html.erb:54: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^):
+  
+app/views/users/index.html.erb:54: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users" for 127.0.0.1 at 2018-07-09 11:59:14 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 12 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/index.html.erb:35
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 8 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:36
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 13 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/index.html.erb:35
+  Rendered users/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 137ms (Views: 130.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4b6213ce49227cc0125c55f688c53555f3ec82a3/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png" for 127.0.0.1 at 2018-07-09 11:59:15 -0700
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4b6213ce49227cc0125c55f688c53555f3ec82a3", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 8 LIMIT 1[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: UQy1uUfBXSK2eQ3wVVZZForK (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTk6MDQ6MTUuODQ4WiIsInB1ciI6ImJsb2Jfa2V5In19--01f0ac6ecad9d8e5ad28ef2a143d9351bda128e5/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTk6MDQ6MTUuODQ4WiIsInB1ciI6ImJsb2Jfa2V5In19--01f0ac6ecad9d8e5ad28ef2a143d9351bda128e5/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTk6MDQ6MTUuODQ4WiIsInB1ciI6ImJsb2Jfa2V5In19--01f0ac6ecad9d8e5ad28ef2a143d9351bda128e5/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png" for 127.0.0.1 at 2018-07-09 11:59:15 -0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"Screen Shot 2018-06-26 at 7.13.46 PM.png\"; filename*=UTF-8''Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTk6MDQ6MTUuODQ4WiIsInB1ciI6ImJsb2Jfa2V5In19--01f0ac6ecad9d8e5ad28ef2a143d9351bda128e5", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+[36m  Disk Storage (1.3ms) [0m[34mDownloaded file from key: UQy1uUfBXSK2eQ3wVVZZForK[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.6ms)
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-09 11:59:17 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 12 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/index.html.erb:35
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 8 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:36
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 13 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/index.html.erb:35
+  Rendered users/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 92ms (Views: 85.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-09 11:59:17 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 12 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/index.html.erb:35
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 8 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:36
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 13 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/index.html.erb:35
+  Rendered users/index.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 132ms (Views: 119.3ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-09 11:59:28 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/paulancajima/Desktop/SFSU/Summer2018/csc648Project/csc648-su18-Team06/AboutUs/app/views/users/index.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...link_to 'Show',image_tag upload, size: '50x50' );@output_buf...
+...                         ^~~~~~):
+  
+app/views/users/index.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+Started GET "/images" for 127.0.0.1 at 2018-07-09 11:59:46 -0700
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (1.4ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/_search_images.html.erb (1.5ms)
+  Rendered images/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 119ms (Views: 108.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/images" for 127.0.0.1 at 2018-07-09 12:00:53 -0700
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.8ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/_search_images.html.erb (0.8ms)
+  Rendered images/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 98ms (Views: 89.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-09 12:01:03 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/paulancajima/Desktop/SFSU/Summer2018/csc648Project/csc648-su18-Team06/AboutUs/app/views/users/index.html.erb:36: syntax error, unexpected ')', expecting =>
+...load, size: '50x50', user_url );@output_buffer.safe_append='
+...                              ^
+/Users/paulancajima/Desktop/SFSU/Summer2018/csc648Project/csc648-su18-Team06/AboutUs/app/views/users/index.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;           end 
+                    ^~~
+/Users/paulancajima/Desktop/SFSU/Summer2018/csc648Project/csc648-su18-Team06/AboutUs/app/views/users/index.html.erb:43: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+              ^~~
+/Users/paulancajima/Desktop/SFSU/Summer2018/csc648Project/csc648-su18-Team06/AboutUs/app/views/users/index.html.erb:52: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/paulancajima/Desktop/SFSU/Summer2018/csc648Project/csc648-su18-Team06/AboutUs/app/views/users/index.html.erb:54: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/users/index.html.erb:36: syntax error, unexpected ')', expecting =>
+app/views/users/index.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/index.html.erb:43: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/index.html.erb:52: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/users/index.html.erb:54: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/users" for 127.0.0.1 at 2018-07-09 12:01:11 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/paulancajima/Desktop/SFSU/Summer2018/csc648Project/csc648-su18-Team06/AboutUs/app/views/users/index.html.erb:36: syntax error, unexpected ')', expecting =>
+...oad, size: '50x50', user_path );@output_buffer.safe_append='
+...                              ^
+/Users/paulancajima/Desktop/SFSU/Summer2018/csc648Project/csc648-su18-Team06/AboutUs/app/views/users/index.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;           end 
+                    ^~~
+/Users/paulancajima/Desktop/SFSU/Summer2018/csc648Project/csc648-su18-Team06/AboutUs/app/views/users/index.html.erb:43: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+              ^~~
+/Users/paulancajima/Desktop/SFSU/Summer2018/csc648Project/csc648-su18-Team06/AboutUs/app/views/users/index.html.erb:52: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/paulancajima/Desktop/SFSU/Summer2018/csc648Project/csc648-su18-Team06/AboutUs/app/views/users/index.html.erb:54: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/users/index.html.erb:36: syntax error, unexpected ')', expecting =>
+app/views/users/index.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/index.html.erb:43: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/index.html.erb:52: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/users/index.html.erb:54: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/users" for 127.0.0.1 at 2018-07-09 12:01:47 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 12 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/index.html.erb:35
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 8 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:36
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 13 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/index.html.erb:35
+  Rendered users/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 91ms (Views: 84.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTk6MDQ6MTUuODQ4WiIsInB1ciI6ImJsb2Jfa2V5In19--01f0ac6ecad9d8e5ad28ef2a143d9351bda128e5/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png" for 127.0.0.1 at 2018-07-09 12:01:48 -0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"Screen Shot 2018-06-26 at 7.13.46 PM.png\"; filename*=UTF-8''Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTk6MDQ6MTUuODQ4WiIsInB1ciI6ImJsb2Jfa2V5In19--01f0ac6ecad9d8e5ad28ef2a143d9351bda128e5", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+[36m  Disk Storage (0.9ms) [0m[34mDownloaded file from key: UQy1uUfBXSK2eQ3wVVZZForK[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.8ms)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-09 12:01:58 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 12 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/index.html.erb:35
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 8 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:36
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 13 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/index.html.erb:35
+  Rendered users/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 74ms (Views: 69.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTk6MDQ6MTUuODQ4WiIsInB1ciI6ImJsb2Jfa2V5In19--01f0ac6ecad9d8e5ad28ef2a143d9351bda128e5/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png" for 127.0.0.1 at 2018-07-09 12:01:58 -0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"Screen Shot 2018-06-26 at 7.13.46 PM.png\"; filename*=UTF-8''Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTk6MDQ6MTUuODQ4WiIsInB1ciI6ImJsb2Jfa2V5In19--01f0ac6ecad9d8e5ad28ef2a143d9351bda128e5", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+[36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: UQy1uUfBXSK2eQ3wVVZZForK[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.8ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2018-07-09 12:01:59 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 12 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/show.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 8 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:8
+  Rendered users/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 91ms (Views: 82.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2018-07-09 12:02:07 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (17.0ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 12 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/show.html.erb:6
+  [1m[36mActiveStorage::Blob Load (2.8ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 8 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:8
+  Rendered users/show.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 122ms (Views: 93.4ms | ActiveRecord: 20.6ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2018-07-09 12:02:15 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (4.8ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 12 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/show.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 8 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:8
+  Rendered users/show.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 97ms (Views: 84.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/images" for 127.0.0.1 at 2018-07-09 12:03:32 -0700
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:24
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:36
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 10 LIMIT 1[0m
+  ↳ app/views/images/index.html.erb:37
+  Rendered images/index.html.erb within layouts/application (398.9ms)
+Completed 500 Internal Server Error in 420ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00007f80c8fc1188>:0x00007f80c9178ee0>):
+    34:         <td><%= image.file_type %></td>
+    35:         <td><%= image.location %></td>
+    36:         <td><%  image.uploads.each do |upload| %>
+    37:             <%= link_to (image_tag upload, size: '50x50'), user %>
+    38:           <% end %>
+    39:         </td>
+    40:         <td><%= link_to 'Show', image %></td>
+  
+app/views/images/index.html.erb:37:in `block (2 levels) in _app_views_images_index_html_erb___4215795236975277187_70095553155000'
+app/views/images/index.html.erb:36:in `block in _app_views_images_index_html_erb___4215795236975277187_70095553155000'
+app/views/images/index.html.erb:24:in `_app_views_images_index_html_erb___4215795236975277187_70095553155000'
+Started GET "/images" for 127.0.0.1 at 2018-07-09 12:04:13 -0700
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:24
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:36
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 10 LIMIT 1[0m
+  ↳ app/views/images/index.html.erb:37
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 4 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:36
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 11 LIMIT 1[0m
+  ↳ app/views/images/index.html.erb:37
+  Rendered images/_search_images.html.erb (0.9ms)
+  Rendered images/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 135ms (Views: 123.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4134269d85b4bd05d1977c82af735b600514cb2f/bg.gif" for 127.0.0.1 at 2018-07-09 12:04:14 -0700
+Processing by ActiveStorage::BlobsController#show as GIF
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4134269d85b4bd05d1977c82af735b600514cb2f", "filename"=>"bg"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 10 LIMIT 1[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: H9Tn1bU7xntsje6bLvDRYmgE (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFJT1ZSdU1XSlZOM2h1ZEhOcVpUWmlUSFpFVWxsdFowVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTk6MDk6MTQuNTk2WiIsInB1ciI6ImJsb2Jfa2V5In19--a795ee1c618eec1e68470c794a223e68d6005e12/bg.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22bg.gif%22%3B+filename%2A%3DUTF-8%27%27bg.gif)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFJT1ZSdU1XSlZOM2h1ZEhOcVpUWmlUSFpFVWxsdFowVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTk6MDk6MTQuNTk2WiIsInB1ciI6ImJsb2Jfa2V5In19--a795ee1c618eec1e68470c794a223e68d6005e12/bg.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22bg.gif%22%3B+filename%2A%3DUTF-8%27%27bg.gif
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--db33132f85633d0109edd24400ad2f1fd6b8b4a8/Screen%20Shot%202018-07-07%20at%203.49.01%20PM.png" for 127.0.0.1 at 2018-07-09 12:04:14 -0700
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--db33132f85633d0109edd24400ad2f1fd6b8b4a8", "filename"=>"Screen Shot 2018-07-07 at 3.49.01 PM"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 11 LIMIT 1[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.9ms) [0m[34mGenerated URL for file at key: jzPosd5np51GWpMCrHBYDpMX (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFxZWxCdmMyUTFibkExTVVkWGNFMURja2hDV1VSd1RWZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTk6MDk6MTQuNjA5WiIsInB1ciI6ImJsb2Jfa2V5In19--58be6c4e0063c25e724a2b28c50f2b9f012bd330/Screen%20Shot%202018-07-07%20at%203.49.01%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-07-07+at+3.49.01+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-07-07%2520at%25203.49.01%2520PM.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFxZWxCdmMyUTFibkExTVVkWGNFMURja2hDV1VSd1RWZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTk6MDk6MTQuNjA5WiIsInB1ciI6ImJsb2Jfa2V5In19--58be6c4e0063c25e724a2b28c50f2b9f012bd330/Screen%20Shot%202018-07-07%20at%203.49.01%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-07-07+at+3.49.01+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-07-07%2520at%25203.49.01%2520PM.png
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFxZWxCdmMyUTFibkExTVVkWGNFMURja2hDV1VSd1RWZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTk6MDk6MTQuNjA5WiIsInB1ciI6ImJsb2Jfa2V5In19--58be6c4e0063c25e724a2b28c50f2b9f012bd330/Screen%20Shot%202018-07-07%20at%203.49.01%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-07-07+at+3.49.01+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-07-07%2520at%25203.49.01%2520PM.png" for 127.0.0.1 at 2018-07-09 12:04:14 -0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFJT1ZSdU1XSlZOM2h1ZEhOcVpUWmlUSFpFVWxsdFowVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTk6MDk6MTQuNTk2WiIsInB1ciI6ImJsb2Jfa2V5In19--a795ee1c618eec1e68470c794a223e68d6005e12/bg.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22bg.gif%22%3B+filename%2A%3DUTF-8%27%27bg.gif" for 127.0.0.1 at 2018-07-09 12:04:14 -0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"Screen Shot 2018-07-07 at 3.49.01 PM.png\"; filename*=UTF-8''Screen%20Shot%202018-07-07%20at%203.49.01%20PM.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFxZWxCdmMyUTFibkExTVVkWGNFMURja2hDV1VSd1RWZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTk6MDk6MTQuNjA5WiIsInB1ciI6ImJsb2Jfa2V5In19--58be6c4e0063c25e724a2b28c50f2b9f012bd330", "filename"=>"Screen Shot 2018-07-07 at 3.49.01 PM"}
+  [1m[35m (2.7ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by ActiveStorage::DiskController#show as GIF
+  Parameters: {"content_type"=>"image/gif", "disposition"=>"inline; filename=\"bg.gif\"; filename*=UTF-8''bg.gif", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFJT1ZSdU1XSlZOM2h1ZEhOcVpUWmlUSFpFVWxsdFowVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTk6MDk6MTQuNTk2WiIsInB1ciI6ImJsb2Jfa2V5In19--a795ee1c618eec1e68470c794a223e68d6005e12", "filename"=>"bg"}
+[36m  Disk Storage (3.0ms) [0m[34mDownloaded file from key: jzPosd5np51GWpMCrHBYDpMX[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (1.4ms)
+Completed 200 OK in 7ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+[36m  Disk Storage (4.7ms) [0m[34mDownloaded file from key: H9Tn1bU7xntsje6bLvDRYmgE[0m
+  Rendering text template
+  Rendered text template (0.3ms)
+Sent data  (1.5ms)
+Completed 200 OK in 8ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images?utf8=%E2%9C%93&q%5Bdescription_cont%5D=bg&images=Search" for 127.0.0.1 at 2018-07-09 12:04:17 -0700
+Processing by ImagesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"description_cont"=>"bg"}, "images"=>"Search"}
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.6ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images` WHERE `images`.`description` LIKE '%bg%'[0m
+  ↳ app/views/images/index.html.erb:24
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:36
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 10 LIMIT 1[0m
+  ↳ app/views/images/index.html.erb:37
+  Rendered images/_search_images.html.erb (1.3ms)
+  Rendered images/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 120ms (Views: 105.4ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFJT1ZSdU1XSlZOM2h1ZEhOcVpUWmlUSFpFVWxsdFowVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTk6MDk6MTQuNTk2WiIsInB1ciI6ImJsb2Jfa2V5In19--a795ee1c618eec1e68470c794a223e68d6005e12/bg.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22bg.gif%22%3B+filename%2A%3DUTF-8%27%27bg.gif" for 127.0.0.1 at 2018-07-09 12:04:17 -0700
+Processing by ActiveStorage::DiskController#show as GIF
+  Parameters: {"content_type"=>"image/gif", "disposition"=>"inline; filename=\"bg.gif\"; filename*=UTF-8''bg.gif", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFJT1ZSdU1XSlZOM2h1ZEhOcVpUWmlUSFpFVWxsdFowVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTk6MDk6MTQuNTk2WiIsInB1ciI6ImJsb2Jfa2V5In19--a795ee1c618eec1e68470c794a223e68d6005e12", "filename"=>"bg"}
+[36m  Disk Storage (1.3ms) [0m[34mDownloaded file from key: H9Tn1bU7xntsje6bLvDRYmgE[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.6ms)
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images?utf8=%E2%9C%93&q%5Bdescription_cont%5D=hello&images=Search" for 127.0.0.1 at 2018-07-09 12:04:25 -0700
+Processing by ImagesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"description_cont"=>"hello"}, "images"=>"Search"}
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images` WHERE `images`.`description` LIKE '%hello%'[0m
+  ↳ app/views/images/index.html.erb:24
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 4 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:36
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 11 LIMIT 1[0m
+  ↳ app/views/images/index.html.erb:37
+  Rendered images/_search_images.html.erb (1.2ms)
+  Rendered images/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 101ms (Views: 95.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFxZWxCdmMyUTFibkExTVVkWGNFMURja2hDV1VSd1RWZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTk6MDk6MTQuNjA5WiIsInB1ciI6ImJsb2Jfa2V5In19--58be6c4e0063c25e724a2b28c50f2b9f012bd330/Screen%20Shot%202018-07-07%20at%203.49.01%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-07-07+at+3.49.01+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-07-07%2520at%25203.49.01%2520PM.png" for 127.0.0.1 at 2018-07-09 12:04:26 -0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"Screen Shot 2018-07-07 at 3.49.01 PM.png\"; filename*=UTF-8''Screen%20Shot%202018-07-07%20at%203.49.01%20PM.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFxZWxCdmMyUTFibkExTVVkWGNFMURja2hDV1VSd1RWZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTk6MDk6MTQuNjA5WiIsInB1ciI6ImJsb2Jfa2V5In19--58be6c4e0063c25e724a2b28c50f2b9f012bd330", "filename"=>"Screen Shot 2018-07-07 at 3.49.01 PM"}
+[36m  Disk Storage (0.1ms) [0m[34mDownloaded file from key: jzPosd5np51GWpMCrHBYDpMX[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.8ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-09 13:54:09 -0700
+  [1m[35m (14.4ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 188ms (Views: 182.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/vendor/jquery/jquery.min.js" for 127.0.0.1 at 2018-07-09 13:54:11 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/jquery/jquery.min.js"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/vendor/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2018-07-09 13:54:11 -0700
+  [1m[35m (0.4ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/vendor/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2018-07-09 13:54:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2018-07-09 13:54:14 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 12 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/index.html.erb:34
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 8 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:35
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 13 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/index.html.erb:34
+  Rendered users/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 124ms (Views: 114.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4b6213ce49227cc0125c55f688c53555f3ec82a3/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png" for 127.0.0.1 at 2018-07-09 13:54:15 -0700
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4b6213ce49227cc0125c55f688c53555f3ec82a3", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 8 LIMIT 1[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: UQy1uUfBXSK2eQ3wVVZZForK (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMjA6NTk6MTUuNTQ1WiIsInB1ciI6ImJsb2Jfa2V5In19--b62370869c183e089397a659fe0792c7308469ed/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMjA6NTk6MTUuNTQ1WiIsInB1ciI6ImJsb2Jfa2V5In19--b62370869c183e089397a659fe0792c7308469ed/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMjA6NTk6MTUuNTQ1WiIsInB1ciI6ImJsb2Jfa2V5In19--b62370869c183e089397a659fe0792c7308469ed/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png" for 127.0.0.1 at 2018-07-09 13:54:16 -0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"Screen Shot 2018-06-26 at 7.13.46 PM.png\"; filename*=UTF-8''Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMjA6NTk6MTUuNTQ1WiIsInB1ciI6ImJsb2Jfa2V5In19--b62370869c183e089397a659fe0792c7308469ed", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+[36m  Disk Storage (0.9ms) [0m[34mDownloaded file from key: UQy1uUfBXSK2eQ3wVVZZForK[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.8ms)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+

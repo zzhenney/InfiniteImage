@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c886784a-2a16-4bf0-b4ef-59907bbd3de2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/AboutUs/app/controllers/pages_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/AboutUs/app/controllers/pages_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AboutUs/app/views/images/_search_images.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/AboutUs/app/views/images/_search_images.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AboutUs/app/views/images/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/AboutUs/app/views/images/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AboutUs/app/views/users/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/AboutUs/app/views/users/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AboutUs/app/views/users/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/AboutUs/app/views/users/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AboutUs/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/AboutUs/db/schema.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AboutUs/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/AboutUs/log/development.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AboutUs/storage/BB/Fx/BBFxDC1H1LuVrT2ZDsrkj5iv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AboutUs/tmp/cache/bootsnap-compile-cache/3a/f929ce02e31109" beforeDir="false" afterPath="$PROJECT_DIR$/AboutUs/tmp/cache/bootsnap-compile-cache/3a/f929ce02e31109" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AboutUs/tmp/cache/bootsnap-compile-cache/f1/d5812b47dd62a4" beforeDir="false" afterPath="$PROJECT_DIR$/AboutUs/tmp/cache/bootsnap-compile-cache/f1/d5812b47dd62a4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AboutUs/tmp/cache/bootsnap-load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/AboutUs/tmp/cache/bootsnap-load-path-cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AboutUs/tmp/pids/server.pid" beforeDir="false" afterPath="$PROJECT_DIR$/AboutUs/tmp/pids/server.pid" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,8 +21,8 @@
     <SUITE FILE_PATH="coverage/csc648_su18_Team06@db_migrate__AboutUs.rcov" NAME="db:migrate: AboutUs Coverage Results" MODIFIED="1531094313119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AboutUs" MODULE_NAME="AboutUs" />
     <SUITE FILE_PATH="coverage/csc648_su18_Team06@Rails_console__AboutUs.rcov" NAME="Rails console: AboutUs Coverage Results" MODIFIED="1530974916420" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AboutUs" MODULE_NAME="AboutUs" />
     <SUITE FILE_PATH="coverage/csc648_su18_Team06@IRB_console__csc648_su18_Team06.rcov" NAME="IRB console: csc648-su18-Team06 Coverage Results" MODIFIED="1531068582189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="csc648-su18-Team06" />
-    <SUITE FILE_PATH="coverage/csc648_su18_Team06@routes__AboutUs.rcov" NAME="routes: AboutUs Coverage Results" MODIFIED="1531069698487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AboutUs" MODULE_NAME="AboutUs" />
     <SUITE FILE_PATH="coverage/csc648_su18_Team06@Development__Infinite_Images.rcov" NAME="Development: Infinite Images Coverage Results" MODIFIED="1531161221830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AboutUs" MODULE_NAME="AboutUs" />
+    <SUITE FILE_PATH="coverage/csc648_su18_Team06@routes__AboutUs.rcov" NAME="routes: AboutUs Coverage Results" MODIFIED="1531162822290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AboutUs" MODULE_NAME="AboutUs" />
     <SUITE FILE_PATH="coverage/csc648_su18_Team06@Development__AboutUs.rcov" NAME="Development: AboutUs Coverage Results" MODIFIED="1530718794445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AboutUs" MODULE_NAME="AboutUs" />
   </component>
   <component name="DatabaseView">
@@ -46,20 +41,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="schema.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AboutUs/db/schema.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="54" column="40" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.ru" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AboutUs/config.ru">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AboutUs/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
@@ -83,11 +64,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AboutUs/app/views/users/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+            <state relative-caret-position="130">
+              <caret line="10" column="11" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="10" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AboutUs/app/views/images/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AboutUs/app/views/users/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="36" column="13" lean-forward="true" selection-start-line="33" selection-start-column="8" selection-end-line="36" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AboutUs/app/views/images/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="36" column="64" selection-start-line="36" selection-start-column="64" selection-end-line="36" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_search_images.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AboutUs/app/views/images/_search_images.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="17" lean-forward="true" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -104,24 +121,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
               <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pages_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AboutUs/app/controllers/pages_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AboutUs/config/routes.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -155,7 +154,6 @@
       <list>
         <option value="$PROJECT_DIR$/Infinite Images/Gemfile" />
         <option value="$PROJECT_DIR$/AboutUs/db/migrate/20180705030218_create_users.rb" />
-        <option value="$PROJECT_DIR$/AboutUs/app/views/users/index.html.erb" />
         <option value="$PROJECT_DIR$/AboutUs/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/AboutUs/app/views/images/_form.html.erb" />
         <option value="$PROJECT_DIR$/AboutUs/app/views/images/show.html.erb" />
@@ -164,7 +162,6 @@
         <option value="$PROJECT_DIR$/AboutUs/app/views/users/_form.html.erb" />
         <option value="$PROJECT_DIR$/AboutUs/Gemfile" />
         <option value="$PROJECT_DIR$/AboutUs/app/controllers/images_controller.rb" />
-        <option value="$PROJECT_DIR$/AboutUs/app/views/images/index.html.erb" />
         <option value="$PROJECT_DIR$/AboutUs/app/models/image.rb" />
         <option value="$PROJECT_DIR$/AboutUs/app/views/images/_search_images.html.erb" />
         <option value="$PROJECT_DIR$/AboutUs/app/controllers/pages_controller.rb" />
@@ -172,6 +169,8 @@
         <option value="$PROJECT_DIR$/AboutUs/db/schema.rb" />
         <option value="$PROJECT_DIR$/AboutUs/config/database.yml" />
         <option value="$PROJECT_DIR$/AboutUs/app/views/users/show.html.erb" />
+        <option value="$PROJECT_DIR$/AboutUs/app/views/users/index.html.erb" />
+        <option value="$PROJECT_DIR$/AboutUs/app/views/images/index.html.erb" />
       </list>
     </option>
   </component>
@@ -246,6 +245,14 @@
             <path>
               <item name="csc648-su18-Team06" type="b2602c69:ProjectViewProjectNode" />
               <item name="csc648-su18-Team06" type="462c0819:PsiDirectoryNode" />
+              <item name="AboutUs" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="csc648-su18-Team06" type="b2602c69:ProjectViewProjectNode" />
+              <item name="csc648-su18-Team06" type="462c0819:PsiDirectoryNode" />
               <item name="Milestones" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -278,7 +285,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Rails.Development: Infinite Images">
+  <component name="RunManager" selected="Rake.routes: AboutUs">
     <configuration name="IRB console: csc648-su18-Team06" type="IrbRunConfigurationType" factoryName="IRB console" temporary="true">
       <module name="csc648-su18-Team06" />
       <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -491,9 +498,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Rake.routes: AboutUs" />
         <item itemvalue="Rake.db:seed: AboutUs" />
         <item itemvalue="Rake.db:migrate: AboutUs" />
-        <item itemvalue="Rake.routes: AboutUs" />
         <item itemvalue="IRB console.IRB console: csc648-su18-Team06" />
         <item itemvalue="IRB console.IRB console: csc648-su18-Team06" />
       </list>
@@ -518,16 +525,15 @@
       <workItem from="1530838844865" duration="1581000" />
       <workItem from="1530943762074" duration="13924000" />
       <workItem from="1530983330667" duration="25878000" />
-      <workItem from="1531159611594" duration="1895000" />
+      <workItem from="1531159611594" duration="3863000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50264000" />
+    <option name="totallyTimeSpent" value="52232000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5072698" side_tool="true" weight="0.20882353" />
@@ -711,13 +717,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AboutUs/app/views/users/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AboutUs/app/views/users/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -729,13 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1095">
           <caret line="73" column="35" selection-start-line="73" selection-start-column="35" selection-end-line="73" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AboutUs/app/views/images/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -752,24 +744,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AboutUs/app/views/images/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="53" selection-start-line="43" selection-start-column="2" selection-end-line="43" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AboutUs/app/models/image.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AboutUs/app/views/images/_search_images.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
@@ -842,8 +820,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AboutUs/app/views/users/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+        <state relative-caret-position="130">
+          <caret line="10" column="11" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AboutUs/app/views/users/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="36" column="13" lean-forward="true" selection-start-line="33" selection-start-column="8" selection-end-line="36" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AboutUs/app/views/images/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AboutUs/app/views/images/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="36" column="64" selection-start-line="36" selection-start-column="64" selection-end-line="36" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AboutUs/app/views/images/_search_images.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="17" lean-forward="true" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
         </state>
       </provider>
     </entry>
