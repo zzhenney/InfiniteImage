@@ -4,5 +4,5 @@ class Image < ApplicationRecord
   has_many_attached :uploads
 
   #foreign key set up
-  belongs_to :tag
+  belongs_to :category
 end

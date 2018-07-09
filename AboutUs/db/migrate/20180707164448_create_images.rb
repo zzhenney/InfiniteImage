@@ -5,7 +5,7 @@ class CreateImages < ActiveRecord::Migration[5.2]
       t.boolean :is_approved
       t.string :image_title
       t.integer :image_owner_id
-      t.belongs_to :tag     #Foreign Key
+      t.belongs_to :category     #Foreign Key
       t.string :licensing
       t.date :date
       t.text :description
