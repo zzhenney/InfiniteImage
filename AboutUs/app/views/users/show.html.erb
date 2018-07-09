@@ -6,8 +6,10 @@
   <% @user.uploads.each do |upload| %>
     <li>
       <%= image_tag upload, size: '200x200'  %>
+      <%= image_tag upload, size: '50x50' %>
     </li>
   <% end %>
+  
 </ul>
 
   <strong>User:</strong>

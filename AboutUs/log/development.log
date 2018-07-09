@@ -15373,3 +15373,1704 @@ Processing by ImagesController#index as HTML
 Completed 200 OK in 88ms (Views: 84.5ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/images?utf8=%E2%9C%93&q%5Bdescription_cont%5D=&images=Search" for 127.0.0.1 at 2018-07-08 11:02:05 -0700
+Processing by ImagesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"description_cont"=>""}, "images"=>"Search"}
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/_search_images.html.erb (0.8ms)
+  Rendered images/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 92ms (Views: 88.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images/new" for 127.0.0.1 at 2018-07-08 11:10:21 -0700
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by ImagesController#new as HTML
+  Rendering images/new.html.erb within layouts/application
+  Rendered images/_form.html.erb (5.4ms)
+  Rendered images/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 107ms (Views: 101.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-08 11:11:23 -0700
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (35.1ms)
+Completed 200 OK in 276ms (Views: 269.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/vendor/jquery/jquery.min.js" for 127.0.0.1 at 2018-07-08 11:11:25 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/jquery/jquery.min.js"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/vendor/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2018-07-08 11:11:25 -0700
+  [1m[35m (3.1ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/vendor/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2018-07-08 11:11:27 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2018-07-08 11:11:54 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 126ms (Views: 103.9ms | ActiveRecord: 12.3ms)
+
+
+Started DELETE "/users/11" for 127.0.0.1 at 2018-07-08 11:12:00 -0700
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"q35A4dy5EOYUsmlHnWiXeQZGOVewNSFWuW5x7V/Oh6Veh63VTMB1/gsP8sjHbnfAiHxuCgkuu70LOSbTufbZnA==", "id"=>"11"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:58
+  [1m[36mUser Destroy (25.3ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 11[0m
+  ↳ app/controllers/users_controller.rb:58
+  [1m[35m (70.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:58
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 11 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/controllers/users_controller.rb:58
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:58
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: a90760fd-8ad0-49f2-9309-02e89e2dccad) to Async(default) with arguments: #<GlobalID:0x00007f7f9157a7c0 @uri=#<URI::GID gid://about-paul/ActiveStorage::Blob/7>>
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:58
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 7 LIMIT 1[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [a90760fd-8ad0-49f2-9309-02e89e2dccad] Performing ActiveStorage::PurgeJob (Job ID: a90760fd-8ad0-49f2-9309-02e89e2dccad) from Async(default) with arguments: #<GlobalID:0x00007f7f91568b10 @uri=#<URI::GID gid://about-paul/ActiveStorage::Blob/7>>
+  [1m[36mActiveStorage::Attachment Destroy (0.9ms)[0m  [1m[31mDELETE FROM `active_storage_attachments` WHERE `active_storage_attachments`.`id` = 4[0m
+  ↳ app/controllers/users_controller.rb:58
+[ActiveJob] [ActiveStorage::PurgeJob] [a90760fd-8ad0-49f2-9309-02e89e2dccad] [36m  Disk Storage (0.7ms) [0m[31mDeleted file from key: BBFxDC1H1LuVrT2ZDsrkj5iv[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [a90760fd-8ad0-49f2-9309-02e89e2dccad] [36m  Disk Storage (0.2ms) [0m[31mDeleted files by key prefix: variants/BBFxDC1H1LuVrT2ZDsrkj5iv/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [a90760fd-8ad0-49f2-9309-02e89e2dccad]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [a90760fd-8ad0-49f2-9309-02e89e2dccad]   ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [a90760fd-8ad0-49f2-9309-02e89e2dccad]   [1m[36mActiveStorage::Blob Destroy (0.4ms)[0m  [1m[31mDELETE FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 7[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [a90760fd-8ad0-49f2-9309-02e89e2dccad]   ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (17.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:58
+Redirected to http://localhost:3000/users
+Completed 302 Found in 132ms (ActiveRecord: 116.8ms)
+
+
+[ActiveJob] [ActiveStorage::PurgeJob] [a90760fd-8ad0-49f2-9309-02e89e2dccad]   [1m[35m (28.1ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [a90760fd-8ad0-49f2-9309-02e89e2dccad]   ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [a90760fd-8ad0-49f2-9309-02e89e2dccad]   [1m[36mActiveStorage::Attachment Load (1.7ms)[0m  [1m[34mSELECT  `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 7 AND `active_storage_attachments`.`record_type` = 'ActiveStorage::Blob' AND `active_storage_attachments`.`name` = 'preview_image' LIMIT 1[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [a90760fd-8ad0-49f2-9309-02e89e2dccad]   ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [a90760fd-8ad0-49f2-9309-02e89e2dccad] Performed ActiveStorage::PurgeJob (Job ID: a90760fd-8ad0-49f2-9309-02e89e2dccad) from Async(default) in 39.76ms
+Started GET "/users" for 127.0.0.1 at 2018-07-08 11:12:00 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 116ms (Views: 112.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2018-07-08 11:12:02 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 12 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/show.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 8 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:8
+  Rendered users/show.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 122ms (Views: 111.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4b6213ce49227cc0125c55f688c53555f3ec82a3/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png" for 127.0.0.1 at 2018-07-08 11:12:02 -0700
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4b6213ce49227cc0125c55f688c53555f3ec82a3", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 8 LIMIT 1[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: UQy1uUfBXSK2eQ3wVVZZForK (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDhUMTg6MTc6MDIuNzUwWiIsInB1ciI6ImJsb2Jfa2V5In19--90eb6f2cde43f74eed92e38dca8173c81a0e6654/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDhUMTg6MTc6MDIuNzUwWiIsInB1ciI6ImJsb2Jfa2V5In19--90eb6f2cde43f74eed92e38dca8173c81a0e6654/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDhUMTg6MTc6MDIuNzUwWiIsInB1ciI6ImJsb2Jfa2V5In19--90eb6f2cde43f74eed92e38dca8173c81a0e6654/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png" for 127.0.0.1 at 2018-07-08 11:12:02 -0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"Screen Shot 2018-06-26 at 7.13.46 PM.png\"; filename*=UTF-8''Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDhUMTg6MTc6MDIuNzUwWiIsInB1ciI6ImJsb2Jfa2V5In19--90eb6f2cde43f74eed92e38dca8173c81a0e6654", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+[36m  Disk Storage (0.1ms) [0m[34mDownloaded file from key: UQy1uUfBXSK2eQ3wVVZZForK[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.5ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-08 11:29:12 -0700
+  [1m[35m (0.5ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 162ms (Views: 157.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/vendor/jquery/jquery.min.js" for 127.0.0.1 at 2018-07-08 11:29:14 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/jquery/jquery.min.js"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/vendor/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2018-07-08 11:29:14 -0700
+  [1m[35m (15.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pages/AboutPaul" for 127.0.0.1 at 2018-07-08 11:29:15 -0700
+  [1m[35m (53.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"AboutPaul"}
+  Rendering pages/AboutPaul.html.erb within layouts/application
+  Rendered pages/AboutPaul.html.erb within layouts/application (0.6ms)
+Started GET "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2018-07-08 11:29:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Completed 200 OK in 982ms (Views: 981.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fonts/fontawesome-webfont.woff2?v=4.7.0" for 127.0.0.1 at 2018-07-08 11:29:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff2"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/devicon.woff"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.0) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.0) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/fontawesome-webfont.woff?v=4.7.0" for 127.0.0.1 at 2018-07-08 11:29:18 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/devicon.ttf"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.0) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.0) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/fontawesome-webfont.ttf?v=4.7.0" for 127.0.0.1 at 2018-07-08 11:29:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.ttf"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-07-08 11:29:33 -0700
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 121ms (Views: 113.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/vendor/jquery/jquery.min.js" for 127.0.0.1 at 2018-07-08 11:29:34 -0700
+Started GET "/vendor/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2018-07-08 11:29:34 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/jquery/jquery.min.js"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-07-08 11:38:36 -0700
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 328ms (Views: 323.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/vendor/jquery/jquery.min.js" for 127.0.0.1 at 2018-07-08 11:38:38 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/jquery/jquery.min.js"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/vendor/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2018-07-08 11:38:38 -0700
+  [1m[35m (13.5ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/vendor/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2018-07-08 11:38:40 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/images" for 127.0.0.1 at 2018-07-08 11:38:41 -0700
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.7ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/_search_images.html.erb (1.1ms)
+  Rendered images/index.html.erb within layouts/application (38.2ms)
+Completed 200 OK in 162ms (Views: 131.9ms | ActiveRecord: 17.1ms)
+
+
+Started GET "/images?utf8=%E2%9C%93&q%5Bdescription_cont%5D=hello&images=Search" for 127.0.0.1 at 2018-07-08 11:39:20 -0700
+Processing by ImagesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"description_cont"=>"hello"}, "images"=>"Search"}
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images` WHERE `images`.`description` LIKE '%hello%'[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/_search_images.html.erb (1.7ms)
+  Rendered images/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 110ms (Views: 103.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/AboutPaul" for 127.0.0.1 at 2018-07-08 12:57:57 -0700
+  [1m[35m (26.1ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"AboutPaul"}
+  Rendering pages/AboutPaul.html.erb within layouts/application
+  Rendered pages/AboutPaul.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 478ms (Views: 461.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/vendor/jquery/jquery.min.js" for 127.0.0.1 at 2018-07-08 12:57:59 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/jquery/jquery.min.js"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/vendor/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2018-07-08 12:57:59 -0700
+  [1m[35m (1.8ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-07-08 16:58:15 -0700
+  [1m[35m (12.8ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (10.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.0) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.0) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.5ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('5509066464804893655', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTags (20180707191822)
+  [1m[35m (172.3ms)[0m  [1m[35mCREATE TABLE `tags` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180707191822_create_tags.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180707191822')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('5509066464804893655')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2018-07-08 16:58:38 -0700
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Started GET "/" for 127.0.0.1 at 2018-07-08 16:58:48 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (283.8ms)
+Completed 200 OK in 503ms (Views: 491.6ms | ActiveRecord: 0.0ms)
+
+
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 136ms (Views: 130.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/vendor/jquery/jquery.min.js" for 127.0.0.1 at 2018-07-08 16:58:49 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/jquery/jquery.min.js"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/vendor/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2018-07-08 16:58:49 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/vendor/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2018-07-08 16:58:51 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/vendor/jquery/jquery.min.js" for 127.0.0.1 at 2018-07-08 16:58:56 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/jquery/jquery.min.js"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/vendor/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2018-07-08 16:58:56 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/images" for 127.0.0.1 at 2018-07-08 16:58:58 -0700
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.6ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/_search_images.html.erb (1.0ms)
+  Rendered images/index.html.erb within layouts/application (37.8ms)
+Completed 200 OK in 192ms (Views: 147.7ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/images?utf8=%E2%9C%93&q%5Bdescription_cont%5D=&images=Search" for 127.0.0.1 at 2018-07-08 16:59:03 -0700
+Processing by ImagesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"description_cont"=>""}, "images"=>"Search"}
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/_search_images.html.erb (1.9ms)
+  Rendered images/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 133ms (Views: 127.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/images?utf8=%E2%9C%93&q%5Bdescription_cont%5D=hello&images=Search" for 127.0.0.1 at 2018-07-08 16:59:08 -0700
+Processing by ImagesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"description_cont"=>"hello"}, "images"=>"Search"}
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images` WHERE `images`.`description` LIKE '%hello%'[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/_search_images.html.erb (1.0ms)
+  Rendered images/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 121ms (Views: 115.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-08 16:59:14 -0700
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 90ms (Views: 87.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-08 16:59:16 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (36.2ms)
+Completed 200 OK in 136ms (Views: 108.4ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2018-07-08 16:59:20 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 12 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/show.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 8 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:8
+  Rendered users/show.html.erb within layouts/application (74.0ms)
+Completed 200 OK in 192ms (Views: 122.8ms | ActiveRecord: 21.5ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4b6213ce49227cc0125c55f688c53555f3ec82a3/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png" for 127.0.0.1 at 2018-07-08 16:59:20 -0700
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4b6213ce49227cc0125c55f688c53555f3ec82a3", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 8 LIMIT 1[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (17.6ms) [0m[34mGenerated URL for file at key: UQy1uUfBXSK2eQ3wVVZZForK (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMDA6MDQ6MjAuMjM2WiIsInB1ciI6ImJsb2Jfa2V5In19--c2927b234f27b77fb6893146f42d0dd6cc46b0ae/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMDA6MDQ6MjAuMjM2WiIsInB1ciI6ImJsb2Jfa2V5In19--c2927b234f27b77fb6893146f42d0dd6cc46b0ae/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png
+Completed 302 Found in 22ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMDA6MDQ6MjAuMjM2WiIsInB1ciI6ImJsb2Jfa2V5In19--c2927b234f27b77fb6893146f42d0dd6cc46b0ae/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png" for 127.0.0.1 at 2018-07-08 16:59:20 -0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"Screen Shot 2018-06-26 at 7.13.46 PM.png\"; filename*=UTF-8''Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMDA6MDQ6MjAuMjM2WiIsInB1ciI6ImJsb2Jfa2V5In19--c2927b234f27b77fb6893146f42d0dd6cc46b0ae", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+[36m  Disk Storage (0.8ms) [0m[34mDownloaded file from key: UQy1uUfBXSK2eQ3wVVZZForK[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (1.9ms)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images" for 127.0.0.1 at 2018-07-08 16:59:29 -0700
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/_search_images.html.erb (1.4ms)
+  Rendered images/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 94ms (Views: 90.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images?utf8=%E2%9C%93&q%5Bdescription_cont%5D=&images=Search" for 127.0.0.1 at 2018-07-08 16:59:31 -0700
+Processing by ImagesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"description_cont"=>""}, "images"=>"Search"}
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (1.7ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/_search_images.html.erb (1.0ms)
+  Rendered images/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 122ms (Views: 113.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/images/new" for 127.0.0.1 at 2018-07-08 16:59:37 -0700
+Processing by ImagesController#new as HTML
+  Rendering images/new.html.erb within layouts/application
+  [1m[36mTag Load (1.5ms)[0m  [1m[34mSELECT `tags`.* FROM `tags`[0m
+  ↳ app/views/images/_form.html.erb:41
+  Rendered images/_form.html.erb (32.4ms)
+  Rendered images/new.html.erb within layouts/application (40.3ms)
+Completed 200 OK in 110ms (Views: 102.8ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/images/new" for 127.0.0.1 at 2018-07-08 17:01:47 -0700
+Processing by ImagesController#new as HTML
+  Rendering images/new.html.erb within layouts/application
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT `tags`.* FROM `tags`[0m
+  ↳ app/views/images/_form.html.erb:41
+  Rendered images/_form.html.erb (11.3ms)
+  Rendered images/new.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 124ms (Views: 92.0ms | ActiveRecord: 14.6ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mTag Create (0.5ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `created_at`, `updated_at`) VALUES ('Animals', '2018-07-09 00:02:35', '2018-07-09 00:02:35')[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (52.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mTag Create (0.4ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `created_at`, `updated_at`) VALUES ('Cars', '2018-07-09 00:02:35', '2018-07-09 00:02:35')[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mTag Create (0.3ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `created_at`, `updated_at`) VALUES ('Food', '2018-07-09 00:02:35', '2018-07-09 00:02:35')[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mTag Create (0.3ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `created_at`, `updated_at`) VALUES ('Nature', '2018-07-09 00:02:35', '2018-07-09 00:02:35')[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mTag Create (0.3ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `created_at`, `updated_at`) VALUES ('People', '2018-07-09 00:02:35', '2018-07-09 00:02:35')[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mTag Create (0.3ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `created_at`, `updated_at`) VALUES ('Sports', '2018-07-09 00:02:35', '2018-07-09 00:02:35')[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mTag Create (0.3ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `created_at`, `updated_at`) VALUES ('Travel', '2018-07-09 00:02:35', '2018-07-09 00:02:35')[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+Started GET "/images/new" for 127.0.0.1 at 2018-07-08 17:02:39 -0700
+Processing by ImagesController#new as HTML
+  Rendering images/new.html.erb within layouts/application
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT `tags`.* FROM `tags`[0m
+  ↳ app/views/images/_form.html.erb:41
+  Rendered images/_form.html.erb (22.7ms)
+  Rendered images/new.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 134ms (Views: 95.3ms | ActiveRecord: 20.5ms)
+
+
+Started GET "/images?utf8=%E2%9C%93&q%5Bdescription_cont%5D=&images=Search" for 127.0.0.1 at 2018-07-08 17:02:56 -0700
+Processing by ImagesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"description_cont"=>""}, "images"=>"Search"}
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (1.0ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/_search_images.html.erb (1.0ms)
+  Rendered images/index.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 128ms (Views: 123.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/images?utf8=%E2%9C%93&q%5Bdescription_cont%5D=bg&images=Search" for 127.0.0.1 at 2018-07-08 17:04:02 -0700
+Processing by ImagesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"description_cont"=>"bg"}, "images"=>"Search"}
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images` WHERE `images`.`description` LIKE '%bg%'[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/_search_images.html.erb (0.9ms)
+  Rendered images/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 105ms (Views: 99.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-09 11:34:25 -0700
+  [1m[35m (94.7ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (442.0ms)
+Completed 200 OK in 599ms (Views: 587.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/vendor/jquery/jquery.min.js" for 127.0.0.1 at 2018-07-09 11:34:28 -0700
+  [1m[35m (0.6ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/jquery/jquery.min.js"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/vendor/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2018-07-09 11:34:28 -0700
+  [1m[35m (0.8ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2018-07-09 11:34:32 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (51.7ms)
+Completed 200 OK in 153ms (Views: 112.3ms | ActiveRecord: 31.8ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2018-07-09 11:34:36 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 12 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/show.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 8 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:8
+  Rendered users/show.html.erb within layouts/application (76.2ms)
+Completed 200 OK in 175ms (Views: 136.4ms | ActiveRecord: 32.1ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4b6213ce49227cc0125c55f688c53555f3ec82a3/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png" for 127.0.0.1 at 2018-07-09 11:34:36 -0700
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4b6213ce49227cc0125c55f688c53555f3ec82a3", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+  [1m[36mActiveStorage::Blob Load (36.1ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 8 LIMIT 1[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (14.1ms) [0m[34mGenerated URL for file at key: UQy1uUfBXSK2eQ3wVVZZForK (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6Mzk6MzYuNzA4WiIsInB1ciI6ImJsb2Jfa2V5In19--4b8def35771cb13800683bd8795c1d7df82f9312/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6Mzk6MzYuNzA4WiIsInB1ciI6ImJsb2Jfa2V5In19--4b8def35771cb13800683bd8795c1d7df82f9312/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png
+Completed 302 Found in 58ms (ActiveRecord: 36.1ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6Mzk6MzYuNzA4WiIsInB1ciI6ImJsb2Jfa2V5In19--4b8def35771cb13800683bd8795c1d7df82f9312/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png" for 127.0.0.1 at 2018-07-09 11:34:36 -0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"Screen Shot 2018-06-26 at 7.13.46 PM.png\"; filename*=UTF-8''Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6Mzk6MzYuNzA4WiIsInB1ciI6ImJsb2Jfa2V5In19--4b8def35771cb13800683bd8795c1d7df82f9312", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+[36m  Disk Storage (0.1ms) [0m[34mDownloaded file from key: UQy1uUfBXSK2eQ3wVVZZForK[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (1.6ms)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images" for 127.0.0.1 at 2018-07-09 11:35:51 -0700
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (1.3ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/_search_images.html.erb (1.1ms)
+  Rendered images/index.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 115ms (Views: 95.3ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/images/3" for 127.0.0.1 at 2018-07-09 11:35:56 -0700
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT  `images`.* FROM `images` WHERE `images`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/images_controller.rb:70
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (14.7ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 10 LIMIT 1[0m
+  ↳ app/views/images/show.html.erb:7
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT  `tags`.* FROM `tags` WHERE `tags`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/images/show.html.erb:34
+  Rendered images/show.html.erb within layouts/application (38.2ms)
+Completed 200 OK in 115ms (Views: 85.3ms | ActiveRecord: 25.3ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4134269d85b4bd05d1977c82af735b600514cb2f/bg.gif" for 127.0.0.1 at 2018-07-09 11:35:56 -0700
+Processing by ActiveStorage::BlobsController#show as GIF
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4134269d85b4bd05d1977c82af735b600514cb2f", "filename"=>"bg"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 10 LIMIT 1[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: H9Tn1bU7xntsje6bLvDRYmgE (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFJT1ZSdU1XSlZOM2h1ZEhOcVpUWmlUSFpFVWxsdFowVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6NDA6NTYuNTIwWiIsInB1ciI6ImJsb2Jfa2V5In19--055defd73ed7f467e29460c06d5354ba59fcc5b7/bg.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22bg.gif%22%3B+filename%2A%3DUTF-8%27%27bg.gif)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFJT1ZSdU1XSlZOM2h1ZEhOcVpUWmlUSFpFVWxsdFowVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6NDA6NTYuNTIwWiIsInB1ciI6ImJsb2Jfa2V5In19--055defd73ed7f467e29460c06d5354ba59fcc5b7/bg.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22bg.gif%22%3B+filename%2A%3DUTF-8%27%27bg.gif
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFJT1ZSdU1XSlZOM2h1ZEhOcVpUWmlUSFpFVWxsdFowVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6NDA6NTYuNTIwWiIsInB1ciI6ImJsb2Jfa2V5In19--055defd73ed7f467e29460c06d5354ba59fcc5b7/bg.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22bg.gif%22%3B+filename%2A%3DUTF-8%27%27bg.gif" for 127.0.0.1 at 2018-07-09 11:35:56 -0700
+Processing by ActiveStorage::DiskController#show as GIF
+  Parameters: {"content_type"=>"image/gif", "disposition"=>"inline; filename=\"bg.gif\"; filename*=UTF-8''bg.gif", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFJT1ZSdU1XSlZOM2h1ZEhOcVpUWmlUSFpFVWxsdFowVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6NDA6NTYuNTIwWiIsInB1ciI6ImJsb2Jfa2V5In19--055defd73ed7f467e29460c06d5354ba59fcc5b7", "filename"=>"bg"}
+[36m  Disk Storage (1.1ms) [0m[34mDownloaded file from key: H9Tn1bU7xntsje6bLvDRYmgE[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.8ms)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images" for 127.0.0.1 at 2018-07-09 11:35:59 -0700
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/_search_images.html.erb (0.9ms)
+  Rendered images/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 77ms (Views: 72.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/images/3" for 127.0.0.1 at 2018-07-09 11:36:03 -0700
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT  `images`.* FROM `images` WHERE `images`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/images_controller.rb:70
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (5.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 10 LIMIT 1[0m
+  ↳ app/views/images/show.html.erb:7
+  [1m[36mTag Load (0.8ms)[0m  [1m[34mSELECT  `tags`.* FROM `tags` WHERE `tags`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/images/show.html.erb:34
+  Rendered images/show.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 102ms (Views: 91.1ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFJT1ZSdU1XSlZOM2h1ZEhOcVpUWmlUSFpFVWxsdFowVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6NDA6NTYuNTIwWiIsInB1ciI6ImJsb2Jfa2V5In19--055defd73ed7f467e29460c06d5354ba59fcc5b7/bg.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22bg.gif%22%3B+filename%2A%3DUTF-8%27%27bg.gif" for 127.0.0.1 at 2018-07-09 11:36:03 -0700
+Processing by ActiveStorage::DiskController#show as GIF
+  Parameters: {"content_type"=>"image/gif", "disposition"=>"inline; filename=\"bg.gif\"; filename*=UTF-8''bg.gif", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFJT1ZSdU1XSlZOM2h1ZEhOcVpUWmlUSFpFVWxsdFowVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6NDA6NTYuNTIwWiIsInB1ciI6ImJsb2Jfa2V5In19--055defd73ed7f467e29460c06d5354ba59fcc5b7", "filename"=>"bg"}
+[36m  Disk Storage (1.6ms) [0m[34mDownloaded file from key: H9Tn1bU7xntsje6bLvDRYmgE[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (1.3ms)
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/3" for 127.0.0.1 at 2018-07-09 11:36:10 -0700
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mImage Load (1.1ms)[0m  [1m[34mSELECT  `images`.* FROM `images` WHERE `images`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/images_controller.rb:70
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 10 LIMIT 1[0m
+  ↳ app/views/images/show.html.erb:7
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT  `tags`.* FROM `tags` WHERE `tags`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/images/show.html.erb:34
+  Rendered images/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 140ms (Views: 96.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/images/3" for 127.0.0.1 at 2018-07-09 11:36:18 -0700
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT  `images`.* FROM `images` WHERE `images`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/images_controller.rb:70
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (14.0ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 10 LIMIT 1[0m
+  ↳ app/views/images/show.html.erb:7
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT  `tags`.* FROM `tags` WHERE `tags`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/images/show.html.erb:34
+  Rendered images/show.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 113ms (Views: 90.8ms | ActiveRecord: 15.5ms)
+
+
+Started GET "/images?utf8=%E2%9C%93&q%5Bdescription_cont%5D=bg&images=Search" for 127.0.0.1 at 2018-07-09 11:36:57 -0700
+Processing by ImagesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"description_cont"=>"bg"}, "images"=>"Search"}
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images` WHERE `images`.`description` LIKE '%bg%'[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/_search_images.html.erb (1.0ms)
+  Rendered images/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 85ms (Views: 78.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/images/3" for 127.0.0.1 at 2018-07-09 11:37:02 -0700
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT  `images`.* FROM `images` WHERE `images`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/images_controller.rb:70
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (4.3ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 10 LIMIT 1[0m
+  ↳ app/views/images/show.html.erb:7
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT  `tags`.* FROM `tags` WHERE `tags`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/images/show.html.erb:34
+  Rendered images/show.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 101ms (Views: 90.1ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFJT1ZSdU1XSlZOM2h1ZEhOcVpUWmlUSFpFVWxsdFowVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6NDA6NTYuNTIwWiIsInB1ciI6ImJsb2Jfa2V5In19--055defd73ed7f467e29460c06d5354ba59fcc5b7/bg.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22bg.gif%22%3B+filename%2A%3DUTF-8%27%27bg.gif" for 127.0.0.1 at 2018-07-09 11:37:02 -0700
+Processing by ActiveStorage::DiskController#show as GIF
+  Parameters: {"content_type"=>"image/gif", "disposition"=>"inline; filename=\"bg.gif\"; filename*=UTF-8''bg.gif", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFJT1ZSdU1XSlZOM2h1ZEhOcVpUWmlUSFpFVWxsdFowVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6NDA6NTYuNTIwWiIsInB1ciI6ImJsb2Jfa2V5In19--055defd73ed7f467e29460c06d5354ba59fcc5b7", "filename"=>"bg"}
+[36m  Disk Storage (0.4ms) [0m[34mDownloaded file from key: H9Tn1bU7xntsje6bLvDRYmgE[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.5ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/3" for 127.0.0.1 at 2018-07-09 11:40:09 -0700
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT  `images`.* FROM `images` WHERE `images`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/images_controller.rb:70
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 10 LIMIT 1[0m
+  ↳ app/views/images/show.html.erb:7
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT  `tags`.* FROM `tags` WHERE `tags`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/images/show.html.erb:34
+  Rendered images/show.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 118ms (Views: 110.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/images/3" for 127.0.0.1 at 2018-07-09 11:41:22 -0700
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT  `images`.* FROM `images` WHERE `images`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/images_controller.rb:70
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 10 LIMIT 1[0m
+  ↳ app/views/images/show.html.erb:7
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT  `tags`.* FROM `tags` WHERE `tags`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/images/show.html.erb:34
+  Rendered images/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 74ms (Views: 68.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4134269d85b4bd05d1977c82af735b600514cb2f/bg.gif" for 127.0.0.1 at 2018-07-09 11:41:23 -0700
+Processing by ActiveStorage::BlobsController#show as GIF
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4134269d85b4bd05d1977c82af735b600514cb2f", "filename"=>"bg"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 10 LIMIT 1[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: H9Tn1bU7xntsje6bLvDRYmgE (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFJT1ZSdU1XSlZOM2h1ZEhOcVpUWmlUSFpFVWxsdFowVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6NDY6MjMuMjk4WiIsInB1ciI6ImJsb2Jfa2V5In19--1079ad3418210a6efa1bdf04f9297b3551c4ba3f/bg.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22bg.gif%22%3B+filename%2A%3DUTF-8%27%27bg.gif)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFJT1ZSdU1XSlZOM2h1ZEhOcVpUWmlUSFpFVWxsdFowVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6NDY6MjMuMjk4WiIsInB1ciI6ImJsb2Jfa2V5In19--1079ad3418210a6efa1bdf04f9297b3551c4ba3f/bg.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22bg.gif%22%3B+filename%2A%3DUTF-8%27%27bg.gif
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFJT1ZSdU1XSlZOM2h1ZEhOcVpUWmlUSFpFVWxsdFowVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6NDY6MjMuMjk4WiIsInB1ciI6ImJsb2Jfa2V5In19--1079ad3418210a6efa1bdf04f9297b3551c4ba3f/bg.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22bg.gif%22%3B+filename%2A%3DUTF-8%27%27bg.gif" for 127.0.0.1 at 2018-07-09 11:41:23 -0700
+Processing by ActiveStorage::DiskController#show as GIF
+  Parameters: {"content_type"=>"image/gif", "disposition"=>"inline; filename=\"bg.gif\"; filename*=UTF-8''bg.gif", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFJT1ZSdU1XSlZOM2h1ZEhOcVpUWmlUSFpFVWxsdFowVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6NDY6MjMuMjk4WiIsInB1ciI6ImJsb2Jfa2V5In19--1079ad3418210a6efa1bdf04f9297b3551c4ba3f", "filename"=>"bg"}
+[36m  Disk Storage (0.6ms) [0m[34mDownloaded file from key: H9Tn1bU7xntsje6bLvDRYmgE[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.6ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images?utf8=%E2%9C%93&q%5Bdescription_cont%5D=bg&images=Search" for 127.0.0.1 at 2018-07-09 11:41:31 -0700
+Processing by ImagesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"description_cont"=>"bg"}, "images"=>"Search"}
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images` WHERE `images`.`description` LIKE '%bg%'[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/_search_images.html.erb (1.8ms)
+  Rendered images/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 98ms (Views: 93.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images?utf8=%E2%9C%93&q%5Bdescription_cont%5D=bg&images=Search" for 127.0.0.1 at 2018-07-09 11:41:32 -0700
+Processing by ImagesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"description_cont"=>"bg"}, "images"=>"Search"}
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images` WHERE `images`.`description` LIKE '%bg%'[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/_search_images.html.erb (0.9ms)
+  Rendered images/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 120ms (Views: 112.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images/3" for 127.0.0.1 at 2018-07-09 11:41:36 -0700
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT  `images`.* FROM `images` WHERE `images`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/images_controller.rb:70
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (4.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 10 LIMIT 1[0m
+  ↳ app/views/images/show.html.erb:7
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT  `tags`.* FROM `tags` WHERE `tags`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/images/show.html.erb:34
+  Rendered images/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 89ms (Views: 80.2ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFJT1ZSdU1XSlZOM2h1ZEhOcVpUWmlUSFpFVWxsdFowVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6NDY6MjMuMjk4WiIsInB1ciI6ImJsb2Jfa2V5In19--1079ad3418210a6efa1bdf04f9297b3551c4ba3f/bg.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22bg.gif%22%3B+filename%2A%3DUTF-8%27%27bg.gif" for 127.0.0.1 at 2018-07-09 11:41:36 -0700
+Processing by ActiveStorage::DiskController#show as GIF
+  Parameters: {"content_type"=>"image/gif", "disposition"=>"inline; filename=\"bg.gif\"; filename*=UTF-8''bg.gif", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFJT1ZSdU1XSlZOM2h1ZEhOcVpUWmlUSFpFVWxsdFowVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6NDY6MjMuMjk4WiIsInB1ciI6ImJsb2Jfa2V5In19--1079ad3418210a6efa1bdf04f9297b3551c4ba3f", "filename"=>"bg"}
+[36m  Disk Storage (0.6ms) [0m[34mDownloaded file from key: H9Tn1bU7xntsje6bLvDRYmgE[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images" for 127.0.0.1 at 2018-07-09 11:41:38 -0700
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  Rendered images/_search_images.html.erb (1.3ms)
+  Rendered images/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 97ms (Views: 91.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-09 11:41:40 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 92ms (Views: 88.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2018-07-09 11:41:43 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 12 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/show.html.erb:6
+  [1m[36mActiveStorage::Blob Load (2.5ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 8 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:8
+  Rendered users/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 83ms (Views: 75.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4b6213ce49227cc0125c55f688c53555f3ec82a3/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png" for 127.0.0.1 at 2018-07-09 11:41:43 -0700
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4b6213ce49227cc0125c55f688c53555f3ec82a3", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 8 LIMIT 1[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (1.3ms) [0m[34mGenerated URL for file at key: UQy1uUfBXSK2eQ3wVVZZForK (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6NDY6NDMuOTc4WiIsInB1ciI6ImJsb2Jfa2V5In19--814354e99ded6c4c4bfde038882347193852e4b5/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6NDY6NDMuOTc4WiIsInB1ciI6ImJsb2Jfa2V5In19--814354e99ded6c4c4bfde038882347193852e4b5/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6NDY6NDMuOTc4WiIsInB1ciI6ImJsb2Jfa2V5In19--814354e99ded6c4c4bfde038882347193852e4b5/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png" for 127.0.0.1 at 2018-07-09 11:41:43 -0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"Screen Shot 2018-06-26 at 7.13.46 PM.png\"; filename*=UTF-8''Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6NDY6NDMuOTc4WiIsInB1ciI6ImJsb2Jfa2V5In19--814354e99ded6c4c4bfde038882347193852e4b5", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+[36m  Disk Storage (0.1ms) [0m[34mDownloaded file from key: UQy1uUfBXSK2eQ3wVVZZForK[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2018-07-09 11:42:32 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 12 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/show.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 8 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:8
+  Rendered users/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 68ms (Views: 63.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6NDY6NDMuOTc4WiIsInB1ciI6ImJsb2Jfa2V5In19--814354e99ded6c4c4bfde038882347193852e4b5/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png" for 127.0.0.1 at 2018-07-09 11:42:33 -0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"Screen Shot 2018-06-26 at 7.13.46 PM.png\"; filename*=UTF-8''Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6NDY6NDMuOTc4WiIsInB1ciI6ImJsb2Jfa2V5In19--814354e99ded6c4c4bfde038882347193852e4b5", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+[36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: UQy1uUfBXSK2eQ3wVVZZForK[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2018-07-09 11:42:42 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 12 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/show.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 8 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:8
+  Rendered users/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 70ms (Views: 65.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6NDY6NDMuOTc4WiIsInB1ciI6ImJsb2Jfa2V5In19--814354e99ded6c4c4bfde038882347193852e4b5/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png" for 127.0.0.1 at 2018-07-09 11:42:42 -0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"Screen Shot 2018-06-26 at 7.13.46 PM.png\"; filename*=UTF-8''Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFWVVhreGRWVm1RbGhUU3pKbFVUTjNWbFphV2tadmNrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMDlUMTg6NDY6NDMuOTc4WiIsInB1ciI6ImJsb2Jfa2V5In19--814354e99ded6c4c4bfde038882347193852e4b5", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+[36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: UQy1uUfBXSK2eQ3wVVZZForK[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-09 11:42:53 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:22
+  Rendered users/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 82ms (Views: 78.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2018-07-09 11:42:58 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 12 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/users/show.html.erb:6
+  [1m[36mActiveStorage::Blob Load (5.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 8 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:8
+  Rendered users/show.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 95ms (Views: 82.9ms | ActiveRecord: 7.0ms)
+
+
