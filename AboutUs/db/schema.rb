@@ -39,12 +39,12 @@ ActiveRecord::Schema.define(version: 2018_07_09_211059) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "image_id"
     t.boolean "is_approved"
     t.string "image_title"
     t.integer "image_owner_id"
-    t.integer "category_id"
+    t.bigint "category_id"
     t.string "licensing"
     t.date "date"
     t.text "description"
@@ -53,9 +53,10 @@ ActiveRecord::Schema.define(version: 2018_07_09_211059) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "user_id"
+    t.index ["category_id"], name: "index_images_on_category_id"
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "user_id"
     t.boolean "is_admin"
     t.integer "cart_id"

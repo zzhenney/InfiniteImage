@@ -1,6 +1,6 @@
 <%= search_form_for @q do |f| %>
   <div class="col-12 col-md-9 mb-2 mb-md-0">
-    <%= f.search_field :description_cont, placeholder: 'Search for an image', class: 'form-control form-control-lg' %>
+    <%= f.search_field :image_title_cont, placeholder: 'Search for an image', class: 'form-control form-control-lg' %>
     <%= f.submit 'Search', name: 'images', class: "btn btn-block btn-lg btn-primary" %>
   </div>
 <% end %>
