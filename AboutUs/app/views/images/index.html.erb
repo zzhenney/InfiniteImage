@@ -21,7 +21,7 @@
 <!--  </thead>-->
 
 <!--  <tbody>-->
-    <%# @images.each do |image| %>
+<%# @images.each do |image| %>
 <!--      <tr>-->
 <!--        <td><%#= image.image_id %></td>-->
 <!--        <td><%#= image.is_approved %></td>-->
@@ -35,14 +35,14 @@
 <!--        <td><%#= image.file_type %></td>-->
 <!--        <td><%#= image.location %></td>-->
 <!--        <td><%#  image.uploads.each do |upload| %>-->
-            <%#= link_to (image_tag upload, size: '50x50'), image %>
-          <%# end %>
+<%#= link_to (image_tag upload, size: '50x50'), image %>
+<%# end %>
 <!--        </td>-->
 <!--        <td><%#= link_to 'Show', image %></td>-->
 <!--        <td><%#= link_to 'Edit', edit_image_path(image) %></td>-->
 <!--        <td><%#= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
 <!--      </tr>-->
-    <%# end %>
+<%# end %>
 <!--  </tbody>-->
 <!--</table>-->
 
@@ -51,8 +51,8 @@
 </p>
 <br>
 <% @images.each do |image| %>
-<%  image.uploads.each do |upload| %>
-<%= link_to (image_tag upload, size: '200x200'), image %>
+  <% image.uploads.each do |upload| %>
+    <%= link_to (image_tag upload, size: '200x200'), image %>
+  <% end %>
 <% end %>
-<% end %>
-<%= link_to 'New Image', new_image_path %>
+<%#= link_to 'New Image', new_image_path %>
