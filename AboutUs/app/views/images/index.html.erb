@@ -50,7 +50,7 @@
   <%= render 'images/search_images', image: @image %>
 </p>
 <br>
-<% @images.each do |image| %>
+<% @images.shuffle.each do |image| %>
   <% image.uploads.each do |upload| %>
     <%= link_to (image_tag upload, size: '200x200'), image %>
   <% end %>

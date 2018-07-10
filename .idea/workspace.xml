@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c886784a-2a16-4bf0-b4ef-59907bbd3de2" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AboutUs/app/views/images/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/AboutUs/app/views/images/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AboutUs/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/AboutUs/log/development.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AboutUs/tmp/cache/bootsnap-compile-cache/a3/f0b479807932b7" beforeDir="false" afterPath="$PROJECT_DIR$/AboutUs/tmp/cache/bootsnap-compile-cache/a3/f0b479807932b7" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -60,8 +63,8 @@
       <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AboutUs/app/views/images/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+            <state relative-caret-position="361">
+              <caret line="52" column="19" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -70,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/AboutUs/app/views/users/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -88,7 +91,7 @@
         <entry file="file://$PROJECT_DIR$/AboutUs/app/views/images/_search_images.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="51" lean-forward="true" selection-start-column="51" selection-end-column="51" />
+              <caret column="51" selection-start-column="51" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -97,7 +100,7 @@
         <entry file="file://$PROJECT_DIR$/AboutUs/config/database.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -124,7 +127,7 @@
         <entry file="file://$PROJECT_DIR$/AboutUs/app/controllers/users_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+              <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -528,12 +531,12 @@
       <workItem from="1530838844865" duration="1581000" />
       <workItem from="1530943762074" duration="13924000" />
       <workItem from="1530983330667" duration="25878000" />
-      <workItem from="1531159611594" duration="17966000" />
+      <workItem from="1531159611594" duration="18457000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66335000" />
+    <option name="totallyTimeSpent" value="66826000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="0" />
@@ -808,14 +811,14 @@
     <entry file="file://$PROJECT_DIR$/AboutUs/app/controllers/users_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AboutUs/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -836,7 +839,7 @@
     <entry file="file://$PROJECT_DIR$/AboutUs/app/views/users/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -850,14 +853,14 @@
     <entry file="file://$PROJECT_DIR$/AboutUs/app/views/images/_search_images.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="51" lean-forward="true" selection-start-column="51" selection-end-column="51" />
+          <caret column="51" selection-start-column="51" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AboutUs/app/views/images/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+        <state relative-caret-position="361">
+          <caret line="52" column="19" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
         </state>
       </provider>
     </entry>
