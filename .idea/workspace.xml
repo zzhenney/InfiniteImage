@@ -3,18 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c886784a-2a16-4bf0-b4ef-59907bbd3de2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AboutUs/app/controllers/images_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/AboutUs/app/controllers/images_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AboutUs/app/models/image.rb" beforeDir="false" afterPath="$PROJECT_DIR$/AboutUs/app/models/image.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AboutUs/app/views/images/_search_images.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/AboutUs/app/views/images/_search_images.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AboutUs/app/views/images/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/AboutUs/app/views/images/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AboutUs/app/views/images/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/AboutUs/app/views/images/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AboutUs/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/AboutUs/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AboutUs/app/views/images/result.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/AboutUs/app/views/images/result.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AboutUs/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/AboutUs/log/development.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AboutUs/tmp/cache/bootsnap-compile-cache/3a/f929ce02e31109" beforeDir="false" afterPath="$PROJECT_DIR$/AboutUs/tmp/cache/bootsnap-compile-cache/3a/f929ce02e31109" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AboutUs/tmp/cache/bootsnap-compile-cache/c9/2a78530fd6ae58" beforeDir="false" afterPath="$PROJECT_DIR$/AboutUs/tmp/cache/bootsnap-compile-cache/c9/2a78530fd6ae58" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AboutUs/tmp/cache/bootsnap-compile-cache/f2/de6e27ac267214" beforeDir="false" afterPath="$PROJECT_DIR$/AboutUs/tmp/cache/bootsnap-compile-cache/f2/de6e27ac267214" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AboutUs/tmp/cache/bootsnap-load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/AboutUs/tmp/cache/bootsnap-load-path-cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AboutUs/tmp/pids/server.pid" beforeDir="false" afterPath="$PROJECT_DIR$/AboutUs/tmp/pids/server.pid" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,17 +55,17 @@
       <file leaf-file-name="result.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AboutUs/app/views/images/result.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="10" lean-forward="true" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+            <state relative-caret-position="15">
+              <caret line="1" column="31" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AboutUs/app/views/images/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="49" lean-forward="true" selection-start-line="36" selection-start-column="49" selection-end-line="36" selection-end-column="49" />
+            <state relative-caret-position="324">
+              <caret line="54" column="41" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -96,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_search_images.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_search_images.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AboutUs/app/views/images/_search_images.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="40" selection-start-column="40" selection-end-column="40" />
+              <caret column="51" lean-forward="true" selection-start-column="51" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -185,10 +177,10 @@
         <option value="$PROJECT_DIR$/AboutUs/app/models/image.rb" />
         <option value="$PROJECT_DIR$/AboutUs/config/routes.rb" />
         <option value="$PROJECT_DIR$/AboutUs/app/views/images/show.html.erb" />
-        <option value="$PROJECT_DIR$/AboutUs/app/views/images/index.html.erb" />
-        <option value="$PROJECT_DIR$/AboutUs/app/views/images/result.html.erb" />
         <option value="$PROJECT_DIR$/AboutUs/app/controllers/images_controller.rb" />
+        <option value="$PROJECT_DIR$/AboutUs/app/views/images/result.html.erb" />
         <option value="$PROJECT_DIR$/AboutUs/app/views/images/_search_images.html.erb" />
+        <option value="$PROJECT_DIR$/AboutUs/app/views/images/index.html.erb" />
       </list>
     </option>
   </component>
@@ -237,6 +229,21 @@
               <item name="csc648-su18-Team06" type="462c0819:PsiDirectoryNode" />
               <item name="AboutUs" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="csc648-su18-Team06" type="b2602c69:ProjectViewProjectNode" />
+              <item name="csc648-su18-Team06" type="462c0819:PsiDirectoryNode" />
+              <item name="AboutUs" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="csc648-su18-Team06" type="b2602c69:ProjectViewProjectNode" />
+              <item name="csc648-su18-Team06" type="462c0819:PsiDirectoryNode" />
+              <item name="AboutUs" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -517,12 +524,12 @@
       <workItem from="1530838844865" duration="1581000" />
       <workItem from="1530943762074" duration="13924000" />
       <workItem from="1530983330667" duration="25878000" />
-      <workItem from="1531159611594" duration="15840000" />
+      <workItem from="1531159611594" duration="16984000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64209000" />
+    <option name="totallyTimeSpent" value="65353000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="0" />
@@ -532,7 +539,7 @@
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5072698" side_tool="true" weight="0.20882353" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4927302" visible="true" weight="0.20882353" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4927302" visible="true" weight="0.23382352" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21486267" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
@@ -801,13 +808,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AboutUs/app/views/users/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AboutUs/app/views/images/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -822,6 +822,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/AboutUs/app/views/images/result.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="31" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AboutUs/app/controllers/images_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -829,24 +836,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AboutUs/app/views/images/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/AboutUs/app/views/users/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="49" lean-forward="true" selection-start-line="36" selection-start-column="49" selection-end-line="36" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AboutUs/app/views/images/result.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="10" lean-forward="true" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        <state relative-caret-position="135">
+          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AboutUs/app/views/images/_search_images.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="40" selection-start-column="40" selection-end-column="40" />
+          <caret column="51" lean-forward="true" selection-start-column="51" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AboutUs/app/views/images/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="54" column="41" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
         </state>
       </provider>
     </entry>
