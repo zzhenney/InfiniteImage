@@ -5,8 +5,8 @@ class ImagesController < ApplicationController
   # GET /images.json
   def index
     @images = Image.all
-    @q = Image.ransack(params[:q])
-    @images = @q.result(distinct: true)
+    @q = Image.ransack(params[:q])          #Ransack gem's  Paul Ancajima
+    @images = @q.result(distinct: true)    #Simple search
   end
 
   # GET /images/1
@@ -72,7 +72,7 @@ class ImagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def image_params
-      #Added uploads param 7/72018
+      #Added uploads param 7/72018 Paul Ancajima
       params.require(:image).permit(:user_id, :image_id, :is_approved, :image_title, :image_owner_id, :category_id, :licensing, :date, :description, :file_type, :location, uploads:[])
     end
 end

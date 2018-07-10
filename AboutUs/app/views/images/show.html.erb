@@ -4,6 +4,7 @@
 <ul>
   <% @image.uploads.each do |upload| %>
     <li>
+<!--      for each loop all to show all. size: < L*W > to reszie images (NOT THUMBNAIL) Paul Ancajima-->
       <%= image_tag upload, size: '200x200'  %>
     </li>
   <% end %>
@@ -31,7 +32,7 @@
 
 <p>
   <strong>Category:</strong>
-  <%= @image.category_id %>
+  <%= @image.category.name %>
 </p>
 
 <p>
