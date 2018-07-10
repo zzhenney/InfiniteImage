@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   #This sets root page to index.
   root 'pages#index'
   get "/pages/:page" => "pages#show"
+  get 'result' => 'images#result'
 
 end

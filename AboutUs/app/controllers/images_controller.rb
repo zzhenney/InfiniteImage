@@ -5,6 +5,13 @@ class ImagesController < ApplicationController
   # GET /images.json
   def index
     @images = Image.all
+
+    @q = Image.ransack(params[:q])          #Ransack gem's  Paul Ancajima
+    @images = @q.result(distinct: true)     #Simple search
+  end
+
+  def result
+    @images = Image.all
     @q = Image.ransack(params[:q])          #Ransack gem's  Paul Ancajima
     @images = @q.result(distinct: true)    #Simple search
   end
@@ -17,7 +24,6 @@ class ImagesController < ApplicationController
   # GET /images/new
   def new
     @image = Image.new
-
   end
 
   # GET /images/1/edit

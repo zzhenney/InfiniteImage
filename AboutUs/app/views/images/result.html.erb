@@ -1,0 +1,7 @@
+<ul>
+  <% @images.each do |image| %>
+    <% image.uploads.each do |upload| %>
+      <%= link_to (image_tag upload, size: '200x200'), image %>
+    <% end %>
+  <% end %>
+</ul>
