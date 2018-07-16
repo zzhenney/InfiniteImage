@@ -1,0 +1,12 @@
+<%#= search_form_for @q, url: result_path do |f| %>
+  <%= search_form_for @q do |f| %>
+  <div class="col-12 col-md-9 mb-2 mb-md-0">
+<!-- Changed search field. We can search through our attributes from the table "category" IE. category_id category_name etc-->
+    <%= f.search_field :category_name_cont, placeholder: 'Search for an image. (i.e. Animals, Cars, Food, Nature, People, Travel)', class: 'form-control form-control-lg' %>
+    <%= f.submit 'Search', name: 'images', class: "btn btn-block btn-lg btn-primary" %>
+  </div>
+<% end %>
+
+
+<!--search form partial Paul Ancajima-->
+

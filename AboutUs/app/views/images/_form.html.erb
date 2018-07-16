@@ -1,0 +1,72 @@
+<%= form_with(model: image, local: true) do |form| %>
+  <% if image.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(image.errors.count, "error") %> prohibited this image from being saved:</h2>
+
+      <ul>
+      <% image.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :uploads %>
+    <%= form.file_field :uploads, multiple:true, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_id %>
+    <%= form.number_field :image_id, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_approved %>
+    <%= form.check_box :is_approved, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_title %>
+    <%= form.text_field :image_title, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_owner_id %>
+    <%= form.number_field :image_owner_id, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category %>
+    <%= form.collection_select(:category_id, Category.all, :id, :name, { :prompt => 'Select a Category', :selected => @image.category_id }, { class: 'form-control' }) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :licensing %>
+    <%= form.text_field :licensing, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :file_type %>
+    <%= form.text_field :file_type, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location, class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
