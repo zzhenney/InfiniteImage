@@ -10,9 +10,14 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 #Precompiles round-about.css. Date written 6/18/18
 Rails.application.config.assets.precompile += %w( round-about.css )
+#Precompiles bootstrap files as well as custom additions found in overrrides.css
+Rails.application.config.assets.precompile += %w( bootstrap.css )
+Rails.application.config.assets.precompile += %w( overrides.css )
+Rails.application.config.assets.precompile += %w( bootstrap.js )
+Rails.application.config.assets.precompile += %w( jquery.js )
 
 
 # Precompile additional assets.
-# application.js, application.css, and all non-JS/CSS in the app/assets
+# application.js, application.css.scss, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
