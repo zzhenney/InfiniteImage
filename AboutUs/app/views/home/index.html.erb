@@ -77,17 +77,16 @@
             <div class="input-group-btn">
               <button type="button" class="btn btn-default dropdown-toggle mb-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All <span class="caret"></span></button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Animals</a></li>
-                <li><a class="dropdown-item" href="#">Nature</a></li>
-                <li><a class="dropdown-item" href="#">Cars</a></li>
-                <li><a class="dropdown-item" href="#">Travel</a></li>
+                <%= Category.all.each do |cat| %>
+                <li><%= link_to cat.name, class: "dropdown-item" %></li>
+                <%end %>
               </ul>
             </div><!-- /btn-group -->
            <!-- <input type="text" class="form-control" aria-label="..."> -->
            <!-- <input type="submit" value="Search"> -->
             <!-- Using ransack gem to create search field and submission button -->
            <%= search_form_for @q do |f| %>
-              <%= f.search_field :category_name_cont, class: "form-control mb-2" %>
+              <%= f.search_field :image_title_cont, class: "form-control mb-2" %>
               <%= f.submit 'Search', name: 'home', class: "btn btn-primary mb-2" %>
             <%end %>
           </div><!-- /input-group -->
@@ -105,7 +104,7 @@
           <% image.uploads.each do |upload| %>
         <div class="col-lg-3 col-md-4 col-xs-6">
 
-              <%= link_to (image_tag upload, size: '200x200', class: "img-fluid img-thumbnail"), image, class: "d-block mb-4 h-100" %>
+              <%= link_to (image_tag upload, size: '400x300', class: "img-fluid img-thumbnail"), image, class: "d-block mb-4 h-100" %>
         </div>
           <% end %>
         <% end %>
