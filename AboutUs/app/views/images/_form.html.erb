@@ -17,23 +17,18 @@
   </div>
 
   <div class="field">
-    <%= form.label :image_id %>
-    <%= form.number_field :image_id, class: "form-control" %>
-  </div>
-
-  <div class="field">
-    <%= form.label :is_approved %>
-    <%= form.check_box :is_approved, class: "form-control" %>
-  </div>
-
-  <div class="field">
     <%= form.label :image_title %>
-    <%= form.text_field :image_title, class: "form-control" %>
+    <%= form.text_field :image_title, placeholder: "Enter image title.", class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :image_owner_id %>
     <%= form.number_field :image_owner_id, class: "form-control" %>
+  </div>
+
+    <div class="field">
+    <%= form.label :status %>
+    <%= form.collection_select(:status_id, Status.all, :id, :name, { :prompt => 'Status', :selected => @image.status_id }, { class: 'form-control' }) %>
   </div>
 
   <div class="field">
@@ -54,11 +49,6 @@
   <div class="field">
     <%= form.label :description %>
     <%= form.text_area :description, class: "form-control" %>
-  </div>
-
-  <div class="field">
-    <%= form.label :file_type %>
-    <%= form.text_field :file_type, class: "form-control" %>
   </div>
 
   <div class="field">

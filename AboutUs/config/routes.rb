@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :images
+  resources :images do
+    collection do
+      match 'search' => 'images#search', via: [:get, :post], as: :search
+    end
+  end
   resources :users
   resources :home
 

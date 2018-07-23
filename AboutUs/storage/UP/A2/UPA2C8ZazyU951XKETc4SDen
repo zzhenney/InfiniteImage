@@ -1,0 +1,29 @@
+Build Instructions:
+
+from the directory of the .c file, you will run the command:
+gcc -o filecopy filecopy.c
+
+Run Instructions:
+
+To run the program you run the command: 
+./filecopy
+
+strace output:
+
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+  0.00    0.000000           0         7           read
+  0.00    0.000000           0         8           write
+  0.00    0.000000           0         5         1 open.    (Here you can see the 
+  0.00    0.000000           0         2           close    programs open syscall which is 
+  0.00    0.000000           0         4           fstat      called 5 times, close is 
+  0.00    0.000000           0         1         1 lseek.     Called 2 times, and
+  0.00    0.000000           0         7           mmap        read and write are called
+  0.00    0.000000           0         4           mprotect.    7 and 8 times 
+  0.00    0.000000           0         1           munmap.      respectively.) 
+  0.00    0.000000           0         3           brk
+  0.00    0.000000           0         3         3 access
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         1           arch_prctl
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000000                    47         5 total
