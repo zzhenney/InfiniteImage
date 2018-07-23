@@ -7,7 +7,61 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="/app/assets/stylesheets/uploadstyle.css">
     <title>Infinite Image</title>
+
+    <style>
+      .upload-drop-zone {
+        height: 200px;
+        border-width: 2px;
+        margin-bottom: 20px;
+      }
+
+      /* skin.css Style*/
+      .upload-drop-zone {
+        color: #ccc;
+        border-style: dashed;
+        border-color: #ccc;
+        line-height: 60px; /*inner box "Choose File"*/
+        text-align: center;
+        height: 75px; /*dashed lines height*/
+
+      }
+      .upload-drop-zone.drop {
+
+        color: #222;
+        border-color: #222;
+      }
+      .panel{margin-left:100px; margin-top:5px;
+        margin-bottom:100%; /*might need to be adjusted*/
+        background-color:#fff;
+        border:1px solid transparent;border-radius:4px;
+        -webkit-box-shadow:0 1px 1px rgba(0,0,0,.05);
+        box-shadow:0 1px 1px rgba(0,0,0,.05);
+       width:900px; }
+      .panel-body{padding:15px;border:1px solid #ddd}
+      .panel-heading{padding:10px 15px;border-bottom:1px solid transparent;
+        border-top-left-radius:3px;border-top-right-radius:3px
+        color:#333;background-color:#f5f5f5;border-color:#ddd
+        border-top:1px solid #ddd;
+        border-left:1px solid #ddd;}
+      .panel-default {
+        border-color: #ddd;
+        align-self: center;
+      }
+      .btn
+      {margin:0;font:inherit;color:inherit}
+      .drop-here{
+        background-color: #fcfbab;
+        width: 740px;
+      }
+      .form-group1{display:inline-block;margin-bottom:0;vertical-align:middle;
+      width: 900px;}
+
+    </style>
   </head>
 
 
@@ -22,9 +76,6 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-            <li class="nav-item">
-              <a class="nav-link" href="upload">Upload</a>
-            </li>
               <a class="nav-link" href="#">Home
                 <span class="sr-only">(current)</span>
               </a>
@@ -91,67 +142,47 @@
     <!-- End Search -->
     <div class ="row top-buffer">
       <div class="row text-center text-lg-left">
-  
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-          </a>
+
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><strong>Upload Image Below</strong> </div>
+          <div class="panel-body">
+
+            <!-- Standar Form -->
+            <h4>Select a file from your computer or Drag & Drop in the yellow zone</h4>
+            <div class="upload-drop-zone" id="drop-zone">
+            <form class="" action="" method="post" enctype="multipart/form-data" id="js-upload-form">
+              <div class="form-inline">
+                <div class="form-group1">
+                  <input class="drop-here" type="file" name="files[]" id="js-upload-files" multiple>
+
+                <button type="submit" class="btn btn-sm btn-primary" id="js-upload-submit">Upload files</button>
+              </div>
+              </div>
+            </form>
+            </div>
+
+
+            <!-- Progress Bar -->
+            <!------- <div class="progress">
+             <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+               <span class="sr-only">60% Complete</span>
+             </div>
+           </div>
+
+           <!-- Upload Finished -->
+            <!------- <div class="js-upload-finished">
+              <h3>Processed files</h3>
+              <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-01.jpg</a>
+                <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-02.jpg</a>
+              </div>
+            </div>---->
+
+          </div>
         </div>
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-          </a>
-        </div>
+
+
       </div>
     </div>
     </div>

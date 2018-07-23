@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   root 'home#index'
   get "/home/:page" => "pages#show"
   get 'result' => 'images#result'
+  get "upload" => "home#upload" #Linking upload page route
 
 end
