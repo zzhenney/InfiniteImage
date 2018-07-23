@@ -1,5 +1,17 @@
 
+<!------
+Author: Teodora (kodekat)
+Purpose: Upload Page for the images on the website
+Users are able to either Browse/Select a file from their local machine
+Or they can drag & drop a file into the designated box.
+They also have to fill out additional informational fields such as:
+image_title, category, description, location; for proper storing in the database.
 
+   
+ To Do:
+ - "Upload" button should only be enabled once mandatory fields have been validated.
+ - Fix the length of the page - avoid scrolling.
+ ---->
   <head>
 
     <meta charset="utf-8">
@@ -35,8 +47,8 @@
         color: #222;
         border-color: #222;
       }
-      .panel{margin-left:100px; margin-top:5px;
-        margin-bottom:100%; /*might need to be adjusted*/
+      .panel{margin-left:125px; margin-top:5px;
+        margin-bottom:100%; /*might need to be adjusted to avoid scrolling*/
         background-color:#fff;
         border:1px solid transparent;border-radius:4px;
         -webkit-box-shadow:0 1px 1px rgba(0,0,0,.05);
@@ -76,7 +88,8 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home
+              <!---href links back to home - to be edited later---->
+              <a class="nav-link" href="home#index">Home
                 <span class="sr-only">(current)</span>
               </a>
             </li>
@@ -156,12 +169,40 @@
                 <div class="form-group1">
                   <input class="drop-here" type="file" name="files[]" id="js-upload-files" multiple>
 
-                <button type="submit" class="btn btn-sm btn-primary" id="js-upload-submit">Upload files</button>
+                <button type="submit" class="btn btn-sm btn-primary" id="js-upload-submit">Upload File!</button>
               </div>
               </div>
             </form>
+            </div> <!--end drop zone --->
+            <div class="row">
+              <div class="col">
+                <label for=""></label>
+                <input type="text" class="form-control" id="" placeholder="Image Title">
             </div>
+              <div class="col">
+                <label for=""></label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                <option>Choose A Category</option>
+                <option>Animals</option>
+                <option>Nature</option>
+                <option>Cars</option>
+                <option>Travel</option>
+                </select>
+            </div>
+          </div> <!---first row additional info -->
+            <div class="row">
+              <div class="form-group col-md-8">
+                <label for=""></label>
+                <input type="text" class="form-control" id="" placeholder="Image Description">
+            </div>
+            <div class="form-group col-md-4">
+                <label for=""></label>
+                <input type="text" class="form-control" id="" placeholder="Image Location">
+              </div>
+            </div> <!---second row additional info -->
 
+
+            <small>All images are subject to approval before they are officially posted online. This process may take up to 48hrs. Thank you for your patience! </small>
 
             <!-- Progress Bar -->
             <!------- <div class="progress">
