@@ -70,6 +70,9 @@ ActiveRecord::Schema.define(version: 2018_07_18_215124) do
     t.integer "friend_list"
     t.string "email"
     t.string "password"
+    t.string "encrypted_password", limit: 128, null: false
+    t.string "confirmation_token", limit: 128
+    t.string "remember_token", limit: 128, null: false
     t.string "first_name"
     t.string "last_name"
     t.datetime "created_at", null: false
