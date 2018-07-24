@@ -18,4 +18,7 @@ Rails.application.routes.draw do
   get "/home/:page" => "pages#show"
   get 'result' => 'images#result'
 
+  #clearance / login / registration
+  #get "/sign_out" => "clearance/sessions#destroy", as: "sign_out"
+
 end
