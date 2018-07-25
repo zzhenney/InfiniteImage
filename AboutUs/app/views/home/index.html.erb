@@ -70,21 +70,11 @@
         <div class="col"></div> <!--center search bar -->
         <div class="col-lg-6">
           <div class="input-group">
-            <div class="input-group-btn">
-              <button type="button" class="btn btn-default dropdown-toggle mb-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All <span class="caret"></span></button>
-              <ul class="dropdown-menu">
-                <%= Category.all.each do |cat| %>
-                <li><%= link_to cat.name, class: "dropdown-item" %></li>
-                <%end %>
-              </ul>
-            </div><!-- /btn-group -->
+
            <!-- <input type="text" class="form-control" aria-label="..."> -->
            <!-- <input type="submit" value="Search"> -->
             <!-- Using ransack gem to create search field and submission button -->
-           <%= search_form_for @q do |f| %>
-              <%= f.search_field :image_title_cont, class: "form-control mb-2" %>
-              <%= f.submit 'Search', name: 'home', class: "btn btn-primary mb-2" %>
-            <%end %>
+           <%= render 'images/search_images', images: @images %>
           </div><!-- /input-group -->
         </div><!-- /.col-lg-6 -->
         <div class="col"></div> <!--center search bar -->
