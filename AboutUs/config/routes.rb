@@ -13,5 +13,5 @@ Rails.application.routes.draw do
   root 'home#index'
   get "/home/:page" => "pages#show"
   get 'result' => 'images#result'
-
+  get 'admin' => 'admin#index'
 end
