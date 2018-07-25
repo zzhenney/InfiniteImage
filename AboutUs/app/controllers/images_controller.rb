@@ -30,6 +30,10 @@ class ImagesController < ApplicationController
   def show
   end
 
+  def download
+    @image.download
+  end
+
   # GET /images/new
   def new
     @image = Image.new
@@ -39,10 +43,23 @@ class ImagesController < ApplicationController
   def edit
   end
 
+  #gets filetype from image and saves it in database
+  # Andre Leslie 07/23/18
+  def get_file_type
+
+    @image.uploads.each do |upload|
+      filename_arr = upload.content_type.to_s.split('/')
+      @image.file_type= filename_arr[1].upcase
+    end
+
+  end
+
   # POST /images
   # POST /images.json
   def create
     @image = Image.new(image_params)
+
+    get_file_type
 
     respond_to do |format|
 
@@ -69,6 +86,8 @@ class ImagesController < ApplicationController
       end
     end
   end
+
+
 
   # DELETE /images/1
   # DELETE /images/1.json
