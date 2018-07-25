@@ -100,7 +100,7 @@
           <% image.uploads.each do |upload| %>
         <div class="col-lg-3 col-md-4 col-xs-6">
 
-              <%= link_to (image_tag upload, size: '400x300', class: "img-fluid img-thumbnail"), image, class: "d-block mb-4 h-100" %>
+              <%= link_to (image_tag upload, class: "img-fluid img-thumbnail"), image, class: "d-block mb-4 h-100" %>
         </div>
           <% end %>
         <% end %>
