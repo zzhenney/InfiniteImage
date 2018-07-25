@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_25_195337) do
+ActiveRecord::Schema.define(version: 2018_07_25_201631) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -43,14 +43,13 @@ ActiveRecord::Schema.define(version: 2018_07_25_195337) do
     t.string "image_title"
     t.integer "image_owner_id"
     t.bigint "category_id"
-    t.string "licensing"
+    t.string "licensing"  
     t.date "date"
     t.text "description"
     t.string "file_type"
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "user_id"
     t.bigint "status_id", default: 0
     t.index ["category_id"], name: "index_images_on_category_id"
     t.index ["status_id"], name: "index_images_on_status_id"
@@ -63,13 +62,8 @@ ActiveRecord::Schema.define(version: 2018_07_25_195337) do
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "user_id"
     t.boolean "is_admin"
-    t.integer "cart_id"
-    t.integer "album_list"
-    t.integer "friend_list"
     t.string "email"
-    t.string "password"
     t.string "first_name"
     t.string "last_name"
     t.string "encrypted_password", limit: 128, null: false

@@ -9,7 +9,7 @@ Date: 7/25/18
 class AddedEncryptedPassToUsers < ActiveRecord::Migration[5.2]
   def change
     add_column :users, :encrypted_password, :string, null: false, limit: 128, :after => :last_name
-    add_column :users, :confirmation_token, :string, null: false, limit: 128, :after => :encrypted_password
+    add_column :users, :confirmation_token, :string, limit: 128, :after => :encrypted_password
     add_column :users, :remember_token, :string, null: false, limit: 128 , :after => :confirmation_token
   end
 end
