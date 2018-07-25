@@ -3419,3 +3419,152 @@ Sent data  (0.4ms)
 Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-07-25 13:35:46 -0700
+Started GET "/" for 127.0.0.1 at 2018-07-25 13:35:46 -0700
+  [1m[35m (1.9ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (3.4ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/andreleslie/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  ↳ /Users/andreleslie/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/andreleslie/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  ↳ /Users/andreleslie/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/home/index.html.erb:76
+  ↳ app/views/home/index.html.erb:76
+  [1m[36mImage Load (1.3ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/home/index.html.erb:99
+  [1m[36mImage Load (1.6ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/home/index.html.erb:99
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/home/index.html.erb:100
+  ↳ app/views/home/index.html.erb:100
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:103
+  ↳ app/views/home/index.html.erb:103
+  Rendered home/index.html.erb within layouts/application (245.8ms)
+  Rendered home/index.html.erb within layouts/application (249.1ms)
+Completed 200 OK in 18942ms (Views: 18793.3ms | ActiveRecord: 86.3ms)
+
+
+Completed 200 OK in 19061ms (Views: 18902.2ms | ActiveRecord: 83.4ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ab474d1e05543697b9d1107a0d887ae0ad463bb6/food_burger_sandwich_bacon_dinner-44324.jpg!d.jpg" for 127.0.0.1 at 2018-07-25 13:36:05 -0700
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ab474d1e05543697b9d1107a0d887ae0ad463bb6", "filename"=>"food_burger_sandwich_bacon_dinner-44324.jpg!d"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  ↳ /Users/andreleslie/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (77.1ms) [0m[34mGenerated URL for file at key: PzcgZf3CqhJbA2EeqbK4XrDy (http://0.0.0.0:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFRZW1ObldtWXpRM0ZvU21KQk1rVmxjV0pMTkZoeVJIa0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMjVUMjA6NDE6MDUuOTM5WiIsInB1ciI6ImJsb2Jfa2V5In19--1070a28b024996e883303b10c467a0edd05d1262/food_burger_sandwich_bacon_dinner-44324.jpg!d.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22food_burger_sandwich_bacon_dinner-44324.jpg%21d.jpg%22%3B+filename%2A%3DUTF-8%27%27food_burger_sandwich_bacon_dinner-44324.jpg%21d.jpg)[0m
+Redirected to http://0.0.0.0:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFRZW1ObldtWXpRM0ZvU21KQk1rVmxjV0pMTkZoeVJIa0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMjVUMjA6NDE6MDUuOTM5WiIsInB1ciI6ImJsb2Jfa2V5In19--1070a28b024996e883303b10c467a0edd05d1262/food_burger_sandwich_bacon_dinner-44324.jpg!d.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22food_burger_sandwich_bacon_dinner-44324.jpg%21d.jpg%22%3B+filename%2A%3DUTF-8%27%27food_burger_sandwich_bacon_dinner-44324.jpg%21d.jpg
+Completed 302 Found in 84ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFRZW1ObldtWXpRM0ZvU21KQk1rVmxjV0pMTkZoeVJIa0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMjVUMjA6NDE6MDUuOTM5WiIsInB1ciI6ImJsb2Jfa2V5In19--1070a28b024996e883303b10c467a0edd05d1262/food_burger_sandwich_bacon_dinner-44324.jpg!d.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22food_burger_sandwich_bacon_dinner-44324.jpg%21d.jpg%22%3B+filename%2A%3DUTF-8%27%27food_burger_sandwich_bacon_dinner-44324.jpg%21d.jpg" for 127.0.0.1 at 2018-07-25 13:36:06 -0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"food_burger_sandwich_bacon_dinner-44324.jpg!d.jpg\"; filename*=UTF-8''food_burger_sandwich_bacon_dinner-44324.jpg!d.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFRZW1ObldtWXpRM0ZvU21KQk1rVmxjV0pMTkZoeVJIa0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMjVUMjA6NDE6MDUuOTM5WiIsInB1ciI6ImJsb2Jfa2V5In19--1070a28b024996e883303b10c467a0edd05d1262", "filename"=>"food_burger_sandwich_bacon_dinner-44324.jpg!d"}
+[36m  Disk Storage (1.0ms) [0m[34mDownloaded file from key: PzcgZf3CqhJbA2EeqbK4XrDy[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (2.8ms)
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-25 13:38:32 -0700
+  [1m[35m (1.6ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/andreleslie/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/andreleslie/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/home/index.html.erb:76
+  [1m[36mImage Load (1.8ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/home/index.html.erb:99
+  [1m[36mActiveStorage::Attachment Load (1.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/home/index.html.erb:100
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:103
+  Rendered home/index.html.erb within layouts/application (199.7ms)
+Completed 200 OK in 961ms (Views: 862.3ms | ActiveRecord: 69.4ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ab474d1e05543697b9d1107a0d887ae0ad463bb6/food_burger_sandwich_bacon_dinner-44324.jpg!d.jpg" for 127.0.0.1 at 2018-07-25 13:38:34 -0700
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ab474d1e05543697b9d1107a0d887ae0ad463bb6", "filename"=>"food_burger_sandwich_bacon_dinner-44324.jpg!d"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  ↳ /Users/andreleslie/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (14.9ms) [0m[34mGenerated URL for file at key: PzcgZf3CqhJbA2EeqbK4XrDy (http://0.0.0.0:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFRZW1ObldtWXpRM0ZvU21KQk1rVmxjV0pMTkZoeVJIa0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMjVUMjA6NDM6MzQuMTQ3WiIsInB1ciI6ImJsb2Jfa2V5In19--6343cc70777dd67c9eb355ec78173aa4d5528794/food_burger_sandwich_bacon_dinner-44324.jpg!d.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22food_burger_sandwich_bacon_dinner-44324.jpg%21d.jpg%22%3B+filename%2A%3DUTF-8%27%27food_burger_sandwich_bacon_dinner-44324.jpg%21d.jpg)[0m
+Redirected to http://0.0.0.0:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFRZW1ObldtWXpRM0ZvU21KQk1rVmxjV0pMTkZoeVJIa0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMjVUMjA6NDM6MzQuMTQ3WiIsInB1ciI6ImJsb2Jfa2V5In19--6343cc70777dd67c9eb355ec78173aa4d5528794/food_burger_sandwich_bacon_dinner-44324.jpg!d.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22food_burger_sandwich_bacon_dinner-44324.jpg%21d.jpg%22%3B+filename%2A%3DUTF-8%27%27food_burger_sandwich_bacon_dinner-44324.jpg%21d.jpg
+Completed 302 Found in 20ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFRZW1ObldtWXpRM0ZvU21KQk1rVmxjV0pMTkZoeVJIa0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMjVUMjA6NDM6MzQuMTQ3WiIsInB1ciI6ImJsb2Jfa2V5In19--6343cc70777dd67c9eb355ec78173aa4d5528794/food_burger_sandwich_bacon_dinner-44324.jpg!d.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22food_burger_sandwich_bacon_dinner-44324.jpg%21d.jpg%22%3B+filename%2A%3DUTF-8%27%27food_burger_sandwich_bacon_dinner-44324.jpg%21d.jpg" for 127.0.0.1 at 2018-07-25 13:38:34 -0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"food_burger_sandwich_bacon_dinner-44324.jpg!d.jpg\"; filename*=UTF-8''food_burger_sandwich_bacon_dinner-44324.jpg!d.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFRZW1ObldtWXpRM0ZvU21KQk1rVmxjV0pMTkZoeVJIa0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMjVUMjA6NDM6MzQuMTQ3WiIsInB1ciI6ImJsb2Jfa2V5In19--6343cc70777dd67c9eb355ec78173aa4d5528794", "filename"=>"food_burger_sandwich_bacon_dinner-44324.jpg!d"}
+[36m  Disk Storage (0.8ms) [0m[34mDownloaded file from key: PzcgZf3CqhJbA2EeqbK4XrDy[0m
+  Rendering text template
+  Rendered text template (0.1ms)
+Sent data  (5.2ms)
+Completed 200 OK in 8ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/1" for 127.0.0.1 at 2018-07-25 13:38:35 -0700
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT  `images`.* FROM `images` WHERE `images`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/images_controller.rb:106
+  Rendering images/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/show.html.erb:5
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/models/image.rb:25
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/image.rb:25
+[36m  Disk Storage (0.1ms) [0m[34mChecked if file exists at key: variants/PzcgZf3CqhJbA2EeqbK4XrDy/417bae27008f0220c1a6f22cdb1ae933aa9ba1aa0f7d1506d10c3af76f08b659 (yes)[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/images/show.html.erb:32
+  Rendered images/show.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 99ms (Views: 91.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ab474d1e05543697b9d1107a0d887ae0ad463bb6/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTnpBd2VEY3dNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--b14b8129d722de1d2884406eaf217bea9092c322/food_burger_sandwich_bacon_dinner-44324.jpg!d.jpg" for 127.0.0.1 at 2018-07-25 13:38:35 -0700
+Processing by ActiveStorage::RepresentationsController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ab474d1e05543697b9d1107a0d887ae0ad463bb6", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTnpBd2VEY3dNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--b14b8129d722de1d2884406eaf217bea9092c322", "filename"=>"food_burger_sandwich_bacon_dinner-44324.jpg!d"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  ↳ /Users/andreleslie/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.1ms) [0m[34mChecked if file exists at key: variants/PzcgZf3CqhJbA2EeqbK4XrDy/417bae27008f0220c1a6f22cdb1ae933aa9ba1aa0f7d1506d10c3af76f08b659 (yes)[0m
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: variants/PzcgZf3CqhJbA2EeqbK4XrDy/417bae27008f0220c1a6f22cdb1ae933aa9ba1aa0f7d1506d10c3af76f08b659 (http://0.0.0.0:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJbWQyWVhKcFlXNTBjeTlRZW1ObldtWXpRM0ZvU21KQk1rVmxjV0pMTkZoeVJIa3ZOREUzWW1GbE1qY3dNRGhtTURJeU1HTXhZVFptTWpKalpHSXhZV1U1TXpOaFlUbGlZVEZoWVRCbU4yUXhOVEEyWkRFd1l6TmhaamMyWmpBNFlqWTFPUVk2QmtWVSIsImV4cCI6IjIwMTgtMDctMjVUMjA6NDM6MzUuNzU5WiIsInB1ciI6ImJsb2Jfa2V5In19--7b5dd9ad8c3474fc5cdc748cc567a710ecf1506b/food_burger_sandwich_bacon_dinner-44324.jpg!d.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22food_burger_sandwich_bacon_dinner-44324.jpg%21d.jpg%22%3B+filename%2A%3DUTF-8%27%27food_burger_sandwich_bacon_dinner-44324.jpg%21d.jpg)[0m
+Redirected to http://0.0.0.0:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJbWQyWVhKcFlXNTBjeTlRZW1ObldtWXpRM0ZvU21KQk1rVmxjV0pMTkZoeVJIa3ZOREUzWW1GbE1qY3dNRGhtTURJeU1HTXhZVFptTWpKalpHSXhZV1U1TXpOaFlUbGlZVEZoWVRCbU4yUXhOVEEyWkRFd1l6TmhaamMyWmpBNFlqWTFPUVk2QmtWVSIsImV4cCI6IjIwMTgtMDctMjVUMjA6NDM6MzUuNzU5WiIsInB1ciI6ImJsb2Jfa2V5In19--7b5dd9ad8c3474fc5cdc748cc567a710ecf1506b/food_burger_sandwich_bacon_dinner-44324.jpg!d.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22food_burger_sandwich_bacon_dinner-44324.jpg%21d.jpg%22%3B+filename%2A%3DUTF-8%27%27food_burger_sandwich_bacon_dinner-44324.jpg%21d.jpg
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFRZW1ObldtWXpRM0ZvU21KQk1rVmxjV0pMTkZoeVJIa0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMjVUMjA6NDM6MzQuMTQ3WiIsInB1ciI6ImJsb2Jfa2V5In19--6343cc70777dd67c9eb355ec78173aa4d5528794/food_burger_sandwich_bacon_dinner-44324.jpg!d.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22food_burger_sandwich_bacon_dinner-44324.jpg%21d.jpg%22%3B+filename%2A%3DUTF-8%27%27food_burger_sandwich_bacon_dinner-44324.jpg%21d.jpg" for 127.0.0.1 at 2018-07-25 13:38:35 -0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJbWQyWVhKcFlXNTBjeTlRZW1ObldtWXpRM0ZvU21KQk1rVmxjV0pMTkZoeVJIa3ZOREUzWW1GbE1qY3dNRGhtTURJeU1HTXhZVFptTWpKalpHSXhZV1U1TXpOaFlUbGlZVEZoWVRCbU4yUXhOVEEyWkRFd1l6TmhaamMyWmpBNFlqWTFPUVk2QmtWVSIsImV4cCI6IjIwMTgtMDctMjVUMjA6NDM6MzUuNzU5WiIsInB1ciI6ImJsb2Jfa2V5In19--7b5dd9ad8c3474fc5cdc748cc567a710ecf1506b/food_burger_sandwich_bacon_dinner-44324.jpg!d.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22food_burger_sandwich_bacon_dinner-44324.jpg%21d.jpg%22%3B+filename%2A%3DUTF-8%27%27food_burger_sandwich_bacon_dinner-44324.jpg%21d.jpg" for 127.0.0.1 at 2018-07-25 13:38:35 -0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"food_burger_sandwich_bacon_dinner-44324.jpg!d.jpg\"; filename*=UTF-8''food_burger_sandwich_bacon_dinner-44324.jpg!d.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFRZW1ObldtWXpRM0ZvU21KQk1rVmxjV0pMTkZoeVJIa0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMjVUMjA6NDM6MzQuMTQ3WiIsInB1ciI6ImJsb2Jfa2V5In19--6343cc70777dd67c9eb355ec78173aa4d5528794", "filename"=>"food_burger_sandwich_bacon_dinner-44324.jpg!d"}
+[36m  Disk Storage (0.4ms) [0m[34mDownloaded file from key: PzcgZf3CqhJbA2EeqbK4XrDy[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (1.2ms)
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (3.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/andreleslie/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"food_burger_sandwich_bacon_dinner-44324.jpg!d.jpg\"; filename*=UTF-8''food_burger_sandwich_bacon_dinner-44324.jpg!d.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJbWQyWVhKcFlXNTBjeTlRZW1ObldtWXpRM0ZvU21KQk1rVmxjV0pMTkZoeVJIa3ZOREUzWW1GbE1qY3dNRGhtTURJeU1HTXhZVFptTWpKalpHSXhZV1U1TXpOaFlUbGlZVEZoWVRCbU4yUXhOVEEyWkRFd1l6TmhaamMyWmpBNFlqWTFPUVk2QmtWVSIsImV4cCI6IjIwMTgtMDctMjVUMjA6NDM6MzUuNzU5WiIsInB1ciI6ImJsb2Jfa2V5In19--7b5dd9ad8c3474fc5cdc748cc567a710ecf1506b", "filename"=>"food_burger_sandwich_bacon_dinner-44324.jpg!d"}
+[36m  Disk Storage (0.9ms) [0m[34mDownloaded file from key: variants/PzcgZf3CqhJbA2EeqbK4XrDy/417bae27008f0220c1a6f22cdb1ae933aa9ba1aa0f7d1506d10c3af76f08b659[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+

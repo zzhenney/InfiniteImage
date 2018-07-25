@@ -58,4 +58,7 @@
 </p>
 
 <%= link_to 'Edit', edit_image_path(@image) %> |
-<%= link_to 'Back', home_index_path %>
+<%= link_to 'Back', home_index_path %> |
+<% @image.uploads.each do |upload| %>
+  <%= link_to 'Download', upload, download: '' %>
+<% end %>
