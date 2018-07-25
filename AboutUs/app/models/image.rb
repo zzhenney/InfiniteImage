@@ -1,13 +1,22 @@
-
 class Image < ApplicationRecord
-  belongs_to :user , optional: true      #optional needs rework. Maybe option for admin?. Paul Ancajima
+  belongs_to :user, optional: true #optional needs rework. Maybe option for admin?. Paul Ancajima
 
-  has_many_attached :uploads       #sets up images for active storage.     Paul ANcajima
+  has_many_attached :uploads #sets up images for active storage.     Paul ANcajima
   #var ":uploads" can be called anything must be accepted in params of controller IE. images_controller "
+
+  validate :correct_uploads_type #validate image types Paul Ancajima 7/17/18
+
+  validates_length_of :description, :minimum => 5, :maximum => 40, :allow_blank => true #validate description length Paul Ancajima 7/17/18
+
+  # validates :description, format: { with: /\A[a-zA-Z]+\z/,
+  #                                   message: "only allows letters" }
+
   #foreign key set up
   belongs_to :category #inherits category @image.category.<etc>
+  belongs_to :status
 
 
+  #process image sizes for database Andre Leslie 7/10/18
   def thumbnail select
     return self.uploads[select].variant(resize: "300x300!").processed
   end
@@ -15,4 +24,20 @@ class Image < ApplicationRecord
   def full_size select
     return self.uploads[select].variant(resize: "700x700").processed
   end
+
+
+
+  private
+  #Paul Ancajima 7/17/18
+  def correct_uploads_type
+    if uploads.attached? == false                         #if uploads are not attached
+      errors.add(:uploads, 'Must have image files')         #error thrown
+    end
+    uploads.each do |u|                                             #each upload do
+      if !u.content_type.in?(%('image/jpeg image/png image/gif'))   #if content type does not match (NOTE: image/jpeg etc is the type of content)
+        errors.add(:uploads, 'Must be jpeg or png file')            #throw error
+      end
+    end
+  end
+
 end

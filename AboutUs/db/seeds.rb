@@ -19,5 +19,5 @@ Category.create([
 Status.create([
     { id: 0, name: 'Pending'},
     { id: 1, name: 'Approved'  },
-    { id: 2, name: 'Unapproved'  }
+    { id: 2, name: 'Rejected'  }
 ])
