@@ -20,8 +20,8 @@ Rails.application.routes.draw do
 
   #overriding clearance routes
   #clearance / login / registration
-  get '/sign_up', to: 'users#new', as: nil
+  get '/sign_in', to: 'sessions#new', as: nil
   delete "/sign_out" => "sessions#destroy", as: nil
-  get "/sign_up" => "clearance/users#new", as: nil
+  get "/sign_up" => "users#new", as: nil
 
 end
