@@ -4,16 +4,25 @@ class ImagesController < ApplicationController
   # GET /images
   # GET /images.json
   def index
+
     @images = Image.all
 
-    @q = Image.ransack(params[:q])          #Ransack gem's  Paul Ancajima
-    @images = @q.result(distinct: true)     #Simple search
+    #Ransack gem's  Paul Ancajima updated 7/17/18
+    @q = Image.ransack(params[:q]) #.each {|k, v| [k, v.strip!]}) #Strips trailing spaces
+    @images = @q.result(distinct: true).includes(:category) #Advance search
+    @q.build_condition if @q.conditions.empty?  #Remove the if statement to add extra search groups
+
+  end
+
+  def search
+    index
+    render :index
   end
 
   def result
     @images = Image.all
-    @q = Image.ransack(params[:q])          #Ransack gem's  Paul Ancajima
-    @images = @q.result(distinct: true)    #Simple search
+    @q = Image.ransack(params[:q]) #Ransack gem's  Paul Ancajima
+    @images = @q.result(distinct: true) #Simple search
   end
 
   # GET /images/1
@@ -36,12 +45,13 @@ class ImagesController < ApplicationController
     @image = Image.new(image_params)
 
     respond_to do |format|
+
       if @image.save
-        format.html { redirect_to @image, notice: 'Image was successfully created.' }
-        format.json { render :show, status: :created, location: @image }
+        format.html {redirect_to @image, notice: 'Image was successfully created.'}
+        format.json {render :show, status: :created, location: @image}
       else
-        format.html { render :new }
-        format.json { render json: @image.errors, status: :unprocessable_entity }
+        format.html {render :new}
+        format.json {render json: @image.errors, status: :unprocessable_entity}
       end
     end
   end
@@ -51,11 +61,11 @@ class ImagesController < ApplicationController
   def update
     respond_to do |format|
       if @image.update(image_params)
-        format.html { redirect_to @image, notice: 'Image was successfully updated.' }
-        format.json { render :show, status: :ok, location: @image }
+        format.html {redirect_to @image, notice: 'Image was successfully updated.'}
+        format.json {render :show, status: :ok, location: @image}
       else
-        format.html { render :edit }
-        format.json { render json: @image.errors, status: :unprocessable_entity }
+        format.html {render :edit}
+        format.json {render json: @image.errors, status: :unprocessable_entity}
       end
     end
   end
@@ -65,20 +75,21 @@ class ImagesController < ApplicationController
   def destroy
     @image.destroy
     respond_to do |format|
-      format.html { redirect_to images_url, notice: 'Image was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html {redirect_to images_url, notice: 'Image was successfully destroyed.'}
+      format.json {head :no_content}
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_image
-      @image = Image.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def image_params
-      #Added uploads param 7/72018 Paul Ancajima
-      params.require(:image).permit(:user_id, :image_id, :is_approved, :image_title, :image_owner_id, :category_id, :licensing, :date, :description, :file_type, :location, uploads:[])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_image
+    @image = Image.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def image_params
+    #Added uploads param 7/72018 Paul Ancajima
+    params.require(:image).permit(:image_title, :image_owner_id, :category_id, :licensing, :date, :description, :file_type, :location, :user_id, :status_id,  uploads: [])
+  end
 end

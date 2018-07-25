@@ -8,20 +8,33 @@ gem 'bootstrap-sass'
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
+gem 'clearance', '~> 1.12', '>= 1.12.1'
 
-#Added mysql2 6/30/18
+#Added capistrano 7/18/18   Paul Ancajima
+group :development do
+  gem "capistrano", "~> 3.10", require: false
+  gem "capistrano-rails", "~> 1.4", require: false
+end
+
+#Added 7/18/18      Paul Ancajima
+gem 'whenever', require: false
+
+#Added 7/11/18      Paul Ancajima
+gem 'table_print'
+
+#Added mysql2 6/30/18   Paul Ancajima
 gem 'mysql2'
 
-#Added aws-sdk 7/6/18
+#Added aws-sdk 7/6/18   Paul Ancajima
 gem 'aws-sdk', '~> 3'
 
-#Added devise 7/6/18  THIS IS USED FOR AUTHENTICATION FOR USERS
+#Added devise 7/6/18  THIS IS USED FOR AUTHENTICATION FOR USERS   Paul Ancajima
 gem 'devise'
 
-#Added ransack 7/7/18 THIS IS USED FOR SEARCHING
+#Added ransack 7/7/18 THIS IS USED FOR SEARCHING      Paul Ancajima
 gem 'ransack'
 
-
+gem 'mini_magick'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use sqlite3 as the database for Active Record

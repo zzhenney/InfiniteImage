@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :images
+  resources :images do
+    collection do
+      match 'search' => 'images#search', via: [:get, :post], as: :search
+    end
+  end
   resources :users
   resources :home
 
@@ -14,5 +18,11 @@ Rails.application.routes.draw do
   get "/home/:page" => "pages#show"
   get 'result' => 'images#result'
   get "upload" => "home#upload" #Linking upload page route
+
+  #overriding clearance routes
+  #clearance / login / registration
+  get '/sign_in', to: 'sessions#new', as: nil
+  delete "/sign_out" => "sessions#destroy", as: nil
+  get "/sign_up" => "users#new", as: nil
 
 end
