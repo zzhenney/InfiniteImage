@@ -6,7 +6,7 @@
 
 
 
-    <%= f.collection_select :category_id, Category.all, :id, :name, {prompt: "All"},  { class: "custom-select col-2" } %>
+    <%= f.collection_select :category_id, Category.all, :id, :name, {:selected => @user_cat_id, :prompt => "All"},  { class: "custom-select col-2" } %>
 
     <%= f.search_field :image_title_cont, placeholder: 'Search for an image. (i.e. Animals, Cars, Food, Nature, People, Travel)', class: "form-control col-8" %>
 
