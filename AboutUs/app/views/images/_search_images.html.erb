@@ -9,7 +9,7 @@
 
     <%= f.collection_select :category_id, Category.all, :id, :name, {:selected => @user_cat_id, :include_blank => 'All'},  { class: "custom-select col-2" } %>
 
-    <%= f.search_field :category_name_cont, placeholder: 'Search for an image. (i.e. Animals, Cars, Food, Nature, People, Travel)', class: "form-control col-8" %>
+    <%= f.search_field :image_title, placeholder: 'Search for an image. (i.e. Animals, Cars, Food, Nature, People, Travel)', class: "form-control col-8" %>
 
     <%= f.submit 'Search', name: 'images', class: "btn btn-primary col-2" %>
 
