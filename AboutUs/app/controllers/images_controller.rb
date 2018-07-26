@@ -5,8 +5,8 @@ class ImagesController < ApplicationController
   # GET /images.json
   def index
 
-    @images = Image.all
 
+    @images = Image.all
     #Ransack gem's  Paul Ancajima updated 7/17/18
     @q = Image.ransack(params[:q]) #.each {|k, v| [k, v.strip!]}) #Strips trailing spaces
     @images = @q.result(distinct: true).includes(:category) #Advance search
@@ -20,9 +20,12 @@ class ImagesController < ApplicationController
   end
 
   def result
+
     @images = Image.all
     @q = Image.ransack(params[:q]) #Ransack gem's  Paul Ancajima
     @images = @q.result(distinct: true) #Simple search
+    if @home.count == 0
+    end
   end
 
   # GET /images/1
@@ -54,13 +57,22 @@ class ImagesController < ApplicationController
 
   end
 
+  #associates User with Image
+  # Andre Leslie 07/25/18
+  def get_author
+    @image.user = current_user
+  end
+
   # POST /images
   # POST /images.json
   def create
     @image = Image.new(image_params)
-
     get_file_type
 
+    if signed_in?
+      get_author
+    end
+    
     respond_to do |format|
 
       if @image.save
