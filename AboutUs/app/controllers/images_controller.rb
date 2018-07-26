@@ -72,7 +72,7 @@ class ImagesController < ApplicationController
     if signed_in?
       get_author
     end
-    
+
     respond_to do |format|
 
       if @image.save
