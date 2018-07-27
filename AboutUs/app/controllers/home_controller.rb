@@ -24,6 +24,7 @@ class HomeController < ApplicationController
     elsif params[:q].present?
       @user_cat_id = params[:q][:category_id] unless params[:q].nil?
       @user_search = params[:q][:image_title]
+
     # if specific category selected check that query (q) and category id exists
     elsif params[:q][:category_id].present?
       @user_cat_name = Category.find(@user_cat_id).name unless params[:q].nil?
