@@ -6,18 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
 
     <title>Infinite Image</title>
   </head>
 
 
-
-
-
     <!-- Page Content -->
     <div class="container">
       <p>Displaying 1 - <%= @home.count  %> images</p>
-      <h1 class="my-4 text-center text-lg-left">Infinite Image</h1>
+      <!--<h1 class="my-4 text-center text-lg-left">Infinite Image</h1>-->
     <!-- Search -->
       <form >
       <div class="row">
@@ -52,7 +50,7 @@
           <% image.uploads.each do |upload| %>
         <div class="col-lg-3 col-md-4 col-xs-6">
 
-              <%= link_to (image_tag upload, class: "img-fluid img-thumbnail"), image, class: "d-block mb-4 h-100" %>
+              <%= link_to (image_tag upload, class: "img-fluid img-thumbnail"), image, class: "d-block mb-4 h-100" ,target: :_blank%>
         </div>
           <% end %>
         <% end %>

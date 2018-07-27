@@ -26,4 +26,7 @@ Rails.application.routes.draw do
   delete "/sign_out" => "sessions#destroy", as: nil
   get "/sign_up" => "users#new", as: nil
 
+  get 'pages/index' => 'pages#index'
+  get "/pages/:page" => "pages#show"
+
 end
