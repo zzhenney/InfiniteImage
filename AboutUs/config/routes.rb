@@ -15,7 +15,8 @@ Rails.application.routes.draw do
   
   #This sets root page to index.
   root 'home#index'
-  get "/home/:page" => "pages#show"
+  get "pages" => "pages#index"
+  get "pages/:page" => "pages#show"
   get 'result' => 'images#result'
   get "upload" => "home#upload" #Linking upload page route
 
