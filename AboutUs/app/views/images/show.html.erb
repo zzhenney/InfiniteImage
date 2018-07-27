@@ -1,16 +1,16 @@
 <p id="notice"><%= notice %></p>
 
 
-<ul>
+
   <% (0...@image.uploads.count).each do |image|  %>
 
-    <li>
+
 <!--      for each loop all to show all. size: < L*W > to reszie images (NOT THUMBNAIL) Paul Ancajima-->
-      <%= image_tag @image.full_size(image) %>
-    </li>
+      <%= image_tag @image.full_size(image) , style: "margin-left: 20px", class: "rounded"%>
+
 
   <% end %>
-</ul>
+
 
 <p>
 
