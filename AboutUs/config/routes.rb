@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   get "upload" => "home#upload" #Linking upload page route
 
   #overriding clearance routes
-  #clearance / login / registration
+  #clearance / login / registrationgit
   #
   # Admin
   constraints Clearance::Constraints::SignedIn.new { |user| user.admin? } do
