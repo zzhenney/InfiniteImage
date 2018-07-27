@@ -23,13 +23,11 @@
 
 <p>
   <strong>Image owner:</strong>
- <!--%=  ##@image.user.email  --%>
-
+  <%= @image.user.email %>
 </p>
 
 <p>
   <strong>Category:</strong>
-<!--  Changed to show category name. from category_id to category.name -->
   <%= @image.category.name %>
 </p>
 

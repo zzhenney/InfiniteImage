@@ -17,7 +17,8 @@ Rails.application.routes.draw do
   root 'home#index'
   get "/home/:page" => "pages#show"
   get 'result' => 'images#result'
-  get "upload" => "home#upload" #Linking upload page route
+  #get "upload" => "home#upload" #Linking upload page route
+  get 'upload' => 'images#new' #Joe Phabmixay 7/27/18 -- reroute upload page to images/new => images/_form/ for image controllers 
 
   #overriding clearance routes
   #clearance / login / registration

@@ -11,48 +11,37 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :uploads %>
-    <%= form.file_field :uploads, multiple:true, class: "form-control" %>
-  </div>
+  <div class="upload-drop-zone" id="drop-zone">
+    <div class="form-inline">
+      <div class="form-group1">
+        <%= form.file_field :uploads, multiple:true, class: 'drop-here' %>
+    </div>
+    </div>
+  </div> <!--end drop zone --->
 
-  <div class="field">
-    <%= form.label :image_title %>
-    <%= form.text_field :image_title, placeholder: "Enter image title.", class: "form-control" %>
-  </div>
+  <div class="row">
+    <div class="col">
+      <%= form.label :image_title %>
+      <%= form.text_field :image_title, placeholder: "Enter image title", class: "form-control" %>
+    </div>
+    <div class="col">
+      <%= form.label :category %>
+      <%= form.collection_select(:category_id, Category.all, :id, :name, { :prompt => 'Select a Category', :selected => @image.category_id }, { class: 'form-control' }) %>
+    </div>
+  </div> <!--- first row additional info -->
 
-
-    <div class="field">
-    <%= form.label :status %>
-    <%= form.collection_select(:status_id, Status.all, :id, :name, { :prompt => 'Status', :selected => @image.status_id }, { class: 'form-control' }) %>
-  </div>
-
-  <div class="field">
-    <%= form.label :category %>
-    <%= form.collection_select(:category_id, Category.all, :id, :name, { :prompt => 'Select a Category', :selected => @image.category_id }, { class: 'form-control' }) %>
-  </div>
-
-  <div class="field">
-    <%= form.label :licensing %>
-    <%= form.text_field :licensing, class: "form-control" %>
-  </div>
-
-  <div class="field">
-    <%= form.label :date %>
-    <%= form.date_select :date, class: "form-control" %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, class: "form-control" %>
-  </div>
-
-  <div class="field">
-    <%= form.label :location %>
-    <%= form.text_field :location, class: "form-control" %>
-  </div>
+  <div class="row">
+    <div class="form-group col-md-8">
+      <%= form.label :description %>
+      <%= form.text_area :description, placeholder: "Enter image description", class: "form-control" %>
+    </div>
+    <div class="form-group col-md-4">
+      <%= form.label :location %>
+      <%= form.text_field :location, class: "form-control" %>
+    </div>
+  </div> <!---second row additional info -->
 
   <div class="actions">
-    <%= form.submit %>
+      <%= form.submit %>
   </div>
-<% end %>
+<% end %> 
