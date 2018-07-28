@@ -38,6 +38,10 @@ class HomeController < ApplicationController
     @home = @q.result
 
 
+    if current_user.is_admin
+      redirect_to admin_path
+    end
+
 
 
   end

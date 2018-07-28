@@ -11,13 +11,20 @@ class ImagesController < ApplicationController
     @q = Image.ransack(params[:q]) #.each {|k, v| [k, v.strip!]}) #Strips trailing spaces
     @images = @q.result(distinct: true).includes(:category) #Advance search
     @q.build_condition if @q.conditions.empty?  #Remove the if statement to add extra search groups
-
   end
 
   def search
     index
     render :index
   end
+
+  def approve
+   @image = Image.find(params[:id])
+   @image.update(:status_id => 1)
+
+        redirect_to admin_path
+  end
+  helper_method :approve
 
   def result
 
@@ -73,6 +80,7 @@ class ImagesController < ApplicationController
       get_author
     end
 
+
     respond_to do |format|
 
       if @image.save
@@ -106,7 +114,7 @@ class ImagesController < ApplicationController
   def destroy
     @image.destroy
     respond_to do |format|
-      format.html {redirect_to images_url, notice: 'Image was successfully destroyed.'}
+      format.html {redirect_to admin_path, notice: 'Image was successfully destroyed.'}
       format.json {head :no_content}
     end
   end
