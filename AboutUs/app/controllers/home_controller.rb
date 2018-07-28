@@ -9,6 +9,7 @@ class HomeController < ApplicationController
   def index
 
     @home = Image.all
+    @approved_images = Image.where(status_id: 1).all 
     if current_user != nil
     if current_user.is_admin
       redirect_to admin_path
