@@ -42,10 +42,7 @@ ActiveRecord::Schema.define(version: 2018_07_27_113047) do
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
     t.string "image_title"
-<<<<<<< HEAD
-=======
     t.integer "user_id"
->>>>>>> 161fc14611238fed112661ee0406757933b2be1a
     t.bigint "category_id"
     t.string "licensing"
     t.date "date"
