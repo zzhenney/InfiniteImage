@@ -129,6 +129,6 @@ class ImagesController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def image_params
     #Added uploads param 7/72018 Paul Ancajima
-    params.require(:image).permit(:image_title, :image_owner_id, :category_id, :licensing, :date, :description, :file_type, :location, :user_id, :status_id,  uploads: [])
+    params.require(:image).permit(:image_title, :image_owner_id, :category_id, :licensing, :date, :description, :file_type, :location, :status_id,  uploads: [])
   end
 end

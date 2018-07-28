@@ -72,6 +72,6 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       #Added uploads for active:storage
-      params.require(:user).permit(:user_id, :is_admin, :cart_id, :album_list, :friend_list, :email, :password, :first_name, :last_name, images_attributes: [:upload],uploads:[])
+      params.require(:user).permit(:is_admin, :cart_id, :album_list, :friend_list, :email, :password, :first_name, :last_name, images_attributes: [:upload],uploads:[])
     end
 end
