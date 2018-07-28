@@ -35,11 +35,11 @@
 
   <div class="row">
     <div class="col">
-      <%= form.label :image_title %>
+      <%= form.label :name, 'Image Title*'%>
       <%= form.text_field :image_title, placeholder: "Enter a Title", class: "form-control", :required => true %>
     </div>
     <div class="col">
-      <%= form.label :category %>
+      <%= form.label :name, 'Category*'%>
       <%= form.collection_select(:category_id, Category.all, :id, :name, { :prompt => 'Select a Category', :selected => @image.category_id }, { class: 'form-control', :required => true }) %>
     </div>
   </div> <!--- first row additional info -->
