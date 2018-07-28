@@ -31,24 +31,18 @@ image_title, category, description, location; for proper storing in the database
         border-width: 2px;
         margin-bottom: 20px;
       }
-
-      /* skin.css Style*/
       .upload-drop-zone {
         color: #ccc;
         border-style: dashed;
         border-color: #ccc;
         line-height: 60px; /*inner box "Choose File"*/
-        text-align: center;
-        height: 75px; /*dashed lines height*/
-
+        text-align: center; height: 75px; /*dashed lines height*/
       }
       .upload-drop-zone {
-
         color: #222;
         border-color: #222;
       }
       .panel{margin-left:125px; margin-top:5px;
-        /* margin-bottom:100%; /*might need to be adjusted to avoid scrolling*/
         background-color:#fff;
         border:1px solid transparent;border-radius:4px;
         -webkit-box-shadow:0 1px 1px rgba(0,0,0,.05);
@@ -64,15 +58,13 @@ image_title, category, description, location; for proper storing in the database
         border-color: #ddd;
         align-self: center;
       }
-      .btn
-      {margin:0;font:inherit;color:inherit}
+      .btn {margin:0;font:inherit;color:inherit}
       .drop-here{
         background-color: #fcfbab;
         width: 740px;
       }
       .form-group1{display:inline-block;margin-bottom:0;vertical-align:middle;
       width: 900px;}
-
     </style>
   </head>
 
@@ -139,12 +131,14 @@ image_title, category, description, location; for proper storing in the database
         <div class="panel panel-default">
           <div class="panel-heading"><strong>Upload Image Below</strong> </div>
           <div class="panel-body">
-            <h4>Select a file from your computer or Drag & Drop in the yellow zone</h4>
+            <h4>Choose a file from your computer or Drag & Drop in the yellow zone</h4>
+
 
             <%= render 'form', image: @image %>
-            
-            <small>All images are subject to approval before they are officially posted online. This process may take up to 48hrs. Thank you for your patience! </small>
 
+            <small><br>All images under Infinite Image will assume a royalty free image license as per Terms of Service. </small>
+            <small><br>All images are subject to approval before they are officially posted online. This process may take up to 48hrs.
+              Thank you for your patience! <br></small>
             <!-- Progress Bar -->
             <!------- <div class="progress">
              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
