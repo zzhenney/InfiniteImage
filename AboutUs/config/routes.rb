@@ -38,6 +38,12 @@ Rails.application.routes.draw do
   get 'pages/index' => 'pages#index'
   get "/pages/:page" => "pages#show"
 
+
   get 'admin' => 'admin#index'
+
+  get 'admin' => 'admin#image'
+  get '/image/approve' => "images#approve"
+
+
 
 end
