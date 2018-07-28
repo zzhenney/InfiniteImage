@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 2018_07_25_201631) do
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.boolean "is_admin"
+    t.boolean "is_admin", default: false
     t.string "email"
     t.string "first_name"
     t.string "last_name"

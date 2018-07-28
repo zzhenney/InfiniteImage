@@ -22,7 +22,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <% if signed_in? %>
+            <% if signed_in? && !current_user.is_admin? %>
 
             <li class="nav-item">
               <a class="nav-link" href="upload">Upload</a>
@@ -30,10 +30,11 @@
           </li>
 
           <% end %>
-
+          <% if !current_user.is_admin? %>
           <li class="nav-item">
             <%=link_to "About", pages_path, class:"nav-link" %>
           </li>
+          <% end %>
           <% if !signed_in? %>
           <li class="nav-item">
             <%=link_to "Register", sign_up_path, class:"nav-link" %>

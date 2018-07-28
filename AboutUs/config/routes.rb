@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  #Admin: Redirects admin user to admin panel on login
+  constraints Clearance::Constraints::SignedIn.new { |user| user.is_admin? } do
+    root to: "admin#index", as: :admin_root
+  end
+
   resources :images do
     collection do
       match 'search' => 'images#search', via: [:get, :post], as: :search
@@ -24,11 +29,6 @@ Rails.application.routes.draw do
 
   #overriding clearance routes
   #clearance / login / registrationgit
-  #
-  # Admin
-  constraints Clearance::Constraints::SignedIn.new { |user| user.admin? } do
-    root to: "admin#index", as: :admin_root
-  end
 
   get '/sign_in', to: 'sessions#new', as: nil
   delete "/sign_out" => "sessions#destroy", as: nil
@@ -37,5 +37,7 @@ Rails.application.routes.draw do
   #About Us routes
   get 'pages/index' => 'pages#index'
   get "/pages/:page" => "pages#show"
+
+  get 'admin' => 'admin#index'
 
 end
