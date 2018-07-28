@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   #Admin: Redirects admin user to admin panel on login
   constraints Clearance::Constraints::SignedIn.new { |user| user.is_admin? } do
-    root to: "admin#index", as: :admin_root
+    root to: "admin#image", as: :admin_root
   end
 
   resources :images do
@@ -40,7 +40,7 @@ Rails.application.routes.draw do
   get "/pages/:page" => "pages#show"
 
 
-  get 'admin' => 'admin#index'
+  #get 'admin' => 'admin#index'
 
   get 'admin' => 'admin#image'
   get '/image/approve' => "images#approve"

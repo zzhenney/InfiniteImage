@@ -4,13 +4,6 @@ class AdminController < ApplicationController
   def index
   end
 
-  private
-
-  def admin
-    redirect_to home_index_path unless current_user.is_admin?
-  end
-
-
   def image
     @images = Image.all
     @users = User.all
@@ -22,5 +15,10 @@ class AdminController < ApplicationController
     @image.status = 1
   end
 
+  private
+
+  def admin
+    redirect_to home_index_path unless current_user.is_admin?
+  end
 
 end
