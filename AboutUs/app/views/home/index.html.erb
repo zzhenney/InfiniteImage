@@ -12,55 +12,6 @@
   </head>
 
 
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <%= link_to 'Infinite Image', home_index_path, class: "navbar-brand" , style: "font-family: 'Kaushan Script', cursive" %>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <% if signed_in? %>
-
-              <li class="nav-item">
-                <a class="nav-link" href="upload">Upload</a>
-              </li>
-              </li>
-
-            <% end %>
-
-              <a class="nav-link" href="#">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'About', "/pages/index",class: 'nav-link' %>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Register</a>
-            </li>
-            <!-- Login -->
-            <% if signed_in? %>
-            <li class="nav-item">
-
-              <%= button_to "Sign Out", sign_out_path, method: :delete, class: "nav-link" %>
-            </li>
-            <% else %>
-            <li class="nav-item">
-              <%= button_to "Login", sign_in_path, method: :get, class: "nav-link" %>
-            </li>
-
-
-            <% end %>
-            <!-- End Login -->
-          </ul>
-        </div>
-      </div>
-    </nav>
-
     <!-- Page Content -->
     <div class="container">
       <p>Displaying 1 - <%= @home.count  %> images</p>
@@ -97,10 +48,12 @@
 
         <% @home.shuffle.each do |image| %>
           <% image.uploads.each do |upload| %>
+            <% if image.status_id == 1 %>
         <div class="col-lg-3 col-md-4 col-xs-6">
 
               <%= link_to (image_tag upload, class: "img-fluid img-thumbnail"), image, class: "d-block mb-4 h-100" ,target: :_blank%>
         </div>
+              <% end %> 
           <% end %>
         <% end %>
 
