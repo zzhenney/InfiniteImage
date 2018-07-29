@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+
+  searchkick                                             #searchkick added to allow indexing
+
   include Clearance::User
 
   has_many :images                                       #association

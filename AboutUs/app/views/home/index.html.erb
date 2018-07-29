@@ -1,128 +1,78 @@
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+
+  <title>Infinite Image</title>
+</head>
 
 
-  <head>
+<!-- Page Content -->
+<div class="container">
+  <p>Displaying 1 - <%= @approved_images.count %> images</p>
+  <!--<h1 class="my-4 text-center text-lg-left">Infinite Image</h1>-->
+  <!-- Search -->
+  <form>
+    <div class="row">
+      <div class="col"></div> <!--center search bar -->
+      <div class="col-lg-6">
+        <div class="input-group">
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+          <!-- <input type="text" class="form-control" aria-label="..."> -->
+          <!-- <input type="submit" value="Search"> -->
+          <!-- Using ransack gem to create search field and submission button -->
+          <%= render 'images/search_images', images: @images %>
+        </div><!-- /input-group -->
+      </div><!-- /.col-lg-6 -->
+      <div class="col"></div> <!--center search bar -->
+    </div><!-- /.row -->
+  </form>
+  <!-- End Search -->
 
-    <title>Infinite Image</title>
-  </head>
+  <!------- if no images found during search ----------->
+  <% if @home.count == 0 %>
+    <p style="text-align: center">Sorry we were not able to find what you were looking for, here are some of our
+      favorites!</p>
+    <% @home = Image.all %>
+  <% end %>
+  <!------- if no images found during search ----------->
+  <div class="row top-buffer">
+    <div class="row text-center text-lg-left">
 
+      <!-- Loop through each picture and assign each to bootstrap class. Will need to limit these and not show whole db -->
 
+      <% @home.shuffle.each do |image| %>
+        <% image.uploads.each do |upload| %>
+          <% if image.status_id == 1 %>
+            <div class="col-lg-3 col-md-4 col-xs-6">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">Infinite Image</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <% if signed_in? %>
-
-              <li class="nav-item">
-                <a class="nav-link" href="upload">Upload</a>
-              </li>
-              </li>
-
-            <% end %>
-
-              <a class="nav-link" href="#">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Register</a>
-            </li>
-            <!-- Login -->
-            <% if signed_in? %>
-            <li class="nav-item">
-
-              <%= button_to "Sign Out", sign_out_path, method: :delete, class: "nav-link" %>
-            </li>
-            <% else %>
-            <li class="nav-item">
-              <%= button_to "Login", sign_in_path, method: :get, class: "nav-link" %>
-            </li>
-
-
-            <% end %>
-            <!-- End Login -->
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Page Content -->
-    <div class="container">
-
-      <h1 class="my-4 text-center text-lg-left">Infinite Image</h1>
-    <!-- Search -->
-      <form>
-      <div class="row">
-        <div class="col"></div> <!--center search bar -->
-        <div class="col-lg-6">
-          <div class="input-group">
-            <div class="input-group-btn">
-              <button type="button" class="btn btn-default dropdown-toggle mb-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All <span class="caret"></span></button>
-              <ul class="dropdown-menu">
-                <%= Category.all.each do |cat| %>
-                <li><%= link_to cat.name, class: "dropdown-item" %></li>
-                <%end %>
-              </ul>
-            </div><!-- /btn-group -->
-           <!-- <input type="text" class="form-control" aria-label="..."> -->
-           <!-- <input type="submit" value="Search"> -->
-            <!-- Using ransack gem to create search field and submission button -->
-           <%= search_form_for @q do |f| %>
-              <%= f.search_field :image_title_cont, class: "form-control mb-2" %>
-              <%= f.submit 'Search', name: 'home', class: "btn btn-primary mb-2" %>
-            <%end %>
-          </div><!-- /input-group -->
-        </div><!-- /.col-lg-6 -->
-        <div class="col"></div> <!--center search bar -->
-      </div><!-- /.row -->
-      </form>
-    <!-- End Search -->
-
-
-    <div class ="row top-buffer">
-      <div class="row text-center text-lg-left">
- <!-- Loop through each picture and assign each to bootstrap class. Will need to limit these and not show whole db -->
-        <% @home.shuffle.each do |image| %>
-          <% image.uploads.each do |upload| %>
-        <div class="col-lg-3 col-md-4 col-xs-6">
-
-              <%= link_to (image_tag upload, size: '400x300', class: "img-fluid img-thumbnail"), image, class: "d-block mb-4 h-100" %>
-        </div>
+              <%= link_to (image_tag upload, class: "img-fluid img-thumbnail"), image, class: "d-block mb-4 h-100", target: :_blank %>
+            </div>
           <% end %>
         <% end %>
+      <% end %>
 
-        <!-- for testing image layout -->
- <!--  <div class="col-lg-3 col-md-4 col-xs-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-          </a>
-       </div> -->
+      <!-- for testing image layout -->
+      <!--  <div class="col-lg-3 col-md-4 col-xs-6">
+               <a href="#" class="d-block mb-4 h-100">
+                 <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
+               </a>
+            </div> -->
 
-      </div>
     </div>
-    </div>
-    <!-- /.container -->
+  </div>
+</div>
+<!-- /.container -->
 
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
-      </div>
-      <!-- /.container -->
-    </footer>
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+  </div>
+  <!-- /.container -->
+</footer>
 
 

@@ -13,27 +13,30 @@ class ImagesController < ApplicationController
     query = params[:q].presence || '*'
     @imagesearch = Image.search(query, suggest: true)
     @images = Image.all
-    if params[:j].present?                                #if category is present
-      if params[:j][:category_id].empty?                    #if category is empty
-        @imagesearch = Image.search(query, suggest: true)     #use search bar or search everything
+    if params[:j].present? #if category is present
+      if params[:j][:category_id].empty? #if category is empty
+        @imagesearch = Image.search(query, suggest: true) #use search bar or search everything
         @image_all = Image.search('*')
-      else                                                #else
-        @cat = params['j']['category_id']                   #we will query with category aggregate
-        @imagesearch = Image.search(query, suggest: true, where: {category_id: @cat })
+      else #else
+        @cat = params['j']['category_id'] #we will query with category aggregate
+        @imagesearch = Image.search(query, suggest: true, where: {category_id: @cat})
         @image_all = Image.search('*', where: {category_id: params['j']['category_id']})
       end
     end
 
-    # #Ransack gem's  Paul Ancajima updated 7/17/18
-    # @q = Image.ransack(params[:q]) #.each {|k, v| [k, v.strip!]}) #Strips trailing spaces
-    # @images = @q.result(distinct: true).includes(:category) #Advance search
-    # @q.build_condition if @q.conditions.empty?  #Remove the if statement to add extra search groups
+
+    @images = Image.all
+    #Ransack gem's  Paul Ancajima updated 7/17/18
+    @q = Image.ransack(params[:q]) #.each {|k, v| [k, v.strip!]}) #Strips trailing spaces
+    @images = @q.result(distinct: true).includes(:category) #Advance search
+    @q.build_condition if @q.conditions.empty? #Remove the if statement to add extra search groups
   end
 
   # def search
   #   index
   #   render :index
   # end
+
 
   def approve
     @image = Image.find(params[:id])
@@ -44,11 +47,13 @@ class ImagesController < ApplicationController
 
   helper_method :approve
 
-
   def result
+
     @images = Image.all
     @q = Image.ransack(params[:q]) #Ransack gem's  Paul Ancajima
     @images = @q.result(distinct: true) #Simple search
+    if @home.count == 0
+    end
   end
 
   # GET /images/1
@@ -80,12 +85,22 @@ class ImagesController < ApplicationController
 
   end
 
+  #associates User with Image
+  # Andre Leslie 07/25/18
+  def get_author
+    @image.user = current_user
+  end
+
   # POST /images
   # POST /images.json
   def create
     @image = Image.new(image_params)
-
     get_file_type
+
+    if signed_in?
+      get_author
+    end
+
 
     respond_to do |format|
 
@@ -119,7 +134,7 @@ class ImagesController < ApplicationController
   def destroy
     @image.destroy
     respond_to do |format|
-      format.html {redirect_to images_url, notice: 'Image was successfully destroyed.'}
+      format.html {redirect_to admin_path, notice: 'Image was successfully destroyed.'}
       format.json {head :no_content}
     end
   end
@@ -134,6 +149,6 @@ class ImagesController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def image_params
     #Added uploads param 7/72018 Paul Ancajima
-    params.require(:image).permit(:image_title, :image_owner_id, :category_id, :licensing, :date, :description, :file_type, :location, :user_id, :status_id, uploads: [])
+    params.require(:image).permit(:image_title, :image_owner_id, :category_id, :licensing, :date, :description, :file_type, :location, :status_id, uploads: [])
   end
 end
