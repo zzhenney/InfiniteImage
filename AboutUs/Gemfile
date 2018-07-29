@@ -10,6 +10,12 @@ gem 'jquery-rails'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'clearance', '~> 1.12', '>= 1.12.1'
 
+
+# follow steps CAREFULLY steps and details at "https://github.com/ankane/searchkick"
+# install elasticsearch
+# launch elasticsearch search engine
+# then install 'searchkick'
+# Added searchkick 7/26/18
 gem 'searchkick', require: true
 gem 'elasticsearch'
 
