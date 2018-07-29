@@ -20,7 +20,7 @@ class Image < ApplicationRecord
   #                  'reindex_user_category_status' is needed because searchkick does not reindex associations if theyre updated
   #                  'search_data' allows associated models and their fields be searchable
   # Date: 7/27/18
-  searchkick callbacks: :async, suggest: [:image_title,:description, :category_name] #attributes for suggestions for typos up to 1 or 2 characters
+  searchkick callbacks: :async, word_start: [:image_title, :description, :category_name], suggest: [:image_title, :description, :category_name] #attributes for suggestions for typos up to 1 or 2 characters
 
   after_commit :reindex_user_category_status
 

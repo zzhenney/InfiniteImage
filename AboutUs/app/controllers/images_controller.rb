@@ -15,11 +15,11 @@ class ImagesController < ApplicationController
     @images = Image.all
     if params[:j].present? #if category is present
       if params[:j][:category_id].empty? #if category is empty
-        @imagesearch = Image.search(query, suggest: true) #use search bar or search everything
+        @imagesearch = Image.search(query, fields:[:image_title, :description], match: :word_start, suggest: true) #use search bar or search everything
         @image_all = Image.search('*')
       else #else
         @cat = params['j']['category_id'] #we will query with category aggregate
-        @imagesearch = Image.search(query, suggest: true, where: {category_id: @cat})
+        @imagesearch = Image.search(query, suggest: true, fields:[:image_title, :description], match: :word_start, where: {category_id: @cat})
         @image_all = Image.search('*', where: {category_id: params['j']['category_id']})
       end
     end
@@ -30,6 +30,37 @@ class ImagesController < ApplicationController
     @q = Image.ransack(params[:q]) #.each {|k, v| [k, v.strip!]}) #Strips trailing spaces
     @images = @q.result(distinct: true).includes(:category) #Advance search
     @q.build_condition if @q.conditions.empty? #Remove the if statement to add extra search groups
+
+    @home = Image.all
+    @approved_images = Image.where(status_id: 1).all
+    if current_user != nil
+      if current_user.is_admin
+        redirect_to admin_path
+      end
+    end
+    # get category selected by user for persistent selection
+    # strip category and search params into variables @user_cat_id and @user_search
+    # this allows for the search function to search first through categories then for the search(image title)
+    # at home page no search performed yet
+    if params[:q].nil? || params['q']['category_id'].nil?
+      @user_cat_name = "All"
+
+      # if 'All' selected check only that query (q) was made
+    elsif params[:q].present?
+      @user_cat_id = params['q']['category_id'] unless params[:q].nil?
+      @user_search = params['q']['image_title']
+
+      # if specific category selected check that query (q) and category id exists
+    elsif params[:q][:category_id].present?
+      @user_cat_name = Category.find(@user_cat_id).name unless params[:q].nil?
+      @user_search = params['q']['image_title']
+    end
+
+    #Search function (ransack gem) - first searches categories then image title
+    @q = Image.ransack(category_id_eq: @user_cat_id, image_title_cont: @user_search)
+
+    #Set search result to @home instance variable for display
+    @home = @q.result
   end
 
   # def search

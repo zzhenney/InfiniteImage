@@ -2,24 +2,26 @@
 <!--ransack uses search_form_for instead of rails standard form_for -->
 <br> <br> <b>ransack</b>
 <%= search_form_for @q do |f| %>
-<!-- Changed search field. We can search through our attributes from the table "category" IE. category_id category_name etc-->
-    <%= f.collection_select :category_id, Category.all, :id, :name, {:selected => @user_cat_id, :include_blank => 'All'},  { class: "custom-select col-2" } %>
-    <%= f.search_field :image_title, :value => @user_search, placeholder: 'Search for an image. (i.e. Animals, Cars, Food, Nature, People, Travel)', class: "form-control col-8" %>
-    <%= f.submit 'Search', name: 'images', class: "btn btn-primary col-2" %>
+  <!-- Changed search field. We can search through our attributes from the table "category" IE. category_id category_name etc-->
+  <%= f.collection_select :category_id, Category.all, :id, :name, {:selected => @user_cat_id, :include_blank => 'All'}, {class: "custom-select col-2"} %>
+  <%= f.search_field :image_title, :value => @user_search, placeholder: 'Search for an image. (i.e. Animals, Cars, Food, Nature, People, Travel)', class: "form-control col-8" %>
+  <%= f.submit 'Search', name: 'images', class: "btn btn-primary col-2" %>
 <% end %>
+<br><br>
+<div class="col-lg-9">
+  <b>searchkick <br></b>
+  NEW SEARCH CAN: <br>
+  &nbsp&nbsp&nbsp HANDLE TYPOS UP TO 1-2 CHARACTERS<br>
+  &nbsp&nbsp&nbsp CAN SUGGEST<br>
+  &nbsp&nbsp&nbsp TEST SEARCH local:3000/images<br>
+</div>
 
-
-<br> <br> <b>searchkick</b>
-NEW SEARCH CAN: <br>
-&nbsp&nbsp&nbsp HANDLE TYPOS UP TO 1-2 CHARACTERS<br>
-&nbsp&nbsp&nbsp CAN SUGGEST<br>
-&nbsp&nbsp&nbsp TEST SEARCH local:3000/images<br>
 
 <%= form_tag @image, method: :get do %>
-  <%= collection_select :j, :category_id, Category.all, :id, :name, { selected: @cat , include_blank: 'All'} %>
-  <%=text_field_tag :q, params[:q], placeholder: 'Search' %>
-  <%=submit_tag 'Submit' %>
-<% end  %>
+  <%= collection_select :j, :category_id, Category.all, :id, :name, {selected: @cat, include_blank: 'All'} %>
+  <%= text_field_tag :q, params[:q], placeholder: 'Search' %>
+  <%= submit_tag 'Submit' %>
+<% end %>
 
 <br><br>
 
