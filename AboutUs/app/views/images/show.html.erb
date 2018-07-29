@@ -70,14 +70,16 @@
         <%= @image.category.name %>
       </p>
 
+      <% if @image.licensing != nil %>
       <p>
         <strong>Licensing:</strong>
         <%= @image.licensing %>
       </p>
+        <% end %>
 
       <p>
         <strong>Date:</strong>
-        <%= @image.date %>
+        <%= @image.created_at %>
       </p>
 
       <p>
@@ -90,10 +92,12 @@
         <%= @image.file_type %>
       </p>
 
+      <% if @image.location != "" %>
       <p>
         <strong>Location:</strong>
         <%= @image.location %>
       </p>
+      <% end %>
 
       <!-- Download Button -->
       <button class="btn"><i class="fa fa-download"></i>
