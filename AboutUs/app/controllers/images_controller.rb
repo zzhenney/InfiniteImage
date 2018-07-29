@@ -5,19 +5,45 @@ class ImagesController < ApplicationController
   # GET /images.json
   def index
 
+    # Author: Paul Ancajima
+    # Purpose: New search gem 'searchkick' with better features see https://github.com/ankane/searchkick for more details
+    # Variables to Note: @image_search is used to search it takes arguments param[:q] and options then perform search queries
+    #                    @cat is the category_id
+    # Date: 7/27/18
+    query = params[:q].presence || '*'
+    @imagesearch = Image.search(query, suggest: true)
     @images = Image.all
+    if params[:j].present?                                #if category is present
+      if params[:j][:category_id].empty?                    #if category is empty
+        @imagesearch = Image.search(query, suggest: true)     #use search bar or search everything
+        @image_all = Image.search('*')
+      else                                                #else
+        @cat = params['j']['category_id']                   #we will query with category aggregate
+        @imagesearch = Image.search(query, suggest: true, where: {category_id: @cat })
+        @image_all = Image.search('*', where: {category_id: params['j']['category_id']})
+      end
+    end
 
-    #Ransack gem's  Paul Ancajima updated 7/17/18
-    @q = Image.ransack(params[:q]) #.each {|k, v| [k, v.strip!]}) #Strips trailing spaces
-    @images = @q.result(distinct: true).includes(:category) #Advance search
-    @q.build_condition if @q.conditions.empty?  #Remove the if statement to add extra search groups
-
+    # #Ransack gem's  Paul Ancajima updated 7/17/18
+    # @q = Image.ransack(params[:q]) #.each {|k, v| [k, v.strip!]}) #Strips trailing spaces
+    # @images = @q.result(distinct: true).includes(:category) #Advance search
+    # @q.build_condition if @q.conditions.empty?  #Remove the if statement to add extra search groups
   end
 
-  def search
-    index
-    render :index
+  # def search
+  #   index
+  #   render :index
+  # end
+
+  def approve
+    @image = Image.find(params[:id])
+    @image.update(:status_id => 1)
+
+    redirect_to admin_path
   end
+
+  helper_method :approve
+
 
   def result
     @images = Image.all
@@ -49,7 +75,7 @@ class ImagesController < ApplicationController
 
     @image.uploads.each do |upload|
       filename_arr = upload.content_type.to_s.split('/')
-      @image.file_type= filename_arr[1].upcase
+      @image.file_type = filename_arr[1].upcase
     end
 
   end
@@ -88,7 +114,6 @@ class ImagesController < ApplicationController
   end
 
 
-
   # DELETE /images/1
   # DELETE /images/1.json
   def destroy
@@ -109,6 +134,6 @@ class ImagesController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def image_params
     #Added uploads param 7/72018 Paul Ancajima
-    params.require(:image).permit(:image_title, :image_owner_id, :category_id, :licensing, :date, :description, :file_type, :location, :user_id, :status_id,  uploads: [])
+    params.require(:image).permit(:image_title, :image_owner_id, :category_id, :licensing, :date, :description, :file_type, :location, :user_id, :status_id, uploads: [])
   end
 end

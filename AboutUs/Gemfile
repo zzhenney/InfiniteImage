@@ -10,6 +10,9 @@ gem 'jquery-rails'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'clearance', '~> 1.12', '>= 1.12.1'
 
+gem 'searchkick', require: true
+gem 'elasticsearch'
+
 #Added capistrano 7/18/18   Paul Ancajima
 group :development do
   gem "capistrano", "~> 3.10", require: false
