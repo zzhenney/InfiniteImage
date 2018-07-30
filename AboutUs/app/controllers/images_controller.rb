@@ -15,11 +15,11 @@ class ImagesController < ApplicationController
     @images = Image.all
     if params[:j].present? #if category is present
       if params[:j][:category_id].empty? #if category is empty
-        @imagesearch = Image.search(query, fields:[:image_title, :description], match: :word_start, suggest: true) #use search bar or search everything
+        @imagesearch = Image.search(query, fields:[:image_title, :description, :category_name],  match: :word_start, operator: 'or', suggest: true) #use search bar or search everything
         @image_all = Image.search('*')
       else #else
         @cat = params['j']['category_id'] #we will query with category aggregate
-        @imagesearch = Image.search(query, suggest: true, fields:[:image_title, :description], match: :word_start, where: {category_id: @cat})
+        @imagesearch = Image.search(query, suggest: true, fields:[:image_title, :description, :category_name],  match: :word_start, operator: 'or', where: {category_id: @cat})
         @image_all = Image.search('*', where: {category_id: params['j']['category_id']})
       end
     end
