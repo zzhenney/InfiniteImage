@@ -16,14 +16,21 @@
   &nbsp&nbsp&nbsp TEST SEARCH local:3000/images<br>
 </div>
 
-
-<%= form_tag @image, method: :get do %>
+<!--form_tag for searchkick. Logic found in images_controller index action-->
+<%= form_tag images_path, method: :get do %>
   <%= collection_select :j, :category_id, Category.all, :id, :name, {selected: @cat, include_blank: 'All'} %>
   <%= text_field_tag :q, params[:q], placeholder: 'Search' %>
+  <!--simple true/false checkboxes that receives value from images_controller for persistence-->
+  <%= check_box_tag 'GIF', 1, @GIF %> GIF
+  <%= check_box_tag 'PNG', 1, @PNG %> PNG
+  <%= check_box_tag 'JPEG', 1, @JPEG %> JPEG
   <%= submit_tag 'Submit' %>
 <% end %>
 
+<%= @PNG %>&nbsp&nbsp&nbsp<%= @GIF %>&nbsp&nbsp&nbsp<%= @JPEG %>
+
 <br><br>
+<%= @imagesearch.aggs  %>
 
 
 

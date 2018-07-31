@@ -14,7 +14,6 @@ Rails.application.routes.draw do
   resources :home
 
 
-
   get 'home/index'
   #get 'pages/index'
   
@@ -44,7 +43,6 @@ Rails.application.routes.draw do
 
   get 'admin' => 'admin#image'
   get '/image/approve' => "images#approve"
-
 
 
 end
