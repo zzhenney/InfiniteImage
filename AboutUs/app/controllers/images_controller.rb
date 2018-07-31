@@ -68,7 +68,6 @@ class ImagesController < ApplicationController
             @imagesearch = Image.search(query, suggest: true, fields: [:image_title, :description, :category_name], match: :word_start, operator: 'or', where: {file_type: 'JPEG', category_id: @cat})
           end
         end
-
       end
     end
 

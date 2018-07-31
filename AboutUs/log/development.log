@@ -5683,3 +5683,725 @@ Sent data  (0.5ms)
 Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/images?utf8=%E2%9C%93&j%5Bcategory_id%5D=4&q=bg&GIF=1&PNG=1&JPEG=1&commit=Submit" for 127.0.0.1 at 2018-07-31 13:53:00 -0700
+Processing by ImagesController#index as HTML
+  Parameters: {"utf8"=>"✓", "j"=>{"category_id"=>"4"}, "q"=>"bg", "GIF"=>"1", "PNG"=>"1", "JPEG"=>"1", "commit"=>"Submit"}
+  [1m[33mImage Search (18.0ms)[0m  curl http://localhost:9200/images_development/_search?pretty -H 'Content-Type: application/json' -d '{"query":{"dis_max":{"queries":[{"multi_match":{"query":"bg","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"bg","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"bg","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"bg","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}},"suggest":{"text":"bg","image_title":{"phrase":{"field":"image_title.suggest"}},"description":{"phrase":{"field":"description.suggest"}},"category_name":{"phrase":{"field":"category_name.suggest"}}},"timeout":"11s","_source":false,"size":10000,"from":0}'
+  [1m[33mImage Search (14.3ms)[0m  curl http://localhost:9200/images_development/_search?pretty -H 'Content-Type: application/json' -d '{"query":{"bool":{"must":{"dis_max":{"queries":[{"bool":{"must":{"bool":{"should":[{"match":{"image_title.word_start":{"query":"bg","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}},{"match":{"image_title.word_start":{"query":"bg","boost":1,"operator":"or","analyzer":"searchkick_word_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true}}}]}},"should":{"match":{"image_title.analyzed":{"query":"bg","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}}}},{"bool":{"must":{"bool":{"should":[{"match":{"description.word_start":{"query":"bg","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}},{"match":{"description.word_start":{"query":"bg","boost":1,"operator":"or","analyzer":"searchkick_word_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true}}}]}},"should":{"match":{"description.analyzed":{"query":"bg","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}}}},{"bool":{"must":{"bool":{"should":[{"match":{"category_name.word_start":{"query":"bg","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}},{"match":{"category_name.word_start":{"query":"bg","boost":1,"operator":"or","analyzer":"searchkick_word_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true}}}]}},"should":{"match":{"category_name.analyzed":{"query":"bg","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}}}}]}},"filter":[{"term":{"category_id":"4"}}]}},"suggest":{"text":"bg","image_title":{"phrase":{"field":"image_title.suggest"}},"description":{"phrase":{"field":"description.suggest"}},"category_name":{"phrase":{"field":"category_name.suggest"}}},"timeout":"11s","_source":false,"size":10000,"from":0}'
+  [1m[33mImage Search (7.3ms)[0m  curl http://localhost:9200/images_development/_search?pretty -H 'Content-Type: application/json' -d '{"query":{"bool":{"must":{"match_all":{}},"filter":[{"term":{"category_id":"4"}}]}},"timeout":"11s","_source":false,"size":10000,"from":0}'
+  [1m[33mImage Search (19.0ms)[0m  curl http://localhost:9200/images_development/_search?pretty -H 'Content-Type: application/json' -d '{"query":{"bool":{"must":{"dis_max":{"queries":[{"bool":{"must":{"bool":{"should":[{"match":{"image_title.word_start":{"query":"bg","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}},{"match":{"image_title.word_start":{"query":"bg","boost":1,"operator":"or","analyzer":"searchkick_word_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true}}}]}},"should":{"match":{"image_title.analyzed":{"query":"bg","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}}}},{"bool":{"must":{"bool":{"should":[{"match":{"description.word_start":{"query":"bg","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}},{"match":{"description.word_start":{"query":"bg","boost":1,"operator":"or","analyzer":"searchkick_word_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true}}}]}},"should":{"match":{"description.analyzed":{"query":"bg","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}}}},{"bool":{"must":{"bool":{"should":[{"match":{"category_name.word_start":{"query":"bg","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}},{"match":{"category_name.word_start":{"query":"bg","boost":1,"operator":"or","analyzer":"searchkick_word_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true}}}]}},"should":{"match":{"category_name.analyzed":{"query":"bg","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}}}}]}},"filter":[{"terms":{"file_type":["PNG","GIF","JPEG"]}},{"term":{"category_id":"4"}}]}},"suggest":{"text":"bg","image_title":{"phrase":{"field":"image_title.suggest"}},"description":{"phrase":{"field":"description.suggest"}},"category_name":{"phrase":{"field":"category_name.suggest"}}},"timeout":"11s","_source":false,"size":10000,"from":0}'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`remember_token` = 'c04defc9ba4e2d5b24cdd97d6a749467c59d6dbf' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/images_controller.rb:84
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 4[0m
+  ↳ app/views/images/index.html.erb:23
+  [1m[36mStatus Load (0.6ms)[0m  [1m[34mSELECT  `statuses`.* FROM `statuses` WHERE `statuses`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/images/index.html.erb:26
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 74 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:35
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 181 LIMIT 1[0m
+  ↳ app/views/images/index.html.erb:36
+  [1m[36mCACHE Status Load (0.0ms)[0m  [1m[34mSELECT  `statuses`.* FROM `statuses` WHERE `statuses`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:26
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 75 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:35
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 182 LIMIT 1[0m
+  ↳ app/views/images/index.html.erb:36
+  [1m[36mCACHE Status Load (0.0ms)[0m  [1m[34mSELECT  `statuses`.* FROM `statuses` WHERE `statuses`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:26
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 76 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:35
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 183 LIMIT 1[0m
+  ↳ app/views/images/index.html.erb:36
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/images/_search_images.html.erb:6
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/images/_search_images.html.erb:21
+  Rendered images/_search_images.html.erb (3.4ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(DISTINCT `images`.`id`) FROM `images`[0m
+  ↳ app/views/images/index.html.erb:71
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`id` = 74[0m
+  ↳ app/views/images/index.html.erb:72
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 74 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:73
+  [1m[36mCACHE ActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 181 LIMIT 1[0m  [["id", 181], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:74
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `images`[0m
+  ↳ app/views/images/index.html.erb:90
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:97
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 74 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:98
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 181 LIMIT 1[0m  [["id", 181], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:100
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 76 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:98
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 183 LIMIT 1[0m  [["id", 183], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:100
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 75 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:98
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 182 LIMIT 1[0m  [["id", 182], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:100
+  Rendered images/index.html.erb within layouts/application (126.1ms)
+Completed 200 OK in 300ms (Views: 152.5ms | Searchkick: 58.6ms | ActiveRecord: 64.7ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBYlU9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2d482d8edf9596d73ee39307c8702d279b8176b1/bg.gif" for 127.0.0.1 at 2018-07-31 13:53:01 -0700
+Processing by ActiveStorage::BlobsController#show as GIF
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBYlU9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2d482d8edf9596d73ee39307c8702d279b8176b1", "filename"=>"bg"}
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBYlk9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--72c90d7190842abd9823e2dcfd97a0a7ac002039/photography-student.gif" for 127.0.0.1 at 2018-07-31 13:53:01 -0700
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 181 LIMIT 1[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: MKRqpTdmbkSSQ5wAC3e9rHCH (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFOUzFKeGNGUmtiV0pyVTFOUk5YZEJRek5sT1hKSVEwZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMTgwWiIsInB1ciI6ImJsb2Jfa2V5In19--eb5a1b1a1522ac481db20d97076681f11f37d2bd/bg.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22bg.gif%22%3B+filename%2A%3DUTF-8%27%27bg.gif)[0m
+Processing by ActiveStorage::BlobsController#show as GIF
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBYlk9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--72c90d7190842abd9823e2dcfd97a0a7ac002039", "filename"=>"photography-student"}
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFOUzFKeGNGUmtiV0pyVTFOUk5YZEJRek5sT1hKSVEwZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMTgwWiIsInB1ciI6ImJsb2Jfa2V5In19--eb5a1b1a1522ac481db20d97076681f11f37d2bd/bg.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22bg.gif%22%3B+filename%2A%3DUTF-8%27%27bg.gif
+Completed 302 Found in 9ms (ActiveRecord: 0.6ms)
+
+
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 182 LIMIT 1[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: DrsYbaEMdH3GNFdHuNJ2oPBy (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFFY25OWlltRkZUV1JJTTBkT1JtUklkVTVLTW05UVFua0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMTg3WiIsInB1ciI6ImJsb2Jfa2V5In19--4a5b96a4d38b1bbbb8bac2ab63d618a868623f92/photography-student.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22photography-student.gif%22%3B+filename%2A%3DUTF-8%27%27photography-student.gif)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFFY25OWlltRkZUV1JJTTBkT1JtUklkVTVLTW05UVFua0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMTg3WiIsInB1ciI6ImJsb2Jfa2V5In19--4a5b96a4d38b1bbbb8bac2ab63d618a868623f92/photography-student.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22photography-student.gif%22%3B+filename%2A%3DUTF-8%27%27photography-student.gif
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBYmM9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1750f4ad786ca6122b0f069086f493047cfe7633/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png" for 127.0.0.1 at 2018-07-31 13:53:01 -0700
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBYmM9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1750f4ad786ca6122b0f069086f493047cfe7633", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 183 LIMIT 1[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: vjnQDgLV3m1LRZ671zDQXTvz (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEyYW01UlJHZE1Wak50TVV4U1dqWTNNWHBFVVZoVWRub0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMjI3WiIsInB1ciI6ImJsb2Jfa2V5In19--88b257b3df38673a3cf3aab683210e926e3e132d/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEyYW01UlJHZE1Wak50TVV4U1dqWTNNWHBFVVZoVWRub0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMjI3WiIsInB1ciI6ImJsb2Jfa2V5In19--88b257b3df38673a3cf3aab683210e926e3e132d/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFOUzFKeGNGUmtiV0pyVTFOUk5YZEJRek5sT1hKSVEwZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMTgwWiIsInB1ciI6ImJsb2Jfa2V5In19--eb5a1b1a1522ac481db20d97076681f11f37d2bd/bg.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22bg.gif%22%3B+filename%2A%3DUTF-8%27%27bg.gif" for 127.0.0.1 at 2018-07-31 13:53:01 -0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFFY25OWlltRkZUV1JJTTBkT1JtUklkVTVLTW05UVFua0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMTg3WiIsInB1ciI6ImJsb2Jfa2V5In19--4a5b96a4d38b1bbbb8bac2ab63d618a868623f92/photography-student.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22photography-student.gif%22%3B+filename%2A%3DUTF-8%27%27photography-student.gif" for 127.0.0.1 at 2018-07-31 13:53:01 -0700
+Processing by ActiveStorage::DiskController#show as GIF
+Processing by ActiveStorage::DiskController#show as GIF
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEyYW01UlJHZE1Wak50TVV4U1dqWTNNWHBFVVZoVWRub0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMjI3WiIsInB1ciI6ImJsb2Jfa2V5In19--88b257b3df38673a3cf3aab683210e926e3e132d/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png" for 127.0.0.1 at 2018-07-31 13:53:01 -0700
+  Parameters: {"content_type"=>"image/gif", "disposition"=>"inline; filename=\"photography-student.gif\"; filename*=UTF-8''photography-student.gif", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFFY25OWlltRkZUV1JJTTBkT1JtUklkVTVLTW05UVFua0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMTg3WiIsInB1ciI6ImJsb2Jfa2V5In19--4a5b96a4d38b1bbbb8bac2ab63d618a868623f92", "filename"=>"photography-student"}
+  Parameters: {"content_type"=>"image/gif", "disposition"=>"inline; filename=\"bg.gif\"; filename*=UTF-8''bg.gif", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFOUzFKeGNGUmtiV0pyVTFOUk5YZEJRek5sT1hKSVEwZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMTgwWiIsInB1ciI6ImJsb2Jfa2V5In19--eb5a1b1a1522ac481db20d97076681f11f37d2bd", "filename"=>"bg"}
+[36m  Disk Storage (0.7ms) [0m[34mDownloaded file from key: MKRqpTdmbkSSQ5wAC3e9rHCH[0m
+[36m  Disk Storage (0.9ms) [0m[34mDownloaded file from key: DrsYbaEMdH3GNFdHuNJ2oPBy[0m
+  Rendering text template
+Processing by ActiveStorage::DiskController#show as PNG
+  Rendered text template (0.0ms)
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"Screen Shot 2018-06-26 at 7.13.46 PM.png\"; filename*=UTF-8''Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEyYW01UlJHZE1Wak50TVV4U1dqWTNNWHBFVVZoVWRub0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMjI3WiIsInB1ciI6ImJsb2Jfa2V5In19--88b257b3df38673a3cf3aab683210e926e3e132d", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+Sent data  (4.1ms)
+  Rendering text template
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+[36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: vjnQDgLV3m1LRZ671zDQXTvz[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (1.1ms)
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+  Rendered text template (0.0ms)
+Sent data  (12.1ms)
+Completed 200 OK in 17ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images?utf8=%E2%9C%93&j%5Bcategory_id%5D=4&q=old+mann&GIF=1&PNG=1&JPEG=1&commit=Submit" for 127.0.0.1 at 2018-07-31 13:53:11 -0700
+Processing by ImagesController#index as HTML
+  Parameters: {"utf8"=>"✓", "j"=>{"category_id"=>"4"}, "q"=>"old mann", "GIF"=>"1", "PNG"=>"1", "JPEG"=>"1", "commit"=>"Submit"}
+  [1m[33mImage Search (48.6ms)[0m  curl http://localhost:9200/images_development/_search?pretty -H 'Content-Type: application/json' -d '{"query":{"dis_max":{"queries":[{"multi_match":{"query":"old mann","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"old mann","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"old mann","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"old mann","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}},"suggest":{"text":"old mann","image_title":{"phrase":{"field":"image_title.suggest"}},"description":{"phrase":{"field":"description.suggest"}},"category_name":{"phrase":{"field":"category_name.suggest"}}},"timeout":"11s","_source":false,"size":10000,"from":0}'
+  [1m[33mImage Search (26.5ms)[0m  curl http://localhost:9200/images_development/_search?pretty -H 'Content-Type: application/json' -d '{"query":{"bool":{"must":{"dis_max":{"queries":[{"bool":{"must":{"bool":{"should":[{"match":{"image_title.word_start":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}},{"match":{"image_title.word_start":{"query":"old mann","boost":1,"operator":"or","analyzer":"searchkick_word_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true}}}]}},"should":{"match":{"image_title.analyzed":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}}}},{"bool":{"must":{"bool":{"should":[{"match":{"description.word_start":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}},{"match":{"description.word_start":{"query":"old mann","boost":1,"operator":"or","analyzer":"searchkick_word_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true}}}]}},"should":{"match":{"description.analyzed":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}}}},{"bool":{"must":{"bool":{"should":[{"match":{"category_name.word_start":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}},{"match":{"category_name.word_start":{"query":"old mann","boost":1,"operator":"or","analyzer":"searchkick_word_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true}}}]}},"should":{"match":{"category_name.analyzed":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}}}}]}},"filter":[{"term":{"category_id":"4"}}]}},"suggest":{"text":"old mann","image_title":{"phrase":{"field":"image_title.suggest"}},"description":{"phrase":{"field":"description.suggest"}},"category_name":{"phrase":{"field":"category_name.suggest"}}},"timeout":"11s","_source":false,"size":10000,"from":0}'
+  [1m[33mImage Search (6.6ms)[0m  curl http://localhost:9200/images_development/_search?pretty -H 'Content-Type: application/json' -d '{"query":{"bool":{"must":{"match_all":{}},"filter":[{"term":{"category_id":"4"}}]}},"timeout":"11s","_source":false,"size":10000,"from":0}'
+  [1m[33mImage Search (28.6ms)[0m  curl http://localhost:9200/images_development/_search?pretty -H 'Content-Type: application/json' -d '{"query":{"bool":{"must":{"dis_max":{"queries":[{"bool":{"must":{"bool":{"should":[{"match":{"image_title.word_start":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}},{"match":{"image_title.word_start":{"query":"old mann","boost":1,"operator":"or","analyzer":"searchkick_word_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true}}}]}},"should":{"match":{"image_title.analyzed":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}}}},{"bool":{"must":{"bool":{"should":[{"match":{"description.word_start":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}},{"match":{"description.word_start":{"query":"old mann","boost":1,"operator":"or","analyzer":"searchkick_word_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true}}}]}},"should":{"match":{"description.analyzed":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}}}},{"bool":{"must":{"bool":{"should":[{"match":{"category_name.word_start":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}},{"match":{"category_name.word_start":{"query":"old mann","boost":1,"operator":"or","analyzer":"searchkick_word_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true}}}]}},"should":{"match":{"category_name.analyzed":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}}}}]}},"filter":[{"terms":{"file_type":["PNG","GIF","JPEG"]}},{"term":{"category_id":"4"}}]}},"suggest":{"text":"old mann","image_title":{"phrase":{"field":"image_title.suggest"}},"description":{"phrase":{"field":"description.suggest"}},"category_name":{"phrase":{"field":"category_name.suggest"}}},"timeout":"11s","_source":false,"size":10000,"from":0}'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`remember_token` = 'c04defc9ba4e2d5b24cdd97d6a749467c59d6dbf' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/images_controller.rb:84
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 4[0m
+  ↳ app/views/images/index.html.erb:23
+  [1m[36mStatus Load (0.4ms)[0m  [1m[34mSELECT  `statuses`.* FROM `statuses` WHERE `statuses`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/images/index.html.erb:26
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 74 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:35
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 181 LIMIT 1[0m
+  ↳ app/views/images/index.html.erb:36
+  [1m[36mCACHE Status Load (0.0ms)[0m  [1m[34mSELECT  `statuses`.* FROM `statuses` WHERE `statuses`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:26
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 75 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:35
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 182 LIMIT 1[0m
+  ↳ app/views/images/index.html.erb:36
+  [1m[36mCACHE Status Load (0.0ms)[0m  [1m[34mSELECT  `statuses`.* FROM `statuses` WHERE `statuses`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:26
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 76 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:35
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 183 LIMIT 1[0m
+  ↳ app/views/images/index.html.erb:36
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/images/_search_images.html.erb:6
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/images/_search_images.html.erb:21
+  Rendered images/_search_images.html.erb (6.9ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(DISTINCT `images`.`id`) FROM `images`[0m
+  ↳ app/views/images/index.html.erb:71
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`id` IN (76, 75)[0m
+  ↳ app/views/images/index.html.erb:72
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 76 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:73
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 183 LIMIT 1[0m  [["id", 183], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:74
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 75 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:73
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 182 LIMIT 1[0m  [["id", 182], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:74
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `images`[0m
+  ↳ app/views/images/index.html.erb:90
+  [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:97
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 76 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:98
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 183 LIMIT 1[0m  [["id", 183], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:100
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 74 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:98
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 181 LIMIT 1[0m  [["id", 181], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:100
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 75 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:98
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 182 LIMIT 1[0m  [["id", 182], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:100
+  Rendered images/index.html.erb within layouts/application (64.8ms)
+Completed 200 OK in 294ms (Views: 148.0ms | Searchkick: 110.3ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFOUzFKeGNGUmtiV0pyVTFOUk5YZEJRek5sT1hKSVEwZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMTgwWiIsInB1ciI6ImJsb2Jfa2V5In19--eb5a1b1a1522ac481db20d97076681f11f37d2bd/bg.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22bg.gif%22%3B+filename%2A%3DUTF-8%27%27bg.gif" for 127.0.0.1 at 2018-07-31 13:53:12 -0700
+Processing by ActiveStorage::DiskController#show as GIF
+  Parameters: {"content_type"=>"image/gif", "disposition"=>"inline; filename=\"bg.gif\"; filename*=UTF-8''bg.gif", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFOUzFKeGNGUmtiV0pyVTFOUk5YZEJRek5sT1hKSVEwZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMTgwWiIsInB1ciI6ImJsb2Jfa2V5In19--eb5a1b1a1522ac481db20d97076681f11f37d2bd", "filename"=>"bg"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFFY25OWlltRkZUV1JJTTBkT1JtUklkVTVLTW05UVFua0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMTg3WiIsInB1ciI6ImJsb2Jfa2V5In19--4a5b96a4d38b1bbbb8bac2ab63d618a868623f92/photography-student.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22photography-student.gif%22%3B+filename%2A%3DUTF-8%27%27photography-student.gif" for 127.0.0.1 at 2018-07-31 13:53:12 -0700
+[36m  Disk Storage (1.1ms) [0m[34mDownloaded file from key: MKRqpTdmbkSSQ5wAC3e9rHCH[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (1.0ms)
+Processing by ActiveStorage::DiskController#show as GIF
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+  Parameters: {"content_type"=>"image/gif", "disposition"=>"inline; filename=\"photography-student.gif\"; filename*=UTF-8''photography-student.gif", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFFY25OWlltRkZUV1JJTTBkT1JtUklkVTVLTW05UVFua0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMTg3WiIsInB1ciI6ImJsb2Jfa2V5In19--4a5b96a4d38b1bbbb8bac2ab63d618a868623f92", "filename"=>"photography-student"}
+[36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: DrsYbaEMdH3GNFdHuNJ2oPBy[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (1.3ms)
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEyYW01UlJHZE1Wak50TVV4U1dqWTNNWHBFVVZoVWRub0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMjI3WiIsInB1ciI6ImJsb2Jfa2V5In19--88b257b3df38673a3cf3aab683210e926e3e132d/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png" for 127.0.0.1 at 2018-07-31 13:53:12 -0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"Screen Shot 2018-06-26 at 7.13.46 PM.png\"; filename*=UTF-8''Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEyYW01UlJHZE1Wak50TVV4U1dqWTNNWHBFVVZoVWRub0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMjI3WiIsInB1ciI6ImJsb2Jfa2V5In19--88b257b3df38673a3cf3aab683210e926e3e132d", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+[36m  Disk Storage (0.1ms) [0m[34mDownloaded file from key: vjnQDgLV3m1LRZ671zDQXTvz[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images?utf8=%E2%9C%93&j%5Bcategory_id%5D=4&q=old+mann&PNG=1&commit=Submit" for 127.0.0.1 at 2018-07-31 13:53:22 -0700
+Processing by ImagesController#index as HTML
+  Parameters: {"utf8"=>"✓", "j"=>{"category_id"=>"4"}, "q"=>"old mann", "PNG"=>"1", "commit"=>"Submit"}
+  [1m[33mImage Search (34.5ms)[0m  curl http://localhost:9200/images_development/_search?pretty -H 'Content-Type: application/json' -d '{"query":{"dis_max":{"queries":[{"multi_match":{"query":"old mann","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"old mann","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"old mann","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"old mann","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}},"suggest":{"text":"old mann","image_title":{"phrase":{"field":"image_title.suggest"}},"description":{"phrase":{"field":"description.suggest"}},"category_name":{"phrase":{"field":"category_name.suggest"}}},"timeout":"11s","_source":false,"size":10000,"from":0}'
+  [1m[33mImage Search (24.3ms)[0m  curl http://localhost:9200/images_development/_search?pretty -H 'Content-Type: application/json' -d '{"query":{"bool":{"must":{"dis_max":{"queries":[{"bool":{"must":{"bool":{"should":[{"match":{"image_title.word_start":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}},{"match":{"image_title.word_start":{"query":"old mann","boost":1,"operator":"or","analyzer":"searchkick_word_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true}}}]}},"should":{"match":{"image_title.analyzed":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}}}},{"bool":{"must":{"bool":{"should":[{"match":{"description.word_start":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}},{"match":{"description.word_start":{"query":"old mann","boost":1,"operator":"or","analyzer":"searchkick_word_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true}}}]}},"should":{"match":{"description.analyzed":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}}}},{"bool":{"must":{"bool":{"should":[{"match":{"category_name.word_start":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}},{"match":{"category_name.word_start":{"query":"old mann","boost":1,"operator":"or","analyzer":"searchkick_word_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true}}}]}},"should":{"match":{"category_name.analyzed":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}}}}]}},"filter":[{"term":{"category_id":"4"}}]}},"suggest":{"text":"old mann","image_title":{"phrase":{"field":"image_title.suggest"}},"description":{"phrase":{"field":"description.suggest"}},"category_name":{"phrase":{"field":"category_name.suggest"}}},"timeout":"11s","_source":false,"size":10000,"from":0}'
+  [1m[33mImage Search (10.9ms)[0m  curl http://localhost:9200/images_development/_search?pretty -H 'Content-Type: application/json' -d '{"query":{"bool":{"must":{"match_all":{}},"filter":[{"term":{"category_id":"4"}}]}},"timeout":"11s","_source":false,"size":10000,"from":0}'
+  [1m[33mImage Search (23.9ms)[0m  curl http://localhost:9200/images_development/_search?pretty -H 'Content-Type: application/json' -d '{"query":{"bool":{"must":{"dis_max":{"queries":[{"bool":{"must":{"bool":{"should":[{"match":{"image_title.word_start":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}},{"match":{"image_title.word_start":{"query":"old mann","boost":1,"operator":"or","analyzer":"searchkick_word_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true}}}]}},"should":{"match":{"image_title.analyzed":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}}}},{"bool":{"must":{"bool":{"should":[{"match":{"description.word_start":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}},{"match":{"description.word_start":{"query":"old mann","boost":1,"operator":"or","analyzer":"searchkick_word_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true}}}]}},"should":{"match":{"description.analyzed":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}}}},{"bool":{"must":{"bool":{"should":[{"match":{"category_name.word_start":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}},{"match":{"category_name.word_start":{"query":"old mann","boost":1,"operator":"or","analyzer":"searchkick_word_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true}}}]}},"should":{"match":{"category_name.analyzed":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}}}}]}},"filter":[{"term":{"file_type":"PNG"}},{"term":{"category_id":"4"}}]}},"suggest":{"text":"old mann","image_title":{"phrase":{"field":"image_title.suggest"}},"description":{"phrase":{"field":"description.suggest"}},"category_name":{"phrase":{"field":"category_name.suggest"}}},"timeout":"11s","_source":false,"size":10000,"from":0}'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`remember_token` = 'c04defc9ba4e2d5b24cdd97d6a749467c59d6dbf' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/images_controller.rb:84
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 4[0m
+  ↳ app/views/images/index.html.erb:23
+  [1m[36mStatus Load (0.3ms)[0m  [1m[34mSELECT  `statuses`.* FROM `statuses` WHERE `statuses`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/images/index.html.erb:26
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 74 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:35
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 181 LIMIT 1[0m
+  ↳ app/views/images/index.html.erb:36
+  [1m[36mCACHE Status Load (0.0ms)[0m  [1m[34mSELECT  `statuses`.* FROM `statuses` WHERE `statuses`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:26
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 75 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:35
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 182 LIMIT 1[0m
+  ↳ app/views/images/index.html.erb:36
+  [1m[36mCACHE Status Load (0.0ms)[0m  [1m[34mSELECT  `statuses`.* FROM `statuses` WHERE `statuses`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:26
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 76 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:35
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 183 LIMIT 1[0m
+  ↳ app/views/images/index.html.erb:36
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/images/_search_images.html.erb:6
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/images/_search_images.html.erb:21
+  Rendered images/_search_images.html.erb (4.2ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(DISTINCT `images`.`id`) FROM `images`[0m
+  ↳ app/views/images/index.html.erb:71
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`id` = 76[0m
+  ↳ app/views/images/index.html.erb:72
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 76 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:73
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 183 LIMIT 1[0m  [["id", 183], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:74
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `images`[0m
+  ↳ app/views/images/index.html.erb:90
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:97
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 76 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:98
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 183 LIMIT 1[0m  [["id", 183], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:100
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 75 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:98
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 182 LIMIT 1[0m  [["id", 182], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:100
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 74 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:98
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 181 LIMIT 1[0m  [["id", 181], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:100
+  Rendered images/index.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 232ms (Views: 117.6ms | Searchkick: 93.7ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFOUzFKeGNGUmtiV0pyVTFOUk5YZEJRek5sT1hKSVEwZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMTgwWiIsInB1ciI6ImJsb2Jfa2V5In19--eb5a1b1a1522ac481db20d97076681f11f37d2bd/bg.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22bg.gif%22%3B+filename%2A%3DUTF-8%27%27bg.gif" for 127.0.0.1 at 2018-07-31 13:53:23 -0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFFY25OWlltRkZUV1JJTTBkT1JtUklkVTVLTW05UVFua0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMTg3WiIsInB1ciI6ImJsb2Jfa2V5In19--4a5b96a4d38b1bbbb8bac2ab63d618a868623f92/photography-student.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22photography-student.gif%22%3B+filename%2A%3DUTF-8%27%27photography-student.gif" for 127.0.0.1 at 2018-07-31 13:53:23 -0700
+Processing by ActiveStorage::DiskController#show as GIF
+Processing by ActiveStorage::DiskController#show as GIF
+  Parameters: {"content_type"=>"image/gif", "disposition"=>"inline; filename=\"bg.gif\"; filename*=UTF-8''bg.gif", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFOUzFKeGNGUmtiV0pyVTFOUk5YZEJRek5sT1hKSVEwZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMTgwWiIsInB1ciI6ImJsb2Jfa2V5In19--eb5a1b1a1522ac481db20d97076681f11f37d2bd", "filename"=>"bg"}
+  Parameters: {"content_type"=>"image/gif", "disposition"=>"inline; filename=\"photography-student.gif\"; filename*=UTF-8''photography-student.gif", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFFY25OWlltRkZUV1JJTTBkT1JtUklkVTVLTW05UVFua0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMTg3WiIsInB1ciI6ImJsb2Jfa2V5In19--4a5b96a4d38b1bbbb8bac2ab63d618a868623f92", "filename"=>"photography-student"}
+[36m  Disk Storage (1.4ms) [0m[34mDownloaded file from key: MKRqpTdmbkSSQ5wAC3e9rHCH[0m
+  Rendering text template
+[36m  Disk Storage (1.0ms) [0m[34mDownloaded file from key: DrsYbaEMdH3GNFdHuNJ2oPBy[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+  Rendered text template (0.0ms)
+Sent data  (3.4ms)
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEyYW01UlJHZE1Wak50TVV4U1dqWTNNWHBFVVZoVWRub0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMjI3WiIsInB1ciI6ImJsb2Jfa2V5In19--88b257b3df38673a3cf3aab683210e926e3e132d/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png" for 127.0.0.1 at 2018-07-31 13:53:23 -0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"Screen Shot 2018-06-26 at 7.13.46 PM.png\"; filename*=UTF-8''Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEyYW01UlJHZE1Wak50TVV4U1dqWTNNWHBFVVZoVWRub0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMjI3WiIsInB1ciI6ImJsb2Jfa2V5In19--88b257b3df38673a3cf3aab683210e926e3e132d", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+[36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: vjnQDgLV3m1LRZ671zDQXTvz[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.8ms)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images?utf8=%E2%9C%93&j%5Bcategory_id%5D=4&q=old+mann&GIF=1&PNG=1&commit=Submit" for 127.0.0.1 at 2018-07-31 13:53:27 -0700
+Processing by ImagesController#index as HTML
+  Parameters: {"utf8"=>"✓", "j"=>{"category_id"=>"4"}, "q"=>"old mann", "GIF"=>"1", "PNG"=>"1", "commit"=>"Submit"}
+  [1m[33mImage Search (35.8ms)[0m  curl http://localhost:9200/images_development/_search?pretty -H 'Content-Type: application/json' -d '{"query":{"dis_max":{"queries":[{"multi_match":{"query":"old mann","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"old mann","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"old mann","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"old mann","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}},"suggest":{"text":"old mann","image_title":{"phrase":{"field":"image_title.suggest"}},"description":{"phrase":{"field":"description.suggest"}},"category_name":{"phrase":{"field":"category_name.suggest"}}},"timeout":"11s","_source":false,"size":10000,"from":0}'
+  [1m[33mImage Search (26.1ms)[0m  curl http://localhost:9200/images_development/_search?pretty -H 'Content-Type: application/json' -d '{"query":{"bool":{"must":{"dis_max":{"queries":[{"bool":{"must":{"bool":{"should":[{"match":{"image_title.word_start":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}},{"match":{"image_title.word_start":{"query":"old mann","boost":1,"operator":"or","analyzer":"searchkick_word_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true}}}]}},"should":{"match":{"image_title.analyzed":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}}}},{"bool":{"must":{"bool":{"should":[{"match":{"description.word_start":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}},{"match":{"description.word_start":{"query":"old mann","boost":1,"operator":"or","analyzer":"searchkick_word_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true}}}]}},"should":{"match":{"description.analyzed":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}}}},{"bool":{"must":{"bool":{"should":[{"match":{"category_name.word_start":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}},{"match":{"category_name.word_start":{"query":"old mann","boost":1,"operator":"or","analyzer":"searchkick_word_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true}}}]}},"should":{"match":{"category_name.analyzed":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}}}}]}},"filter":[{"term":{"category_id":"4"}}]}},"suggest":{"text":"old mann","image_title":{"phrase":{"field":"image_title.suggest"}},"description":{"phrase":{"field":"description.suggest"}},"category_name":{"phrase":{"field":"category_name.suggest"}}},"timeout":"11s","_source":false,"size":10000,"from":0}'
+  [1m[33mImage Search (8.7ms)[0m  curl http://localhost:9200/images_development/_search?pretty -H 'Content-Type: application/json' -d '{"query":{"bool":{"must":{"match_all":{}},"filter":[{"term":{"category_id":"4"}}]}},"timeout":"11s","_source":false,"size":10000,"from":0}'
+  [1m[33mImage Search (20.9ms)[0m  curl http://localhost:9200/images_development/_search?pretty -H 'Content-Type: application/json' -d '{"query":{"bool":{"must":{"dis_max":{"queries":[{"bool":{"must":{"bool":{"should":[{"match":{"image_title.word_start":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}},{"match":{"image_title.word_start":{"query":"old mann","boost":1,"operator":"or","analyzer":"searchkick_word_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true}}}]}},"should":{"match":{"image_title.analyzed":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}}}},{"bool":{"must":{"bool":{"should":[{"match":{"description.word_start":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}},{"match":{"description.word_start":{"query":"old mann","boost":1,"operator":"or","analyzer":"searchkick_word_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true}}}]}},"should":{"match":{"description.analyzed":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}}}},{"bool":{"must":{"bool":{"should":[{"match":{"category_name.word_start":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}},{"match":{"category_name.word_start":{"query":"old mann","boost":1,"operator":"or","analyzer":"searchkick_word_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true}}}]}},"should":{"match":{"category_name.analyzed":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}}}}]}},"filter":[{"terms":{"file_type":["PNG","GIF","JPEG"]}},{"term":{"category_id":"4"}}]}},"suggest":{"text":"old mann","image_title":{"phrase":{"field":"image_title.suggest"}},"description":{"phrase":{"field":"description.suggest"}},"category_name":{"phrase":{"field":"category_name.suggest"}}},"timeout":"11s","_source":false,"size":10000,"from":0}'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`remember_token` = 'c04defc9ba4e2d5b24cdd97d6a749467c59d6dbf' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/images_controller.rb:84
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 4[0m
+  ↳ app/views/images/index.html.erb:23
+  [1m[36mStatus Load (0.4ms)[0m  [1m[34mSELECT  `statuses`.* FROM `statuses` WHERE `statuses`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/images/index.html.erb:26
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 74 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:35
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 181 LIMIT 1[0m
+  ↳ app/views/images/index.html.erb:36
+  [1m[36mCACHE Status Load (0.0ms)[0m  [1m[34mSELECT  `statuses`.* FROM `statuses` WHERE `statuses`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:26
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 75 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:35
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 182 LIMIT 1[0m
+  ↳ app/views/images/index.html.erb:36
+  [1m[36mCACHE Status Load (0.0ms)[0m  [1m[34mSELECT  `statuses`.* FROM `statuses` WHERE `statuses`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:26
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 76 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:35
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 183 LIMIT 1[0m
+  ↳ app/views/images/index.html.erb:36
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/images/_search_images.html.erb:6
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/images/_search_images.html.erb:21
+  Rendered images/_search_images.html.erb (4.2ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(DISTINCT `images`.`id`) FROM `images`[0m
+  ↳ app/views/images/index.html.erb:71
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`id` IN (76, 75)[0m
+  ↳ app/views/images/index.html.erb:72
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 76 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:73
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 183 LIMIT 1[0m  [["id", 183], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:74
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 75 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:73
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 182 LIMIT 1[0m  [["id", 182], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:74
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `images`[0m
+  ↳ app/views/images/index.html.erb:90
+  [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:97
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 76 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:98
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 183 LIMIT 1[0m  [["id", 183], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:100
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 74 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:98
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 181 LIMIT 1[0m  [["id", 181], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:100
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 75 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:98
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 182 LIMIT 1[0m  [["id", 182], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:100
+  Rendered images/index.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 252ms (Views: 131.3ms | Searchkick: 91.5ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFOUzFKeGNGUmtiV0pyVTFOUk5YZEJRek5sT1hKSVEwZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMTgwWiIsInB1ciI6ImJsb2Jfa2V5In19--eb5a1b1a1522ac481db20d97076681f11f37d2bd/bg.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22bg.gif%22%3B+filename%2A%3DUTF-8%27%27bg.gif" for 127.0.0.1 at 2018-07-31 13:53:28 -0700
+Processing by ActiveStorage::DiskController#show as GIF
+  Parameters: {"content_type"=>"image/gif", "disposition"=>"inline; filename=\"bg.gif\"; filename*=UTF-8''bg.gif", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFOUzFKeGNGUmtiV0pyVTFOUk5YZEJRek5sT1hKSVEwZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMTgwWiIsInB1ciI6ImJsb2Jfa2V5In19--eb5a1b1a1522ac481db20d97076681f11f37d2bd", "filename"=>"bg"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFFY25OWlltRkZUV1JJTTBkT1JtUklkVTVLTW05UVFua0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMTg3WiIsInB1ciI6ImJsb2Jfa2V5In19--4a5b96a4d38b1bbbb8bac2ab63d618a868623f92/photography-student.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22photography-student.gif%22%3B+filename%2A%3DUTF-8%27%27photography-student.gif" for 127.0.0.1 at 2018-07-31 13:53:28 -0700
+[36m  Disk Storage (0.8ms) [0m[34mDownloaded file from key: MKRqpTdmbkSSQ5wAC3e9rHCH[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Processing by ActiveStorage::DiskController#show as GIF
+Sent data  (2.8ms)
+  Parameters: {"content_type"=>"image/gif", "disposition"=>"inline; filename=\"photography-student.gif\"; filename*=UTF-8''photography-student.gif", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFFY25OWlltRkZUV1JJTTBkT1JtUklkVTVLTW05UVFua0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMTg3WiIsInB1ciI6ImJsb2Jfa2V5In19--4a5b96a4d38b1bbbb8bac2ab63d618a868623f92", "filename"=>"photography-student"}
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+[36m  Disk Storage (7.3ms) [0m[34mDownloaded file from key: DrsYbaEMdH3GNFdHuNJ2oPBy[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEyYW01UlJHZE1Wak50TVV4U1dqWTNNWHBFVVZoVWRub0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMjI3WiIsInB1ciI6ImJsb2Jfa2V5In19--88b257b3df38673a3cf3aab683210e926e3e132d/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png" for 127.0.0.1 at 2018-07-31 13:53:28 -0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"Screen Shot 2018-06-26 at 7.13.46 PM.png\"; filename*=UTF-8''Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEyYW01UlJHZE1Wak50TVV4U1dqWTNNWHBFVVZoVWRub0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMjI3WiIsInB1ciI6ImJsb2Jfa2V5In19--88b257b3df38673a3cf3aab683210e926e3e132d", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+[36m  Disk Storage (0.1ms) [0m[34mDownloaded file from key: vjnQDgLV3m1LRZ671zDQXTvz[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images?utf8=%E2%9C%93&j%5Bcategory_id%5D=4&q=old+mann&GIF=1&commit=Submit" for 127.0.0.1 at 2018-07-31 13:55:28 -0700
+Processing by ImagesController#index as HTML
+  Parameters: {"utf8"=>"✓", "j"=>{"category_id"=>"4"}, "q"=>"old mann", "GIF"=>"1", "commit"=>"Submit"}
+  [1m[33mImage Search (32.7ms)[0m  curl http://localhost:9200/images_development/_search?pretty -H 'Content-Type: application/json' -d '{"query":{"dis_max":{"queries":[{"multi_match":{"query":"old mann","boost":10,"operator":"and","analyzer":"searchkick_search","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"old mann","boost":10,"operator":"and","analyzer":"searchkick_search2","fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"old mann","boost":1,"operator":"and","analyzer":"searchkick_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}},{"multi_match":{"query":"old mann","boost":1,"operator":"and","analyzer":"searchkick_search2","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true,"fields":["*.analyzed"],"type":"best_fields"}}]}},"suggest":{"text":"old mann","image_title":{"phrase":{"field":"image_title.suggest"}},"description":{"phrase":{"field":"description.suggest"}},"category_name":{"phrase":{"field":"category_name.suggest"}}},"timeout":"11s","_source":false,"size":10000,"from":0}'
+  [1m[33mImage Search (29.7ms)[0m  curl http://localhost:9200/images_development/_search?pretty -H 'Content-Type: application/json' -d '{"query":{"bool":{"must":{"dis_max":{"queries":[{"bool":{"must":{"bool":{"should":[{"match":{"image_title.word_start":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}},{"match":{"image_title.word_start":{"query":"old mann","boost":1,"operator":"or","analyzer":"searchkick_word_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true}}}]}},"should":{"match":{"image_title.analyzed":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}}}},{"bool":{"must":{"bool":{"should":[{"match":{"description.word_start":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}},{"match":{"description.word_start":{"query":"old mann","boost":1,"operator":"or","analyzer":"searchkick_word_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true}}}]}},"should":{"match":{"description.analyzed":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}}}},{"bool":{"must":{"bool":{"should":[{"match":{"category_name.word_start":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}},{"match":{"category_name.word_start":{"query":"old mann","boost":1,"operator":"or","analyzer":"searchkick_word_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true}}}]}},"should":{"match":{"category_name.analyzed":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}}}}]}},"filter":[{"term":{"category_id":"4"}}]}},"suggest":{"text":"old mann","image_title":{"phrase":{"field":"image_title.suggest"}},"description":{"phrase":{"field":"description.suggest"}},"category_name":{"phrase":{"field":"category_name.suggest"}}},"timeout":"11s","_source":false,"size":10000,"from":0}'
+  [1m[33mImage Search (9.3ms)[0m  curl http://localhost:9200/images_development/_search?pretty -H 'Content-Type: application/json' -d '{"query":{"bool":{"must":{"match_all":{}},"filter":[{"term":{"category_id":"4"}}]}},"timeout":"11s","_source":false,"size":10000,"from":0}'
+  [1m[33mImage Search (27.9ms)[0m  curl http://localhost:9200/images_development/_search?pretty -H 'Content-Type: application/json' -d '{"query":{"bool":{"must":{"dis_max":{"queries":[{"bool":{"must":{"bool":{"should":[{"match":{"image_title.word_start":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}},{"match":{"image_title.word_start":{"query":"old mann","boost":1,"operator":"or","analyzer":"searchkick_word_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true}}}]}},"should":{"match":{"image_title.analyzed":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}}}},{"bool":{"must":{"bool":{"should":[{"match":{"description.word_start":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}},{"match":{"description.word_start":{"query":"old mann","boost":1,"operator":"or","analyzer":"searchkick_word_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true}}}]}},"should":{"match":{"description.analyzed":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}}}},{"bool":{"must":{"bool":{"should":[{"match":{"category_name.word_start":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}},{"match":{"category_name.word_start":{"query":"old mann","boost":1,"operator":"or","analyzer":"searchkick_word_search","fuzziness":1,"prefix_length":0,"max_expansions":3,"fuzzy_transpositions":true}}}]}},"should":{"match":{"category_name.analyzed":{"query":"old mann","boost":10,"operator":"or","analyzer":"searchkick_word_search"}}}}}]}},"filter":[{"term":{"file_type":"GIF"}},{"term":{"category_id":"4"}}]}},"suggest":{"text":"old mann","image_title":{"phrase":{"field":"image_title.suggest"}},"description":{"phrase":{"field":"description.suggest"}},"category_name":{"phrase":{"field":"category_name.suggest"}}},"timeout":"11s","_source":false,"size":10000,"from":0}'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`remember_token` = 'c04defc9ba4e2d5b24cdd97d6a749467c59d6dbf' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/images_controller.rb:84
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT DISTINCT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:23
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 4[0m
+  ↳ app/views/images/index.html.erb:23
+  [1m[36mStatus Load (0.3ms)[0m  [1m[34mSELECT  `statuses`.* FROM `statuses` WHERE `statuses`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/images/index.html.erb:26
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 74 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:35
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 181 LIMIT 1[0m
+  ↳ app/views/images/index.html.erb:36
+  [1m[36mCACHE Status Load (0.0ms)[0m  [1m[34mSELECT  `statuses`.* FROM `statuses` WHERE `statuses`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:26
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 75 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:35
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 182 LIMIT 1[0m
+  ↳ app/views/images/index.html.erb:36
+  [1m[36mCACHE Status Load (0.0ms)[0m  [1m[34mSELECT  `statuses`.* FROM `statuses` WHERE `statuses`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:26
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 76 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:35
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 183 LIMIT 1[0m
+  ↳ app/views/images/index.html.erb:36
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/images/_search_images.html.erb:6
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/images/_search_images.html.erb:21
+  Rendered images/_search_images.html.erb (5.0ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(DISTINCT `images`.`id`) FROM `images`[0m
+  ↳ app/views/images/index.html.erb:71
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`id` = 75[0m
+  ↳ app/views/images/index.html.erb:72
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 75 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:73
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 182 LIMIT 1[0m  [["id", 182], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:74
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `images`[0m
+  ↳ app/views/images/index.html.erb:90
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT `images`.* FROM `images`[0m
+  ↳ app/views/images/index.html.erb:97
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 76 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:98
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 183 LIMIT 1[0m  [["id", 183], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:100
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 74 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:98
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 181 LIMIT 1[0m  [["id", 181], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:100
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 75 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/index.html.erb:98
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 182 LIMIT 1[0m  [["id", 182], ["LIMIT", 1]]
+  ↳ app/views/images/index.html.erb:100
+  Rendered images/index.html.erb within layouts/application (53.6ms)
+Completed 200 OK in 262ms (Views: 141.4ms | Searchkick: 99.7ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFOUzFKeGNGUmtiV0pyVTFOUk5YZEJRek5sT1hKSVEwZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMTgwWiIsInB1ciI6ImJsb2Jfa2V5In19--eb5a1b1a1522ac481db20d97076681f11f37d2bd/bg.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22bg.gif%22%3B+filename%2A%3DUTF-8%27%27bg.gif" for 127.0.0.1 at 2018-07-31 13:55:29 -0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFFY25OWlltRkZUV1JJTTBkT1JtUklkVTVLTW05UVFua0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMTg3WiIsInB1ciI6ImJsb2Jfa2V5In19--4a5b96a4d38b1bbbb8bac2ab63d618a868623f92/photography-student.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22photography-student.gif%22%3B+filename%2A%3DUTF-8%27%27photography-student.gif" for 127.0.0.1 at 2018-07-31 13:55:29 -0700
+Processing by ActiveStorage::DiskController#show as GIF
+  Parameters: {"content_type"=>"image/gif", "disposition"=>"inline; filename=\"bg.gif\"; filename*=UTF-8''bg.gif", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFOUzFKeGNGUmtiV0pyVTFOUk5YZEJRek5sT1hKSVEwZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMTgwWiIsInB1ciI6ImJsb2Jfa2V5In19--eb5a1b1a1522ac481db20d97076681f11f37d2bd", "filename"=>"bg"}
+Processing by ActiveStorage::DiskController#show as GIF
+  Parameters: {"content_type"=>"image/gif", "disposition"=>"inline; filename=\"photography-student.gif\"; filename*=UTF-8''photography-student.gif", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFFY25OWlltRkZUV1JJTTBkT1JtUklkVTVLTW05UVFua0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMTg3WiIsInB1ciI6ImJsb2Jfa2V5In19--4a5b96a4d38b1bbbb8bac2ab63d618a868623f92", "filename"=>"photography-student"}
+[36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: DrsYbaEMdH3GNFdHuNJ2oPBy[0m
+  Rendering text template
+[36m  Disk Storage (1.9ms) [0m[34mDownloaded file from key: MKRqpTdmbkSSQ5wAC3e9rHCH[0m
+  Rendered text template (0.0ms)
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (1.0ms)
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Sent data  (2.1ms)
+Completed 200 OK in 14ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEyYW01UlJHZE1Wak50TVV4U1dqWTNNWHBFVVZoVWRub0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMjI3WiIsInB1ciI6ImJsb2Jfa2V5In19--88b257b3df38673a3cf3aab683210e926e3e132d/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png" for 127.0.0.1 at 2018-07-31 13:55:30 -0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"Screen Shot 2018-06-26 at 7.13.46 PM.png\"; filename*=UTF-8''Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEyYW01UlJHZE1Wak50TVV4U1dqWTNNWHBFVVZoVWRub0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjA6NTg6MDEuMjI3WiIsInB1ciI6ImJsb2Jfa2V5In19--88b257b3df38673a3cf3aab683210e926e3e132d", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+[36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: vjnQDgLV3m1LRZ671zDQXTvz[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/75" for 127.0.0.1 at 2018-07-31 13:57:30 -0700
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"75"}
+  [1m[36mImage Load (6.8ms)[0m  [1m[34mSELECT  `images`.* FROM `images` WHERE `images`.`id` = 75 LIMIT 1[0m
+  ↳ app/controllers/images_controller.rb:226
+  Rendering images/show.html.erb within layouts/application
+  [1m[35m (7.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 75 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/images/show.html.erb:41
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 75 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/models/image.rb:43
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 182 LIMIT 1[0m
+  ↳ app/models/image.rb:43
+[36m  Disk Storage (0.1ms) [0m[34mChecked if file exists at key: variants/DrsYbaEMdH3GNFdHuNJ2oPBy/417bae27008f0220c1a6f22cdb1ae933aa9ba1aa0f7d1506d10c3af76f08b659 (yes)[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/images/show.html.erb:64
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/images/show.html.erb:70
+  Rendered images/show.html.erb within layouts/application (52.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`remember_token` = 'c04defc9ba4e2d5b24cdd97d6a749467c59d6dbf' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 135ms (Views: 105.9ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBYlk9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--72c90d7190842abd9823e2dcfd97a0a7ac002039/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTnpBd2VEY3dNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--b14b8129d722de1d2884406eaf217bea9092c322/photography-student.gif" for 127.0.0.1 at 2018-07-31 13:57:30 -0700
+Processing by ActiveStorage::RepresentationsController#show as GIF
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBYlk9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--72c90d7190842abd9823e2dcfd97a0a7ac002039", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTnpBd2VEY3dNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--b14b8129d722de1d2884406eaf217bea9092c322", "filename"=>"photography-student"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 182 LIMIT 1[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.0ms) [0m[34mChecked if file exists at key: variants/DrsYbaEMdH3GNFdHuNJ2oPBy/417bae27008f0220c1a6f22cdb1ae933aa9ba1aa0f7d1506d10c3af76f08b659 (yes)[0m
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: variants/DrsYbaEMdH3GNFdHuNJ2oPBy/417bae27008f0220c1a6f22cdb1ae933aa9ba1aa0f7d1506d10c3af76f08b659 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJbWQyWVhKcFlXNTBjeTlFY25OWlltRkZUV1JJTTBkT1JtUklkVTVLTW05UVFua3ZOREUzWW1GbE1qY3dNRGhtTURJeU1HTXhZVFptTWpKalpHSXhZV1U1TXpOaFlUbGlZVEZoWVRCbU4yUXhOVEEyWkRFd1l6TmhaamMyWmpBNFlqWTFPUVk2QmtWVSIsImV4cCI6IjIwMTgtMDctMzFUMjE6MDI6MzAuNTczWiIsInB1ciI6ImJsb2Jfa2V5In19--54e1e0c70da74f2f3d6f84d1e836c049097f7ff8/photography-student.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22photography-student.gif%22%3B+filename%2A%3DUTF-8%27%27photography-student.gif)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJbWQyWVhKcFlXNTBjeTlFY25OWlltRkZUV1JJTTBkT1JtUklkVTVLTW05UVFua3ZOREUzWW1GbE1qY3dNRGhtTURJeU1HTXhZVFptTWpKalpHSXhZV1U1TXpOaFlUbGlZVEZoWVRCbU4yUXhOVEEyWkRFd1l6TmhaamMyWmpBNFlqWTFPUVk2QmtWVSIsImV4cCI6IjIwMTgtMDctMzFUMjE6MDI6MzAuNTczWiIsInB1ciI6ImJsb2Jfa2V5In19--54e1e0c70da74f2f3d6f84d1e836c049097f7ff8/photography-student.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22photography-student.gif%22%3B+filename%2A%3DUTF-8%27%27photography-student.gif
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJbWQyWVhKcFlXNTBjeTlFY25OWlltRkZUV1JJTTBkT1JtUklkVTVLTW05UVFua3ZOREUzWW1GbE1qY3dNRGhtTURJeU1HTXhZVFptTWpKalpHSXhZV1U1TXpOaFlUbGlZVEZoWVRCbU4yUXhOVEEyWkRFd1l6TmhaamMyWmpBNFlqWTFPUVk2QmtWVSIsImV4cCI6IjIwMTgtMDctMzFUMjE6MDI6MzAuNTczWiIsInB1ciI6ImJsb2Jfa2V5In19--54e1e0c70da74f2f3d6f84d1e836c049097f7ff8/photography-student.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22photography-student.gif%22%3B+filename%2A%3DUTF-8%27%27photography-student.gif" for 127.0.0.1 at 2018-07-31 13:57:30 -0700
+Processing by ActiveStorage::DiskController#show as GIF
+  Parameters: {"content_type"=>"image/gif", "disposition"=>"inline; filename=\"photography-student.gif\"; filename*=UTF-8''photography-student.gif", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJbWQyWVhKcFlXNTBjeTlFY25OWlltRkZUV1JJTTBkT1JtUklkVTVLTW05UVFua3ZOREUzWW1GbE1qY3dNRGhtTURJeU1HTXhZVFptTWpKalpHSXhZV1U1TXpOaFlUbGlZVEZoWVRCbU4yUXhOVEEyWkRFd1l6TmhaamMyWmpBNFlqWTFPUVk2QmtWVSIsImV4cCI6IjIwMTgtMDctMzFUMjE6MDI6MzAuNTczWiIsInB1ciI6ImJsb2Jfa2V5In19--54e1e0c70da74f2f3d6f84d1e836c049097f7ff8", "filename"=>"photography-student"}
+[36m  Disk Storage (1.0ms) [0m[34mDownloaded file from key: variants/DrsYbaEMdH3GNFdHuNJ2oPBy/417bae27008f0220c1a6f22cdb1ae933aa9ba1aa0f7d1506d10c3af76f08b659[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/new" for 127.0.0.1 at 2018-07-31 13:58:16 -0700
+Processing by ImagesController#new as HTML
+  Rendering images/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/images/_form.html.erb:43
+  Rendered images/_form.html.erb (35.3ms)
+  Rendered images/new.html.erb within layouts/application (39.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`remember_token` = 'c04defc9ba4e2d5b24cdd97d6a749467c59d6dbf' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 119ms (Views: 108.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/app/assets/stylesheets/uploadstyle.css" for 127.0.0.1 at 2018-07-31 13:58:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/stylesheets/uploadstyle.css"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-07-31 13:59:05 -0700
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`remember_token` = 'c04defc9ba4e2d5b24cdd97d6a749467c59d6dbf' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `images` WHERE `images`.`status_id` = 1[0m
+  ↳ app/views/home/index.html.erb:15
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/images/_search_images.html.erb:6
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/images/_search_images.html.erb:21
+  Rendered images/_search_images.html.erb (14.7ms)
+  Rendered home/index.html.erb within layouts/application (19.3ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `aggs' for nil:NilClass):
+    30: <%= @PNG %>&nbsp&nbsp&nbsp<%= @GIF %>&nbsp&nbsp&nbsp<%= @JPEG %>
+    31: 
+    32: <br><br>
+    33: <%= @imagesearch.aggs  %>
+    34: 
+    35: 
+    36: 
+  
+app/views/images/_search_images.html.erb:33:in `_app_views_images__search_images_html_erb__4406835777842623378_70133115580280'
+app/views/home/index.html.erb:26:in `_app_views_home_index_html_erb___3478981529589996988_70133082555160'
+Started GET "/" for 127.0.0.1 at 2018-07-31 14:00:01 -0700
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`remember_token` = 'c04defc9ba4e2d5b24cdd97d6a749467c59d6dbf' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `images` WHERE `images`.`status_id` = 1[0m
+  ↳ app/views/home/index.html.erb:15
+  [1m[36mCategory Load (4.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/images/_search_images.html.erb:6
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/images/_search_images.html.erb:21
+  Rendered images/_search_images.html.erb (15.3ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `images`[0m
+  ↳ app/views/home/index.html.erb:35
+  [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT `images`.* FROM `images`[0m
+  ↳ app/views/home/index.html.erb:46
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 76 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/home/index.html.erb:47
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 183 LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:51
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 75 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/home/index.html.erb:47
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 182 LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:51
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 74 AND `active_storage_attachments`.`record_type` = 'Image' AND `active_storage_attachments`.`name` = 'uploads'[0m
+  ↳ app/views/home/index.html.erb:47
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 181 LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:51
+  Rendered home/index.html.erb within layouts/application (184.1ms)
+Completed 200 OK in 343ms (Views: 322.5ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBYmM9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1750f4ad786ca6122b0f069086f493047cfe7633/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png" for 127.0.0.1 at 2018-07-31 14:00:03 -0700
+Processing by ActiveStorage::BlobsController#show as PNG
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBYlk9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--72c90d7190842abd9823e2dcfd97a0a7ac002039/photography-student.gif" for 127.0.0.1 at 2018-07-31 14:00:03 -0700
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBYmM9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1750f4ad786ca6122b0f069086f493047cfe7633", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBYlU9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2d482d8edf9596d73ee39307c8702d279b8176b1/bg.gif" for 127.0.0.1 at 2018-07-31 14:00:03 -0700
+Processing by ActiveStorage::BlobsController#show as GIF
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBYlk9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--72c90d7190842abd9823e2dcfd97a0a7ac002039", "filename"=>"photography-student"}
+  [1m[35m (1.8ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by ActiveStorage::BlobsController#show as GIF
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBYlU9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2d482d8edf9596d73ee39307c8702d279b8176b1", "filename"=>"bg"}
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 181 LIMIT 1[0m
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 182 LIMIT 1[0m
+  [1m[36mActiveStorage::Blob Load (1.5ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 183 LIMIT 1[0m
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  ↳ /Users/paulancajima/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.9ms) [0m[34mGenerated URL for file at key: vjnQDgLV3m1LRZ671zDQXTvz (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEyYW01UlJHZE1Wak50TVV4U1dqWTNNWHBFVVZoVWRub0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjE6MDU6MDMuMjA5WiIsInB1ciI6ImJsb2Jfa2V5In19--c3531b303e9517a7171a98821d1c65e4a5cb95b0/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png)[0m
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: DrsYbaEMdH3GNFdHuNJ2oPBy (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFFY25OWlltRkZUV1JJTTBkT1JtUklkVTVLTW05UVFua0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjE6MDU6MDMuMjEzWiIsInB1ciI6ImJsb2Jfa2V5In19--c6b45f0d380ea50aabc941b771ce46dadcedc842/photography-student.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22photography-student.gif%22%3B+filename%2A%3DUTF-8%27%27photography-student.gif)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFFY25OWlltRkZUV1JJTTBkT1JtUklkVTVLTW05UVFua0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjE6MDU6MDMuMjEzWiIsInB1ciI6ImJsb2Jfa2V5In19--c6b45f0d380ea50aabc941b771ce46dadcedc842/photography-student.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22photography-student.gif%22%3B+filename%2A%3DUTF-8%27%27photography-student.gif
+[36m  Disk Storage (1.1ms) [0m[34mGenerated URL for file at key: MKRqpTdmbkSSQ5wAC3e9rHCH (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFOUzFKeGNGUmtiV0pyVTFOUk5YZEJRek5sT1hKSVEwZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjE6MDU6MDMuMjExWiIsInB1ciI6ImJsb2Jfa2V5In19--42875e3a8265022a0eb895182903a2fb8d8df77a/bg.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22bg.gif%22%3B+filename%2A%3DUTF-8%27%27bg.gif)[0m
+Completed 302 Found in 14ms (ActiveRecord: 0.6ms)
+
+
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEyYW01UlJHZE1Wak50TVV4U1dqWTNNWHBFVVZoVWRub0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjE6MDU6MDMuMjA5WiIsInB1ciI6ImJsb2Jfa2V5In19--c3531b303e9517a7171a98821d1c65e4a5cb95b0/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFOUzFKeGNGUmtiV0pyVTFOUk5YZEJRek5sT1hKSVEwZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjE6MDU6MDMuMjExWiIsInB1ciI6ImJsb2Jfa2V5In19--42875e3a8265022a0eb895182903a2fb8d8df77a/bg.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22bg.gif%22%3B+filename%2A%3DUTF-8%27%27bg.gif
+Completed 302 Found in 22ms (ActiveRecord: 1.5ms)
+
+
+Completed 302 Found in 14ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFFY25OWlltRkZUV1JJTTBkT1JtUklkVTVLTW05UVFua0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjE6MDU6MDMuMjEzWiIsInB1ciI6ImJsb2Jfa2V5In19--c6b45f0d380ea50aabc941b771ce46dadcedc842/photography-student.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22photography-student.gif%22%3B+filename%2A%3DUTF-8%27%27photography-student.gif" for 127.0.0.1 at 2018-07-31 14:00:03 -0700
+Processing by ActiveStorage::DiskController#show as GIF
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEyYW01UlJHZE1Wak50TVV4U1dqWTNNWHBFVVZoVWRub0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjE6MDU6MDMuMjA5WiIsInB1ciI6ImJsb2Jfa2V5In19--c3531b303e9517a7171a98821d1c65e4a5cb95b0/Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screen+Shot+2018-06-26+at+7.13.46+PM.png%22%3B+filename%2A%3DUTF-8%27%27Screen%2520Shot%25202018-06-26%2520at%25207.13.46%2520PM.png" for 127.0.0.1 at 2018-07-31 14:00:03 -0700
+  Parameters: {"content_type"=>"image/gif", "disposition"=>"inline; filename=\"photography-student.gif\"; filename*=UTF-8''photography-student.gif", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFFY25OWlltRkZUV1JJTTBkT1JtUklkVTVLTW05UVFua0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjE6MDU6MDMuMjEzWiIsInB1ciI6ImJsb2Jfa2V5In19--c6b45f0d380ea50aabc941b771ce46dadcedc842", "filename"=>"photography-student"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFOUzFKeGNGUmtiV0pyVTFOUk5YZEJRek5sT1hKSVEwZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjE6MDU6MDMuMjExWiIsInB1ciI6ImJsb2Jfa2V5In19--42875e3a8265022a0eb895182903a2fb8d8df77a/bg.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22bg.gif%22%3B+filename%2A%3DUTF-8%27%27bg.gif" for 127.0.0.1 at 2018-07-31 14:00:03 -0700
+[36m  Disk Storage (0.6ms) [0m[34mDownloaded file from key: DrsYbaEMdH3GNFdHuNJ2oPBy[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Processing by ActiveStorage::DiskController#show as PNG
+Processing by ActiveStorage::DiskController#show as GIF
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"Screen Shot 2018-06-26 at 7.13.46 PM.png\"; filename*=UTF-8''Screen%20Shot%202018-06-26%20at%207.13.46%20PM.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEyYW01UlJHZE1Wak50TVV4U1dqWTNNWHBFVVZoVWRub0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjE6MDU6MDMuMjA5WiIsInB1ciI6ImJsb2Jfa2V5In19--c3531b303e9517a7171a98821d1c65e4a5cb95b0", "filename"=>"Screen Shot 2018-06-26 at 7.13.46 PM"}
+Sent data  (4.4ms)
+  Parameters: {"content_type"=>"image/gif", "disposition"=>"inline; filename=\"bg.gif\"; filename*=UTF-8''bg.gif", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFOUzFKeGNGUmtiV0pyVTFOUk5YZEJRek5sT1hKSVEwZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMzFUMjE6MDU6MDMuMjExWiIsInB1ciI6ImJsb2Jfa2V5In19--42875e3a8265022a0eb895182903a2fb8d8df77a", "filename"=>"bg"}
+[36m  Disk Storage (0.5ms) [0m[34mDownloaded file from key: vjnQDgLV3m1LRZ671zDQXTvz[0m
+Completed 200 OK in 10ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+  Rendering text template
+  Rendered text template (0.0ms)
+[36m  Disk Storage (2.3ms) [0m[34mDownloaded file from key: MKRqpTdmbkSSQ5wAC3e9rHCH[0m
+Sent data  (2.3ms)
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 6ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+
+
+Sent data  (1.1ms)
+Completed 200 OK in 7ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
