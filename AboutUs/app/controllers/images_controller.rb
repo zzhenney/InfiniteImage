@@ -41,7 +41,7 @@ class ImagesController < ApplicationController
   end
 
   def download
-    @image.download
+      @image.download
   end
 
   # GET /images/new

@@ -104,7 +104,11 @@
       <!-- Download Button -->
       <button class="btn"><i class="fa fa-download"></i>
         <% @image.uploads.each do |upload| %>
-          <%= link_to 'Download', upload, download: '' , :style=>'color: white;' %></button>
+          <% if signed_in? %>
+            <%= link_to 'Download', upload, download: '' , :style=>'color: white;' %></button>
+          <% else %>
+            <%= link_to 'Download', sign_up_path, :style=>'color: white;' %></button>
+          <% end %>
           </div></div><!---end right column-->
           </div><!----end row--->
         <% end %>
