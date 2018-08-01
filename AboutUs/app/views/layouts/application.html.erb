@@ -2,6 +2,16 @@
 <html>
 
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123080567-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-123080567-1');
+    </script>
+
     <title>SFSU Software Engineering Project CSC 648-848, Summer 2018</title>
 
     <%= stylesheet_link_tag    'bootstrap', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -25,7 +35,7 @@
             <% if signed_in? %>
               <% if current_user != nil && !current_user.is_admin? %>
                 <li class="nav-item">
-                  <a class="nav-link" href="upload">Upload</a>
+                  <a class="nav-link" href="new_image_path">Upload</a>
                 </li>
               <% end %>
             <% end %>
