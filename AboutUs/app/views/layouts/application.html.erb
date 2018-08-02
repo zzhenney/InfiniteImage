@@ -57,13 +57,13 @@
           <!-- Login -->
           <li class="nav-item">
             <% if signed_in? %>
-              <%= button_to "Sign Out", sign_out_path, method: :delete, class: "nav-link" %>
+              <%= link_to "Sign Out", sign_out_path, method: :delete, class: "nav-link" %>
           </li>
 
             <% else %>
 
           <li class="nav-item">
-              <%= button_to "Login", sign_in_path, method: :get, class: "nav-link" %>
+              <%= link_to "Login", sign_in_path, method: :get, class: "nav-link" %>
             <% end %>
           </li>
           <!-- End Login -->
