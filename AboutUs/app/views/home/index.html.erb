@@ -14,7 +14,8 @@
 
     <!-- Page Content -->
     <div class="container">
-      <p>Displaying 1 - <%= @approved_images.count  %> images</p>
+    <br><h3 align="center">SFSU Software Engineering Project CSC 648-848, Summer 2018</h3>
+      <h3 align="center">For Demonstration Only</h3><br>
       <!--<h1 class="my-4 text-center text-lg-left">Infinite Image</h1>-->
     <!-- Search -->
       <form >
@@ -33,7 +34,7 @@
       </div><!-- /.row -->
       </form>
     <!-- End Search -->
-
+      <br><p align="center">Displaying <%= @home.count %> - <%= @approved_images.count  %> images</p>
       <!------- if no images found during search ----------->
       <% if @home.count == 0 %>
         <p style="text-align: center">Sorry we were not able to find what you were looking for, here are some of our favorites!</p>
@@ -69,12 +70,6 @@
     </div>
     <!-- /.container -->
 
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
-      </div>
-      <!-- /.container -->
-    </footer>
+
 
 

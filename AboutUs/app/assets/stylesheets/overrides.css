@@ -6,6 +6,7 @@
 
 body {
   padding-top: 54px;
+  height: 100%;
 }
 
 @media (min-width: 992px) {
@@ -28,4 +29,11 @@ input[type=submit] {
 
 .top-buffer {
 	margin-top: 40px; 
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
 }
