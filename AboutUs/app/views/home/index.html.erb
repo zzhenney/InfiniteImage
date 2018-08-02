@@ -21,7 +21,7 @@
       <form >
       <div class="row">
         <div class="col"></div> <!--center search bar -->
-        <div class="col-lg-6">
+        <div class="col-lg-8">
           <div class="input-group">
 
            <!-- <input type="text" class="form-control" aria-label="..."> -->
@@ -34,7 +34,10 @@
       </div><!-- /.row -->
       </form>
     <!-- End Search -->
-      <br><p align="center">Displaying <%= @home.count %> - <%= @approved_images.count  %> images</p>
+      <br>
+      <% if @home.count != 0 %>
+      <p align="center">Displaying <%= @home.count %> - <%= @approved_images.count  %> images</p>
+        <% end %>
       <!------- if no images found during search ----------->
       <% if @home.count == 0 %>
         <p style="text-align: center">Sorry we were not able to find what you were looking for, here are some of our favorites!</p>
