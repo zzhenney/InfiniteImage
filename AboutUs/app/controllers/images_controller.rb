@@ -47,6 +47,7 @@ class ImagesController < ApplicationController
         @imagesearch = Image.search(query, suggest: true, fields: [:image_title, :description, :category_name], match: :word_start, operator: 'or', where: {category_id: @cat})
         @image_all = Image.search('*', where: {category_id: params['j']['category_id']})
 
+
         if params[:PNG].present? || params[:GIF].present? || params[:JPEG].present?
           @PNG = params[:PNG]
           @GIF = params[:GIF]
@@ -121,7 +122,7 @@ class ImagesController < ApplicationController
     @image = Image.find(params[:id])
     @image.update(:status_id => 1)
 
-    redirect_to :back
+    redirect_to admin_path
   end
 
   helper_method :approve

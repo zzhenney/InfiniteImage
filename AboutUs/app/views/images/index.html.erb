@@ -68,7 +68,7 @@
         <% end %>
       <% end %>
     <% else %>
-      Showing <%= @imagesearch.total_count %> out of <%= @images.count %>
+      <% if @image_all %> Showing <%= @imagesearch.total_count %> out of  <%= @image_all.count %> <% end %>
       <% @imagesearch.each do |i| %>
         <% i.uploads.each do |upload| %>
           <%= link_to (image_tag upload, size: '50x50'), i %>
