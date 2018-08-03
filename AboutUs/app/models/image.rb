@@ -8,9 +8,6 @@ class Image < ApplicationRecord
 
   validates_length_of :description, :minimum => 5, :maximum => 40, :allow_blank => true #validate description length Paul Ancajima 7/17/18
 
-  # validates :description, format: { with: /\A[a-zA-Z]+\z/,
-  #                                   message: "only allows letters" }
-
   #foreign key set up
   belongs_to :category #inherits category @image.category.<etc>
   belongs_to :status

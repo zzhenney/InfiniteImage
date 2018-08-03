@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+git_source(:github) {|repo| "https://github.com/#{repo}.git"}
 
 ruby '2.5.1'
 
@@ -16,10 +16,13 @@ group :development do
   gem "capistrano-rails", "~> 1.4", require: false
 end
 
-#Added 7/18/18      Paul Ancajima
+#Added 8/2/18       Paul Ancajima   USED FOR LIMITING RESULTS PER PAGE
+gem 'will_paginate', '~> 3.1.1'
+
+#Added 7/18/18      Paul Ancajima   USED FOR SCHEDULING. I.E. DELETE UNAPPROVED IMAGES EVERY NIGHT SEE schedule.rb
 gem 'whenever', require: false
 
-#Added 7/11/18      Paul Ancajima
+#Added 7/11/18      Paul Ancajima   USED FOR VIEW PRETTY DATABASE TABLES. I.E. 'tp Image.all'
 gem 'table_print'
 
 #Added mysql2 6/30/18   Paul Ancajima

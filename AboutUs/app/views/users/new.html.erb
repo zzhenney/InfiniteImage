@@ -8,14 +8,20 @@
 
       <div id="clearance" class="sign-in">
 
-
         <%= form_for @user do |form| %>
           <%= render partial: '/users/form', object: form %>
         <% end %>
 
+        <!--        flash error-->
+        <!--        loops through to display error message from controller    Paul Ancajima-->
+        <b>
+          <% flash.each do |name, msg| -%>
+            <%= content_tag :div, msg, class: name %>
+          <% end -%>
+        </b>
 
-    </div> <!---end sign in-->
+      </div> <!---end sign in-->
     </div> <!---end col-->
     <div class="col"></div> <!--center -->
-    </div><!-----end row----->
+  </div><!-----end row----->
 </div>

@@ -30,9 +30,11 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to home_index_path, notice: 'User was successfully created.' }
+        flash[:notice] = 'Account was successfully created. Plase log in'
+        format.html { redirect_to home_index_url }
         format.json { render :show, status: :created, location: @user }
       else
+        flash[:notice] = 'Email already exist.' #rendering code in views/users/new Paul Ancajima 8/2/18
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end

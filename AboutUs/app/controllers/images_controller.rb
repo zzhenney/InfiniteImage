@@ -6,11 +6,63 @@ class ImagesController < ApplicationController
   def index
 
 
-    @images = Image.all
-    #Ransack gem's  Paul Ancajima updated 7/17/18
-    @q = Image.ransack(params[:q]) #.each {|k, v| [k, v.strip!]}) #Strips trailing spaces
-    @images = @q.result(distinct: true).includes(:category) #Advance search
-    @q.build_condition if @q.conditions.empty?  #Remove the if statement to add extra search groups
+    # @images = Image.all
+    # #Ransack gem's  Paul Ancajima updated 7/17/18
+    # @q = Image.ransack(params[:q]) #.each {|k, v| [k, v.strip!]}) #Strips trailing spaces
+    # @images = @q.result(distinct: true).includes(:category) #Advance search
+    # @q.build_condition if @q.conditions.empty? #Remove the if statement to add extra search groups
+
+    @show_all_images = Image.all
+    #To setup params key 'page'. The method paginate comes from gem 'will_paginate'    Paul Ancajima
+    @home = Image.paginate(page: params[:page])
+    @approved_images = Image.where(status_id: 1).all
+
+    # get category selected by user for persistent selection
+    # strip category and search params into variables @user_cat_id and @user_search
+    # this allows for the search function to search first through categories then for the search(image title)
+    # at home page no search performed yet
+    if params[:q].nil? || params[:q][:category_id].nil?
+      @user_cat_name = "All"
+
+      # if 'All' selected check only that query (q) was made
+    elsif params[:q].present?
+      @user_cat_id = params[:q][:category_id] unless params[:q].nil?
+      @user_search = params[:q][:image_title]
+
+      # if specific category selected check that query (q) and category id exists
+    elsif params[:q][:category_id].present?
+      @user_cat_name = Category.find(@user_cat_id).name unless params[:q].nil?
+      @user_search = params[:q][:image_title]
+
+    end
+
+    #Search function (ransack gem) - first searches categories then image title
+    @q = Image.ransack(category_id_eq: @user_cat_id, image_title_cont: @user_search)
+
+    #Set search result to @home instance variable for display
+    #Set pagination per page here
+
+    #Only admins are allowed to this action otherwise will be redirected home
+    if current_user
+      if current_user.is_admin?
+        @current_user_is_admin = current_user
+      end
+      redirect_to home_index_path unless current_user.is_admin?
+    else
+      redirect_to home_index_path
+    end
+
+    @home = @q.result.paginate(page: params[:page], per_page: 3)
+  end
+
+
+  def result
+    @home = Image.all
+    @q = Image.ransack(params[:q]) #Ransack gem's
+    @home = @q.result(distinct: true) #Simple search
+    if @home.count == 0
+      @home = Image.all
+    end
   end
 
   def search
@@ -19,11 +71,12 @@ class ImagesController < ApplicationController
   end
 
   def approve
-   @image = Image.find(params[:id])
-   @image.update(:status_id => 1)
+    @image = Image.find(params[:id])
+    @image.update(:status_id => 1)
 
-        redirect_to admin_path
+    redirect_to admin_path
   end
+
   helper_method :approve
 
   def result
@@ -41,7 +94,7 @@ class ImagesController < ApplicationController
   end
 
   def download
-      @image.download
+    @image.download
   end
 
   # GET /images/new
@@ -59,7 +112,7 @@ class ImagesController < ApplicationController
 
     @image.uploads.each do |upload|
       filename_arr = upload.content_type.to_s.split('/')
-      @image.file_type= filename_arr[1].upcase
+      @image.file_type = filename_arr[1].upcase
     end
 
   end
@@ -108,7 +161,6 @@ class ImagesController < ApplicationController
   end
 
 
-
   # DELETE /images/1
   # DELETE /images/1.json
   def destroy
@@ -129,6 +181,7 @@ class ImagesController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def image_params
     #Added uploads param 7/72018 Paul Ancajima
-    params.require(:image).permit(:image_title, :image_owner_id, :category_id, :licensing, :date, :description, :file_type, :location, :status_id,  uploads: [])
+    params.require(:image).permit(:image_title, :image_owner_id, :category_id, :licensing, :date, :description, :file_type, :location, :status_id, uploads: [])
   end
+
 end
