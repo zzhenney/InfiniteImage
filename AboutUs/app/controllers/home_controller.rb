@@ -39,20 +39,18 @@ class HomeController < ApplicationController
     #Set search result to @home instance variable for display
     @home = @q.result
 
-
   end
 
   def result
 
     @home = Image.all
-    @q = Image.ransack(params[:q]) #Ransack gem's
-    @home = @q.result(distinct: true) #Simple search
+    @q = Image.ransack(params[:q])       #Ransack gem's
+    @home = @q.result(distinct: true)    #Simple search
     if @home.count == 0
       @home = Image.all
     end
   end
 
   #parsing the user's category search selection for persistent selection
-
 
 end

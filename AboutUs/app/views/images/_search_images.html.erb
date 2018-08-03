@@ -9,36 +9,40 @@
 <% end %>
 <br><br>
 
-<div class="col-lg-9">
-  <b>searchkick <br></b>
-  NEW SEARCH CAN: <br>
-  &nbsp&nbsp&nbsp -handle typos up to 2 characters<br>
-  &nbsp&nbsp&nbsp -full text search for multiple fields and attributes displays top results first<br>
-  &nbsp&nbsp&nbsp -filter by types of images<br>
-  &nbsp&nbsp&nbsp -can suggest<br>
-  &nbsp&nbsp&nbsp -TEST SEARCH at local:3000/images<br>
-</div>
+<% if @current_user_is_admin %>
 
-<!--form_tag for searchkick. Logic found in images_controller index action-->
-<button onclick="toggle_check_box()">Filters</button>
-
-<%= form_tag images_path, method: :get do %>
-  <%= collection_select :j, :category_id, Category.all, :id, :name, {selected: @cat, include_blank: 'All'} %>
-  <%= text_field_tag :q, params[:q], placeholder: 'Search' %>
-
-<!--  little toggle for fun-->
-  <div id="toggle_check_box" style="display: none">
-    <!--simple true/false checkboxes that receives value from images_controller for persistence-->
-    <%= check_box_tag 'GIF', 1, @GIF %> GIF
-    <%= check_box_tag 'PNG', 1, @PNG %> PNG
-    <%= check_box_tag 'JPEG', 1, @JPEG %> JPEG
+  <div class="col-lg-9">
+    <b>searchkick <br></b>
+    NEW SEARCH CAN: <br>
+    &nbsp&nbsp&nbsp -handle typos up to 2 characters<br>
+    &nbsp&nbsp&nbsp -full text search for multiple fields and attributes displays top results first<br>
+    &nbsp&nbsp&nbsp -filter by types of images<br>
+    &nbsp&nbsp&nbsp -can suggest<br>
+    &nbsp&nbsp&nbsp -TEST SEARCH at local:3000/images<br>
   </div>
-  <%= submit_tag 'Submit' %>
-<% end %>
-<br>
 
-<!--test to retrieve check box data-->
-<%= @PNG %>&nbsp&nbsp&nbsp<%= @GIF %>&nbsp&nbsp&nbsp<%= @JPEG %>
+  <!--form_tag for searchkick. Logic found in images_controller index action-->
+  <button onclick="toggle_check_box()">Filters</button>
+
+  <%= form_tag images_path, method: :get do %>
+    <%= collection_select :j, :category_id, Category.all, :id, :name, {selected: @cat, include_blank: 'All'} %>
+    <%= text_field_tag :q, params[:q], placeholder: 'Search' %>
+
+    <!--  little toggle for fun-->
+    <div id="toggle_check_box" style="display: none">
+      <!--simple true/false checkboxes that receives value from images_controller for persistence-->
+      <%= check_box_tag 'GIF', 1, @GIF %> GIF
+      <%= check_box_tag 'PNG', 1, @PNG %> PNG
+      <%= check_box_tag 'JPEG', 1, @JPEG %> JPEG
+    </div>
+    <%= submit_tag 'Submit' %>
+  <% end %>
+  <br>
+
+  <!--test to retrieve check box data-->
+  <%= @PNG %>&nbsp&nbsp&nbsp<%= @GIF %>&nbsp&nbsp&nbsp<%= @JPEG %>
+<% end %>
+
 
 <br><br>
 

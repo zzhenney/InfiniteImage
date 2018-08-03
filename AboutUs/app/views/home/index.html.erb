@@ -12,14 +12,17 @@
 
 <!-- Page Content -->
 <div class="container">
-  <p>Displaying 1 - <%= @approved_images.count %> images</p>
+  <br>
+  <h3 align="center">SFSU Software Engineering Project CSC 648-848, Summer 2018</h3>
+  <h3 align="center">For Demonstration Only</h3><br>
   <!--<h1 class="my-4 text-center text-lg-left">Infinite Image</h1>-->
   <!-- Search -->
   <form>
     <div class="row">
       <div class="col"></div> <!--center search bar -->
-      <div class="col-lg-6">
+      <div class="col-lg-8">
         <div class="input-group">
+
           <!-- <input type="text" class="form-control" aria-label="..."> -->
           <!-- <input type="submit" value="Search"> -->
           <!-- Using ransack gem to create search field and submission button -->
@@ -30,7 +33,10 @@
     </div><!-- /.row -->
   </form>
   <!-- End Search -->
-
+  <br>
+  <% if @home.count != 0 %>
+    <p align="center">Displaying <%= @home.count %> - <%= @approved_images.count %> images</p>
+  <% end %>
   <!------- if no images found during search ----------->
   <% if @home.count == 0 %>
     <p style="text-align: center">Sorry we were not able to find what you were looking for, here are some of our
@@ -42,25 +48,21 @@
     <div class="row text-center text-lg-left">
 
       <!-- Loop through each picture and assign each to bootstrap class. Will need to limit these and not show whole db -->
-
       <% @home.shuffle.each do |image| %>
-        <% image.uploads.each do |upload| %>
+        <% (0...image.uploads.count).each do |upload| %>
           <% if image.status_id == 1 %>
             <div class="col-lg-3 col-md-4 col-xs-6">
-
-              <%= link_to (image_tag upload, class: "img-fluid img-thumbnail"), image, class: "d-block mb-4 h-100", target: :_blank %>
+              <%= link_to (image_tag image.thumbnail(upload), class: "img-fluid"), image, class: "d-block mb-4 h-100", target: :_blank %>
             </div>
           <% end %>
         <% end %>
       <% end %>
-
       <!-- for testing image layout -->
       <!--  <div class="col-lg-3 col-md-4 col-xs-6">
                <a href="#" class="d-block mb-4 h-100">
                  <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
                </a>
             </div> -->
-
     </div>
   </div>
 </div>
