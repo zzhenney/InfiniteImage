@@ -15,9 +15,17 @@ Rails.application.config.assets.precompile += %w( bootstrap.css )
 Rails.application.config.assets.precompile += %w( overrides.css )
 Rails.application.config.assets.precompile += %w( bootstrap.js )
 Rails.application.config.assets.precompile += %w( jquery.js )
-
+Rails.application.config.assets.precompile += %w( resume.css )
+Rails.application.config.assets.precompile += %w( pages.css )
+Rails.application.config.assets.precompile += %w( font-awesome.css )
+Rails.application.config.assets.precompile += %w( _bootstrap-overrides.css )
+Rails.application.config.assets.precompile += %w( _nav.css )
 
 # Precompile additional assets.
 # application.js, application.css.scss, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
+
+# Precompile JS
+Rails.application.config.assets.precompile += %w( resume.js )
+Rails.application.config.assets.precompile += %w( cable.js )
