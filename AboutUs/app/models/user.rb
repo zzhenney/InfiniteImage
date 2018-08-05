@@ -2,6 +2,7 @@ class User < ApplicationRecord
   include Clearance::User
 
   attr_accessor :password_confirmation
+
   has_many :images                                       #association
 
   accepts_nested_attributes_for :images       #Needs to be reworked.
