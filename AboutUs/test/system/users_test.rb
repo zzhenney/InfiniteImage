@@ -22,7 +22,6 @@ class UsersTest < ApplicationSystemTestCase
     fill_in "Is Admin", with: @user.is_admin
     fill_in "Last Name", with: @user.last_name
     fill_in "Password", with: @user.password
-    fill_in "User", with: @user.user_id
     click_on "Create User"
 
     assert_text "User was successfully created"
@@ -41,7 +40,6 @@ class UsersTest < ApplicationSystemTestCase
     fill_in "Is Admin", with: @user.is_admin
     fill_in "Last Name", with: @user.last_name
     fill_in "Password", with: @user.password
-    fill_in "User", with: @user.user_id
     click_on "Update User"
 
     assert_text "User was successfully updated"

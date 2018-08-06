@@ -1,0 +1,131 @@
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Admin Page</title>
+
+  <!-- Bootstrap core CSS -->
+ <!--- <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">   ---->
+
+  <!-- Custom styles for this template -->
+  <!---<link href="css/thumbnail-gallery.css" rel="stylesheet"> ---->
+
+</head>
+
+<body>
+
+<!-- Page Content -->
+<div class="container">
+
+  <h1 class="my-4 text-center text-lg-left">Admin Page</h1>
+
+
+
+
+  <!-- tabs -->
+
+
+
+  <ul class="nav nav-tabs">
+     <li class="active nav-item">
+       <a class="nav-link" data-toggle="tab" href="#images">Images</a>
+     </li>
+
+     <li class="nav-item">
+       <a class="nav-link" data-toggle="tab" href="#users">Users</a>
+     </li>
+  </ul>
+
+
+
+
+
+  <div class="tab-content">
+
+    <!--images tab -->
+    <div class="tab-pane active" id="images">
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Image</th>
+          <th>Username</th>
+          <th>Time/Date</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <% @images.each do |upload| %>
+          <% (0...upload.uploads.count).each do |element|%>
+            <% if upload.status_id != 1 %>
+
+            <tr>
+              <td>
+                <%= link_to (image_tag upload.thumbnail(element)), upload, style: 'background-color: transparent' %>
+              </td>
+              <td><%= upload.user.email %></td>
+              <td><%= upload.created_at %></td>
+              <td><button type="button" class="btn btn-light"><%= link_to 'Approve', image_approve_path(id: upload.id) %></button>
+                <button type="button" class="btn btn-danger"><%= link_to 'Delete', upload, method: :delete, data: { confirm: 'Are you sure?' } , style: "color: white"%></button></td>
+            </tr>
+            <% end %>
+          <% end %>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+
+
+
+
+    <!--users tab -->
+    <div class="tab-pane" id="users">
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Username</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <%  @users.each do |user| %>
+        <% if !user.is_admin %>
+        <tr>
+          <td><%= user.email  %></td>
+          <td>
+            <button type="button" class="btn btn-danger"><%= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' } , style: "color: white"%></button></td>
+        </tr>
+          <% end %>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+</div>
+
+
+</body>
+
+<!-- /.container -->
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">Copyright &copy; Infinite Image 2018</p>
+  </div>
+  <!-- /.container -->
+  <!-- Bootstrap core JavaScript -->
+</footer>
+
+
+
+
+
+
+</html>

@@ -1,3 +1,15 @@
+<head><style>
+  .drop-here{
+    background-color: #fcfbab;
+    width: 860px; height: 64px;
+  }
+  .form-group1{display:inline-block;margin-bottom:0;vertical-align:middle;
+    width: 900px;
+   }
+  .upload-drop-zone { height: 69px; border-color: #a6a6a6; }
+
+</style></head>
+
 <%= form_with(model: image, local: true) do |form| %>
   <% if image.errors.any? %>
     <div id="error_explanation">
@@ -11,62 +23,39 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :uploads %>
-    <%= form.file_field :uploads, multiple:true, class: "form-control" %>
-  </div>
+  <div class="upload-drop-zone" id="drop-zone">
+    <div class="form-inline">
+      <div class="form-group1">
+        <div class="drop-here">
+        <%= form.file_field :uploads, multiple:true, class: 'drop-here', :required => true %>
+        </div>
+    </div>
+    </div>
+  </div> <!--end drop zone --->
 
-  <div class="field">
-    <%= form.label :image_id %>
-    <%= form.number_field :image_id, class: "form-control" %>
-  </div>
+  <div class="row">
+    <div class="col">
+      <%= form.label :name, 'Image Title*'%>
+      <%= form.text_field :image_title, placeholder: "Enter a Title", class: "form-control", :required => true %>
+    </div>
+    <div class="col">
+      <%= form.label :name, 'Category*'%>
+      <%= form.collection_select(:category_id, Category.all, :id, :name, { :prompt => 'Select a Category', :selected => @image.category_id }, { class: 'form-control', :required => true }) %>
+    </div>
+  </div> <!--- first row additional info -->
 
-  <div class="field">
-    <%= form.label :is_approved %>
-    <%= form.check_box :is_approved, class: "form-control" %>
-  </div>
-
-  <div class="field">
-    <%= form.label :image_title %>
-    <%= form.text_field :image_title, class: "form-control" %>
-  </div>
-
-  <div class="field">
-    <%= form.label :image_owner_id %>
-    <%= form.number_field :image_owner_id, class: "form-control" %>
-  </div>
-
-  <div class="field">
-    <%= form.label :category %>
-    <%= form.collection_select(:category_id, Category.all, :id, :name, { :prompt => 'Select a Category', :selected => @image.category_id }, { class: 'form-control' }) %>
-  </div>
-
-  <div class="field">
-    <%= form.label :licensing %>
-    <%= form.text_field :licensing, class: "form-control" %>
-  </div>
-
-  <div class="field">
-    <%= form.label :date %>
-    <%= form.date_select :date, class: "form-control" %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, class: "form-control" %>
-  </div>
-
-  <div class="field">
-    <%= form.label :file_type %>
-    <%= form.text_field :file_type, class: "form-control" %>
-  </div>
-
-  <div class="field">
-    <%= form.label :location %>
-    <%= form.text_field :location, class: "form-control" %>
-  </div>
+  <div class="row">
+    <div class="form-group col-md-8">
+      <%= form.label :description %>
+      <%= form.text_area :description, placeholder: "Enter a Description (optional, but recommended)", class: "form-control" %>
+    </div>
+    <div class="form-group col-md-4">
+      <%= form.label :location %>
+      <%= form.text_field :location, class: "form-control", placeholder: "City, State or Country"%>
+    </div>
+  </div> <!---second row additional info -->
 
   <div class="actions">
-    <%= form.submit %>
+      <%= form.submit %>
   </div>
-<% end %>
+<% end %> 

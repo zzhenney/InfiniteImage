@@ -4,18 +4,19 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    redirect_to home_index_path
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
+    redirect_to home_index_path
   end
 
   # GET /users/new
   def new
     @user = User.new
-    @user.images.new
+    #@user.images.new
   end
 
   # GET /users/1/edit
@@ -28,10 +29,12 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     respond_to do |format|
-      if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+      if verify_recaptcha(model: @user) && @user.save
+        flash[:notice] = 'Account was successfully created. Plase log in'
+        format.html { redirect_to home_index_url }
         format.json { render :show, status: :created, location: @user }
       else
+        flash[:notice] = 'Email already exist.' #rendering code in views/users/new Paul Ancajima 8/2/18
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
@@ -71,6 +74,8 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       #Added uploads for active:storage
-      params.require(:user).permit(:user_id, :is_admin, :cart_id, :album_list, :friend_list, :email, :password, :first_name, :last_name, images_attributes: [:upload],uploads:[])
+      #
+
+      params.require(:user).permit(:is_admin, :cart_id, :album_list, :friend_list, :email, :password, :password_confirmation, :first_name, :last_name, images_attributes: [:upload],uploads:[])
     end
 end

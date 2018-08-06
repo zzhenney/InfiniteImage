@@ -17,7 +17,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create user" do
     assert_difference('User.count') do
-      post users_url, params: { user: { album_list[]: @user.album_list[], cart_id: @user.cart_id, email: @user.email, first_name: @user.first_name, friend_list[]: @user.friend_list[], is_admin: @user.is_admin, last_name: @user.last_name, password: @user.password, user_id: @user.user_id } }
+      post users_url, params: { user: { album_list[]: @user.album_list[], cart_id: @user.cart_id, email: @user.email, first_name: @user.first_name, friend_list[]: @user.friend_list[], is_admin: @user.is_admin, last_name: @user.last_name, password: @user.password } }
     end
 
     assert_redirected_to user_url(User.last)
@@ -34,7 +34,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update user" do
-    patch user_url(@user), params: { user: { album_list[]: @user.album_list[], cart_id: @user.cart_id, email: @user.email, first_name: @user.first_name, friend_list[]: @user.friend_list[], is_admin: @user.is_admin, last_name: @user.last_name, password: @user.password, user_id: @user.user_id } }
+    patch user_url(@user), params: { user: { album_list[]: @user.album_list[], cart_id: @user.cart_id, email: @user.email, first_name: @user.first_name, friend_list[]: @user.friend_list[], is_admin: @user.is_admin, last_name: @user.last_name, password: @user.password } }
     assert_redirected_to user_url(@user)
   end
 

@@ -15,3 +15,9 @@ Category.create([
     { name: 'Sports'    },
     { name: 'Travel'    }
 ])
+
+Status.create([
+    { id: 0, name: 'Pending'},
+    { id: 1, name: 'Approved'  },
+    { id: 2, name: 'Rejected'  }
+])

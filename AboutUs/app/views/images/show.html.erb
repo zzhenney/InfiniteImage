@@ -1,65 +1,115 @@
+<!---
+  Teodora - File Purpose: Display Images full size. Show information such as meta data
+  and allow users to easily download.
+  Current Navigation items: Edit & Back - in the future to be removed.
+---->
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    /* Style buttons */
+    .btn {
+      background-color: #28a745;
+      border: none; padding: 12px 30px;
+      cursor: pointer; font-size: 27px;
+      width: 260px; color: white;
+    }
+    /* Hover over button */
+    .btn:hover {
+      background-color: #24993f;
+    }
+    @media screen and (max-width: 1090px) {
+      .colresponsive {
+        padding-left: 100px;
+      } /* for responsive layout so columns appear under eacho ther
+          and the metadata is indented below the image preview*/
+    }
+  </style>
+</head>
 <p id="notice"><%= notice %></p>
 
+<p style="padding-left: 30px; border: 2px; border-bottom: #1b1e21;">
+  <%= link_to 'Back', '', :onclick=>'window.close();' %>
+</p><br>
 
-<ul>
-  <% @image.uploads.each do |upload| %>
-    <li>
-<!--      for each loop all to show all. size: < L*W > to reszie images (NOT THUMBNAIL) Paul Ancajima-->
-      <%= image_tag upload, size: '300x300'  %>
-    </li>
-  <% end %>
-</ul>
+<h3 align="center">Preview & Download Your Image Below</h3><br><br>
+<div class="container">
+<div class="row">
+  <div class="col">
+    <ul>
+      <% (0...@image.uploads.count).each do |image|  %>
 
-<p>
-  <strong>Image:</strong>
-  <%= @image.image_id %>
-</p>
+        <!--<li>-->
+        <!--      for each loop all to show all. size: < L*W > to reszie images (NOT THUMBNAIL) Paul Ancajima-->
+        <%= image_tag @image.full_size(image) , :style=>'padding-left: 55px;'%>
+        <!--</li>-->
 
-<p>
-  <strong>Is approved:</strong>
-  <%= @image.is_approved %>
-</p>
+      <% end %>
+    </ul>
+  </div>
+  <p>
 
-<p>
-  <strong>Image title:</strong>
-  <%= @image.image_title %>
-</p>
+  </p>
 
-<p>
-  <strong>Image owner:</strong>
-  <%= @image.image_owner_id %>
-</p>
+  <div class="col">
+    <div class="colresponsive">
+      <p>
+        <strong>Image title:</strong>
+        <%= @image.image_title %>
+      </p>
 
-<p>
-  <strong>Category:</strong>
-<!--  Changed to show category name. from category_id to category.name -->
-  <%= @image.category.name %>
-</p>
+      <p>
+        <strong>Image owner:</strong>
+        <%= @image.user.email %>
+      </p>
 
-<p>
-  <strong>Licensing:</strong>
-  <%= @image.licensing %>
-</p>
+      <p>
+        <strong>Category:</strong>
+        <!--  Changed to show category name. from category_id to category.name -->
+        <%= @image.category.name %>
+      </p>
 
-<p>
-  <strong>Date:</strong>
-  <%= @image.date %>
-</p>
+      <% if @image.licensing != nil %>
+      <p>
+        <strong>Licensing:</strong>
+        <%= @image.licensing %>
+      </p>
+        <% end %>
 
-<p>
-  <strong>Description:</strong>
-  <%= @image.description %>
-</p>
+      <p>
+        <strong>Date:</strong>
+        <%= @image.created_at %>
+      </p>
 
-<p>
-  <strong>File type:</strong>
-  <%= @image.file_type %>
-</p>
+      <% if @image.description != "" %>
+      <p>
+        <strong>Description:</strong>
+        <%= @image.description %>
+      </p>
+      <% end %>
 
-<p>
-  <strong>Location:</strong>
-  <%= @image.location %>
-</p>
+      <p>
+        <strong>File type:</strong>
+        <%= @image.file_type %>
+      </p>
 
-<%= link_to 'Edit', edit_image_path(@image) %> |
-<%= link_to 'Back', images_path %>
+      <% if @image.location != "" %>
+      <p>
+        <strong>Location:</strong>
+        <%= @image.location %>
+      </p>
+      <% end %>
+
+      <!-- Download Button -->
+      <button class="btn"><i class="fa fa-download"></i>
+        <% @image.uploads.each do |upload| %>
+          <% if signed_in? %>
+            <%= link_to 'Download', upload, download: '' , :style=>'color: white;' %></button>
+          <% else %>
+            <%= link_to 'Download', sign_up_path, :style=>'color: white;' %></button>
+          <% end %>
+          </div></div><!---end right column-->
+          </div><!----end row--->
+        <% end %>
+
+        </div>
