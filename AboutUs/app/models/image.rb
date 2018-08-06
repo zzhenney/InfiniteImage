@@ -12,8 +12,11 @@ class Image < ApplicationRecord
   belongs_to :category #inherits category @image.category.<etc>
   belongs_to :status
 
-
-  #process image sizes for database Andre Leslie 7/10/18
+  # Author: Andre Leslie
+  # Purpose: Resize images then save them into database
+  # Methods to Note: 'thumbnail' formats image to thumbnail size and saves to database
+  #                  'full_size' formats image to display size abd saves to database
+  # Date: 7/10/18
   def thumbnail select
     return self.uploads[select].variant(resize: "300x300!").processed
   end
@@ -21,8 +24,7 @@ class Image < ApplicationRecord
   def full_size select
     return self.uploads[select].variant(resize: "700x700").processed
   end
-
-
+  #########################################################################
 
   private
   #Paul Ancajima 7/17/18
