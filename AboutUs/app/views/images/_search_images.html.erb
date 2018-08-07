@@ -1,17 +1,30 @@
 <%#= search_form_for @q, url: result_path do |f| %>
 <!--ransack uses search_form_for instead of rails standard form_for -->
-<br> <br> <b>ransack</b>
-<%= search_form_for @q do |f| %>
-  <!-- Changed search field. We can search through our attributes from the table "category" IE. category_id category_name etc-->
-  <%= f.collection_select :category_id, Category.all, :id, :name, {:selected => @user_cat_id, :include_blank => 'All'}, {class: "custom-select col-2"} %>
-  <%= f.search_field :image_title, :value => @user_search, placeholder: 'Search for an image. (i.e. Animals, Cars, Food, Nature, People, Travel)', class: "form-control col-8" %>
-  <%= f.submit 'Search', name: 'images', class: "btn btn-primary col-2" %>
+<%#= search_form_for @q do |f| %>
+<!-- Changed search field. We can search through our attributes from the table "category" IE. category_id category_name etc-->
+  <%#= f.collection_select :category_id, Category.all, :id, :name, {:selected => @user_cat_id, :include_blank => 'All'}, {class: "custom-select col-2"} %>
+  <%#= f.search_field :image_title, :value => @user_search, placeholder: 'Search for an image. (i.e. Animals, Cars, Food, Nature, People, Travel)', class: "form-control col-8" %>
+  <%#= f.submit 'Search', name: 'images', class: "btn btn-primary col-2" %>
+<%# end %>
+
+<%= form_tag images_path, method: :get do %>
+  <%= collection_select :j, :category_id, Category.all, :id, :name, {selected: @cat, include_blank: 'All', class: "custom-select col-2"} %>
+  <%= text_field_tag :q, params[:q], placeholder: 'Search', value: params[:q], class: "form-control col-8" %>
+
+  <!--  little toggle for fun-->
+  <div id="toggle_check_box" style="display: none">
+    <!--simple true/false checkboxes that receives value from images_controller for persistence-->
+    <%= check_box_tag 'GIF', 1, @GIF %> GIF
+    <%= check_box_tag 'PNG', 1, @PNG %> PNG
+    <%= check_box_tag 'JPEG', 1, @JPEG %> JPEG
+  </div>
+  <%= submit_tag 'Submit' %>
 <% end %>
-<br><br>
+<br>
 
 <% if @current_user_is_admin %>
 
-  <div class="col-lg-9">
+
     <b>searchkick <br></b>
     NEW SEARCH CAN: <br>
     &nbsp&nbsp&nbsp -handle typos up to 2 characters<br>
@@ -19,14 +32,14 @@
     &nbsp&nbsp&nbsp -filter by types of images<br>
     &nbsp&nbsp&nbsp -can suggest<br>
     &nbsp&nbsp&nbsp -TEST SEARCH at local:3000/images<br>
-  </div>
 
   <!--form_tag for searchkick. Logic found in images_controller index action-->
   <button onclick="toggle_check_box()">Filters</button>
 
+
   <%= form_tag images_path, method: :get do %>
-    <%= collection_select :j, :category_id, Category.all, :id, :name, {selected: @cat, include_blank: 'All'} %>
-    <%= text_field_tag :q, params[:q], placeholder: 'Search' %>
+    <%= collection_select :j, :category_id, Category.all, :id, :name, {selected: @cat, include_blank: 'All', class: "custom-select col-2"} %>
+    <%= text_field_tag :q, params[:q], placeholder: 'Search', value: params[:q], class: "form-control col-8" %>
 
     <!--  little toggle for fun-->
     <div id="toggle_check_box" style="display: none">
@@ -44,7 +57,7 @@
 <% end %>
 
 
-<br><br>
+
 
 <!--javascript from w3 school-->
 <script>

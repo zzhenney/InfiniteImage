@@ -8,7 +8,7 @@
     <!--      <th>Img ID</th>-->
     <th>Image Status</th>
     <th>Image title</th>
-    <th>Category</th>
+<!--    <th>Category</th>-->
     <!--      <th>Licensing</th>-->
     <th>Date</th>
     <th>Description</th>
@@ -25,7 +25,7 @@
       <!--        <td><%#= image.image_owner_id %></td>-->
       <td><%= image.status.name %></td>
       <td><%= image.image_title %></td>
-      <td><%= image.category.name %></td>
+<!--      <td><%#= image.category.name %></td>-->
       <!--        <td><%#= image.licensing %></td>-->
       <td><%= image.date %></td>
       <td><%= image.description %></td>
@@ -68,7 +68,7 @@
         <% end %>
       <% end %>
     <% else %>
-      <% if @image_all %> Showing <%= @imagesearch.total_count %> out of  <%= @image_all.count %> <% end %>
+      <% if @image_all %> Showing <%= @imagesearch.results.count %> out of  <%= @image_all.count %> <% end %>
       <% @imagesearch.each do |i| %>
         <% i.uploads.each do |upload| %>
           <%= link_to (image_tag upload, size: '50x50'), i %>
@@ -94,7 +94,7 @@
 <% end %>
 <!------- if no images found during search ----------->
     <!-- Loop through each picture and assign each to bootstrap class. Will need to limit these and not show whole db -->
-    <% @home.shuffle.each do |image| %>
+    <% @home.each do |image| %>
       <% image.uploads.each do |upload| %>
         <% if image.status_id == 1 %>
             <%= link_to (image_tag upload, size: '50x50'), image, target: :_blank %>
