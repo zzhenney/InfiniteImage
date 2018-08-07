@@ -1,23 +1,42 @@
 <div class="container">
   <div class="row">
     <div class="col"></div> <!-- to center  -->
-    <div class="col-lg-6">
+    <div class="col-lg-8">
       <div class="form-control">
         <div id="clearance" class="sign-in">
           <h2><%= "Register" %></h2>
 
           <div class="form-group">
-            <%= form.label :email %>
+            <%= form.label :first_name %><br>
+            <%= form.text_field :first_name, type: 'first_name' %>
+          </div>
+
+          <div class="form-group">
+            <%= form.label :last_name %><br>
+            <%= form.text_field :last_name, type: 'last_name' %>
+          </div>
+
+          <div class="form-group">
+            <%= form.label :email %><br>
 <!--            Note: email validation must clear oninvalid by using oninput otherwise it will stay invalid    Paul Ancajima 8/2/18-->
             <%= form.text_field :email, type: 'email', required: true, pattern: '[^@]+@[^@]+\.[a-zA-Z]{2,6}', oninvalid:"this.setCustomValidity('Enter a valid email')",
             oninput: "setCustomValidity('')" %>
           </div>
 
           <div class="form-group">
-            <%= form.label :password %>
+            <%= form.label :password %><br>
             <!--            Note: password validation must be between 8-20 characters    Paul Ancajima 8/2/18-->
-            <%= form.password_field :password, required: true, pattern: '.{8,20}', oninvalid:"this.setCustomValidity('Password must be between 8-20 characters')",
+            <%= form.password_field :password, required: true, pattern: '.{8,20}', autofocus: true , autocomplete: "off", oninvalid:"this.setCustomValidity('Password must be between 8-20 characters')",
                                     oninput: "setCustomValidity('')"%>
+          </div>
+
+          <div class="form-group">
+            <%= form.label :password_confirmation %>
+            <%= form.password_field :password_confirmation, autocomplete: "off" %>
+          </div>
+
+          <div class="form-group">
+            <%= recaptcha_tags %>
           </div>
 
           <div class="submit-field">

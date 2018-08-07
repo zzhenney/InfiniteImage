@@ -4,9 +4,15 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-thumbnail-gallery/blob/master/LICENSE)
  */
 
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 body {
-  padding-top: 54px;
-  height: 100%;
+    padding-top: 54px;
+    height: 100%;
+    margin-bottom: 60px;
 }
 
 @media (min-width: 992px) {
@@ -33,6 +39,8 @@ input[type=submit] {
 
 footer {
     position: absolute;
+    bottom: 0;
+    height: 60px;
     width: 100%;
 
 }
