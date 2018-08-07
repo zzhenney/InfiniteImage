@@ -52,7 +52,7 @@ class ImagesController < ApplicationController
       redirect_to home_index_path
     end
 
-    @home = @q.result.paginate(page: params[:page], per_page: 3)
+    @home = @q.result.paginate(page: params[:page], per_page: 20)
   end
 
 
