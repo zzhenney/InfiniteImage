@@ -1,8 +1,9 @@
 # Zac Henney, Paul Ancajima
-# Contoller for Home page views. Search is currently controlled here
-# Methods
-# index contains search function and persistent category selection logic
-#
+# Contoller for Home page views.
+# Notes: Search is currently controlled here
+# Methods:
+# index method contains search function and persistent category selection logic
+
 
 
 class HomeController < ApplicationController
@@ -17,6 +18,7 @@ class HomeController < ApplicationController
         redirect_to admin_path
       end
     end
+
     # get category selected by user for persistent selection
     # strip category and search params into variables @user_cat_id and @user_search
     # this allows for the search function to search first through categories then for the search(image title)
@@ -41,7 +43,7 @@ class HomeController < ApplicationController
 
     #Set search result to @home instance variable for display
     #Set pagination per page here
-    @home = @q.result.paginate(page: params[:page], per_page: 4)
+    @home = @q.result.paginate(page: params[:page], per_page: 20)
   end
 
   def result

@@ -1,10 +1,11 @@
 class AdminController < ApplicationController
-
+ layout 'application'
   before_action :admin
   def index
   end
 
   def image
+
     @images = Image.all
     @users = User.all
 
