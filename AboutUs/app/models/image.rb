@@ -6,7 +6,7 @@ class Image < ApplicationRecord
 
   validate :correct_uploads_type #validate image types Paul Ancajima 7/17/18
 
-  validates_length_of :description, :minimum => 5, :maximum => 40, :allow_blank => true #validate description length Paul Ancajima 7/17/18
+  validates_length_of :description, :minimum => 3, :maximum => 40, :allow_blank => true #validate description length Paul Ancajima 7/17/18
 
   #foreign key set up
   belongs_to :category #inherits category @image.category.<etc>
