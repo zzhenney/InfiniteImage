@@ -14,6 +14,8 @@
       cursor: pointer; font-size: 27px;
       width: 260px; color: white;
     }
+
+
     /* Hover over button */
     .btn:hover {
       background-color: #24993f;
@@ -108,8 +110,17 @@
           <% else %>
             <%= link_to 'Download', sign_up_path, :style=>'color: white;' %></button>
           <% end %>
+          <!----- delete button ------------->
+          </br>
+          <% if current_user != nil  %>
+            <% if current_user.email == @image.user.email%>
+              <%= link_to 'Delete', @image, method: :delete, data: { confirm: 'Are you sure?' } , style: "color: red"%>
+            <% end %>
+          <% end %>
           </div></div><!---end right column-->
           </div><!----end row--->
         <% end %>
+
+
 
         </div>

@@ -29,7 +29,7 @@ class Image < ApplicationRecord
   private
   #Paul Ancajima 7/17/18
   def correct_uploads_type
-    if uploads.attached? == false                         #if uploads are not attached
+    if uploads.attached? == false                           #if uploads are not attached
       errors.add(:uploads, 'Must have image files')         #error thrown
     end
     uploads.each do |u|                                             #each upload do
