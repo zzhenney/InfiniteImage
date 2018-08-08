@@ -19,6 +19,8 @@ end
 #Added 8/2/18       Paul Ancajima   USED FOR LIMITING RESULTS PER PAGE
 gem 'will_paginate', '~> 3.1.1'
 
+gem 'will_paginate-bootstrap4'
+
 #Added 7/18/18      Paul Ancajima   USED FOR SCHEDULING. I.E. DELETE UNAPPROVED IMAGES EVERY NIGHT SEE schedule.rb
 gem 'whenever', require: false
 
