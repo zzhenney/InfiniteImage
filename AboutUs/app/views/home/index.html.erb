@@ -33,7 +33,7 @@
   <!-- End Search -->
   <br>
   <% if @home.count != 0 %>
-    <p align="center">Displaying <%= @home.size %> - <%= @home.count %> images</p>
+    <p align="center">Displaying <%= @approved_images.size %> - <%= @approved_images.count %> images</p>
   <% end %>
   <!------- if no images found during search ----------->
   <% if @home.count == 0 %>

@@ -15,6 +15,7 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
+    session[:prev_url] = request.referer
     @user = User.new
   end
 
@@ -25,14 +26,19 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
+
     @user = User.new(user_params)
 
     respond_to do |format|
       if verify_recaptcha(model: @user) && @user.save
-        #flash[:notice] = 'Account was successfully created. Please log in'
-        session[:user_id] = @user.id
-        format.html { redirect_to home_index_path}
+
+        #flash[:notice] = 'Account was successfully created. Plase log in'
+        sign_in(@user)
+        @current_user = @user
+        format.html { redirect_to session[:prev_url] }
         format.json { render :show, status: :created, location: @user }
+
+
       else
         flash[:notice] = 'Email already exists or Passwords do not match.' #rendering code in views/users/new Paul Ancajima 8/2/18
         format.html { render :new }
