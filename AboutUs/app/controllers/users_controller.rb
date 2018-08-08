@@ -15,8 +15,8 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
+    session[:prev_url] = request.referer
     @user = User.new
-    #@user.images.new
   end
 
   # GET /users/1/edit
@@ -26,15 +26,21 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
+
     @user = User.new(user_params)
 
     respond_to do |format|
       if verify_recaptcha(model: @user) && @user.save
-        flash[:notice] = 'Account was successfully created. Plase log in'
-        format.html { redirect_to home_index_url }
+
+        #flash[:notice] = 'Account was successfully created. Plase log in'
+        sign_in(@user)
+        @current_user = @user
+        format.html { redirect_to session[:prev_url] }
         format.json { render :show, status: :created, location: @user }
+
+
       else
-        flash[:notice] = 'Email already exist.' #rendering code in views/users/new Paul Ancajima 8/2/18
+        flash[:notice] = 'Email already exists or Passwords do not match.' #rendering code in views/users/new Paul Ancajima 8/2/18
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
@@ -46,7 +52,7 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        #format.html { redirect_to @user, notice: 'User was successfully updated.' }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
@@ -60,7 +66,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+      #format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
