@@ -5,6 +5,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+  <%= stylesheet_link_tag 'pagination', media: 'all', 'data-turbolinks-track': 'reload' %>
 
   <title>Infinite Image</title>
 </head>
@@ -65,26 +66,19 @@
             <% end %>
           <% end %>
         <% end %>
+
       </div>
+
+      <!--This will setup links to other pages of results. Paul Ancajima 8/2/18-->
+
+      <%= will_paginate @home, :class=> "apple_pagination"%>
+
     </div>
     <br>
   <% end %>
 
-  <!--        This will setup links to other pages of results. Paul Ancajima 8/2/18-->
-  <%= will_paginate @home if @home.present? %>
-  <!--flash success-->
-  <b>
-    <% flash.each do |name, msg| -%>
-      <%= content_tag :div, msg, class: name %>
-    <% end -%>
-  </b>
 
-  <!-- for testing image layout -->
-  <!--  <div class="col-lg-3 col-md-4 col-xs-6">
-           <a href="#" class="d-block mb-4 h-100">
-             <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-           </a>
-        </div> -->
+
 
 </div>
 <!-- /.container -->
