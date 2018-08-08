@@ -9,10 +9,23 @@
 class HomeController < ApplicationController
   def index
 
+
     @show_all_images = Image.all
+
+    #Paul Ancajima 8/8/18
+    # if no images are found show some random images
+    #   show half the number of images
+    #   keep number of images shown max 10
+    number_of_images = Image.count/2
+    if number_of_images > 10
+      number_of_images = 10
+    end
+    @some_random_images = Image.order("RAND()").first(number_of_images)
+
+
     #To setup params key 'page'. The method paginate comes from gem 'will_paginate'    Paul Ancajima
     @home = Image.paginate(page: params[:page])
-    @approved_images = Image.where(status_id: 1).all
+    @approved_images = Image.paginate(page: params[:page]).where(status_id: 1).all
     if current_user != nil
       if current_user.is_admin
         redirect_to admin_path
@@ -30,20 +43,23 @@ class HomeController < ApplicationController
     elsif params[:q].present?
       @user_cat_id = params[:q][:category_id] unless params[:q].nil?
       @user_search = params[:q][:image_title]
+      @file_type = params[:q][:file_type]
 
       # if specific category selected check that query (q) and category id exists
     elsif params[:q][:category_id].present?
       @user_cat_name = Category.find(@user_cat_id).name unless params[:q].nil?
       @user_search = params[:q][:image_title]
+      @file_type = params[:q][:file_type]
 
     end
 
     #Search function (ransack gem) - first searches categories then image title
-    @q = Image.ransack(category_id_eq: @user_cat_id, image_title_cont: @user_search)
+    @q = Image.ransack(category_id_eq: @user_cat_id, image_title_cont: @user_search, file_type_cont: @file_type)
 
     #Set search result to @home instance variable for display
     #Set pagination per page here
-    @home = @q.result.paginate(page: params[:page], per_page: 12)
+    #Paul Ancajima 8/8/18 display showing x out of y images where images are approved
+    @home = @q.result.paginate(page: params[:page], per_page: 4).where(status_id: 1)
   end
 
   def result
