@@ -20,6 +20,7 @@ Rails.application.config.assets.precompile += %w( pages.css )
 Rails.application.config.assets.precompile += %w( font-awesome.css )
 Rails.application.config.assets.precompile += %w( _bootstrap-overrides.css )
 Rails.application.config.assets.precompile += %w( _nav.css )
+Rails.application.config.assets.precompile += %w( pagination.css )
 
 # Precompile additional assets.
 # application.js, application.css.scss, and all non-JS/CSS in the app/assets

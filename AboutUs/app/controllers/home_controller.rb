@@ -43,7 +43,7 @@ class HomeController < ApplicationController
 
     #Set search result to @home instance variable for display
     #Set pagination per page here
-    @home = @q.result.paginate(page: params[:page], per_page: 20)
+    @home = @q.result.paginate(page: params[:page], per_page: 12)
   end
 
   def result
