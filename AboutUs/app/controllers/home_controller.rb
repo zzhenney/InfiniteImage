@@ -28,16 +28,18 @@ class HomeController < ApplicationController
     elsif params[:q].present?
       @user_cat_id = params[:q][:category_id] unless params[:q].nil?
       @user_search = params[:q][:image_title]
+      @file_type = params[:q][:file_type]
 
       # if specific category selected check that query (q) and category id exists
     elsif params[:q][:category_id].present?
       @user_cat_name = Category.find(@user_cat_id).name unless params[:q].nil?
       @user_search = params[:q][:image_title]
+      @file_type = params[:q][:file_type]
 
     end
 
     #Search function (ransack gem) - first searches categories then image title
-    @q = Image.ransack(category_id_eq: @user_cat_id, image_title_cont: @user_search)
+    @q = Image.ransack(category_id_eq: @user_cat_id, image_title_cont: @user_search, file_type_cont: @file_type)
 
     #Set search result to @home instance variable for display
     #Set pagination per page here
