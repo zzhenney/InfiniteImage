@@ -18,7 +18,7 @@ class Image < ApplicationRecord
   #                  'full_size' formats image to display size abd saves to database
   # Date: 7/10/18
   def thumbnail select
-    return self.uploads[select].variant(resize: "300x300!").processed
+    return self.uploads[select].variant(resize: "400x300!").processed
   end
 
   def full_size select
