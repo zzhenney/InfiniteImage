@@ -1,0 +1,76 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <h1 align="center">Approved Images</h1>
+  <br>
+  <br>
+  <form>
+    <div class="row">
+      <div class="col"></div> <!--center search bar -->
+      <div class="col-lg-8">
+        <div class="input-group">
+
+          <!-- <input type="text" class="form-control" aria-label="..."> -->
+          <!-- <input type="submit" value="Search"> -->
+          <!-- Using ransack gem to create search field and submission button -->
+          <%= render 'images/search_images', images: @images %>
+        </div><!-- /input-group -->
+      </div><!-- /.col-lg-6 -->
+      <div class="col"></div> <!--center search bar -->
+    </div><!-- /.row -->
+  </form>
+  <!-- End Search -->
+  <br>
+  <div class="row">
+  <div class="col"></div>
+  <div class="col-lg-8">
+
+<table>
+  <thead>
+    <tr>
+ <!--     <th class="col-md-2">User</th> -->
+ <!--     <th class="col-md-2">Status</th> -->
+      <th class="col-md-2">Title</th>
+      <th class="col-md-2">Category</th>
+<!--      <th>Licensing</th>-->
+      <th class="col-md-2">Date</th>
+      <th class="col-md-2">Description</th>
+<!--      <th>File type</th>-->
+<!--      <th>Location</th>-->
+      <th class="col-md-2">Image</th>
+      <th colspan="5"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+<% @home.all.each do |image| %>
+      <tr>
+<!--        <td class="col-md-2"><%#= image.user_id %></td> -->
+<!--        <td class="col-md-2"><%#= image.status.name %></td> -->
+        <td class="col-md-2"><%= image.image_title %></td>
+        <td class="col-md-2"><%= image.category.name %></td>
+<!--        <td><%#= image.licensing %></td>-->
+        <td class="col-md-2"><%= image.date %></td>
+        <td class="col-md-2"><%= image.description %></td>
+<!--        <td><%#= image.file_type %></td>-->
+<!--        <td><%#= image.location %></td>-->
+        <td class="col-md-2"><%  image.uploads.each do |upload| %>
+<%= link_to (image_tag upload, size: '50x50'), image %>
+<% end %>
+        </td>
+        <td class="col-md-2"><%= link_to 'Show', image %></td>
+        <td class="col-md-2"><%= link_to 'Edit', edit_image_path(image) %></td>
+        <td class="col-md-2"><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+<% end %>
+  </tbody>
+</table>
+
+
+<br>
+
+<br>
+<%= will_paginate @home if @home.present? %>
+    </div>
+    <div class="col"></div>
+  </div>
+</div>

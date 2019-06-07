@@ -1,0 +1,20 @@
+<%#= search_form_for @q, url: result_path do |f| %>
+<!--ransack uses search_form_for instead of rails standard form_for -->
+<%= search_form_for @q do |f| %>
+
+  <!-- Changed search field. We can search through our attributes from the table "category" IE. category_id category_name etc-->
+  <%= f.collection_select :category_id, Category.all, :id, :name, {:selected => @user_cat_id, :include_blank => 'All'}, {class: "custom-select col-2"} %>
+  <%= f.search_field :image_title, :value => @user_search, placeholder: 'Search for an image. (i.e. Animals, Cars, Food, Nature, People, Travel)',
+                     class: 'form-control col-8', pattern: '^[a-zA-Z0-9 ]+', oninvalid: 'setCustomValidity("Please enter valid search")', oninput: "setCustomValidity('')" %>
+  <%= f.submit 'Search', name: 'images', class: "btn btn-primary col-2" %>
+
+  <!--  Author: Paul Ancajima-->
+  <!--  Purpose: validated searchbar-->
+  <!--  Variables to Note: "setCustomValidity('')"    MUST BE WRAPPED IN "" AND NOT ''-->
+  <!--  Date: 8/2/18-->
+<% end %>
+
+
+
+<!--search form partial Paul Ancajima-->
+

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: MyString
+  is_admin: false
+  cart_id: 1
+  album_list[]: 1
+  friend_list[]: 1
+  email: MyString
+  password: MyString
+  first_name: MyString
+  last_name: MyString
+
+two:
+  user_id: MyString
+  is_admin: false
+  cart_id: 1
+  album_list[]: 1
+  friend_list[]: 1
+  email: MyString
+  password: MyString
+  first_name: MyString
+  last_name: MyString

@@ -1,0 +1,142 @@
+<!------
+Author: Teodora (kodekat)
+Purpose: Upload Page for the images on the website
+Users are able to either Browse/Select a file from their local machine
+Or they can drag & drop a file into the designated box.
+They also have to fill out additional informational fields such as:
+image_title, category, description, location; for proper storing in the database.
+
+
+ To Do:
+ - "Upload" button should only be enabled once mandatory fields have been validated.
+ - Fix the length of the page - avoid scrolling.
+ ---->
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link rel="stylesheet" href="/app/assets/stylesheets/uploadstyle.css">
+  <title>Infinite Image</title>
+
+  <style>
+    .upload-drop-zone {
+      height: 200px;
+      border-width: 2px;
+      margin-bottom: 20px;
+    }
+
+    .upload-drop-zone {
+      color: #ccc;
+      border-style: dashed;
+      border-color: #ccc;
+      line-height: 60px; /*inner box "Choose File"*/
+      text-align: center;
+      height: 75px; /*dashed lines height*/
+    }
+
+    .upload-drop-zone {
+      color: #222;
+      border-color: #222;
+    }
+
+    .panel {
+      margin-left: 125px;
+      margin-top: 5px;
+      background-color: #fff;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+      width: 900px;
+    }
+
+    .panel-body {
+      padding: 15px;
+      border: 1px solid #ddd
+    }
+
+    .panel-heading {
+      padding: 10px 15px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      color: #333;
+      background-color: #f5f5f5;
+      border-color: #ddd;
+      border-top: 1px solid #ddd;
+      border-left: 1px solid #ddd;
+    }
+
+    .panel-default {
+      border-color: #ddd;
+      align-self: center;
+    }
+
+    .btn {
+      margin: 0;
+      font: inherit;
+      color: inherit
+    }
+
+    .drop-here {
+      background-color: #fcfbab;
+      width: 740px;
+    }
+
+    .form-group1 {
+      display: inline-block;
+      margin-bottom: 0;
+      vertical-align: middle;
+      width: 900px;
+    }
+  </style>
+</head>
+
+<!-- Page Content -->
+<div class="container" style="min-height: calc(100vh - 125px);">
+
+  <h1 class="my-4 text-center text-lg-left">Infinite Image</h1>
+  <div class="row top-buffer">
+    <div class="row text-center text-lg-left">
+
+      <div class="panel panel-default">
+        <div class="panel-heading"><strong>Upload Image Below</strong></div>
+        <div class="panel-body">
+          <h4>Choose a file from your computer or Drag & Drop in the yellow zone</h4>
+
+
+          <%= render 'form', image: @image %>
+
+          <small><br>All images under Infinite Image will assume a royalty free image license as per Terms of Service.
+          </small>
+          <small><br>All images are subject to approval before they are officially posted online. This process may take
+            up to 48hrs.
+            Thank you for your patience! <br></small>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+<!-- /.container -->
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+  </div>
+  <!-- /.container -->
+</footer>
+
+
+
+
+
