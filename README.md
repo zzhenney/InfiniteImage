@@ -1,3 +1,6 @@
+Live Version: https://infinite-image.herokuapp.com/
+
+
 database set up: 
 
 1. create database named "ii_development" 
